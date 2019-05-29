@@ -4,7 +4,14 @@ import {withRouter} from 'react-router-dom';
 class sessionForm extends React.Component {
     constructor(props){
         super(props);
-        this.state = {username: "", password: ""}
+        if (this.props.formType === 'signup'){
+            this.state = {email: "", password: "", first_name: "",
+                          last_name: "", zip_code: 0};
+        } else {
+
+        
+        this.state = {email: "", password: ""}
+        }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -31,8 +38,36 @@ class sessionForm extends React.Component {
         );
     }
 
+    renderOtherData(){
+        if (this.props.formType === 'signup'){
+            return (
+                ""
+            )
+        } else {
+            return (
+                <div>
+                    <label id="first_name">First Name:
+                            <input type="text"
+                            value={this.state.first_name}
+                            onChange={this.update('first_name')} />
+                    </label>
+                    <label id="last_name">Last Name:
+                            <input type="text"
+                            value={this.state.last_name}
+                            onChange={this.update('last_name')} />
+                    </label>
+                    <label id="zip_code">Zip Code:
+                            <input type="text"
+                            value={this.state.zip_code}
+                            onChange={this.update('zip_code')} />
+                    </label>
+                </div>
+            )
+        }
+    }
 
     render(){
+
 
         return (
             <div className="processingForm">
@@ -41,13 +76,13 @@ class sessionForm extends React.Component {
                     
                     <h3>{this.props.formType} or {this.props.navLink}</h3>
                     {this.renderErrorMessages()}
-                    <label id="username">Username
+                    <label id="email">Email:
                         <input type="text"
-                               value={this.state.username}
-                               onChange={this.update('username')}/>
+                               value={this.state.email}
+                               onChange={this.update('email')}/>
                     </label>
-
-                    <label id="password">Password
+                    {this.renderOtherData()}
+                    <label id="password">Password:
                         <input type="password"
                                value={this.state.password}
                                onChange={this.update('password')}/>
