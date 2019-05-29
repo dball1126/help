@@ -3,8 +3,8 @@ import errors from './errors_reducer';
 import session from './session_reducer';
 import entities from './entities_reducer';
 
-const rootReducer = (combineReducers(session,
+const rootReducer = combineReducers({session,
                                      errors,
-                                     entities));
+                                     entities});
 
 export default rootReducer;

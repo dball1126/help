@@ -8,14 +8,20 @@ const Greeting = ({logout, currentUser}) => {
             <br />
             <Link to="/signup">Sign up</Link>
         </nav>
-    )
+    );
+
+    const personalGreeting = () => (
+        <div>
+            <h1>currentUser.username</h1>
+            <button onClick={logout}>Logout</button>
+        </div>
+    );
+
+        if (currentUser){
+           return personalGreeting()
+        } else {
+           return sessionLinks();
+        }
 }
-
-
-const PersonalGreeting = ({}) => {
-
-
-}
-
 
 export default Greeting;

@@ -6,16 +6,16 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const signup = (user) => {
     return (dispatch) => {
-        return SessionApiUtil.signup(user).then(fromServer => {
-            return dispatch(receiveCurrentUser(fromServer));
+        return SessionApiUtil.signup(user).then(user => {
+            return dispatch(receiveCurrentUser(user));
         }, (errors) => { return dispatch(receiveErrors(errors))});
     };
 };
 
 export const login = (user) => {
     return (dispatch) => {
-        return SessionApiUtil.login(user).then(fromServer => {
-            return dispatch(receiveCurrentUser(fromServer))
+        return SessionApiUtil.login(user).then(user => {
+            return dispatch(receiveCurrentUser(user))
         }, (errors) => { return dispatch(receiveErrors(errors))});
     };
 };
@@ -28,10 +28,10 @@ export const logout = (user) => {
     }
 }
 
-const receiveCurrentUser = (currentUser) => {
+const receiveCurrentUser = (user) => {
     return {
         type: RECEIVE_CURRENT_USER,
-        currentUser: currentUser
+        user: user
     }
 } 
 const logoutCurrentUser = () => {

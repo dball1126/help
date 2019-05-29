@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user, :logged_in?
+    helper_method :current_user #, :ensure_logged_in?
     
     private
     def current_user
@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
         session[:session_token] = nil
     end
 
-    def ensure_logged_in?
-        redirect_to root_url unless logged_in? 
-    end
+    # def ensure_logged_in?
+    #     redirect_to root_url unless logged_in? 
+    # end
 
 
     def logged_in?
