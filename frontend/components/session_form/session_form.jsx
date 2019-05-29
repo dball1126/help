@@ -6,7 +6,7 @@ class sessionForm extends React.Component {
         super(props);
         if (this.props.formType === 'signup'){
             this.state = {email: "", password: "", first_name: "",
-                          last_name: "", zip_code: 0};
+                          last_name: "", zip_code: ""};
         } else {
 
         
@@ -41,27 +41,30 @@ class sessionForm extends React.Component {
     renderOtherData(){
         if (this.props.formType === 'signup'){
             return (
-                ""
-            )
-        } else {
-            return (
                 <div>
-                    <label id="first_name">First Name:
+                    <label id="first_name">
                             <input type="text"
+                            placeholder = 'First Name'
                             value={this.state.first_name}
                             onChange={this.update('first_name')} />
                     </label>
-                    <label id="last_name">Last Name:
+                    <label id="last_name">
                             <input type="text"
+                            placeholder='Last Name'
                             value={this.state.last_name}
                             onChange={this.update('last_name')} />
                     </label>
-                    <label id="zip_code">Zip Code:
+                    <label id="zip_code">
                             <input type="text"
+                            placeholder='Zip Code'
                             value={this.state.zip_code}
                             onChange={this.update('zip_code')} />
                     </label>
                 </div>
+            )
+        } else {
+            return (
+                ""
             )
         }
     }
@@ -76,14 +79,16 @@ class sessionForm extends React.Component {
                     
                     <h3>{this.props.formType} or {this.props.navLink}</h3>
                     {this.renderErrorMessages()}
-                    <label id="email">Email:
+                    <label id="email">
                         <input type="text"
+                               placeholder='Email'
                                value={this.state.email}
                                onChange={this.update('email')}/>
                     </label>
                     {this.renderOtherData()}
-                    <label id="password">Password:
+                    <label id="password">
                         <input type="password"
+                               placeholder='Password'
                                value={this.state.password}
                                onChange={this.update('password')}/>
                     </label>
