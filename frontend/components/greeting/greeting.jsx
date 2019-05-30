@@ -12,7 +12,7 @@ const Greeting = ({logout, currentUser}) => {
 
     const personalGreeting = () => (
         <div>
-            <h1>currentUser.username</h1>
+            <h1>currentUser.email</h1>
             <button onClick={logout}>Logout</button>
         </div>
     );
