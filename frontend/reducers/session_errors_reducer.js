@@ -3,13 +3,16 @@ import { RECEIVE_CURRENT_USER,
 
 const nullErrors = [];
 
-export default (oldState = nullErrors, action) => {
+const sessionErrorsReducer  = (oldState = nullErrors, action) => {
+    Object.freeze(oldState);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return action.errors;
+            return [];
         case RECEIVE_ERRORS:
-            return nullErrors;
+            return action.errors;
         default:
             return oldState;
     }
 }
+
+export default sessionErrorsReducer;

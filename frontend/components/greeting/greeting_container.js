@@ -6,7 +6,8 @@ const mapStateToProps = (state) => {
     
     return {
         
-        currentUser: state.entities.users[state.session.id]
+        currentUser: state.entities.users[state.session.id],
+        path: state.path
 
     }
 }

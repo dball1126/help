@@ -6,7 +6,7 @@ const homepage = () => {
     return (
         <div>
             Welcome to Help
-            <GreetingContainer />
+            <GreetingContainer path="homepage" />
         </div>
     )
 }
