@@ -6,8 +6,8 @@ import { AuthRoute, Protectedroute } from '../util/route_util';
 import Homepage from './greeting/homepage';
 const App = () => {
     return (
-        <div>    
-             <Route path="/" component={Homepage} />
+        <div> 
+             <Homepage />
              <AuthRoute exact path="/login" component={LoginformContainer} />
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
         </div>

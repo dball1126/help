@@ -8,7 +8,7 @@ export const signup = (user) => {
     return (dispatch) => {
         return SessionApiUtil.signup(user).then(user => {
             return dispatch(receiveCurrentUser(user));
-        }, (errors) => { return dispatch(receiveErrors(errors))});
+        }, (errors) => { return dispatch(receiveErrors(errors.responseJSON))});
     };
 };
 
@@ -16,7 +16,7 @@ export const login = (user) => {
     return (dispatch) => {
         return SessionApiUtil.login(user).then(user => {
             return dispatch(receiveCurrentUser(user))
-        }, (errors) => { return dispatch(receiveErrors(errors))});
+        }, (errors) => { return dispatch(receiveErrors(errors.responseJSON))});
     };
 };
 
