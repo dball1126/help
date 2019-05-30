@@ -17,13 +17,15 @@ const homepage = () => {
                     </a>
                 </div>
             </div>
-            <GreetingContainer path="homepage" />
             <div className="homepage-main-container">
                 <div className="homepage-main-inner-container">
-                    <nav className="homepage-nav-reviews">
-
-                    </nav>
-                    <nav className="homepage-nav-session"></nav>
+                    <div className="homepage-main-nav-container">
+                        <nav className="homepage-nav-reviews">
+                        </nav>
+                        <nav className="homepage-nav-session">
+                            <GreetingContainer path="homepage" />
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
