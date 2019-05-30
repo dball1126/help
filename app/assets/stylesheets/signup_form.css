@@ -1,0 +1,56 @@
+.login-signup-header {
+    min-width: 1020px;
+    color: #bd1f1f;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.75em;
+    font-weight: 700;
+    z-index: 9;
+    border-bottom: none;
+    background: #bd1f1f;
+}
+
+.login-signup-header-container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: block;
+}
+
+.login-signup-header-link {
+    color: white;
+    text-decoration: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    display: flex;
+    justify-content: center
+}
+
+.login-signup-header-image {
+    margin-right: 3px;
+    margin-top: 4px;
+}
+
+.login-signup-header-slogan {
+    padding-top: 3px;
+    font-family: "Helvetica Neue";
+    font-weight: 900;
+}
+
+.processingForm-header {
+    min-width: 1020px;
+    color: #d32323;
+    padding: 12px;
+    z-index: 1012;
+    border-bottom: none;
+    background: #d32323;
+}
+
+
+.login-signup-main-logo {
+    background-image: url(http://45thparallel.com/wp-content/uploads/2018/07/Yelp_RGB_fullcolor_outline.png);
+    height: 40px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+}

@@ -4,10 +4,13 @@ import LoginformContainer from '../components/session_form/login_form_container'
 import SignUpformContainer from '../components/session_form/signup_form_container';
 import { AuthRoute, Protectedroute } from '../util/route_util';
 import Homepage from './greeting/homepage';
+import Banner from './greeting/top_banner';
+
 const App = () => {
     return (
-        <div> 
-             <Route path ='/' component={Homepage} />
+        <div>
+             <Route exact path ='/' component={Banner} />
+             <Route exact path ='/' component={Homepage} />
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
              <AuthRoute exact path="/login" component={LoginformContainer} />
         </div>

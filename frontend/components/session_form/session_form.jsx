@@ -70,7 +70,29 @@ class sessionForm extends React.Component {
              )
          })
          
+         
+
         return (
+            <div>
+                <div className="login-signup-header">
+                    <div className="main-header-container">
+                        <a href="https://help10.herokuapp.com/#/" className="main-header-link">
+                            <span className="main-header-image">
+                                <img src="/assets/suitcase.png" width="18" height="18"></img>
+                            </span>
+                            <span className="main-header-slogan">
+                                Go to Help for Business Owners
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="processingForm-header">
+                    <div className="login-signup-main-logo"></div>
+                </div>
+
+
+
             <div className="processingForm">
                 <h1>Welcome to Help</h1>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -95,6 +117,7 @@ class sessionForm extends React.Component {
 
                     <input type="submit" value={this.props.formType}/>
                 </form>
+            </div>
             </div>
         )
     }
