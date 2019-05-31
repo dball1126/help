@@ -49,6 +49,7 @@ const homepage = () => {
                                             Restaurants
                                         </li>
                                         <li className="home-services">
+                                            <span className="home-icon"></span>
                                             Home Services
                                         </li>
                                         <li className="Delivery">

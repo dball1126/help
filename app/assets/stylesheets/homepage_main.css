@@ -153,4 +153,15 @@
 .main-nav-categories {
     width: 960px;
     height: 192px;
+    color: white;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: 700;
 }
+
+.ul-nav-categories {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 100%;
+}
+
