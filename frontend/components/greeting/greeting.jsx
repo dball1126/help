@@ -5,7 +5,7 @@ const Greeting = ({logout, currentUser}) => {
     const sessionLinks = () => (
         <ul className="login-signup">
             <li className="login"><Link to="/login">Log In</Link></li>
-            <li className="signup"><Link to="/signup">Sign up</Link></li>
+            <li className="signup"><Link to="/signup"><span className="signup-word">Sign up</span></Link></li>
         </ul>
     );
 

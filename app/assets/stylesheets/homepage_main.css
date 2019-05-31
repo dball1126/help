@@ -54,6 +54,8 @@
     line-height: 30px;
 }
 
+
+
 .login-signup .signup {
     width: 104px;
     border: 2px solid white;
@@ -62,6 +64,7 @@
     text-align: center;
     border-radius: 5px;
 }
+
 .login-signup .login a {
     color: white;
     font-family: "Helvetica Neue";
@@ -169,3 +172,13 @@
     padding: 10px;
 }
 
+.signup:hover {
+    background-color: white;
+    color: #666;
+    transition-delay: .3s;
+    -webkit-transition-delay: .3s;
+}
+
+.signup-word:hover {
+    color: #333;
+}
