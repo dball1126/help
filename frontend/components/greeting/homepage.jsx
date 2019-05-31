@@ -2,7 +2,7 @@ import GreetingContainer from './greeting_container';
 import React from 'react';
 
 const homepage = () => {
-   
+    
     return (
         <div>
             <div className="homepage-main-container">
@@ -35,7 +35,8 @@ const homepage = () => {
                                        className="location-search"/>
                                 <div className="main-search-button">
                                     <button type="submit" className="search-button">
-                                        <img src={window.searchURL} width="19" height="19"></img>
+                                    
+                                        <img src="https://i.imgur.com/6nfeJt3.png" width="19" height="19"></img>
                                     </button>
                                 </div>
                             </form>

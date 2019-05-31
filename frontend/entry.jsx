@@ -7,6 +7,9 @@ import configureStore from './store/store'
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     let store;
+
+ 
+
         if (window.currentUser) {
             const preloadedState = {
                 session: { id: window.currentUser.id },
