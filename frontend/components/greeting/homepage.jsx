@@ -43,16 +43,19 @@ const homepage = () => {
                                 <nav className="main-nav-categories">
                                     <ul className="ul-nav-categories">
                                         <li className="cooling-services">
+                                    <img src="/assets/home-heating-icon.png" width="20" height="20"></img>
                                             Heating & Air Conditioning
                                         </li>
                                         <li className="restaurants">
+                                    <img src="/assets/utensil.png" width="20" height="20"></img>
                                             Restaurants
                                         </li>
                                         <li className="home-services">
-                                            <span className="home-icon"></span>
+                                 <img src="/assets/home-icon.png" width="20" height="20"></img>
                                             Home Services
                                         </li>
                                         <li className="Delivery">
+                                    <img src="/assets/delivery-scooter.png" width="20" height="20"></img>
                                             Deilvery
                                         </li>
                                     </ul>

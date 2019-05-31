@@ -161,7 +161,11 @@
 
 .ul-nav-categories {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 100%;
+}
+
+.ul-nav-categories li {
+    padding: 10px;
 }
 
