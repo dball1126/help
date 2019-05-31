@@ -184,3 +184,40 @@
 .signup-word:hover {
     color: #333;
 }
+
+.main-header-credits {
+    width: 960px;
+    height: 36px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.business-credit {
+    width: 960px;
+    height: 18px;
+    text-align: center;
+    
+}
+.name-credit {
+    width: 960px;
+    height: 18px;
+    text-align: center;   
+}
+
+
+
+.login:hover {
+    box-shadow: inset 0 -3px 0 white, inset 0 -3.5px 0 white;
+}
+
+.nav-events-link:hover {
+    box-shadow: inset 0 -3px 0 white, inset 0 -3.5px 0 white;
+}
+
+.nav-review-link:hover {
+    box-shadow: inset 0 -3px 0 white, inset 0 -3.5px 0 white;
+}
+
+.nav-talk-link:hover {
+    box-shadow: inset 0 -3px 0 white, inset 0 -3.5px 0 white;
+}

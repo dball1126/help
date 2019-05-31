@@ -40,26 +40,30 @@ const homepage = () => {
                                 </div>
                             </form>
                         </div>
-                                <nav className="main-nav-categories">
-                                    <ul className="ul-nav-categories">
-                                        <li className="cooling-services">
-                                    <img src="/assets/home-heating-icon.png" width="20" height="20"></img>
-                                            Heating & Air Conditioning
-                                        </li>
-                                        <li className="restaurants">
-                                    <img src="/assets/utensil.png" width="20" height="20"></img>
-                                            Restaurants
-                                        </li>
-                                        <li className="home-services">
-                                 <img src="/assets/home-icon.png" width="20" height="20"></img>
-                                            Home Services
-                                        </li>
-                                        <li className="Delivery">
-                                    <img src="/assets/delivery-scooter.png" width="20" height="20"></img>
-                                            Deilvery
-                                        </li>
-                                    </ul>
-                                </nav>
+                            <nav className="main-nav-categories">
+                                <ul className="ul-nav-categories">
+                                    <li className="cooling-services">
+                                <img src="/assets/home-heating-icon.png" width="20" height="20"></img>
+                                        Heating & Air Conditioning
+                                    </li>
+                                    <li className="restaurants">
+                                <img src="/assets/utensil.png" width="20" height="20"></img>
+                                        Restaurants
+                                    </li>
+                                    <li className="home-services">
+                                <img src="/assets/home-icon.png" width="20" height="20"></img>
+                                        Home Services
+                                    </li>
+                                    <li className="Delivery">
+                                <img src="/assets/delivery-scooter.png" width="20" height="20"></img>
+                                        Deilvery
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div className="main-header-credits">
+                                <div className="business-credit">Pancake Man</div>
+                                <div className="name-credit">Photo by Johanna L</div>
+                            </div>
                     </div>
                 </div>
             </div>
