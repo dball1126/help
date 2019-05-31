@@ -35,7 +35,7 @@ const homepage = () => {
                                        className="location-search"/>
                                 <div className="main-search-button">
                                     <button type="submit" className="search-button">
-                                        <img src="/assets/search.png" width="19" height="19"></img>
+                                        <img src={window.searchURL} width="19" height="19"></img>
                                     </button>
                                 </div>
                             </form>
