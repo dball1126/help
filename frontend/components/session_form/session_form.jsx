@@ -65,7 +65,6 @@ class sessionForm extends React.Component {
         const getZip = () => {
             if (this.props.formType === 'Sign Up') {
                 return (
-                    
                         <label className="zipcode">
                             <input type="text"
                                 placeholder='Zip Code'
@@ -73,7 +72,6 @@ class sessionForm extends React.Component {
                                 onChange={this.update('zip_code')}
                                 className="zipcode" />
                         </label>
-                    
                 )
             }
         }
@@ -82,8 +80,8 @@ class sessionForm extends React.Component {
              
              if (this.props.errors.length > 0) {
                 return (
-                    <div className="mainErrorsContainer">
-                        <ul>
+                    <div className="login-signup-errors-container">
+                        <ul className="ul-login-signup-errors">
                             {this.props.errors.map((error, i) => {
                                 return (
                                 <li key={i}>{error}</li>
@@ -123,6 +121,7 @@ class sessionForm extends React.Component {
             <div className="login-signup-container">
                     
                 <div className="login-signup-layout">
+                        
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="login-legal-data">
                         <h3 className="login-legal-header">Sign Up for Help</h3>
