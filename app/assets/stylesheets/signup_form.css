@@ -40,17 +40,124 @@
 .processingForm-header {
     min-width: 1020px;
     color: #d32323;
-    padding: 12px;
-    z-index: 1012;
+    padding: 12px 14px;
     border-bottom: none;
     background: #d32323;
+    position: relative;
+    margin: 0 auto;
+
 }
 
 
-.login-signup-main-logo {
-    background-image: url(http://45thparallel.com/wp-content/uploads/2018/07/Yelp_RGB_fullcolor_outline.png);
+.login-signup-help-logo {
+    
     height: 40px;
     width: 80px;
     background-size: 100%;
     background-position: center;
+    margin: 0 auto;
+}
+
+.login-signup-container {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.login-signup-layout {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px
+}
+
+.login-form-box {
+    max-width: 300px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.login-legal-header {
+    font-size: 22px;
+    font-weight: 700;
+    color: #d32323;
+    margin-bottom: 5px;
+    line-height: 1.2em;
+}
+
+.login-legal-saying {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: black;
+}
+
+.login-legal-terms {
+    font-size: 12px;
+    line-height: 1.5em;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.login-form-box .email-password {
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    width: 100%;
+    padding: 5px 9px;
+
+}
+
+.login-form-box .zipcode {
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    width: 100%;
+    
+}
+
+.login-form-box .first_and_last {
+    width: 300px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-form-box .names {
+    width: 150px;
+    height: 30px;
+    border-radius: 1px;
+    box-sizing: border-box;
+    border: 0.5px solid #999;
+    width: 100%;
+    
+}
+
+.login-form-box input[type="first_name"],
+.login-form-box input[type="last_name"] {
+    width: 150px;
+    height: 30px;
+}
+
+.login-form-box input[type="submit"] {
+    background-color: #db0e0e;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #8d0005;
+    color: white;
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 8px;
+    font-family: "Helvetica Neue";
+}
+
+.login-form-photo {
+    width: 495px;
+    height: 471px;
+    margin-top: 100px;
 }

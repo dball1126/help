@@ -5,7 +5,6 @@ const homepage = () => {
    
     return (
         <div>
-            
             <div className="homepage-main-container">
                 <div className="homepage-main-inner-container">
                     <div className="homepage-main-nav-container">
@@ -21,8 +20,22 @@ const homepage = () => {
                         </nav>
                     </div>
                     <div className="homepage-main-inner-inner-container">
-                        <div className="main-logo">
-                            
+                        <div className="main-logo-containter">
+                            <div className="main-logo">
+                                <img src="/assets/help-logo.png" width="150" height="150"></img>
+                            </div>
+                        </div>
+                        <div className="main-search-form">
+                           <form method="get" className="main-business-search">
+                                <input type="text"
+                                       placeholder="Find ac repair, burgers, bars, spas..."
+                                       className="business-search"/>
+                                <input type="text"
+                                       placeholder="Near Manhattan, NY"
+                                       className="location-search"/>
+                                <button type="submit"
+                                        className="button-search">Search</button>
+                            </form>
                         </div>
                     </div>
                 </div>
