@@ -74,11 +74,16 @@ class sessionForm extends React.Component {
             }
         }
 
-         const errors = this.props.errors.map(error => {
+         const errors = this.props.errors.map((error, i) => {
              return (
-                    <li>
-                        <h1>{error}</h1>
-                    </li>
+                <div className="session-errors-container">
+                    <ul className="ul-errors-container">
+                        <li className="li-error-item" key={i}>
+                             {error}
+                        </li>
+                     </ul>
+                     <button onClick={() => this.props.clearErrors()}></button>
+                </div>
              ) 
          })
          

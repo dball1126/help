@@ -3,7 +3,6 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
-
 export const signup = (user) => {
     return (dispatch) => {
         return SessionApiUtil.signup(user).then(user => {
@@ -25,6 +24,12 @@ export const logout = (user) => {
         return SessionApiUtil.logout(user).then( () => {
             return dispatch(logoutCurrentUser())
         })
+    }
+}
+
+export const clearErrors = () =>{
+    return (dispatch) => {
+        return dispatch(receiveErrors([]))
     }
 }
 

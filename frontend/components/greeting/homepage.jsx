@@ -33,8 +33,9 @@ const homepage = () => {
                                 <input type="text"
                                        placeholder="Near Manhattan, NY"
                                        className="location-search"/>
-                                <button type="submit"
-                                        className="button-search">Search</button>
+                                <div className="main-search-button">
+                                    <button type="submit" className="search-button">Search</button>
+                                </div>
                             </form>
                         </div>
                     </div>
