@@ -27,11 +27,8 @@ export const logout = (user) => {
     }
 }
 
-export const clearErrors = () =>{
-    return (dispatch) => {
-        return dispatch(receiveErrors([]))
-    }
-}
+export const clearErrors = () => (dispatch) => (dispatch(receiveErrors([]))
+    );
 
 const receiveCurrentUser = (user) => {
     return {

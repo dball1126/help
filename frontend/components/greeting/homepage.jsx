@@ -34,10 +34,28 @@ const homepage = () => {
                                        placeholder="Near Manhattan, NY"
                                        className="location-search"/>
                                 <div className="main-search-button">
-                                    <button type="submit" className="search-button">Search</button>
+                                    <button type="submit" className="search-button">
+                                        <img src="/assets/search.png" width="19" height="19"></img>
+                                    </button>
                                 </div>
                             </form>
                         </div>
+                                <nav className="main-nav-categories">
+                                    <ul className="ul-nav-categories">
+                                        <li className="cooling-services">
+                                            Heating & Air Conditioning
+                                        </li>
+                                        <li className="restaurants">
+                                            Restaurants
+                                        </li>
+                                        <li className="home-services">
+                                            Home Services
+                                        </li>
+                                        <li className="Delivery">
+                                            Deilvery
+                                        </li>
+                                    </ul>
+                                </nav>
                     </div>
                 </div>
             </div>

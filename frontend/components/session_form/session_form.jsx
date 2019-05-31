@@ -28,6 +28,10 @@ class sessionForm extends React.Component {
         };
     };
 
+    componentWillUnmount(){
+        this.props.clearErrors();
+    }
+
 
     render(){
         
@@ -74,18 +78,24 @@ class sessionForm extends React.Component {
             }
         }
 
-         const errors = this.props.errors.map((error, i) => {
-             return (
-                <div className="session-errors-container">
-                    <ul className="ul-errors-container">
-                        <li className="li-error-item" key={i}>
-                             {error}
-                        </li>
-                     </ul>
-                     <button onClick={() => this.props.clearErrors()}></button>
-                </div>
-             ) 
-         })
+         const errors = () => {
+             
+             if (this.props.errors.length > 0) {
+                return (
+                    <div className="mainErrorsContainer">
+                        <ul>
+                            {this.props.errors.map((error, i) => {
+                                return (
+                                <li key={i}>{error}</li>
+                                )
+                            })}
+                        </ul>
+                        <button onClick={() => this.props.clearErrors()}>Close</button>
+                    </div>
+                )      
+             }
+             return "";
+        }
          
          
 
@@ -111,6 +121,7 @@ class sessionForm extends React.Component {
 
 
             <div className="login-signup-container">
+                    
                 <div className="login-signup-layout">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="login-legal-data">
@@ -118,9 +129,7 @@ class sessionForm extends React.Component {
                         <div className="login-legal-saying">Connect with great local businesses</div>
                         <div className="login-legal-terms">By Continuing, you agree to view Help's reviews, pictures and content</div>
                     </div>
-
-                    <ul>{errors}</ul>
-                    
+                    {errors()}
                     {getNames()}
                         
                         <label className="email">
