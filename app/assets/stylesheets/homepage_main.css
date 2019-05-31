@@ -120,6 +120,8 @@
 .main-business-search input[type="text"] {
     width: 416px;
     height: 45px;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 
