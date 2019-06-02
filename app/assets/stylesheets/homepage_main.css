@@ -87,7 +87,7 @@
 .homepage-main-inner-inner-container .main-logo {
     margin-top: 50px;
     margin-left: 420px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     
 }
 
@@ -97,10 +97,12 @@
 }
 
 .main-logo {
-    height: 80px;
-    width: 80px;
+    background-image: url(https://i.imgur.com/khxz88S.png);
+    height: 200px;
+    width: 200px;
     background-size: 100%;
     background-position: center;
+    background-repeat: no-repeat;
     
 }
 

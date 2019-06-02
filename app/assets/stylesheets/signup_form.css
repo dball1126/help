@@ -10,6 +10,8 @@
     background: #bd1f1f;
 }
 
+
+
 .login-signup-header-container {
     width: 960px;
     margin: 0 auto;
@@ -50,7 +52,7 @@
 
 
 .login-signup-help-logo {
-    
+    background-image: url(https://i.imgur.com/khxz88S.png);
     height: 40px;
     width: 80px;
     background-size: 100%;
