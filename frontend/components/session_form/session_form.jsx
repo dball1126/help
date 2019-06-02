@@ -44,14 +44,14 @@ class sessionForm extends React.Component {
                                 placeholder='First Name'
                                 value={this.state.first_name}
                                 onChange={this.update('first_name')}
-                                className="names" />
+                                className="first-name" />
                         </label>
                         <label className="names">
                             <input type="text"
                                 placeholder='Last Name'
                                 value={this.state.last_name}
                                 onChange={this.update('last_name')}
-                                className="names" />
+                                className="last-name" />
                         </label>
                     </div>
                 )
@@ -65,7 +65,7 @@ class sessionForm extends React.Component {
         const getZip = () => {
             if (this.props.formType === 'Sign Up') {
                 return (
-                        <label className="zipcode">
+                        <label className="main-zipcode">
                             <input type="text"
                                 placeholder='Zip Code'
                                 value={this.state.zip_code}
@@ -112,7 +112,7 @@ class sessionForm extends React.Component {
                 </div>
                 <div className="processingForm-header">
                     <div className="login-signup-help-logo">
-                        <img src="/assets/help-logo.png" width="60" height="60"></img>
+                        
                     </div>
                 </div>
 
