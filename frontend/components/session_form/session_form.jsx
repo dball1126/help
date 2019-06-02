@@ -103,7 +103,6 @@ class sessionForm extends React.Component {
                     <div className="main-header-container">
                         <a href="https://help10.herokuapp.com/#/" className="main-header-link">
                             <span className="main-header-image">
-                                <img src="/assets/suitcase.png" width="18" height="18"></img>
                             </span>
                             <span className="main-header-slogan">
                                 Go to Help for Business Owners
@@ -151,7 +150,7 @@ class sessionForm extends React.Component {
                     <input type="submit" value={this.props.formType}/>
                 </form>
                 <div className="login-form-photo">
-                    <img src="/assets/picture.png" width="300" height="300"></img>
+                    <div className="login-photo"></div>
                 </div>
                 </div>
             </div>

@@ -22,7 +22,6 @@ const homepage = () => {
                     <div className="homepage-main-inner-inner-container">
                         <div className="main-logo-containter">
                             <div className="main-logo">
-                                <img src="/assets/help-logo.png" width="150" height="150"></img>
                             </div>
                         </div>
                         <div className="main-search-form">
@@ -35,7 +34,7 @@ const homepage = () => {
                                        className="location-search"/>
                                 <div className="main-search-button">
                                     <button type="submit" className="search-button">
-                                        <img src="/assets/search.png" width="19" height="19"></img>
+                                        <div className="search-image"></div>
                                     </button>
                                 </div>
                             </form>
@@ -43,19 +42,15 @@ const homepage = () => {
                             <nav className="main-nav-categories">
                                 <ul className="ul-nav-categories">
                                     <li className="cooling-services">
-                                <img src="/assets/home-heating-icon.png" width="20" height="20"></img>
                                         Heating & Air Conditioning
                                     </li>
                                     <li className="restaurants">
-                                <img src="/assets/utensil.png" width="20" height="20"></img>
                                         Restaurants
                                     </li>
                                     <li className="home-services">
-                                <img src="/assets/home-icon.png" width="20" height="20"></img>
                                         Home Services
                                     </li>
                                     <li className="Delivery">
-                                <img src="/assets/delivery-scooter.png" width="20" height="20"></img>
                                         Deilvery
                                     </li>
                                 </ul>
