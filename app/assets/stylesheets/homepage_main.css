@@ -39,7 +39,7 @@
     font-weight: 700;
     display: flex;
     font-size: 14px;
-    width: 205px;
+    width: 305px;
 }
 
 .login-signup {
@@ -71,6 +71,19 @@
     font-weight: 700;
     text-decoration: none;
 }
+
+.login-signup .demo-button {
+    width: 120px;
+    color: white;
+    line-height: 30px;
+    background-color: transparent;
+    font-family: "Helvetica Neue";
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 100%;
+    border: none;
+}
+
 .login-signup .signup a {
     color: white;
     font-family: "Helvetica Neue";
