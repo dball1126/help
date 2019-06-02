@@ -34,12 +34,7 @@ const homepage = () => {
                                        className="location-search"/>
                                 <div className="main-search-button">
                                     <button type="submit" className="search-button">
-<<<<<<< HEAD
-                                    
-                                        <img src="https://i.imgur.com/6nfeJt3.png" width="19" height="19"></img>
-=======
                                         <div className="search-image"></div>
->>>>>>> other-auth
                                     </button>
                                 </div>
                             </form>
