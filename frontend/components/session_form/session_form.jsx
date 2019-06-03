@@ -123,7 +123,7 @@ class sessionForm extends React.Component {
                         
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <div className="login-legal-data">
-                        <h3 className="login-legal-header">Sign Up for Help</h3>
+                        <h3 className="login-legal-header">Sign Up for Yap</h3>
                         <div className="login-legal-saying">Connect with great local businesses</div>
                         <div className="login-legal-terms">By Continuing, you agree to view Help's reviews, pictures and content</div>
                     </div>
