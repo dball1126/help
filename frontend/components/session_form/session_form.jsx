@@ -34,7 +34,7 @@ class sessionForm extends React.Component {
 
 
     render(){
-        
+
         const getNames = () => {
             if (this.props.formType === 'Sign Up') {
                 return (
