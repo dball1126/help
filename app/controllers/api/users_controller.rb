@@ -4,6 +4,7 @@ class Api::UsersController < ApplicationController
         @user = User.new
     end
 
+    
     def index
         @users = User.all
     end
