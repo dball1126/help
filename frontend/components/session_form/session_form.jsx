@@ -39,6 +39,7 @@ class sessionForm extends React.Component {
             if (this.props.formType === 'Sign Up') {
                 return (
                     <div className="first_and_last">
+                        <div className="first-name-div">
                         <label className="names">
                             <input type="text"
                                 placeholder='First Name'
@@ -46,6 +47,8 @@ class sessionForm extends React.Component {
                                 onChange={this.update('first_name')}
                                 className="first-name" />
                         </label>
+                        </div>
+                        <div className="last-name-div">
                         <label className="names">
                             <input type="text"
                                 placeholder='Last Name'
@@ -53,6 +56,7 @@ class sessionForm extends React.Component {
                                 onChange={this.update('last_name')}
                                 className="last-name" />
                         </label>
+                        </div>
                     </div>
                 )
             } else {
@@ -65,13 +69,15 @@ class sessionForm extends React.Component {
         const getZip = () => {
             if (this.props.formType === 'Sign Up') {
                 return (
+                    <div className="main-zipcode-div">
                         <label className="main-zipcode">
                             <input type="text"
-                                placeholder='Zip Code'
+                                placeholder='ZIP Code'
                                 value={this.state.zip_code}
                                 onChange={this.update('zip_code')}
                                 className="zipcode" />
                         </label>
+                    </div>
                 )
             }
         }
@@ -129,7 +135,7 @@ class sessionForm extends React.Component {
                     </div>
                     {errors()}
                     {getNames()}
-                        
+                        <div className="email-password-div">
                         <label className="email">
                         <input type="text"
                                placeholder='Email'
@@ -145,7 +151,7 @@ class sessionForm extends React.Component {
                                onChange={this.update('password')}
                                className="email-password"/>
                         </label>
-                      
+                        </div>
                     {getZip()}
                     <input type="submit" value={this.props.formType}/>
                 </form>
