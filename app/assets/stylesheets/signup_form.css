@@ -76,7 +76,7 @@
     height: 400px;
     margin: auto;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 131px;
 }
 
 .login-legal-header {
@@ -109,6 +109,9 @@
     border: 1px solid #999;
     width: 100%;
     padding: 5px 9px;
+    margin: 5px 0;
+    font-size: 14px;
+    font-family: "Helvetica Neue";
 
 }
 
@@ -120,6 +123,8 @@
     border: 1px solid #999;
     width: 100%;
     padding: 5px 9px;
+    font-size: 14px;
+    font-family: "Helvetica Neue";
 }
 
 .login-form-box .first_and_last {
@@ -132,22 +137,30 @@
 .login-form-box .names {
     width: 150px;
     height: 30px;
-    border-radius: 1px;
+    /* border-radius: 1px;
     box-sizing: border-box;
-    border: 0.5px solid #999;
+    border: 0.5px solid #999; */
     width: 100%;
-    
 }
 
 .login-form-box .first-name{
-    
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #999;
     padding: 5px 9px;
+    font-size: 14px;
+    font-family: "Helvetica Neue";
+    
     
 }
 
 .login-form-box .last-name{
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #999;
     padding: 5px 9px;
-    
+    font-size: 14px;
+    font-family: "Helvetica Neue";
     
     
 }
@@ -179,8 +192,8 @@
 }
 
 .login-photo {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     background-image: url(https://i.imgur.com/6ZwLKaJ.png);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -195,5 +208,46 @@
 .ul-login-signup-errors {
     width: 100%;
     color: red;
+}
+
+.email-password-div {
+    width: 300px;
+    height: 70px;
+    display: block;
+    padding: 3px 0;
+    padding-bottom: 0px;
+    
+}
+
+.email-password-div .email {
+    margin-top: 0;
+}
+.email-password-div .password {
+    margin-bottom: 0;
+}
+
+.main-zipcode-div {
+    width: 300px;
+    height: 30px;
+    padding-top: 16px;
+    font-size: 14px;
+    font-family: "Helvetica Neue";
+}
+
+.first-name-div {
+    width: 150px;
+    height: 30px;
+}
+
+.first-name-div .first-name{
+    width: 147px;
+}
+.last-name-div .last-name{
+    width: 147px;
+    padding-right: 0px;
+}
+
+.first-name-div {
+    margin-left: -1px;
 }
 
