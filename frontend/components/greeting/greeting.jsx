@@ -5,7 +5,7 @@ const Greeting = ({logout, currentUser, demoLogin}) => {
     const sessionLinks = () => (
         <ul className="login-signup">
             <li className="login"><Link to="/login">Log In</Link></li>
-            <li className="signup"><Link to="/signup">Sign up</Link></li>
+            <Link to="/signup" className="signup">Sign up</Link>
             <li><button className="demo-button" onClick={demoLogin}>Demo Log in</button></li>
         </ul>
     );
