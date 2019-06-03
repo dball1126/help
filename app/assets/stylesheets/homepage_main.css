@@ -130,6 +130,41 @@
     padding-top: 30px;
 }
 
+.searchbar-left .searchbar-right {
+    position: relative;
+}
+
+.searchbar-left label .input-searchbar-left,
+.searchbar-right label .input-searchbar-right{
+    width: 100%;
+}
+
+.searchbar-left:after,
+.searchbar-right:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    bottom: 9px;
+    width: 1px;
+    background-color: white;
+
+}
+
+.searchbar-left-inside .searchbar-right-inside {
+    display: flex;
+}
+
+.find-searchbar-left .input-searchbar-left {
+    background-color: white;
+    padding: 12px;
+    font-size: 18px;
+    float: right;
+    margin-right: 100px;
+}
+
+
+
 .main-business-search {
     width: 960px;
     height: 63px;
@@ -145,11 +180,22 @@
 }
 
 
+
 .business-search {
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid #999;
+    padding: 5px 65px;
 }
+
+.location-search {
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    padding: 5px 65px;
+
+}
+
 
 .location-search {
     border-radius: 3px;
@@ -170,13 +216,16 @@
     background-color: #D32323;
     color: #D32323;
     line-height: 1.5em;
+    
     border-radius: 0 4px 4px 0;
+    border: 0;
     vertical-align: middle;
     overflow: hidden;
     background-image: url(https://i.imgur.com/6nfeJt3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
+    
 }
 
 
@@ -253,3 +302,37 @@
 .signup {
     color: white;
 }
+
+.find-searchbar-left {
+    font-weight: 700;
+    color: #666;
+}
+
+.near-searchbar-right {
+    font-weight: 700;
+    color: #666;
+}
+
+.near-searchbar-right {
+    margin-right: -56px;
+    color: #666;
+    position: relative;
+    font: inherit;
+    font-size: 18px;
+    vertical-align: baseline;
+    line-height: 2.6;
+    font-weight: 700;
+}
+
+.find-searchbar-left {
+    margin-right: -56px;
+    color: #666;
+    position: relative;
+    font: inherit;
+    font-size: 18px;
+    vertical-align: baseline;
+    line-height: 2.6;
+    font-weight: 700;
+
+}
+
