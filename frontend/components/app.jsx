@@ -6,7 +6,8 @@ import { AuthRoute, Protectedroute } from '../util/route_util';
 import Homepage from './greeting/homepage';
 import Banner from './greeting/top_banner';
 import BusinessShowContainer from './business_show/business_show_container';
-import BusinessIndexContainer from './business_index/business_index_container';
+import BusinessIndexContainer from './business/business_index_container';
+
 const App = () => {
     return (
         <div>

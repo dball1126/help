@@ -1,18 +1,23 @@
-import {fetchBusiness} from '../../actions/business_actions';
+import {fetchBusiness, fetchBusinesses} from '../../actions/business_actions';
 import BusinessShow from './business_show';
 import {connect} from 'react-redux';
 
 
-const mapStateToProps = (state, ownprops) => {
-    const business = state.entities.businesses[ownprops.match.params.businessId];
+const mapStateToProps = (state, ownProps) => {
+    
+    const businessId = parseInt(ownProps.match.params.businessId);
+    const business = state.entities.businesses[businessId];  //INVESTIGATE
+    
     return {
-        business: business
+        business,
+        businessId
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchBusiness: (id) => dispatch(fetchBusiness(id))
+       
     }
 }
 

@@ -1,29 +1,29 @@
 import React from 'react';
-
+import Search from '../search/search';
+import Banner from '../greeting/top_banner';
 class BusinessShow extends React.Component {
     constructor(props){
         super(props);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     componentDidMount(){
         
-        this.props.fetchBusiness(this.props.match.params.businessId)
+        this.props.fetchBusiness(this.props.businessId);
     }
 
-    handleSubmit(e){
-        e.preventDefault();
-    }
+    
 
     render(){
-        
+        const business = this.props.business || "";
+
         return (
-            <div className="business-show-main-container">
+            <div>
+                <Banner />
+                <Search />
                 <ul className="ul-business-info">
-                    <li>{this.props.business}</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>HELLO</li>
+                    <li>{business.name}</li>
+                    <li>{}</li>
                 </ul>
             </div>
         );

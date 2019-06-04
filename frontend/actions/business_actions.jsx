@@ -20,16 +20,16 @@ export const fetchBusiness = (id) => {
 };
 
 
-const receiveBusinesses = (businesses) => {
-    return {
+const receiveBusinesses = ({businesses}) => {
+        return {
         type: RECEIVE_ALL_BUSINESSES,
         businesses: businesses
-    }
-}
+        }
+};
 
-const receiveBusiness = (business) => {
+const receiveBusiness = ({business}) => {
     return {
         type: RECEIVE_BUSINESS,
         business: business
     }
-}
+};
