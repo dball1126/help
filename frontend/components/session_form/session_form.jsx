@@ -121,7 +121,7 @@ class sessionForm extends React.Component {
                     <div className="login-legal-data">
                         <h3 className="login-legal-header">Sign Up for Yap</h3>
                         <div className="login-legal-saying">Connect with great local businesses</div>
-                        <div className="login-legal-terms">By Continuing, you agree to view Help's reviews, pictures and content</div>
+                        <div className="login-legal-terms">By continuing, you agree to view Yap's reviews, pictures and content.</div>
                     </div>
                     {errors()}
                     {getNames()}
