@@ -1,6 +1,6 @@
 import GreetingContainer from './greeting_container';
 import React from 'react';
-import Search from '../search/search';
+import MainSearch from '../search/main_search';
 
 const homepage = () => {
     
@@ -25,7 +25,7 @@ const homepage = () => {
                             <div className="main-logo">
                             </div>
                         </div>
-                        <Search />
+                        <MainSearch />
                             <nav className="main-nav-categories">
                                 <ul className="ul-nav-categories">
                                     <li className="cooling-services">

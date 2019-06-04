@@ -1,6 +1,7 @@
 .business-show-header {
     background: #d32323;
-    padding: 12px 0;
+    padding-top: 12px;
+    padding-bottom: 14px;
     position: relative;
     z-index: 6;
 }
@@ -10,8 +11,8 @@
     height: 40px;
     display: flex;
     justify-content: center;
-    margin-left: -18px;
-    margin-right: -18px;
+    margin-left: 97px;
+    margin-right: 97px;
     border-spacing: 18px 0;
     border-collapse: separate;
     display: flex;
@@ -23,11 +24,14 @@
     height: 40px;
     width: 80px;
     background-size: 100%;
+    margin-right: 20px;
 }
 
 .business-search-container {
     width: 703px;
     height: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .business-show-search {
@@ -96,24 +100,49 @@
 .business-show-search-button {
     width: 54px;
     height: 36px;
-    margin: 0px -3px;
+    margin-left: -25px;
     background: #d32323;
     border: 1px solid #bd1f1f;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .search-button-business-show {
     vertical-align: middle;
     width: 100%;
     height: 100%;
-    background-image: url(https://i.imgur.com/6nfeJt3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+    background: #BD1F1F;
+    border: 1px solid #bd1f1f;
+    border-radius: 3px;
 }
 
 .business-show-search-image{
-    
-   
-   
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.imgur.com/6nfeJt3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:50%;
+}
+
+.business-show-search-left .searchbar-left-inside {
+    width: 321px;
+    height: 36px;
+    margin-top: -5px;
+}
+
+.business-show-search-right .searchbar-right-inside {
+    width: 321px;
+    height: 36px;
+    margin-top: -5px;
+}
+
+.business-show-search-left .searchbar-left-inside .business-search {
+    width: 321px;
+    height: 36px;
+    margin-left: 10px;
+}
+.business-show-search-right .searchbar-right-inside .location-search {
+    width: 321px;
+    height: 36px;
 }

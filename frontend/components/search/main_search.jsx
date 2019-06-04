@@ -1,6 +1,6 @@
 import React from 'react';
 
-const search = () => {
+const mainSearch = () => {
     return (
             <div className="main-search-form">
                 <form method="get" className="main-business-search">
@@ -38,4 +38,4 @@ const search = () => {
     );
 }
 
-export default search;
+export default mainSearch;
