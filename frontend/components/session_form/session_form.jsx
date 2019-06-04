@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-
+import RedBanner from '../greeting/top_banner_red';
 class sessionForm extends React.Component {
     constructor(props){
         super(props);
@@ -105,17 +105,7 @@ class sessionForm extends React.Component {
 
         return (
             <div>
-                 <div className="login-signup-header">
-                    <div className="main-header-container">
-                        <a href="https://help10.herokuapp.com/#/" className="main-header-link">
-                            <span className="main-header-image-signup">
-                            </span>
-                            <span className="main-header-slogan">
-                                Go to Help for Business Owners
-                            </span>
-                        </a>
-                    </div>
-                </div>
+                 <RedBanner />
                 <div className="processingForm-header">
                     <div className="login-signup-help-logo">
                         
