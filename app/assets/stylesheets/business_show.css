@@ -173,13 +173,21 @@
     display: flex;
     justify-content: space-evenly;
     color: #333333;
-    font-size: 100%;
+    font-size: 14px;
     font-family:"Helvetica Neue";
+    font-weight: 500;
+    
 }
 
 .categories-restaurants {
     width: 157px;
     height: 40px;
+    border: 1px solid #e6e6e6;
+}
+
+.ul-categories-business-show li {
+    text-align: center;
+    border: 1px solid #e6e6e6;
 }
 
 .ul-categories-business-show span {
@@ -188,29 +196,35 @@
 .categories-home-services {
     width: 175px;
     height: 40px;
+    
 }
 
 .categories-auto-services {
     width: 168px;
     height: 40px;
+    
 }
 
 .categories-more {
     width: 91px;
     height: 40px;
+    
 }
 
 .categories-separator {
     width: 50px;
     height: 40px;
+    
 }
 
 .categories-review {
     width: 156px;
     height: 40px;
+    
 }
 
 .categories-business {
     width: 159px;
     height: 40px;
+    
 }
