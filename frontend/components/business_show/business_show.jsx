@@ -55,7 +55,8 @@ class BusinessShow extends React.Component {
                     <div className="business-content-container">
                         <div className="actual-business-header">
                             <div className="business-name-header">
-                                <div className="business-name">{business.name}</div>
+                                <div className="business-name">{business.name}
+                                </div>
                                     <div className="business-ratings">
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
@@ -72,10 +73,19 @@ class BusinessShow extends React.Component {
                                     <button className="save-button">Save</button>
                                 </div>
                             </div>
+                        <div className="business-show-sub-header">
+                            <div className="business-show-map">
+                                <div className="image-placeholder">
+
+                                </div>
+                            </div>
+                            <div className="business-pictures-container">
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                    
-                
             </div>
         );
     }
