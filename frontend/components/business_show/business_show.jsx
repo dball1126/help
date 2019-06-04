@@ -38,7 +38,19 @@ class BusinessShow extends React.Component {
                         </div>
                     </div>
                 </div>
-                
+                <div className="categories-main-header">
+                    <div className="business-show-categories-container">
+                        <ul className="ul-categories-business-show">
+                            <li className="categories-restaurants"><span className="restaurants">Restaurants</span></li>
+                            <li className="categories-home-services"><span>Home Services</span></li>
+                            <li className="categories-auto-services"><span>Auto Services</span></li>
+                            <li className="categories-more"><span>More</span></li>
+                            <li className="categories-separator"></li>
+                            <li className="categories-review"><span>Write a Review</span></li>
+                            <li className="categories-business"><span>For Businesses</span></li>
+                        </ul>
+                    </div>
+                </div>
                     
                     
                 
