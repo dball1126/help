@@ -51,14 +51,31 @@ class BusinessShow extends React.Component {
                         </ul>
                     </div>
                 </div>
-                    
+                <div className="business-main-content-container">
+                    <div className="business-content-container">
+                        <div className="actual-business-header">
+                            <div className="business-name-header">
+                                <div className="business-name">{business.name}</div>
+                                    <div className="business-ratings">
+                                        <span className="fa fa-star"></span>
+                                        <span className="fa fa-star"></span>
+                                        <span className="fa fa-star"></span>
+                                        <span className="fa fa-star"></span>
+                                        <span className="fa fa-star"></span>
+                                        <span className="reviews-count"> 0 reviews</span>
+                                    </div>
+                                </div>
+                                <div className="business-review-header">
+                                    <button className="write-a-review-button">Write a Review</button>
+                                    <button className="add-photo-button">Add Photo</button>
+                                    <button className="share-photo-button">Share</button>
+                                    <button className="save-button">Save</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
                     
                 
-                <ul className="ul-business-info">
-                    <li>HELLO</li>
-                    <li>{business.name}</li>
-                    <li>{}</li>
-                </ul>
             </div>
         );
     }
