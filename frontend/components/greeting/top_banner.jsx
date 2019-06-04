@@ -10,7 +10,7 @@ const banner = () => {
                     
                 </span>
                 <span className="main-header-slogan">
-                    Go to Help for Business Owners
+                    Go to Yap for Business Owners
                 </span>
             </a>
         </div>

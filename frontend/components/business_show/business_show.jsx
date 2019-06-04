@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../search/search';
-import Banner from '../greeting/top_banner';
+import RedBanner from '../greeting/top_banner_red';
 class BusinessShow extends React.Component {
     constructor(props){
         super(props);
@@ -18,8 +18,12 @@ class BusinessShow extends React.Component {
 
         return (
             <div>
-                <Banner />
-                <Search />
+                <RedBanner />
+                
+                
+                    <Search />
+                    
+                
                 <ul className="ul-business-info">
                     <li>HELLO</li>
                     <li>{business.name}</li>
