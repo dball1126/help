@@ -4,6 +4,8 @@ class User < ApplicationRecord
     validates :zip_code, length:{minimum: 5}
     
     attr_reader :password
+    has_many :reviews
+
     after_initialize :ensure_session_token
 
     def self.find_by_credentials(email, password)

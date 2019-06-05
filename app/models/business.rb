@@ -3,4 +3,6 @@ class Business < ApplicationRecord
     :phone_number, :website, :latitude, :longitude, presence: true
 
     has_many_attached :images
+
+    has_many :reviews
 end
