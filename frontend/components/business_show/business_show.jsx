@@ -17,8 +17,26 @@ class BusinessShow extends React.Component {
 
     render(){
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
-        website: "", latitude: "", longitute: ""}
+        website: "", latitude: "", longitude: "", imageLinks: [""]}
         const business = this.props.business || defaultBusiness;
+
+        const images = () => {
+            if (!business.imageLinks){
+                return "";
+            }   else {
+                return (
+                    <div>
+                        <ul className="ul-images">
+                            {business.imageLinks.map((image, i) => {
+                                return (
+                                    <li key={i}><img src={image} className="image"></img></li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                )
+            }
+        }
 
         return (
             <div>
@@ -85,7 +103,9 @@ class BusinessShow extends React.Component {
                                 </div>
                             </div>
                             <div className="business-pictures-container">
-
+                                <div className="business-pictures-showcase">
+                                    {images()}
+                                </div>
                             </div>
                         </div>
 

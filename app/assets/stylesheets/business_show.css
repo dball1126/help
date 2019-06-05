@@ -339,6 +339,8 @@
 .business-show-sub-header {
     width: 960px;
     height: 333px;
+    display: flex;
+    
 }
 
 .business-show-map {
@@ -351,6 +353,18 @@
 .business-pictures-container {
     width: 660px;
     height: 333px;
+}
+
+.business-pictures-showcase {
+    width: 660px;
+    height: 220px;
+    padding-top: 50px;
+}
+
+.ul-images {
+    width: 660px;
+    height: 220px;
+    display: flex;
 }
 
 .image-placeholder {
@@ -373,4 +387,9 @@
     font-family: "Helvetica Neue";
     font-weight: bold;
     
+}
+
+.image {
+    width: 220px;
+    height: 220px;
 }
