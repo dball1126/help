@@ -14,7 +14,11 @@ business3 = Business.create(name: "L & B Spumoni Gardens", state: "NY", city: "B
 # business3.images.attach(io: File.open('./app/assets/images/spumoni1.jpg'), filename: 'spumoni1.jpg')
 # business3.images.attach(io: File.open('./app/assets/images/spumoni2.jpg'), filename: 'spumoni2.jpg')
 # business3.images.attach(io: File.open('./app/assets/images/spumoni3.jpg'), filename: 'spumoni3.jpg')
-file = open('https://yap-dev.s3.amazonaws.com/spumoni3.jpg')
+file1 = open('https://yap-dev.s3.amazonaws.com/spumoni1.jpg')
+business3.images.attach(io: file, filename: 'spumoni3.jpg')
+file2 = open('https://yap-dev.s3.amazonaws.com/spumoni2.jpg')
+business3.images.attach(io: file, filename: 'spumoni3.jpg')
+file3 = open('https://yap-dev.s3.amazonaws.com/spumoni3.jpg')
 business3.images.attach(io: file, filename: 'spumoni3.jpg')
 
 
