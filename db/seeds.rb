@@ -10,6 +10,6 @@ business1 = Business.create(name: "Joe's Pizza", state: "NY", city: "New York", 
 business2 = Business.create(name: "CAVA", state: "NY", city: "New York", zipcode: 10018, address: "1385 Broadway", phone_number: "(718)502-9282", website: "www.cava.com", latitude: "40.752789", longitude: "-73.987862")
 business3 = Business.create(name: "L & B Spumoni Gardens", state: "NY", city: "Brooklyn", zipcode: 11223, address: "2725 86th St", phone_number: "(718)449-1230", website: "www.spumonigardens.com", latitude: "40.594710", longitude: "-73.981340")
 
-business3.images.attach(io: File.open('./app/assets/images/spumoni1.jpg'), filename: 'spumoni1.jpg')
+bus.images.attach(io: File.open('./app/assets/images/spumoni1.jpg'), filename: 'spumoni1.jpg')
 business3.images.attach(io: File.open('./app/assets/images/spumoni2.jpg'), filename: 'spumoni2.jpg')
 business3.images.attach(io: File.open('./app/assets/images/spumoni3.jpg'), filename: 'spumoni3.jpg')
