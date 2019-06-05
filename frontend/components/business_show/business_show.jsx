@@ -76,7 +76,12 @@ class BusinessShow extends React.Component {
                         <div className="business-show-sub-header">
                             <div className="business-show-map">
                                 <div className="image-placeholder">
-
+                                </div>
+                                <div className="address-box">
+                                    <span className="full-address">{business.address}</span><br />
+                                    <span className="full-address">{business.city}, {business.state} {business.zipcode}</span><br />
+                                    <span>{business.phone_number}</span><br />
+                                    <span><Link to={business.website}>{business.website}</Link></span>
                                 </div>
                             </div>
                             <div className="business-pictures-container">
