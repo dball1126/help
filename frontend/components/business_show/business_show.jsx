@@ -115,10 +115,14 @@ class BusinessShow extends React.Component {
                     <div className="business-bottom-inner-container">
                         <div className="business-secion-container">
                             <div className="business-left-section">
+                                <div className="review-highlights">
 
+                                </div>
                             </div>
                             <div className="business-right-section">
+                                <div className="order-food">
 
+                                </div>
                             </div>
                         </div>
                     </div>
