@@ -393,3 +393,24 @@
     width: 220px;
     height: 220px;
 }
+
+.business-bottom-container {
+    width: 990px;
+
+}
+
+.business-bottom-inner-container {
+    width: 960px;
+}
+
+.business-secion-container {
+    width: 990px;
+}
+
+.business-left-section {
+    width: 660px;
+}
+
+.business-right-section {
+    width: 329px;
+}
