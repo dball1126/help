@@ -317,7 +317,7 @@
     color: #666666;
     background: #ffffff;
     font-size: 12px;
-   border-radius: 1px;
+    border-radius: 4px 0px 0px 4px;
     
 }
 
@@ -333,7 +333,7 @@
     width: 63.14;
     height: 30.91px;
     font-size: 12px;
-    border-radius: 1px;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .business-show-sub-header {
@@ -414,6 +414,7 @@
 .business-left-section {
     width: 660px;
     float: left;
+    margin-left: 15px;
 }
 
 .review-highlights {
@@ -430,9 +431,10 @@
 }
 
 .order-food {
-    width: 299.98px;
-    height: 264.88px;
+    width: 273.98px;
+    height: 242.88px;
     padding: 11px;
+    padding-right: 15px;
     margin-bottom: 18px;
     background: #FFFFFF;
     border: 1px solid #e6e6e6;
@@ -480,5 +482,136 @@
     padding-left: 10px;
 }
 
+.order-options {
+    width: 275.98px;
+    height: 62px;
+    margin-bottom: 18px;
+}
 
+.ul-order-option {
+    width: 273.98;
+    height: 60px;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    border-radius: 4px;
+}
 
+.free-delivery{
+    font-size: 12px;
+    width: 91.66px;
+    height: 60px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    font-family:"Helvetica Neue";
+    font-weight: bold;
+}
+
+.delivery-span-box {
+    padding-top: 12px;
+}
+.delivery-span-box span {
+    line-height: 17px;
+}
+
+.delivery-min {
+    width: 91.66px;
+    height: 60px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+
+.delivery-min-span-box{
+    padding-top: 12px;
+}
+
+.delivery-min-span-box span:first-child{
+   font-family:"Helvetica Neue";
+    font-size: 12px;
+}
+
+.delivery-min-span-box span:nth-child(3){
+    font-family:"Helvetica Neue";
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.delivery-min-span-box span {
+    line-height: 17px;
+}
+
+.arrives{
+    width: 90.66px;
+    height: 60px;
+    text-align: center;
+}
+
+.arrives-box{
+    padding-top: 12px;
+}
+
+.arrives-box span:first-child{
+    font-family:"Helvetica Neue";
+    font-size: 12px;
+}
+
+.arrives-box span:nth-child(3){
+    font-family:"Helvetica Neue";
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.arrives-box span {
+    line-height: 17px;
+}
+
+.delivery-address-box {
+    width: 275.98px;
+    height: 53px;
+    
+}
+
+.delivery-address-header{
+    width: 263.98px;
+    height: 17px;
+    font-size: 14px;
+    font-family:"Helvetica Neue";
+    margin: 6px;
+    color: #333333;
+    font-weight: bold;
+
+}
+
+.actual-address{
+    width: 275.98px;
+    height: 30px;
+    margin-bottom: 6px;
+}
+
+.input-actual-address{
+    width: 253.98px;
+    height: 30px;
+    background: #ffffff;
+    padding: 0px 9px;
+    margin: 0px 0px 6px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.start-order {
+    width: 275.98px;
+    height: 30px;
+}
+.start-order-button{
+    width: 275.98px;
+    height: 30px;
+    background: #41A700;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family:"Helvetica Neue";
+}
+
+.write-a-review-button .star:first-child{
+    padding-right:5px;
+}

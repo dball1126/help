@@ -85,7 +85,8 @@ class BusinessShow extends React.Component {
                                     </div>
                                 </div>
                                 <div className="business-review-header">
-                                    <button className="write-a-review-button">Write a Review</button>
+                                <button className="write-a-review-button">
+                                    <span className="star" >&#9733;</span>Write a Review</button>
                                     <button className="add-photo-button">Add Photo</button>
                                     <button className="share-photo-button">Share</button>
                                     <button className="save-button">Save</button>
@@ -136,9 +137,43 @@ class BusinessShow extends React.Component {
                                             </label>
                                         </div>
                                         <div className="order-options">
+                                            <ul className="ul-order-option">
+                                                <li className="free-delivery">
+                                                    <div className="delivery-span-box">
+                                                    <span>Free</span><br />
+                                                    <span>Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li className="delivery-min">
+                                                    <div className="delivery-min-span-box">
+                                                        <span>Delivery Min</span><br />
+                                                        <span>$20</span>
+                                                    </div>
+                                                </li>
+                                                <li className="arrives">
+                                                    <div className="arrives-box">
+                                                        <span>Arrives in</span><br />
+                                                        <span>55-65 Mins</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="delivery-address-box">
+                                            <div className="delivery-address-header">
+                                                <span>Delivery Address</span>
+                                            </div>
+                                            <div className="actual-address">
+                                                <label>
+                                                    <input type="text" placeholder='1 Yap St., New York, NY 11212' className="input-actual-address"/>
+                                            </label>
+                                            <div className="start-order">
+                                                <button className="start-order-button">Start Order</button>
+                                            </div>
 
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
