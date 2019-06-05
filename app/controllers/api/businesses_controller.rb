@@ -10,7 +10,7 @@ class Api::BusinessesController < ApplicationController
     end
 
     def create
-        @business = Business.create(business_params)
+        @business = Business.create!(business_params)
         render :show
     end
 
