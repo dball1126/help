@@ -121,7 +121,24 @@ class BusinessShow extends React.Component {
                             </div>
                             <div className="business-right-section">
                                 <div className="order-food">
+                                    <div className="order-food-header">
+                                        <h3>Order Food</h3>
+                                    </div>
+                                    <div className="make-order-box">
+                                        <div className="option-selection">
+                                            <label className="delivery-radio">
+                                                <input type="radio" checked />
+                                                <span>Delivery</span>
+                                            </label>
+                                            <label className="takeout-radio">
+                                                <input type="radio"/>
+                                                <span>Takeout</span>
+                                            </label>
+                                        </div>
+                                        <div className="order-options">
 
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
