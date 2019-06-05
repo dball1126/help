@@ -209,7 +209,8 @@
 .main-search-button {
     width: 65px;
     height: 45px;
-    
+    padding-top: 1px;
+    margin-left: -2px;
     
 }
 
