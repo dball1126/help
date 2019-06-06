@@ -1,10 +1,13 @@
 class Review < ApplicationRecord
     validates :content, :rating, presence: true
 
-    belongs_to :business
-    
-    belongs_to :author,
+    belongs_to :business,
         primary_key: :id,
-        foreign_key: :user_id,
+        foreign_key: :business_id,
+        class_name: :Business
+    
+    belongs_to :user,
+        primary_key: :id,
+        foreign_key: :author_id,
         class_name: :User
 end
