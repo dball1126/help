@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {selectBusinessReviews, selectBusiness} from '../../reducers/selectors';
 // import { fetchReviews} from '../../actions/review_actions';
 const mapStateToProps = (state, ownProps) => {
-    const businessId = ownProps.match.params.businessId;
+    const businessId = parseInt(ownProps.match.params.businessId);
     const business = selectBusiness(state.entities, businessId);
     // const business = state.entities.businesses[businessId] || {reviews: []};  //INVESTIGATE
     

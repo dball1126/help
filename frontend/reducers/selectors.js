@@ -1,8 +1,8 @@
 export const selectBusiness = ({businesses}, businessId) => {
-    return businesses[businessId] || { review_ids: [] }
+    return businesses[businessId] || { reviewIds: [] }
 }
 
 export const selectBusinessReviews = ({reviews}, business) => {
     
-    return business.review_ids.map(reviewId => reviews[reviewId]);
+    return business.reviewIds.map(reviewId => reviews[reviewId]);
 }
