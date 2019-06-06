@@ -3,24 +3,44 @@ import Search from '../search/main_search';
 import RedBanner from '../greeting/top_banner_red';
 import {Link} from 'react-router-dom';
 import BusinessShowSearch from '../search/business_show_search';
+import ReviewListContainer from './review_list_container';
 class BusinessShow extends React.Component {
     constructor(props){
         super(props);
+        debugger
     }
 
     componentDidMount(){
         
         this.props.fetchBusiness(this.props.businessId);
+        // const test = this.props.fetchReviews();
+        // console.log(test);
+        debugger
     }
 
     
 
     render(){
+
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
         website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
 
         const reviewButton = `/businesses/${this.props.businessId}/review`;
+        debugger
+        const reviews = () => {
+            if(!this.props.reviews) return "";
+        this.props.reviews.map(review => {               
+                return (
+                    <div>
+                        <ReviewListContainer key={review.id} 
+                                             review={review}
+                                             business={this.props.business} />
+                    </div>
+                )
+            })
+        }
+        
 
         const images = () => {
             if (!business.imageLinks){
@@ -151,8 +171,8 @@ class BusinessShow extends React.Component {
                                                 <span>English (3454)</span>
                                             </div>
                                         </div>
-
                                     </div>
+                                   
                                 </div>
                             </div>
                             <div className="business-right-section">
