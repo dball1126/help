@@ -14,6 +14,9 @@ const App = () => {
              <Route exact path ='/' component={Banner} />
              <Route exact path ='/' component={Homepage} />
              <Route exact path ='/businesses' component={BusinessIndexContainer} />
+             <Route exact path ='/reviews/:new' />
+             <Route exact path ='/reviews/:reviewId' />
+             <Route exact path ='/reviews/:reviewId/:edit' />
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
              <AuthRoute exact path="/login" component={LoginformContainer} />
