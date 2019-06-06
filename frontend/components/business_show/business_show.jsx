@@ -124,7 +124,27 @@ class BusinessShow extends React.Component {
                             <div className="business-left-section">
                                 <div className="review-highlights">
                                     <div className="review-highlights-header">
-                                        <span>Recommended Reviews</span>
+                                        <div className="review-highlights-header-text">
+                                            <span>Recommended Reviews</span>
+                                        </div>
+                                        <div className="review-trust-banner">
+                                            <div className="trust-banner-data">
+                                                <span>Your trust is our top concern,</span>
+                                                <span>so businesses can't pay to alter or remove their reviews</span>
+                                                <a href="">Learn more.</a>
+                                            </div>
+                                        </div>
+                                        <div className="trust-banner-search">
+                                            <div className="trust-search-bar">
+                                                <input type="text" placeholder="Search within Reviews" className="trust-search-input"/>
+                                                <div className="trust-search-button">
+                                                    <button className="trust-button-img">
+                                                        <div className="trust-button-img-div"></div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
