@@ -16,6 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         fetchBusiness: (id) => dispatch(fetchBusiness(id)),
+       
     }
 }
 

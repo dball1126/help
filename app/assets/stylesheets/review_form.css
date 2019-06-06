@@ -1,0 +1,46 @@
+.review-banner {
+    background: #d32323;
+    
+   
+    position: relative;
+    height: 64px;
+}
+
+.review-banner-container{
+    
+    margin: 0 auto;
+}
+
+.reivew-banner-inner-container {
+    width: 996px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    padding: 12px 12px
+}
+
+.review-logo {
+    width: 80px;
+    height: 40px;
+    background-image: url(https://i.imgur.com/khxz88S.png);
+    
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.write-a-review-header {
+    width: 142px;
+    height: 40px;
+    font-size: 20px;
+    font-family: "Helvetica Neue";
+    color: #ffffff;
+    vertical-align: middle;
+    margin-left: 12px;
+    text-align: center;
+    font-weight: 450;
+}
+
+.write-a-review-header span{
+    line-height: 41px;
+}

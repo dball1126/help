@@ -20,6 +20,8 @@ class BusinessShow extends React.Component {
         website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
 
+        const reviewButton = `/businesses/${this.props.businessId}/review`;
+
         const images = () => {
             if (!business.imageLinks){
                 return "";
@@ -85,8 +87,12 @@ class BusinessShow extends React.Component {
                                     </div>
                                 </div>
                                 <div className="business-review-header">
+
                                 <button className="write-a-review-button">
-                                    <span className="star" >&#9733;</span>Write a Review</button>
+                                    <span className="star" >&#9733;</span>
+                                    <Link to={reviewButton} >Write A Review</Link>
+                                    </button>
+
                                     <button className="add-photo-button">Add Photo</button>
                                     <button className="share-photo-button">Share</button>
                                     <button className="save-button">Save</button>
