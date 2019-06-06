@@ -44,3 +44,100 @@
 .write-a-review-header span{
     line-height: 41px;
 }
+
+.review-main-container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.review-container{
+    max-width: 996px;
+    margin: 0 auto;
+    display: block;
+}
+
+.left-review-container{
+    max-width: 625px;
+}
+
+.business-review-header{
+    
+    width: 673px;
+    height: 84px;
+    padding-bottom: 12px;
+    display: flex;
+    
+}
+
+.review-business-name{
+    width: 408px;
+    
+}
+
+.guidelines{
+    width: 217px;
+    
+}
+
+.review-form-container{
+    width: 625px;
+    height: 492px;
+}
+
+.review-form{
+    width: 625px;
+    height: 384px;
+    padding: 18px;
+    border: 1px solid #ccc;
+    cursor: text;
+    border-radius: 4px;
+}
+
+.review-button-box{
+    width: 625px;
+    height: 84px;
+    margin: 24px 0px 0px;
+}
+
+.review-buttin-inner{
+   
+}
+
+.actual-review-button{
+    width: 240px;
+    height: 48px;
+    align-items: flex-start;
+    background: #d32323;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.rating-data{
+    width: 587px;
+    height: 30px;
+    
+}
+
+.content-data{
+    width: 587px;
+    height: 258px;
+    border: 0;
+    resize: none;
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    color: #333333;
+}
+
+.star-box{
+    height: 30px;
+    width: 30px;
+}
+
+.ul-field-rating{
+    width: 587px;
+    height: 30px;
+    display: flex;
+}

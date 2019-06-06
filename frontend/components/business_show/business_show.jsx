@@ -123,7 +123,9 @@ class BusinessShow extends React.Component {
                         <div className="business-secion-container">
                             <div className="business-left-section">
                                 <div className="review-highlights">
-
+                                    <div className="review-highlights-header">
+                                        <span>Recommended Reviews</span>
+                                    </div>
                                 </div>
                             </div>
                             <div className="business-right-section">
