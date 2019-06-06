@@ -143,6 +143,13 @@ class BusinessShow extends React.Component {
                                                     </button>
                                                 </div>
                                             </div>
+                                            <div className="yap-sort">
+                                                <span>Sort by Yap Sort</span>
+                                            </div>
+                                            <div className="yap-language">
+                                                <span>Language</span>
+                                                <span>English (3454)</span>
+                                            </div>
                                         </div>
 
                                     </div>

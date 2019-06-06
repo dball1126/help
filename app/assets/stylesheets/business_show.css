@@ -447,6 +447,7 @@
 .trust-banner-search {
     height: 55px;
     width: 600px;
+    display: flex;
 }
 
 .trust-search-bar{
@@ -486,6 +487,16 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size:50%;
+}
+
+.yap-sort{
+    width: 130px;
+    height: 36px;
+}
+
+.yap-language{
+    width: 158px;
+    height: 36px;
 }
 
 .business-right-section {

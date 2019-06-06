@@ -1,6 +1,7 @@
 import {fetchBusiness, fetchBusinesses} from '../../actions/business_actions';
 import BusinessShow from './business_show';
 import {connect} from 'react-redux';
+import {selectBusinessReviews} from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
     
