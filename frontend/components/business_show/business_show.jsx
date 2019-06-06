@@ -17,7 +17,7 @@ class BusinessShow extends React.Component {
 
     render(){
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
-        website: "", latitude: "", longitude: "", imageLinks: [""]}
+        website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
 
         const images = () => {
