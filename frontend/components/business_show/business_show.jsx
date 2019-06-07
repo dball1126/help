@@ -33,7 +33,7 @@ class BusinessShow extends React.Component {
             } else {
                 return (
                 <div>
-                    <ul>
+                    <ul className="ul-business-show-review">
                         {business.reviews.map(review => {
                             return (
                             <ReviewListContainer key={review.id}
@@ -170,8 +170,8 @@ class BusinessShow extends React.Component {
                                                 </div>
                                             </div>
                                             <div className="yap-sort">
-                                                <span className="sort-by-language">Sort by</span> 
-                                                <span className=""> Yap Sort</span>
+                                                <span className="">Sort by</span> 
+                                                <span className="sort-by-language"> Yap Sort</span>
                                             </div>
                                             <div className="yap-language">
                                                 <span>Language</span>
@@ -192,7 +192,7 @@ class BusinessShow extends React.Component {
                                     <div className="make-order-box">
                                         <div className="option-selection">
                                             <label className="delivery-radio">
-                                                <input type="radio" checked />
+                                                <input type="radio" defaultChecked />
                                                 <span>Delivery</span>
                                             </label>
                                             <label className="takeout-radio">
