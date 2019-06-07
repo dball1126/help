@@ -4,5 +4,8 @@ class Business < ApplicationRecord
 
     has_many_attached :images
 
-    has_many :reviews
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :business_id,
+        class_name: :Review
 end

@@ -41,11 +41,22 @@ const homepage = () => {
                                         Deilvery
                                     </li>
                                 </ul>
-                            </nav>
                             <div className="main-header-credits">
                                 <div className="business-credit">Pancake Man</div>
                                 <div className="name-credit">Photo by Johanna L</div>
                             </div>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div className="homepage-main-footer-container">
+                <div className="homepage-footer-inner-container">
+                    <div className="footer-content-wrapper">
+
+                    </div>
+                    <div className="footer-img-wrapper">
+                        <div className="footer-img"></div>
                     </div>
                 </div>
             </div>

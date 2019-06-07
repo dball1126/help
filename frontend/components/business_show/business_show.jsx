@@ -3,22 +3,50 @@ import Search from '../search/main_search';
 import RedBanner from '../greeting/top_banner_red';
 import {Link} from 'react-router-dom';
 import BusinessShowSearch from '../search/business_show_search';
+import ReviewListContainer from './review_list_container';
 class BusinessShow extends React.Component {
     constructor(props){
         super(props);
+        
     }
 
     componentDidMount(){
         
         this.props.fetchBusiness(this.props.businessId);
+        
     }
 
     
 
     render(){
+
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
-        website: "", latitude: "", longitude: "", imageLinks: [""]}
+        website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
+        
+        const reviewButton = `/businesses/${this.props.businessId}/review`;
+        
+        
+        
+        const reviews = () => {
+            if (!business.reviews) {
+                return "";
+            } else {
+                return (
+                <div>
+                    <ul className="ul-business-show-review">
+                        {business.reviews.map(review => {
+                            return (
+                            <ReviewListContainer key={review.id}
+                                review={review}
+                                business={this.props.business} />
+                            )
+                        })}
+                    </ul>
+                </div>
+        )}
+    }
+        
 
         const images = () => {
             if (!business.imageLinks){
@@ -81,12 +109,16 @@ class BusinessShow extends React.Component {
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
-                                        <span className="reviews-count"> 0 reviews</span>
+                                        <span className="reviews-count"> {"0"} reviews</span>
                                     </div>
                                 </div>
                                 <div className="business-review-header">
+
                                 <button className="write-a-review-button">
-                                    <span className="star" >&#9733;</span>Write a Review</button>
+                                    <span className="star" >&#9733;</span>
+                                    <Link to={reviewButton} >Write A Review</Link>
+                                    </button>
+
                                     <button className="add-photo-button">Add Photo</button>
                                     <button className="share-photo-button">Share</button>
                                     <button className="save-button">Save</button>
@@ -100,7 +132,7 @@ class BusinessShow extends React.Component {
                                     <span className="full-address">{business.address}</span><br />
                                     <span className="full-address">{business.city}, {business.state} {business.zipcode}</span><br />
                                     <span>{business.phone_number}</span><br />
-                                    <span><Link to={business.website}>{business.website}</Link></span>
+                                    <span><Link to={business.website} className="address-link">{business.website}</Link></span>
                                 </div>
                             </div>
                             <div className="business-pictures-container">
@@ -117,7 +149,40 @@ class BusinessShow extends React.Component {
                         <div className="business-secion-container">
                             <div className="business-left-section">
                                 <div className="review-highlights">
-
+                                    <div className="review-highlights-header">
+                                        <div className="review-highlights-header-text">
+                                            <span>Recommended Reviews</span>
+                                            <span className="recommended-review"> for {business.name}</span>
+                                        </div>
+                                        <div className="review-trust-banner">
+                                            <div className="trust-banner-data">
+                                                <span className="trust-concern">Your trust is our top concern, </span>
+                                                <span>so businesses can't pay to alter or remove their reviews.</span>
+                                                <a href="" className="trust-link"> Learn more.</a>
+                                            </div>
+                                        </div>
+                                        <div className="trust-banner-search">
+                                            <div className="trust-search-bar">
+                                                <input type="text" placeholder="Search within Reviews" className="trust-search-input"/>
+                                                <div className="trust-search-button">
+                                                    <button className="trust-button-img">
+                                                        <div className="trust-button-img-div"></div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className="yap-sort">
+                                                <span className="">Sort by</span> 
+                                                <span className="sort-by-language"> Yap Sort</span>
+                                            </div>
+                                            <div className="yap-language">
+                                                <span>Language</span>
+                                                <span className="sort-by-language"> English (3454)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="bus-show-reviews-container">
+                                   {reviews()}
+                                    </div>
                                 </div>
                             </div>
                             <div className="business-right-section">
@@ -128,7 +193,7 @@ class BusinessShow extends React.Component {
                                     <div className="make-order-box">
                                         <div className="option-selection">
                                             <label className="delivery-radio">
-                                                <input type="radio" checked />
+                                                <input type="radio" defaultChecked />
                                                 <span>Delivery</span>
                                             </label>
                                             <label className="takeout-radio">

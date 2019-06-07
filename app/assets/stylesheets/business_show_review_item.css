@@ -1,0 +1,64 @@
+.bus-show-reviews-container{
+    width:600px;
+    padding-top: 10px;
+}
+
+.ul-business-show-review{
+    width: 600px;
+}
+
+.review-business-show-li{
+    width: 600px;
+    height: 200px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.review-item-li-container{
+    width: 600px;
+    height: 200px;
+    
+}
+
+.review-item-li-left-container{
+    width: 250px;
+    height: 200px;
+    float: left;
+}
+
+.review-item-li-right-container{
+    width: 350px;
+    height: 200px;
+    float: right;
+}
+
+.review-item-rating-container{
+    width: 350px;
+    height: 20px;
+    display: flex;
+}
+
+.review-item-content-container{
+    width: 350px;
+    height: 150px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-family:"Helvetica Neue";
+    color: #333333;
+
+}
+
+.review-item-destroy-container{
+    width: 350px;
+    height: 30px;
+}
+
+.star-review-item-rating{
+    color: #d32323;
+    
+}
+
+.review-item-content{
+    padding-top: 5px;
+}
