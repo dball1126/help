@@ -5,15 +5,14 @@ import {selectBusinessReviews, selectBusiness} from '../../reducers/selectors';
 // import { fetchReviews} from '../../actions/review_actions';
 const mapStateToProps = (state, ownProps) => {
     const businessId = parseInt(ownProps.match.params.businessId);
-    const business = selectBusiness(state.entities, businessId);
-    // const business = state.entities.businesses[businessId] || {reviews: []};  //INVESTIGATE
+    // const business = selectBusiness(state.entities, businessId);
+    const business = state.entities.businesses[businessId];  //INVESTIGATE
     
-    const reviews = selectBusinessReviews(state.entities, business);
-    debugger
+    // const reviews1 = selectBusinessReviews(state.entities, business);
+    
     return {
         business,
-        businessId,
-        reviews
+        businessId
         
     }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ReviewListItem = ({author, review, business}) => {
-    
+const ReviewListItem = ({user, review, business, currentUser}) => {
+        
         return (
-            <li>
+            <li key={business.id}>
                 <span>{review.content}</span>
                 <span>{review.rating}</span>
-                <span>{author.email}</span>
+                <span>{}</span>
                 <span>{business.name}</span>
             </li>
         )

@@ -13,7 +13,7 @@ class ReviewForm extends React.Component{
     componentDidMount(){
         this.props.fetchBusiness(this.props.match.params.businessId);
         this.setState({...this.props.review});
-        debugger
+        
     }
 
     handleSubmit(e){

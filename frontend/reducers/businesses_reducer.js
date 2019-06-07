@@ -12,8 +12,9 @@ const businessesReducer = (oldState = {}, action) => {
         case RECEIVE_BUSINESS:
             return merge({}, oldState, {[action.business.id]: action.business});
         case RECEIVE_REVIEW:
+            
             const {review} = action;
-            newState[review.business_id].reviewIds.push(review.id);
+            newState[review.business_id].reviews.push(review.id);
             return newState
         default:
             return oldState;

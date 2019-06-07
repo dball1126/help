@@ -7,15 +7,13 @@ import ReviewListContainer from './review_list_container';
 class BusinessShow extends React.Component {
     constructor(props){
         super(props);
-        debugger
+        
     }
 
     componentDidMount(){
         
         this.props.fetchBusiness(this.props.businessId);
-        // const test = this.props.fetchReviews();
-        // console.log(test);
-        debugger
+        
     }
 
     
@@ -25,21 +23,28 @@ class BusinessShow extends React.Component {
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
         website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
-
+        
         const reviewButton = `/businesses/${this.props.businessId}/review`;
-        debugger
+        
+        
         const reviews = () => {
-            if(!this.props.reviews) return "";
-        this.props.reviews.map(review => {               
+            if (!business.reviews) {
+                return "";
+            } else {
                 return (
-                    <div>
-                        <ReviewListContainer key={review.id} 
-                                             review={review}
-                                             business={this.props.business} />
-                    </div>
-                )
-            })
-        }
+                <div>
+                    <ul>
+                        {business.reviews.map(review => {
+                            return (
+                            <ReviewListContainer key={review.id}
+                                review={review}
+                                business={this.props.business} />
+                            )
+                        })}
+                    </ul>
+                </div>
+        )}
+    }
         
 
         const images = () => {
@@ -172,7 +177,9 @@ class BusinessShow extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-                                   
+                                    <div className="bus-show-reviews-container">
+                                   {reviews()}
+                                    </div>
                                 </div>
                             </div>
                             <div className="business-right-section">

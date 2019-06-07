@@ -3,9 +3,12 @@ import {connect} from 'react-redux';
 import ReviewListItem from './review_list_item';
 
 const mapStateToProps = (state, ownProps) => {
-    const author = state.entities.users[ownProps.match.params.author_id]
+    const user = state.entities.users[ownProps.review.author_id];
+    const currentUser = state.entities.users[state.session.id];
+    
     return {
-        author: author
+        user: user,
+        currentUser: currentUser
     }
 }
 
