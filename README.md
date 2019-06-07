@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# [Yap](https://www.google.com)
+Yap is a website where you can find a listing of businesses and you can leave reviews about them.  It is a clone of Yelp
 
-Things you may want to cover:
 
-* Ruby version
+![alt text](https://i.imgur.com/K6cLLEW.png "Logo Title Text 1")
+Yap's Homepage.
 
-* System dependencies
+Users and viewers can search for businesses depending on location, and logged in users can leave reviews.
 
-* Configuration
+# Technologies Used
+Yap's backend is built with Ruby on Rails and the frontend use's a combination of React-Redux. Amazon Web Services is used for hosting pictures, Postgres is used for the database, and Jbuilder is used for sending JSON from our backend to our frontend. Put it all together and we get a single page app, prioritizing fast load times.
 
-* Database creation
+# Feature: Write A Review
+![alt text](https://i.imgur.com/l3OsrGL.png "Logo Title Text 2")
 
-* Database initialization
+The review form page for a business.
 
-* How to run the test suite
+# Feature: Star Rating Render Implementation
+![alt text](https://i.imgur.com/D56jaoZ.png "Logo Title Text 3")
 
-* Services (job queues, cache servers, search engines, etc.)
+Frontend code that renders stars 1-5 depending on the value selected by the user.
 
-* Deployment instructions
+Users select a rating for a review and this code renders the amount of stars selected by the user.
+
+# Coming Features and Features Not Totally Complete.
+Searching for businesses via location.
+
+Editing Reviews.
+
+New Categories component.
+
+Filters for search.
 
 * ...
