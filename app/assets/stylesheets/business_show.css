@@ -253,7 +253,7 @@
     width: 960px;
     margin: 0 auto;
     
-    padding: 15px 15px;
+    padding: 30px 15px;
     
 }
 
@@ -277,7 +277,7 @@
 .business-name {
     width: 525px;
     height: 42px;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -290,6 +290,8 @@
     width: 405px;
     height: 37px;
     line-height: 84px;
+    padding-left: 30px;
+    padding-top: 18px;
     
 }
 

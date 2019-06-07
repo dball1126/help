@@ -7,7 +7,8 @@ class ReviewForm extends React.Component{
         super(props);
         this.state = this.props.review || {};
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.onMouseChange
+        // this.onMouseChange
+        
     }
 
     componentDidMount(){
@@ -36,6 +37,10 @@ class ReviewForm extends React.Component{
     }
 
     render(){
+            
+        const business = this.props.businesses[this.props.match.params.businessId];
+            if (business === undefined) return "" ;
+
         return (
             <div>
                 <div className="review-banner">
@@ -54,7 +59,7 @@ class ReviewForm extends React.Component{
                             <div className="left-review-container">
                                 <div className="business-review-header">
                                     <div className="review-business-name">
-                                        <span>Business Name</span>
+                                        <span>{business.name}</span>
                                     </div>
                                     <div className="guidelines">
                                         <a href="">Read our review guidelines</a>

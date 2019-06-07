@@ -5,12 +5,13 @@ import {createReview} from '../../actions/review_actions';
 import {fetchBusiness} from '../../actions/business_actions';
 
 const mapStateToProps = (state, ownprops) => {
-    
+    const businesses = state.entities.businesses;
     const currentUser = state.entities.users[state.session.id]
     return {
         review: {content: "", rating: 0},
         formType: 'Create Review',
-        currentUser: currentUser
+        currentUser: currentUser,
+        businesses: businesses
     }
 }
 

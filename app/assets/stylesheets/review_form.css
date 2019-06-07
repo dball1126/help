@@ -63,21 +63,33 @@
 
 .business-review-header{
     
-    width: 673px;
+    width: 625px;
     height: 84px;
     padding-bottom: 12px;
     display: flex;
+    justify-content: space-between;
+    padding-left: 0px;
     
 }
 
 .review-business-name{
     width: 408px;
-    
+    font-size: 35px;
+    font-family: "Helvetica Neue";
+    color: #0073bb;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .guidelines{
     width: 217px;
-    
+    margin-right: -60px;
+    font-family: "Helvetica Neue";
+}
+
+.guidelines a {
+    text-decoration: none;
+    color: #0073bb;
 }
 
 .review-form-container{

@@ -27,6 +27,7 @@ class BusinessShow extends React.Component {
         const reviewButton = `/businesses/${this.props.businessId}/review`;
         
         
+        
         const reviews = () => {
             if (!business.reviews) {
                 return "";
@@ -108,7 +109,7 @@ class BusinessShow extends React.Component {
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
-                                        <span className="reviews-count"> 0 reviews</span>
+                                        <span className="reviews-count"> {"0"} reviews</span>
                                     </div>
                                 </div>
                                 <div className="business-review-header">

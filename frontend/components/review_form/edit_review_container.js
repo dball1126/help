@@ -10,11 +10,13 @@ const mapStateToProps = (state, ownprops) => {
     const review = state.entities.reviews[ownprops.match.params.reviewId] || defaultReview;
     const currentUser = state.entities.users[state.session.id];
     const business = state.entities.businesses[ownprops.match.params.businessId]
+    const businesses =  state.entities.businesses;
     return {
         review: review,
         formType: 'Edit Review',
         business: business,
-        currentUser: currentUser
+        currentUser: currentUser,
+        businesses: businesses
     }
 }
 
