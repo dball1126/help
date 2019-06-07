@@ -151,12 +151,13 @@ class BusinessShow extends React.Component {
                                     <div className="review-highlights-header">
                                         <div className="review-highlights-header-text">
                                             <span>Recommended Reviews</span>
+                                            <span className="recommended-review"> for {business.name}</span>
                                         </div>
                                         <div className="review-trust-banner">
                                             <div className="trust-banner-data">
-                                                <span>Your trust is our top concern,</span>
-                                                <span>so businesses can't pay to alter or remove their reviews</span>
-                                                <a href="">Learn more.</a>
+                                                <span className="trust-concern">Your trust is our top concern, </span>
+                                                <span>so businesses can't pay to alter or remove their reviews.</span>
+                                                <a href="" className="trust-link"> Learn more.</a>
                                             </div>
                                         </div>
                                         <div className="trust-banner-search">
@@ -169,11 +170,12 @@ class BusinessShow extends React.Component {
                                                 </div>
                                             </div>
                                             <div className="yap-sort">
-                                                <span>Sort by Yap Sort</span>
+                                                <span className="sort-by-language">Sort by</span> 
+                                                <span className=""> Yap Sort</span>
                                             </div>
                                             <div className="yap-language">
                                                 <span>Language</span>
-                                                <span>English (3454)</span>
+                                                <span className="sort-by-language"> English (3454)</span>
                                             </div>
                                         </div>
                                     </div>

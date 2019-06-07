@@ -308,6 +308,7 @@
     font-size: 14px;
     font-weight: 600;
     margin-right: 30px;
+    
    
 }
 
@@ -345,7 +346,7 @@
 
 .business-show-map {
     width: 300px;
-    height: 332.56px;
+    height: 315px;
     background: #FFFFFF;
     padding: 5px;
 }
@@ -425,29 +426,58 @@
 .review-highlights-header{
     width: 600px;
     height: 131px;
+    font-family:"Helvetica Neue";
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .review-highlights-header-text{
     width: 600px;
     height: 27px;
+    font-size: 21px;
+    color: #d32323;
+    font-weight: 450;
+
+}
+
+.recommended-review{
+    color: #333333;
+    font-weight: 400;
 }
 
 .review-trust-banner{
     width: 600px;
     height: 49px;
+    background-color: #f5f5f5;
+    text-align: center;
 }
+
+
 
 .trust-banner-data{
     width: 600px;
     height: 24px;
     font-size: 12px;
+    
+    line-height: 4.5em;
     font-family:"Helvetica Neue";
 }
 
+.trust-concern{
+    font-weight: 450;
+}
+
+.trust-link {
+    color: #0073bb;
+    text-decoration: none;
+}
+
 .trust-banner-search {
-    height: 55px;
+    height: 56px;
     width: 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
+    color: #666666;
 }
 
 .trust-search-bar{
@@ -459,15 +489,19 @@
 
 .trust-search-input{
     width: 246px;
-    height: 30px;
+    height: 26px;
     border-radius: 4px 0px 0px 4px;
+    padding-left: 5px;
+    background: #ffffff;
+    font-size: 14px;
     
 }
 
 .trust-search-button {
-    width: 37px;
-    height: 36px;
+    width: 36px;
+    height: 30px;
     background: white;
+    
 }
 
 .trust-button-img {
@@ -486,17 +520,29 @@
     background-image: url(https://i.imgur.com/6nfeJt3.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size:50%;
+    background-size:70%;
 }
 
 .yap-sort{
-    width: 130px;
+    width: 125px;
     height: 36px;
+    font-size: 14px;
+    
 }
 
+
 .yap-language{
-    width: 158px;
+    width: 165px;
     height: 36px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.sort-by-language{
+    color: #666666;
+    font-weight: bold;
+    line-height: 2;
+    
 }
 
 .bus-show-reviews-container{
@@ -696,4 +742,11 @@
 
 .write-a-review-button .star:first-child{
     padding-right:5px;
+    
+   
+}
+
+.write-a-review-button a {
+    text-decoration: none;
+    color: white;
 }
