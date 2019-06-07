@@ -293,11 +293,13 @@
     padding-left: 30px;
     padding-top: 18px;
     
+    
 }
 
 .business-review-header button {
     font-family: "Helvetica Neue";
     font-weight: bold;
+    
     
 }
 
@@ -382,6 +384,7 @@
     width: 254px;
     height: 100px;
     padding-left: 30px;
+    
 }
 
 .full-address {
@@ -748,4 +751,9 @@
 .write-a-review-button a {
     text-decoration: none;
     color: white;
+}
+
+.address-link{
+    text-decoration: none;
+    color: #0073bb;
 }

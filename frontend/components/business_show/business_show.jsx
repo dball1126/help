@@ -132,7 +132,7 @@ class BusinessShow extends React.Component {
                                     <span className="full-address">{business.address}</span><br />
                                     <span className="full-address">{business.city}, {business.state} {business.zipcode}</span><br />
                                     <span>{business.phone_number}</span><br />
-                                    <span><Link to={business.website}>{business.website}</Link></span>
+                                    <span><Link to={business.website} className="address-link">{business.website}</Link></span>
                                 </div>
                             </div>
                             <div className="business-pictures-container">

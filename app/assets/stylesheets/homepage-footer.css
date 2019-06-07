@@ -1,0 +1,33 @@
+.homepage-main-footer-container{
+    height: 536px;
+    background: #f5f5f5;
+    border-top: solid 1px #666666;
+}
+
+.homepage-footer-inner-container{
+    width: 960px;
+    height: 536px;
+    margin: 0 auto;
+}
+
+.footer-img-wrapper{
+    
+    padding-bottom: 0px;
+    
+   
+}
+
+.footer-img{
+    background-image: url(https://i.imgur.com/vi0d4TW.png);
+    height: 140px;
+    width: 960px;
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.footer-content-wrapper{
+    height: 390px;
+    width: 960px;
+
+}
