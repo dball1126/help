@@ -3,24 +3,29 @@ import React from 'react';
 const ReviewListItem = ({user, review, business, currentUser}) => {
         
         const stars = () => {
-            const n = review.rating;
+            if(!review.rating){
+                return "";
+            } else {
+                const num = review.rating;
             return (
-                <div className="star-review-item-rating">
-                    {[...Array(n)].map(ele => {
+                <div className="star-review-item-rating" key={review.id}>
+                    {[...Array(num)].map((ele, i) => {
                         return (
                             
                                 <span className="fa fa-star"></span>
-
+                            
                         )
                     })}
 
                 </div>
+            
             )
+            }
         }
         
 
         return (
-            <li key={business.id} className="review-business-show-li">
+            <li  key={review.id} className="review-business-show-li">
                 <div className="review-item-li-container">
                     <div className="review-item-li-left-container">
                     </div>

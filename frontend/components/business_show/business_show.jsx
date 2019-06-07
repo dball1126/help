@@ -33,9 +33,9 @@ class BusinessShow extends React.Component {
                 return "";
             } else {
                 return (
-                <div>
+                <div key={Math.random()}>
                     <ul className="ul-business-show-review">
-                        {business.reviews.map(review => {
+                        {business.reviews.map((review, i) => {
                             return (
                             <ReviewListContainer key={review.id}
                                 review={review}
@@ -57,7 +57,7 @@ class BusinessShow extends React.Component {
                         <ul className="ul-images">
                             {business.imageLinks.map((image, i) => {
                                 return (
-                                    <li key={i}><img src={image} className="image"></img></li>
+                                    <li key={i} ><img src={image} className="image"></img></li>
                                 )
                             })}
                         </ul>

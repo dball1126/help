@@ -19,12 +19,13 @@ class ReviewForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-
+        
         const vals = {
             content: this.state.content,
             author_id: this.props.currentUser.id,
             rating: parseInt(this.state.rating),
             business_id: this.props.match.params.businessId
+            
         }
         
         this.props.action(vals).then(() => this.props.history.push(`/businesses/${this.props.match.params.businessId}`));
@@ -73,16 +74,16 @@ class ReviewForm extends React.Component{
                                             
                                                 <ul className="ul-field-rating">
                                                     <li className="star-box">
-                                                        <input type="radio" id="rating-1" className="fa fa-star" value="1" />
+                                                        <input type="radio" id="rating-1" className="fa fa-star" value="1" onChange={this.update('rating')}/>
                                                     </li >
                                                     <li className="star-box">
-                                                        <input type="radio" id="rating-2" className="fa fa-star" value="2"/>
+                                                        <input type="radio" id="rating-2" className="fa fa-star" value="2" onChange={this.update('rating')}/>
                                                     </li>
                                                     <li className="star-box">
-                                                        <input type="radio" id="rating-3" className="fa fa-star" value="3"/>
+                                                        <input type="radio" id="rating-3" className="fa fa-star" value="3" onChange={this.update('rating')}/>
                                                     </li>
                                                     <li className="star-box">
-                                                        <input type="radio" id="rating-4" className="fa fa-star" value="4"/>
+                                                        <input type="radio" id="rating-4" className="fa fa-star" value="4" onChange={this.update('rating')}/>
                                                     </li>
                                                     <li className="star-box">
                                                         <input type="radio" id="rating-5" className="fa fa-star" value="5" onChange={this.update('rating')}/>
