@@ -7,12 +7,16 @@ const mapStateToProps = (state, ownProps) => {
     const businessId = parseInt(ownProps.match.params.businessId);
     // const business = selectBusiness(state.entities, businessId);
     const business = state.entities.businesses[businessId];  //INVESTIGATE
-    
-    // const reviews1 = selectBusinessReviews(state.entities, business);
+    // const currentUser = state.entities.users[state.session.id];
+    // const reviews = selectBusinessReviews(state.entities, business);
+    // debugger
+    // const reviews = business.reviews || {};
     
     return {
         business,
-        businessId
+        businessId,
+        // currentUser
+        //  reviews: business.reviews
         
     }
 }

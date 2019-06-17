@@ -32,8 +32,10 @@ class EditReviewForm extends React.Component{
 
     render(){
         const {business, review, currentUser, formType} = this.props;
+        
         return (
         <div>
+            
             <ReviewForm business={business} 
                         review={review}
                         currentUser={currentUser}

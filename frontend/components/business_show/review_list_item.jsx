@@ -8,23 +8,19 @@ const ReviewListItem = ({user, review, business, currentUser}) => {
             } else {
                 const num = review.rating;
             return (
-                <div className="star-review-item-rating" key={review.id}>
+                <div className="star-review-item-rating" >
                     {[...Array(num)].map((ele, i) => {
                         return (
-                            
-                                <span className="fa fa-star"></span>
-                            
+                                <span className="fa fa-star" key={i}></span>              
                         )
                     })}
-
                 </div>
-            
             )
             }
         }
         
-
         return (
+            
             <li  key={review.id} className="review-business-show-li">
                 <div className="review-item-li-container">
                     <div className="review-item-li-left-container">
@@ -35,6 +31,9 @@ const ReviewListItem = ({user, review, business, currentUser}) => {
                         </div>
                         <div className="review-item-content-container">
                             <span className="review-item-content">{review.content}</span>
+                            {/* <span>{user.first_name}</span> */}
+                            <span>{}</span>
+                            
                         </div>
                         <div className="review-item-destroy-container">
                         </div>

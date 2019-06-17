@@ -1,6 +1,6 @@
 import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS} from '../actions/business_actions';
 
-import {RECEIVE_REVIEW} from '../actions/review_actions';
+import { RECEIVE_REVIEW, DESTROY_REVIEW} from '../actions/review_actions';
 
 const businessesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
@@ -10,12 +10,21 @@ const businessesReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_BUSINESSES:
             return Object.assign({}, action.businesses);
         case RECEIVE_BUSINESS:
+            
+
             return Object.assign({}, oldState, {[action.business.id]: action.business});
         case RECEIVE_REVIEW:
-            
             const {review} = action;
-            newState[review.business_id].reviews.push(review.id);
-            return newState
+            if (!newState[review.business_id].reviewIds.includes(review.id)) {
+                newState[review.business_id].reviewIds.push(review.id);
+            }
+            return newState;
+        case DESTROY_REVIEW:
+            const index = newState[action.review.business_id].reviewIds.indexOf(action.review.id);
+                if (index >= 0){
+                    newState[action.review.business_id].reviewIds.splice(index, 1);
+                }
+            return newState;
         default:
             return oldState;
     }

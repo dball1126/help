@@ -8,10 +8,12 @@ class BusinessShow extends React.Component {
     constructor(props){
         super(props);
         
+        debugger
+        // this.state.reviews = this.props.business.reviews || {};
     }
 
     componentDidMount(){
-        
+        // debugger
         this.props.fetchBusiness(this.props.businessId);
         
     }
@@ -23,6 +25,7 @@ class BusinessShow extends React.Component {
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
         website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
+        const currentUser = this.props.currentUser || {};
         
         const reviewButton = `/businesses/${this.props.businessId}/review`;
         
@@ -32,12 +35,14 @@ class BusinessShow extends React.Component {
             if (!business.reviews) {
                 return "";
             } else {
+                
                 return (
+                    
                 <div key={Math.random()}>
                     <ul className="ul-business-show-review">
                         {business.reviews.map((review, i) => {
                             return (
-                            <ReviewListContainer key={review.id}
+                            <ReviewListContainer key={i}
                                 review={review}
                                 business={this.props.business} />
                             )
@@ -182,6 +187,7 @@ class BusinessShow extends React.Component {
                                     </div>
                                     <div className="bus-show-reviews-container">
                                    {reviews()}
+                                   {}
                                     </div>
                                 </div>
                             </div>

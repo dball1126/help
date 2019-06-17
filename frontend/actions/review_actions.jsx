@@ -2,18 +2,17 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_ALL_REVIEWS = 'RECEIVE_ALL_REVIEWS'
 export const DESTROY_REVIEW = 'DESTROY_REVIEW';
 import * as ReviewApiUtil from '../util/review_api_util';
-const receiveReview = ({review, author}) => {
+const receiveReview = ({review, user}) => {
     return {
         type: RECEIVE_REVIEW,
         review: review,
-        author: author
+        user: user
     } 
 }
 const receiveReviews = ({reviews}) => {
     return {
         type: RECEIVE_ALL_REVIEWS,
         reviews: reviews
-      
     } 
 }
 
