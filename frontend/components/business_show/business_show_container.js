@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
     // const reviews = selectBusinessReviews(state.entities, business);
     // debugger
     // const reviews = business.reviews || {};
-    
+    // debugger
     return {
         business,
         businessId,

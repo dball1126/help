@@ -54,7 +54,7 @@ const receiveBusiness = ({business}) => {
 };
 
 const receiveBusinessReviews = ({business}) => {
-    debugger
+    
     return {
         type: RECEIVE_BUSINESS_REVIEWS,
         business: business

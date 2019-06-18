@@ -1,23 +1,26 @@
 import React from 'react';
 
 const ReviewListItem = ({user, review, business, currentUser}) => {
-        debugger
+        let starCounter = review.rating;
+        let starColor;
+
         const stars = () => {
-            if(!review.rating){
-                return "";
-            } else {
-                const num = review.rating;
+           
             return (
                 <div className="star-review-item-rating" >
-                    {[...Array(num)].map((ele, i) => {
+                    {[...Array(5)].map((ele, i) => { 
+                        starCounter -= 1;
+                        if(starCounter < 0 ) starColor = "stary";
                         return (
-                                <span className="fa fa-star" key={i}></span>              
+                            <div className="star-box" key={i}>
+                                <span className="fa fa-star" id={starColor} ></span> 
+                            </div>             
                         )
                     })}
                 </div>
             )
-            }
-        }
+            
+        }    
         
         return (
             

@@ -9,6 +9,7 @@ class BusinessShow extends React.Component {
         super(props);
         
         // this.state.reviews = this.props.business.reviews || {};
+        
     }
 
     componentDidMount(){
@@ -50,6 +51,41 @@ class BusinessShow extends React.Component {
                 </div>
         )}
     }
+        let starColorTop;
+        const avgRating = () => {
+            if(!business.reviews){
+                return 0;
+            } else {
+                
+                let avgRating = 0;
+                // let reviewsRating = (avgRating / business.reviews.length) || 0;
+                
+                business.reviews.forEach(review => {
+                    avgRating += review.rating;
+                })
+                return Math.ceil(avgRating / business.reviews.length);
+            }
+
+        }
+        
+
+        const stars = () => {
+            let starCounter = avgRating(); 
+            return (
+                <div className="star-review-item-rating" >
+                    {[...Array(5)].map((ele, i) => {
+                        starCounter -= 1;
+                        if (starCounter < 0) starColorTop = "stary";
+                        return (
+                            <div className="star-box" key={i}>
+                                <span className="fa fa-star" id={starColorTop} ></span>
+                            </div>
+                        )
+                    })}
+                </div>
+            )
+
+        }    
         
 
         const images = () => {
@@ -108,11 +144,12 @@ class BusinessShow extends React.Component {
                                 <div className="business-name">{business.name}
                                 </div>
                                     <div className="business-ratings">
+                                        {/* <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
+                                        <span className="fa fa-star"></span> */}
+                                        {stars()}
                                         <span className="reviews-count"> {"0"} reviews</span>
                                     </div>
                                 </div>

@@ -20,7 +20,7 @@ const reviewsReducer = (oldState = {}, action) => {
         //     // , reviews: action.business.reviews
         //     return Object.assign({}, oldState, action.business.reviews)
         case RECEIVE_BUSINESS_REVIEWS:
-            debugger
+            
             // , reviews: action.business.reviews
             return Object.assign({}, oldState, action.business.reviews)
         default:

@@ -55,7 +55,7 @@
 }
 
 .star-review-item-rating{
-    color: #d32323;
+    color: #ffffff;
     
 }
 
@@ -65,8 +65,39 @@
 
 .review-user{
     text-align: center;
-    padding: 24px;
+    padding: 23px;
     font-family:"Helvetica Neue";
     display: block;
     font-weight: bold;
+}
+
+.star-review-item-rating{
+    display: flex;
+}
+
+.star-box{
+    height: 20px;
+    width: 20px;
+    /* background: #f15c4f */
+}
+
+.star-review-item-rating-blank{
+    
+}
+
+#stary{
+    background: #cccccc;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    background: #f15c4f;
+    margin-left: 0px;
+    padding: 1px;
+    border-radius: 3px;
+
 }
