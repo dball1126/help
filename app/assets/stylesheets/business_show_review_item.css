@@ -62,3 +62,11 @@
 .review-item-content{
     padding-top: 5px;
 }
+
+.review-user{
+    text-align: center;
+    padding: 24px;
+    font-family:"Helvetica Neue";
+    display: block;
+    font-weight: bold;
+}

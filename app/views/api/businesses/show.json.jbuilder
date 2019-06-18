@@ -3,7 +3,7 @@ json.business do
     json.imageLinks @business.images.map { |image| url_for(image) }
     json.reviews @business.reviews do |review|
         json.extract! review, :id, :content, :author_id, :business_id, :rating, :created_at, :updated_at
-        json.first_name = review.user.first_name  # places the first_name in the reviews state under businesses
+        json.first_name review.user.first_name  # places the first_name in the reviews state under businesses
 
     end
     json.reviewIds @business.reviews.pluck(:id)

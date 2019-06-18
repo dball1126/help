@@ -8,12 +8,11 @@ class BusinessShow extends React.Component {
     constructor(props){
         super(props);
         
-        debugger
         // this.state.reviews = this.props.business.reviews || {};
     }
 
     componentDidMount(){
-        // debugger
+        
         this.props.fetchBusiness(this.props.businessId);
         
     }
