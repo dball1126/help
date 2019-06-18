@@ -146,7 +146,54 @@
 
 
 .ul-field-rating{
-    width: 587px;
+    width: 200px;
     height: 30px;
     display: flex;
+    flex-direction: row-reverse;
 }
+
+input[type=radio]{
+    display:none;
+    visibility: collapse;
+}
+
+.star-box-rev{
+    
+    width: 20px;
+    height: 20px;
+}
+
+.fa-star:before{
+    color: white;
+}
+
+.ul-field-rating .fa{
+    /* display: inline-block; */
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding: 1px;
+    -moz-osx-font-smoothing: grayscale;
+    border-radius: 3px;
+    height: 18px;
+    width: 15px;
+    margin-left: 3px;
+    background: #cccccc;
+}
+
+fieldset{
+    width: 100px;
+    height: 30px;
+}
+
+.ul-field-rating .fa:hover,
+   
+    .ul-field-rating .fa:hover ~ .fa-star,
+    .rating-input:checked ~ .fa-star{
+        background: #f15c4f;
+        background-position: 0 0;
+    }
+
+
+

@@ -52,6 +52,7 @@ class BusinessShow extends React.Component {
         )}
     }
         let starColorTop;
+        let reviewsCount = 0;
         const avgRating = () => {
             if(!business.reviews){
                 return 0;
@@ -63,6 +64,7 @@ class BusinessShow extends React.Component {
                 business.reviews.forEach(review => {
                     avgRating += review.rating;
                 })
+                reviewsCount = business.reviews.length;
                 return Math.ceil(avgRating / business.reviews.length);
             }
 
@@ -150,7 +152,7 @@ class BusinessShow extends React.Component {
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span> */}
                                         {stars()}
-                                        <span className="reviews-count"> {"0"} reviews</span>
+                                        <span className="reviews-count"> {reviewsCount} reviews</span>
                                     </div>
                                 </div>
                                 <div className="business-review-header">

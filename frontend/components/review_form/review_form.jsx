@@ -7,7 +7,7 @@ class ReviewForm extends React.Component{
         super(props);
         this.state = this.props.review || {};
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.onMouseChange
+        this.mouseEnter = this.mouseEnter.bind(this);
         
     }
 
@@ -17,6 +17,30 @@ class ReviewForm extends React.Component{
         
     }
 
+    mouseEnter(index) {
+        return () => {
+            this.starListClass(index);
+            // this.ratingTextContent(index);
+        };
+    }
+
+    mouseLeave() {
+        return () => {
+            this.starListClass(this.state.rating);
+            // this.ratingTextContent(this.state.rating);
+        };
+    }
+    ratingTextContent(index) {
+        const options = ["Select your rating", "Eek! Methinks not.", "Meh. I've experienced better.", "A-OK", "Yay! I'm a fan.", "Woohoo! As good as it gets!"];
+        const element = document.getElementById('rating-text');
+        element.innerHTML = options[index];
+    }
+    starListClass(index) {
+        const element = document.getElementById('starlist');
+        const lastClass = element.classList[element.classList.length - 1];
+        element.classList.remove(lastClass);
+        element.classList.add('stars-extra-large-' + index);
+    }
     handleSubmit(e){
         e.preventDefault();
         
@@ -72,23 +96,30 @@ class ReviewForm extends React.Component{
                                     <div className="review-form">
                                         <div className="rating-data">
                                             
-                                                <ul className="ul-field-rating">
-                                                    <li className="star-box">
-                                                        <input type="radio" id="rating-1" className="fa fa-star" value="1" onChange={this.update('rating')}/>
-                                                    </li >
-                                                    <li className="star-box">
-                                                        <input type="radio" id="rating-2" className="fa fa-star" value="2" onChange={this.update('rating')}/>
-                                                    </li>
-                                                    <li className="star-box">
-                                                        <input type="radio" id="rating-3" className="fa fa-star" value="3" onChange={this.update('rating')}/>
-                                                    </li>
-                                                    <li className="star-box">
-                                                        <input type="radio" id="rating-4" className="fa fa-star" value="4" onChange={this.update('rating')}/>
-                                                    </li>
-                                                    <li className="star-box">
-                                                        <input type="radio" id="rating-5" className="fa fa-star" value="5" onChange={this.update('rating')}/>
-                                                    </li>
+                                                <ul className="ul-field-rating" >
+                                                    {/* className="fa fa-star" */}
                                                     <span className="rating select"> Select your rating</span>
+                                                        
+                                                    <input type="radio" id="rating-input-1-5" className="rating-input" name="rating-input-1" value="1" onChange={this.update('rating')}/>
+                                                    <label htmlFor="rating-input-1-5" className="star-box-rev" className="fa fa-star" ></label>
+                                                    
+                                                        
+                                                    <input type="radio" id="rating-input-1-4" className="rating-input" name="rating-input-1" value="2" onChange={this.update('rating')}/>
+                                                    <label htmlFor="rating-input-1-4" className="star-box-rev" className="fa fa-star"></label>
+                                                    
+                                                    <input type="radio" id="rating-input-1-3" className="rating-input" name="rating-input-1" value="3" onChange={this.update('rating')}/>
+                                                    <label htmlFor="rating-input-1-3" className="star-box-rev" className="fa fa-star"></label>
+                                                    
+                                                    
+                                                    <input type="radio" id="rating-input-1-2" className="rating-input" name="rating-input-1" value="4" onChange={this.update('rating')}/>
+                                                    <label htmlFor="rating-input-1-2" className="star-box-rev" className="fa fa-star"></label>
+                                                    
+                                                    <input type="radio" id="rating-input-1-1" className="rating-input" name="rating-input-1" value="5" onChange={this.update('rating')}/>
+                                                    <label htmlFor="rating-input-1-1" className="star-box-rev" className="fa fa-star"></label>
+                                                    
+                                                    
+                                                    
+                                                   
                                                 </ul>
                                             
                                         </div>
