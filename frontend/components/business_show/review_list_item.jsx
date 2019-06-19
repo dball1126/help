@@ -3,7 +3,18 @@ import React from 'react';
 const ReviewListItem = ({user, review, business, currentUser}) => {
         let starCounter = review.rating;
         let starColor;
-
+        
+        const image = () => {
+            if (!review.image){
+                return "";
+            } else {
+                return (
+                    <div>
+                        <span><img src={review.image} className="review-image"></img></span>
+                    </div>
+                )
+            }
+        }
         const stars = () => {
            
             return (
@@ -36,7 +47,7 @@ const ReviewListItem = ({user, review, business, currentUser}) => {
                         <div className="review-item-content-container">
                             <span className="review-item-content">{review.content}</span>
                             
-                            <span>{}</span>
+                            <span>{image()}</span>
                             
                         </div>
                         <div className="review-item-destroy-container">

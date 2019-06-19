@@ -15,13 +15,14 @@ class BusinessShow extends React.Component {
     componentDidMount(){
         
         this.props.fetchBusiness(this.props.businessId);
-        
+        // debugger
     }
 
     
 
     render(){
-
+        // const reviews1 = this.props.business.reviews || {};
+        
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
         website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
@@ -107,6 +108,7 @@ class BusinessShow extends React.Component {
                 )
             }
         }
+        
 
         return (
             <div>
