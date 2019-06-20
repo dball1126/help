@@ -353,6 +353,7 @@
     height: 315px;
     background: #FFFFFF;
     padding: 5px;
+    bordeR: 1px solid #ccc;
 }
 
 .business-pictures-container {
@@ -382,8 +383,9 @@
 
 .address-box {
     width: 254px;
-    height: 100px;
+    height: 75px;
     padding-left: 30px;
+    padding-top: 5px;
     
 }
 

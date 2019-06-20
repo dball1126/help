@@ -16,7 +16,7 @@ user3 = User.create(email: 'demo3@demo.com', password: 'demouser3', first_name: 
 
 
 business1 = Business.create(name: "Katz's Delicatessen", state: "NY", city: "New York", zipcode: 10002, address: "205 E Houston St", phone_number: "(212)254-2246", website: "www.katzsdelicatessen.com", latitude: "40.722345", longitude: "-73.9873614")
-business2 = Business.create(name: "Roll N Roaster", state: "NY", city: "Brooklyn", zipcode: 11235, address: "2901 Emmons Ave", phone_number: "(718)502-9282", website: "www.rollnroaster.com", latitude: "40.752789", longitude: "-73.987862")
+business2 = Business.create(name: "Roll N Roaster", state: "NY", city: "Brooklyn", zipcode: 11235, address: "2901 Emmons Ave", phone_number: "(718)502-9282", website: "www.rollnroaster.com", latitude: "40.5841462", longitude: "-73.9396418")
 business3 = Business.create(name: "L & B Spumoni Gardens", state: "NY", city: "Brooklyn", zipcode: 11223, address: "2725 86th St", phone_number: "(718)449-1230", website: "www.spumonigardens.com", latitude: "40.594710", longitude: "-73.981340")
 
 
