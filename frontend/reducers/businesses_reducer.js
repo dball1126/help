@@ -21,7 +21,7 @@ const businessesReducer = (oldState = {}, action) => {
             return newState;
         case DESTROY_REVIEW:
           
-            debugger
+            
             // delete newState
             // delete newState.reviews[]
             return newState;

@@ -132,7 +132,7 @@ class BusinessShow extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="categories-main-header">
+                {/* <div className="categories-main-header">
                     <div className="business-show-categories-container">
                         <ul className="ul-categories-business-show">
                             <li className="categories-restaurants"><span className="restaurants">Restaurants</span></li>
@@ -144,7 +144,7 @@ class BusinessShow extends React.Component {
                             <li className="categories-business"><span>For Businesses</span></li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
                 <div className="business-main-content-container">
                     <div className="business-content-container">
                         <div className="actual-business-header">
@@ -236,7 +236,7 @@ class BusinessShow extends React.Component {
                                 </div>
                             </div>
                             <div className="business-right-section">
-                                <div className="order-food">
+                                {/* <div className="order-food">
                                     <div className="order-food-header">
                                         <h3>Order Food</h3>
                                     </div>
@@ -289,7 +289,7 @@ class BusinessShow extends React.Component {
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

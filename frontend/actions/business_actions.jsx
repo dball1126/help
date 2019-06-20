@@ -24,7 +24,7 @@ export const fetchBusiness = (id) => {
         return BusinessApiUtil.fetchBusiness(id).then(payload => {
             return dispatch(receiveBusiness(payload)) 
         }).then(payload => {
-            debugger
+            
             return dispatch(receiveBusinessReviews(payload))
         });
     }

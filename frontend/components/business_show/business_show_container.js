@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
     // debugger
     // const reviews = business.reviews || {};
     // debugger
-    debugger
+    
 
     const reviews = Object.keys(state.entities.reviews).map(id => state.entities.reviews[id])
     

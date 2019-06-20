@@ -9,8 +9,8 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
                 return "";
             } else {
                 return (
-                    <div>
-                        <button onClick={() => deleteReview(review.id)}>Delete</button>
+                    <div className="delete-review">
+                        <button onClick={() => deleteReview(review.id)} className="deleteReviewButton">Delete Review</button>
                     </div>
                 )
             }
@@ -60,9 +60,10 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
                             <span className="review-item-content">{review.content}</span>
                             
                             <span>{image()}</span>
-                            <span>{deleteButton()}</span>
+                            
                         </div>
                         <div className="review-item-destroy-container">
+                            <span>{deleteButton()}</span>
                         </div>
                     </div>
                 </div>
