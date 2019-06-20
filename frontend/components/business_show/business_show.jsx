@@ -4,6 +4,8 @@ import RedBanner from '../greeting/top_banner_red';
 import {Link} from 'react-router-dom';
 import BusinessShowSearch from '../search/business_show_search';
 import ReviewListContainer from './review_list_container';
+import BusinessMap from './business_map';
+ 
 class BusinessShow extends React.Component {
     constructor(props){
         super(props);
@@ -113,7 +115,7 @@ class BusinessShow extends React.Component {
                 )
             }
         }
-        
+        const mapCenter = { lat: 37.7758, lng: -122.435 };
 
         return (
             <div>
@@ -178,12 +180,13 @@ class BusinessShow extends React.Component {
                             <div className="business-show-map">
                                 <div className="image-placeholder">
                                 </div>
-                                <div className="address-box">
+                                {/* <BusinessMap center={mapCenter} /> */}
+                                {/* <div className="address-box">
                                     <span className="full-address">{business.address}</span><br />
                                     <span className="full-address">{business.city}, {business.state} {business.zipcode}</span><br />
                                     <span>{business.phone_number}</span><br />
                                     <span><Link to={business.website} className="address-link">{business.website}</Link></span>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="business-pictures-container">
                                 <div className="business-pictures-showcase">
