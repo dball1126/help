@@ -115,10 +115,31 @@
 }
 
 .deleteReviewButton {
-    background: #f15c4f;
+    background: #bd2020;
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 11px;
+    font-family:"Helvetica Neue";
+    width: 90px;
+    height: 15px;
+}
+
+.editReviewButton {
+   background:#bd2020;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer; 
+    text-decoration: none;
+    font-size: 11px;
+    font-family:"Helvetica Neue";
+    width: 90px;
+    height: 15px;
+
+}
+.editReviewButton a {
+    text-decoration: none;
+    color: white;
 }
 
 .rating-selector p {
@@ -132,5 +153,5 @@
 .field {
     font-family:"Helvetica Neue";
     padding-left: 1px;
-    
+
 }

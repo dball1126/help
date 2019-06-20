@@ -11,7 +11,8 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
             } else {
                 return (
                     <div className="delete-review">
-                        <Link to={`/businesses/${review.business_id}/edit/${review.id}`}>Edit Review</Link>
+                        {/* <button className="editReviewButton"><Link to={`/businesses/${review.business_id}/edit/${review.id}`}>Edit Review</Link></button> */}
+                        <button className="editReviewButton"><Link to={`/businesses/${review.business_id}/edit/${review.id}`}>Edit Review</Link></button>
                         <button onClick={() => deleteReview(review.id)} className="deleteReviewButton">Delete Review</button>
                     </div>
                 )
