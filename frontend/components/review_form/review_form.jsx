@@ -5,14 +5,15 @@ import { withRouter } from 'react-router-dom';
 class ReviewForm extends React.Component{
     constructor(props){
         super(props);
-        this.state = this.props.review || {};
+        this.state = this.props.review || {content: "", rating: 0};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
         this.photoFile = this.state.photoFile || {};
     }
 
     componentDidMount(){
-        this.props.fetchBusiness(this.props.match.params.businessId);
+        
+        // this.props.fetchBusiness(this.props.match.params.businessId);
         this.setState({...this.props.review});
         
     }
@@ -24,12 +25,12 @@ class ReviewForm extends React.Component{
         if(this.state.photoFile){
             
         formData.append('review[image]', this.state.photoFile);
+        
+        }
         formData.append('review[content]', this.state.content);
         formData.append('review[author_id]', this.props.currentUser.id);
-            formData.append('review[rating]', parseInt(this.state.rating));
-            formData.append('review[business_id]', this.props.match.params.businessId);
-
-        }
+        formData.append('review[rating]', parseInt(this.state.rating));
+        formData.append('review[business_id]', this.props.match.params.businessId);
         
         $.ajax({
             url: '/api/reviews',
@@ -64,8 +65,10 @@ class ReviewForm extends React.Component{
     }
 
     render(){
-            console.log(this.state);
-        const business = this.props.businesses[this.props.match.params.businessId];
+            debugger
+
+        // const business = this.props.businesses[this.props.match.params.businessId];
+        const business = this.props.business;
             if (business === undefined) return "" ;
 
         return (
@@ -100,20 +103,20 @@ class ReviewForm extends React.Component{
                                         
                                             <ul className="ul-field-rating" >
                                       
-                                                <span className="rating select"> Select your rating</span>
+                                                <span className="rating-selector"> <p>Select Your Rating</p></span>
                                                     
-                                                <input type="radio" id="rating-input-1-5" className="rating-input" name="rating-input-1" value="5" onChange={this.update('rating')}/>
+                                                <input type="radio" id="rating-input-1-5" className="rating-input" name="rating-input-1" value="5" onChange={this.update('rating')} />
                                                 <label htmlFor="rating-input-1-5" className="star-box-rev" className="fa fa-star" ></label>
                                                 
                                                     
-                                                <input type="radio" id="rating-input-1-4" className="rating-input" name="rating-input-1" value="4" onChange={this.update('rating')}/>
+                                                    <input type="radio" id="rating-input-1-4" className="rating-input" name="rating-input-1" value="4" onChange={this.update('rating')} />
                                                 <label htmlFor="rating-input-1-4" className="star-box-rev" className="fa fa-star"></label>
                                                 
                                                 <input type="radio" id="rating-input-1-3" className="rating-input" name="rating-input-1" value="3" onChange={this.update('rating')}/>
                                                 <label htmlFor="rating-input-1-3" className="star-box-rev" className="fa fa-star"></label>
                                                 
                                                 
-                                                <input type="radio" id="rating-input-1-2" className="rating-input" name="rating-input-1" value="1" onChange={this.update('rating')}/>
+                                                <input type="radio" id="rating-input-1-2" className="rating-input" name="rating-input-1" value="2" onChange={this.update('rating')}/>
                                                 <label htmlFor="rating-input-1-2" className="star-box-rev" className="fa fa-star"></label>
                                                 
                                                 <input type="radio" id="rating-input-1-1" className="rating-input" name="rating-input-1" value="1" onChange={this.update('rating')}/>
@@ -123,12 +126,15 @@ class ReviewForm extends React.Component{
                                             
                                         </div>
                                         <textarea className="content-data" 
+                                                  value={this.state.content}
                                                   onChange={this.update('content')}
                                                   placeholder="Your review helps other learn about great local businesses"/>
                                     </div>
                                         <div className="field">
+                                            <label htmlFor="file">Add Photo: </label>
                                             <input type="file"
                                                    onChange={this.handleFile}/>
+                                                   
                                         </div>
                                         <div className="review-button-box">
                                             <div className="review-buttin-inner">

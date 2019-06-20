@@ -31,6 +31,7 @@ class BusinessShow extends React.Component {
         // const reviews = this.props.reviews || {};
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
+        
         console.log(reviewsEntities)
         
         

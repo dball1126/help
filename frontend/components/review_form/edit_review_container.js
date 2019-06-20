@@ -6,11 +6,13 @@ import {updateReview} from '../../actions/review_actions';
 
 
 const mapStateToProps = (state, ownprops) => {
+    
     const defaultReview = {content: "", rating: 0}
     const review = state.entities.reviews[ownprops.match.params.reviewId] || defaultReview;
     const currentUser = state.entities.users[state.session.id];
-    const business = state.entities.businesses[ownprops.match.params.businessId]
+    const business = state.entities.businesses[ownprops.match.params.businessId] || {};
     const businesses =  state.entities.businesses;
+    
     return {
         review: review,
         formType: 'Edit Review',
@@ -32,7 +34,7 @@ class EditReviewForm extends React.Component{
 
     render(){
         const {business, review, currentUser, formType} = this.props;
-        
+        debugger
         return (
         <div>
             

@@ -109,7 +109,7 @@
 .review-button-box{
     width: 625px;
     height: 84px;
-    margin: 24px 0px 0px;
+    margin: 15px 0px 0px;
 }
 
 .review-buttin-inner{
@@ -118,7 +118,7 @@
 
 .actual-review-button{
     width: 240px;
-    height: 48px;
+    height: 43px;
     align-items: flex-start;
     background: #d32323;
     font-family: "Helvetica Neue";
@@ -185,6 +185,7 @@ input[type=radio]{
 fieldset{
     width: 100px;
     height: 30px;
+    
 }
 
 .ul-field-rating .fa:hover,
@@ -195,5 +196,10 @@ fieldset{
         background-position: 0 0;
     }
 
+ .tcheck1{
+    background: lightblue;
+}
 
-
+.check2{
+    background: lightblue;
+}

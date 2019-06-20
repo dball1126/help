@@ -3,11 +3,7 @@ class Review < ApplicationRecord
 
     has_one_attached :image
 
-     before_save :grab_image
-
-    def grab_image
-        return image.service_url
-    end
+     
     
     belongs_to :business,
         primary_key: :id,

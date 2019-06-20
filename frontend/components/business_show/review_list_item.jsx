@@ -4,12 +4,14 @@ import {Link} from 'react-router-dom';
 const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => {
         let starCounter = review.rating;
         let starColor;
+        
         const deleteButton = () => {
             if (!user){
                 return "";
             } else {
                 return (
                     <div className="delete-review">
+                        <Link to={`/businesses/${review.business_id}/edit/${review.id}`}>Edit Review</Link>
                         <button onClick={() => deleteReview(review.id)} className="deleteReviewButton">Delete Review</button>
                     </div>
                 )
@@ -63,6 +65,7 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
                             
                         </div>
                         <div className="review-item-destroy-container">
+                            
                             <span>{deleteButton()}</span>
                         </div>
                     </div>
