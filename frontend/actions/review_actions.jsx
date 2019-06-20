@@ -16,9 +16,11 @@ const receiveReviews = ({reviews}) => {
     } 
 }
 
-const destroyReview = () => {
+const destroyReview = (reviewId) => {
+    
     return {
-        type: DESTROY_REVIEW
+        type: DESTROY_REVIEW,
+        reviewId: reviewId
     }
 }
 
@@ -54,10 +56,12 @@ export const updateReview = (review) => {
     }
 }
 
-export const deleteReview = (review) => {
+export const deleteReview = (reviewId) => {
+    
     return (dispatch) => {
-        return ReviewApiUtil.destroyReview(review).then(() => {
-            return dispatch(destroyReview(review))
+        return ReviewApiUtil.destroyReview(reviewId).then((payload) => {
+            
+            return dispatch(destroyReview(payload.review.id))
         })
     }
 }

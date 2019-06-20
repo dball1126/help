@@ -10,17 +10,23 @@ const reviewsReducer = (oldState = {}, action) => {
         case RECEIVE_ALL_BUSINESSES:
             return action.reviews;
         case RECEIVE_ALL_REVIEWS:
+            debugger
             return Object.assign({}, oldState, action.reviews);
         case DESTROY_REVIEW:
+            
             const newState = Object.assign({}, oldState);
-                delete newState[action.review.id]
+            
+                delete newState[action.reviewId]
+                debugger
             return newState;
+        case RECEIVE_BUSINESS:
+            
+            return action.business.reviews
         // case RECEIVE_BUSINESS:
         //     debugger
-        //     // , reviews: action.business.reviews
-        //     return Object.assign({}, oldState, action.business.reviews)
         case RECEIVE_BUSINESS_REVIEWS:
-            
+            //entities.reviews
+            debugger
             // , reviews: action.business.reviews
             return Object.assign({}, oldState, action.business.reviews)
         default:

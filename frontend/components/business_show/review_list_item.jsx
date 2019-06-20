@@ -1,10 +1,22 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-const ReviewListItem = ({user, review, business, currentUser}) => {
+const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => {
         let starCounter = review.rating;
         let starColor;
-        
+        const deleteButton = () => {
+            if (!user){
+                return "";
+            } else {
+                return (
+                    <div>
+                        <button onClick={() => deleteReview(review.id)}>Delete</button>
+                    </div>
+                )
+            }
+        }
         const image = () => {
+            
             if (!review.image){
                 return "";
             } else {
@@ -48,7 +60,7 @@ const ReviewListItem = ({user, review, business, currentUser}) => {
                             <span className="review-item-content">{review.content}</span>
                             
                             <span>{image()}</span>
-                            
+                            <span>{deleteButton()}</span>
                         </div>
                         <div className="review-item-destroy-container">
                         </div>

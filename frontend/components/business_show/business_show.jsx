@@ -8,7 +8,7 @@ class BusinessShow extends React.Component {
     constructor(props){
         super(props);
         
-        // this.state.reviews = this.props.business.reviews || {};
+        // this.state.reviews = this.props.reviews || {};
         
     }
 
@@ -21,31 +21,35 @@ class BusinessShow extends React.Component {
     
 
     render(){
-        // const reviews1 = this.props.business.reviews || {};
-        
+        // const reviews1 = this.props.reviewsEntities || {};
+        const defaultReview = {rating: 0, author_id: 0, user_id: 0, content: "", first_name: "",}
         const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
         website: "", latitude: "", longitude: "", imageLinks: []}
         const business = this.props.business || defaultBusiness;
         const currentUser = this.props.currentUser || {};
-        
+        // const reviewE = this.props.reviewsd || defaultReview;
+        // const reviews = this.props.reviews || {};
+        const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
-        
+        console.log(reviewsEntities)
         
         
         const reviews = () => {
-            if (!business.reviews) {
+            if (!reviewsEntities) {
                 return "";
             } else {
+                
                 
                 return (
                     
                 <div key={Math.random()}>
                     <ul className="ul-business-show-review">
-                        {business.reviews.map((review, i) => {
+                        {reviewsEntities.map((review, i) => {
                             return (
                             <ReviewListContainer key={i}
                                 review={review}
-                                business={this.props.business} />
+                                business={this.props.business} 
+                                currentUser={currentUser}/>
                             )
                         })}
                     </ul>
@@ -55,18 +59,18 @@ class BusinessShow extends React.Component {
         let starColorTop;
         let reviewsCount = 0;
         const avgRating = () => {
-            if(!business.reviews){
+            if(!reviewsEntities){
                 return 0;
             } else {
                 
                 let avgRating = 0;
-                // let reviewsRating = (avgRating / business.reviews.length) || 0;
+                // let reviewsRating = (avgRating / reviewsEntities.length) || 0;
                 
-                business.reviews.forEach(review => {
+                reviewsEntities.forEach(review => {
                     avgRating += review.rating;
                 })
-                reviewsCount = business.reviews.length;
-                return Math.ceil(avgRating / business.reviews.length);
+                reviewsCount = reviewsEntities.length;
+                return Math.ceil(avgRating / reviewsEntities.length);
             }
 
         }

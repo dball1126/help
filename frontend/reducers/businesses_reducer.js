@@ -11,7 +11,7 @@ const businessesReducer = (oldState = {}, action) => {
             return Object.assign({}, action.businesses);
         case RECEIVE_BUSINESS:
             
-
+        
             return Object.assign({}, oldState, {[action.business.id]: action.business});
         case RECEIVE_REVIEW:
             const {review} = action;
@@ -20,10 +20,10 @@ const businessesReducer = (oldState = {}, action) => {
             }
             return newState;
         case DESTROY_REVIEW:
-            const index = newState[action.review.business_id].reviewIds.indexOf(action.review.id);
-                if (index >= 0){
-                    newState[action.review.business_id].reviewIds.splice(index, 1);
-                }
+          
+            debugger
+            // delete newState
+            // delete newState.reviews[]
             return newState;
         default:
             return oldState;
