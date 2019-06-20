@@ -65,7 +65,7 @@ class ReviewForm extends React.Component{
     }
 
     render(){
-            debugger
+            
 
         // const business = this.props.businesses[this.props.match.params.businessId];
         const business = this.props.business;

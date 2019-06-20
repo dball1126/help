@@ -11,6 +11,7 @@ class BusinessShow extends React.Component {
         super(props);
 
         // this.state.reviews = this.props.reviews || {};
+        
 
     }
 
@@ -18,6 +19,7 @@ class BusinessShow extends React.Component {
 
         this.props.fetchBusiness(this.props.businessId);
         // debugger
+
     }
 
 
@@ -29,16 +31,28 @@ class BusinessShow extends React.Component {
             name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
             website: "", latitude: "", longitude: "", imageLinks: []
         }
+        
+
         const business = this.props.business || defaultBusiness;
         const currentUser = this.props.currentUser || {};
         // const reviewE = this.props.reviewsd || defaultReview;
         // const reviews = this.props.reviews || {};
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
-
-        console.log(reviewsEntities)
-
-
+        
+        const businessMap = () => {
+            if(!business.longitude){
+                return "";
+            } else {
+                const businessPosition = {lat: business.latitude, lng: business.longitude}
+                const mapCenter = { lat: business.latitude, lng: business.longitude };
+                
+                return (
+                    <BusinessMap center={mapCenter} position={businessPosition} />
+                )
+            }
+        }
+        
         const reviews = () => {
             if (!reviewsEntities) {
                 return "";
@@ -118,9 +132,10 @@ class BusinessShow extends React.Component {
                 )
             }
         }
-        const mapCenter = { lat: 37.7758, lng: -122.435 };
+        
 
         return (
+            
             <div>
                 <RedBanner />
                 <div className="business-show-header">
@@ -183,7 +198,7 @@ class BusinessShow extends React.Component {
                             <div className="business-show-map">
                                 {/* <div className="image-placeholder">
                                 </div> */}
-                                <BusinessMap center={mapCenter} />
+                                {businessMap()}
                                 <div className="address-box">
                                     <span className="full-address">{business.address}</span><br />
                                     <span className="full-address">{business.city}, {business.state} {business.zipcode}</span><br />
