@@ -1,74 +1,77 @@
 import React from 'react';
 import Search from '../search/main_search';
 import RedBanner from '../greeting/top_banner_red';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import BusinessShowSearch from '../search/business_show_search';
 import ReviewListContainer from './review_list_container';
 import BusinessMap from './business_map';
- 
+
 class BusinessShow extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        
+
         // this.state.reviews = this.props.reviews || {};
-        
+
     }
 
-    componentDidMount(){
-        
+    componentDidMount() {
+
         this.props.fetchBusiness(this.props.businessId);
         // debugger
     }
 
-    
 
-    render(){
+
+    render() {
         // const reviews1 = this.props.reviewsEntities || {};
-        const defaultReview = {rating: 0, author_id: 0, user_id: 0, content: "", first_name: "",}
-        const defaultBusiness = {name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
-        website: "", latitude: "", longitude: "", imageLinks: []}
+        const defaultReview = { rating: 0, author_id: 0, user_id: 0, content: "", first_name: "", }
+        const defaultBusiness = {
+            name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
+            website: "", latitude: "", longitude: "", imageLinks: []
+        }
         const business = this.props.business || defaultBusiness;
         const currentUser = this.props.currentUser || {};
         // const reviewE = this.props.reviewsd || defaultReview;
         // const reviews = this.props.reviews || {};
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
-        
+
         console.log(reviewsEntities)
-        
-        
+
+
         const reviews = () => {
             if (!reviewsEntities) {
                 return "";
             } else {
-                
-                
+
+
                 return (
-                    
-                <div key={Math.random()}>
-                    <ul className="ul-business-show-review">
-                        {reviewsEntities.map((review, i) => {
-                            return (
-                            <ReviewListContainer key={i}
-                                review={review}
-                                business={this.props.business} 
-                                currentUser={currentUser}/>
-                            )
-                        })}
-                    </ul>
-                </div>
-        )}
-    }
+
+                    <div key={Math.random()}>
+                        <ul className="ul-business-show-review">
+                            {reviewsEntities.map((review, i) => {
+                                return (
+                                    <ReviewListContainer key={i}
+                                        review={review}
+                                        business={this.props.business}
+                                        currentUser={currentUser} />
+                                )
+                            })}
+                        </ul>
+                    </div>
+                )
+            }
+        }
         let starColorTop;
         let reviewsCount = 0;
         const avgRating = () => {
-            if(!reviewsEntities){
+            if (!reviewsEntities) {
                 return 0;
             } else {
-                
+
                 let avgRating = 0;
                 // let reviewsRating = (avgRating / reviewsEntities.length) || 0;
-                
+
                 reviewsEntities.forEach(review => {
                     avgRating += review.rating;
                 })
@@ -77,10 +80,10 @@ class BusinessShow extends React.Component {
             }
 
         }
-        
+
 
         const stars = () => {
-            let starCounter = avgRating(); 
+            let starCounter = avgRating();
             return (
                 <div className="star-review-item-rating" >
                     {[...Array(5)].map((ele, i) => {
@@ -95,13 +98,13 @@ class BusinessShow extends React.Component {
                 </div>
             )
 
-        }    
-        
+        }
+
 
         const images = () => {
-            if (!business.imageLinks){
+            if (!business.imageLinks) {
                 return "";
-            }   else {
+            } else {
                 return (
                     <div>
                         <ul className="ul-images">
@@ -124,13 +127,13 @@ class BusinessShow extends React.Component {
                     <div className="business-header-container">
                         <div className="business-header-logo">
                         </div>
-                        <BusinessShowSearch  />
+                        <BusinessShowSearch />
                         <div className="business-show-login-signup">
                             <div className="business-show-login-box">
-                            <Link to="/login" className="business-show-login">Log In</Link>
+                                <Link to="/login" className="business-show-login">Log In</Link>
                             </div>
                             <div className="business-show-signup-box">
-                            <Link to="/signup" className="business-show-signup">Sign up</Link>
+                                <Link to="/signup" className="business-show-signup">Sign up</Link>
                             </div>
                         </div>
                     </div>
@@ -154,39 +157,39 @@ class BusinessShow extends React.Component {
                             <div className="business-name-header">
                                 <div className="business-name">{business.name}
                                 </div>
-                                    <div className="business-ratings">
-                                        {/* <span className="fa fa-star"></span>
+                                <div className="business-ratings">
+                                    {/* <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span>
                                         <span className="fa fa-star"></span> */}
-                                        {stars()}
-                                        <span className="reviews-count"> {reviewsCount} reviews</span>
-                                    </div>
+                                    {stars()}
+                                    <span className="reviews-count"> {reviewsCount} reviews</span>
                                 </div>
-                                <div className="business-review-header">
+                            </div>
+                            <div className="business-review-header">
 
                                 <button className="write-a-review-button">
                                     <span className="star" >&#9733;</span>
                                     <Link to={reviewButton} >Write A Review</Link>
-                                    </button>
+                                </button>
 
-                                    <button className="add-photo-button">Add Photo</button>
-                                    <button className="share-photo-button">Share</button>
-                                    <button className="save-button">Save</button>
-                                </div>
+                                <button className="add-photo-button">Add Photo</button>
+                                <button className="share-photo-button">Share</button>
+                                <button className="save-button">Save</button>
                             </div>
+                        </div>
                         <div className="business-show-sub-header">
                             <div className="business-show-map">
-                                <div className="image-placeholder">
-                                </div>
-                                {/* <BusinessMap center={mapCenter} /> */}
-                                {/* <div className="address-box">
+                                {/* <div className="image-placeholder">
+                                </div> */}
+                                <BusinessMap center={mapCenter} />
+                                <div className="address-box">
                                     <span className="full-address">{business.address}</span><br />
                                     <span className="full-address">{business.city}, {business.state} {business.zipcode}</span><br />
                                     <span>{business.phone_number}</span><br />
                                     <span><Link to={business.website} className="address-link">{business.website}</Link></span>
-                                </div> */}
+                                </div>
                             </div>
                             <div className="business-pictures-container">
                                 <div className="business-pictures-showcase">
@@ -216,7 +219,7 @@ class BusinessShow extends React.Component {
                                         </div>
                                         <div className="trust-banner-search">
                                             <div className="trust-search-bar">
-                                                <input type="text" placeholder="Search within Reviews" className="trust-search-input"/>
+                                                <input type="text" placeholder="Search within Reviews" className="trust-search-input" />
                                                 <div className="trust-search-button">
                                                     <button className="trust-button-img">
                                                         <div className="trust-button-img-div"></div>
@@ -224,7 +227,7 @@ class BusinessShow extends React.Component {
                                                 </div>
                                             </div>
                                             <div className="yap-sort">
-                                                <span className="">Sort by</span> 
+                                                <span className="">Sort by</span>
                                                 <span className="sort-by-language"> Yap Sort</span>
                                             </div>
                                             <div className="yap-language">
@@ -234,8 +237,8 @@ class BusinessShow extends React.Component {
                                         </div>
                                     </div>
                                     <div className="bus-show-reviews-container">
-                                   {reviews()}
-                                   {}
+                                        {reviews()}
+                                        {}
                                     </div>
                                 </div>
                             </div>

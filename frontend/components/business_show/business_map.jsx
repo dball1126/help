@@ -9,11 +9,12 @@ class BusinessMap extends React.Component{
     }
 
     componentDidMount(){
-        const map = ReactDOM.findDOMNode(this.refs.map);
-
+        // const map = ReactDOM.findDOMNode(this.refs.map);
+        debugger
         const mapOptions = {
-            center: { lat: 40.7831, lng: 73.9712 },
+            center: { lat: 40.7831, lng: -73.9712 },
             zoom: 13
+            
         }
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -23,8 +24,8 @@ class BusinessMap extends React.Component{
 
     render(){
         return (
-            <div ref={ map => this.mapNode = map}>
-                <p>map test</p>
+            <div ref={ map => this.mapNode = map} id="map">
+                
             </div>
         )
     }
