@@ -1,6 +1,9 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-const mainSearch = () => {
+class MainSearch extends React.Component{
+
+    render(){
     return (
             <div className="main-search-form">
                 <form method="get" className="main-business-search">
@@ -36,6 +39,7 @@ const mainSearch = () => {
                 </form>
             </div>
     );
+    }
 }
 
-export default mainSearch;
+export default withRouter(MainSearch);
