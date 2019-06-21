@@ -9,7 +9,7 @@ import BusinessShowContainer from './business_show/business_show_container';
 import BusinessIndexContainer from './business/business_index_container';
 import CreateReviewContainer from './review_form/create_review_container';
 import EditReviewContainer from './review_form/edit_review_container';
-
+import SearchContainer from './search/search_container';
 
 const App = () => {
     return (
@@ -20,6 +20,7 @@ const App = () => {
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
              <Route exact path ='/businesses/:businessId/review' component={CreateReviewContainer}/>
              <Route exact path ='/businesses/:businessId/edit/:reviewId' component={EditReviewContainer}/>
+             <Route exact path ='/businesses/search' component={SearchContainer}/>
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
              <AuthRoute exact path="/login" component={LoginformContainer} />
         </div>
