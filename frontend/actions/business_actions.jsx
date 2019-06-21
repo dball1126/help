@@ -1,6 +1,7 @@
 export const RECEIVE_ALL_BUSINESSES = 'RECEIVE_ALL_BUSINESSES';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESS_REVIEWS = 'RECEIVE_BUSINESS_REVIEWS';
+import * as SearchApiUtil from '../util/search_api_util';
 import * as BusinessApiUtil from '../util/business_api_util';
 
 
@@ -12,13 +13,6 @@ export const fetchBusinesses = () => {
     };
 };
 
-// export const fetchBusiness = (id) => {
-//     return (dispatch) => {
-//         return BusinessApiUtil.fetchBusiness(id).then(payload => {
-//             return dispatch(receiveBusiness(payload))
-//         }, (business) => { return dispatch(receiveBusinessReviews(business)) } );
-//     };
-// };
 export const fetchBusiness = (id) => {
     return (dispatch) => {
         return BusinessApiUtil.fetchBusiness(id).then(payload => {
@@ -30,14 +24,7 @@ export const fetchBusiness = (id) => {
     }
 };
 
-// export const login = (user) => {
-//     return (dispatch) => {
-//         return SessionApiUtil.login(user).then(user => {
-//             return dispatch(receiveCurrentUser(user))
-//         }, (errors) => { return dispatch(receiveErrors(errors.responseJSON)) });
-//     };
-// };
-// attach another .then for  receive Reviews
+
 
 const receiveBusinesses = ({businesses}) => {
         return {
