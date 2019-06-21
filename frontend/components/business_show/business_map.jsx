@@ -30,30 +30,52 @@ class BusinessMap extends React.Component{
             position: this.pos,
             map: this.map
         });
+
+        
+        
+
         if(this.businesses){
             zoom = 5;
             this.businesses.forEach(business => {
-            const pos = new google.maps.LatLng(business.latitude, business.longitude);
+            // const pos = new google.maps.LatLng(business.latitude, business.longitude);
             
+                
+
             return (
                 
-                 this.marker = new google.maps.Marker({
-                    position: pos,
-                    map: this.map
-                })
+                //  this.marker = new google.maps.Marker({
+                //     position: pos,
+                //     map: this.map
+                // })
+                this.addBusiness(business)
+                 
             )
         });
         }
+
+        
+
+
         // const options = { center: this.props.center}
     }
 
     addBusiness(business){
-        debugger
+        // debugger
         const pos = new google.maps.LatLng(business.latitude, business.longitude)
         const marker = new google.maps.Marker({
             position: pos,
             map: this.map
         });
+
+        const infowindow = new google.maps.InfoWindow({
+            content: business.name
+        })
+        
+        marker.addListener('click', () => {
+            infowindow.open(this.map, marker);
+                    
+                })
+
     }
 
     render(){
