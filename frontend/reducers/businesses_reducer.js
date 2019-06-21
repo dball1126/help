@@ -8,10 +8,9 @@ const businessesReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_ALL_BUSINESSES:
+            
             return Object.assign({}, action.businesses);
         case RECEIVE_BUSINESS:
-            
-        
             return Object.assign({}, oldState, {[action.business.id]: action.business});
         case RECEIVE_REVIEW:
             const {review} = action;
@@ -20,8 +19,6 @@ const businessesReducer = (oldState = {}, action) => {
             }
             return newState;
         case DESTROY_REVIEW:
-          
-            
             // delete newState
             // delete newState.reviews[]
             return newState;

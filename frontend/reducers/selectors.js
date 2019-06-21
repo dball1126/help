@@ -4,6 +4,5 @@
 
 // export const selectBusinessReviews = ({reviews}, business) => {
 //     //Problem
-//     debugger
 //     return business.reviewIds.map(reviewId => reviews[reviewId]);
 // }

@@ -1,0 +1,22 @@
+.businesses-container{
+    width: 960px;
+    display: flex;
+}
+
+.businesses-picture-column{
+    width: 200px;
+}
+
+.businesses-ul{
+    width: 460px;
+    
+}
+
+.business-index-li{
+    width: 300px;
+    
+}
+
+.businesses-index-rightSide{
+    width: 300px;
+}

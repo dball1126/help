@@ -9,9 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     const business = state.entities.businesses[businessId];  //INVESTIGATE
     const currentUser = state.entities.users[state.session.id];
     // const reviews = selectBusinessReviews(state.entities, business);
-    // debugger
     // const reviews = business.reviews || {};
-    // debugger
+ 
     
 
     const reviews = Object.keys(state.entities.reviews).map(id => state.entities.reviews[id])
