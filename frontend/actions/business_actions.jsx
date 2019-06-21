@@ -18,13 +18,18 @@ export const fetchBusiness = (id) => {
         return BusinessApiUtil.fetchBusiness(id).then(payload => {
             return dispatch(receiveBusiness(payload)) 
         }).then(payload => {
-            
             return dispatch(receiveBusinessReviews(payload))
         });
     }
 };
 
-
+export const searchBusinesses = (query) => {
+    return (dispatch) => {
+        return SearchApiUtil.searchBusinesses(query).then(payload =>{
+            return dispatch(receiveBusinesses(payload))
+        });
+    }
+};
 
 const receiveBusinesses = ({businesses}) => {
         return {
