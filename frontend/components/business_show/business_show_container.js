@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 
     const reviews = Object.keys(state.entities.reviews).map(id => state.entities.reviews[id])
     
-    // console.log(reviews)
+   
     return {
         currentUser: currentUser,
         business,

@@ -16,7 +16,7 @@ class BusinessMap extends React.Component{
         // const map = ReactDOM.findDOMNode(this.refs.map);
         let zoom = 10;
         if (this.position) zoom = 13;
-        console.log(this.zoom)
+        
         const mapOptions = {
             center: this.center,
             zoom: zoom,
@@ -60,7 +60,7 @@ class BusinessMap extends React.Component{
     }
 
     addBusiness(business){
-        // debugger
+       
         const pos = new google.maps.LatLng(business.latitude, business.longitude)
         const marker = new google.maps.Marker({
             position: pos,

@@ -24,14 +24,24 @@ export const fetchBusiness = (id) => {
 };
 
 export const searchBusinesses = (query) => {
+        
     return (dispatch) => {
         return SearchApiUtil.searchBusinesses(query).then(payload =>{
+            
             return dispatch(receiveBusinesses(payload))
         });
     }
 };
+// searchBusinesses
+// export const searchBusinesses = query => dispatch => (
+    
+//     SearchApiUtil.searchBusinesses(query)
+//         .then(payload => dispatch(receiveBusinesses(payload)))
+// );
+
 
 const receiveBusinesses = ({businesses}) => {
+        
         return {
         type: RECEIVE_ALL_BUSINESSES,
         businesses: businesses

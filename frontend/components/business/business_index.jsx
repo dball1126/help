@@ -7,7 +7,10 @@ class BusinessIndex extends React.Component {
         
     }
     componentDidMount(){
+        
+        if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
         this.props.fetchBusinesses();
+        }
     }
 
     
@@ -17,7 +20,7 @@ class BusinessIndex extends React.Component {
         // const indexMap = this.props.businesses.map((business, i) => {
         //     const businessPosition = { lat: business.latitude, lng: business.longitude }
         //     const mapCenter = { lat: 40.722345, lng: -73.9873614 };
-        //     debugger
+      
         //     return (
         //         <BusinessMap businesses={this.props.businesses} position={businessPosition} center={mapCenter} key={i}/>
         //         // <BusinessMap key={i} />

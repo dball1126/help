@@ -1,8 +1,7 @@
 import {connect} from 'react-redux';
 import MainSearch from './main_search';
-import mainSearch from './main_search';
-import {searchBusinesses} from '../../util/search_api_util';
-
+// import mainSearch from './main_search';
+import { searchBusinesses, fetchBusinesses} from '../../actions/business_actions';
 
 const msp = (state, ownProps) => {
     const placeHolder = {};
@@ -13,8 +12,9 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
     return {
+        // fetchBusinesses: () => dispatch(fetchBusinesses()),
         searchBusinesses: query => dispatch(searchBusinesses(query))
     }
 }
 
-export default connect(msp, mdp)(mainSearch);
+export default connect(msp, mdp)(MainSearch);

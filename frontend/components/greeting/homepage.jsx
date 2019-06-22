@@ -1,7 +1,7 @@
 import GreetingContainer from './greeting_container';
 import React from 'react';
-import MainSearch from '../search/main_search';
-
+// import MainSearch from '../search/main_search';
+import SearchContainer from '../search/search_container';
 const homepage = () => {
     
     return (
@@ -25,7 +25,7 @@ const homepage = () => {
                             <div className="main-logo">
                             </div>
                         </div>
-                        <MainSearch />
+                        <SearchContainer />
                             <nav className="main-nav-categories">
                                 <ul className="ul-nav-categories">
                                     <li className="cooling-services">
