@@ -1,18 +1,16 @@
 import React from 'react';
-import Search from '../search/main_search';
 import RedBanner from '../greeting/top_banner_red';
+import BusinessHeader from '../greeting/business_header';
 import { Link } from 'react-router-dom';
-import BusinessShowSearch from '../search/business_show_search';
 import ReviewListContainer from './review_list_container';
 import BusinessMap from './business_map';
+
 
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
         // this.state.reviews = this.props.reviews || {};
-        
-
     }
 
     componentDidMount() {
@@ -137,21 +135,8 @@ class BusinessShow extends React.Component {
             
             <div>
                 <RedBanner />
-                <div className="business-show-header">
-                    <div className="business-header-container">
-                        <div className="business-header-logo">
-                        </div>
-                        <BusinessShowSearch />
-                        <div className="business-show-login-signup">
-                            <div className="business-show-login-box">
-                                <Link to="/login" className="business-show-login">Log In</Link>
-                            </div>
-                            <div className="business-show-signup-box">
-                                <Link to="/signup" className="business-show-signup">Sign up</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <BusinessHeader />
+                
                 {/* <div className="categories-main-header">
                     <div className="business-show-categories-container">
                         <ul className="ul-categories-business-show">
