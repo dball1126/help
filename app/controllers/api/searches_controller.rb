@@ -1,7 +1,11 @@
 class Api::SearchesController < ApplicationController
     def business_search
         query = params[:query][:query]
-        
+        if query == ""
+            @businesses = Business.all 
+            render '/api/businesses/index'
+        else
+            debugger
         queryString = query.split(' ').map do |string|
             
             string = "LOWER(name) LIKE '%#{string.downcase}%'"
@@ -15,6 +19,7 @@ class Api::SearchesController < ApplicationController
         
         @businesses = Business.all if @businesses.empty?
         render '/api/businesses/index'
+    end
     end
 
     def category_search
