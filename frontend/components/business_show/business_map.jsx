@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 // const mapCenter = { lat: 40.7831, lng: 73.9712 };
 

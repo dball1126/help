@@ -24,7 +24,9 @@ class Api::ReviewsController < ApplicationController
     end
 
     def update
-        @review = Review.find_by(user_id: params[:review][:user_id], business_id: params[:review][:business_id])
+        # @review = Review.find_by(author_id: params[:review][:author_id], business_id: params[:review][:business_id])
+        @review = Review.find_by(id: params[:id])
+        
         if @review.update_attributes(review_params)
             render json: show
         else

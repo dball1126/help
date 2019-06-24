@@ -21,20 +21,31 @@ class ReviewForm extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         const formData = new FormData();
+        let method;
+        let url;
+        if (this.props.formType === 'Create Review'){
+            method = 'POST';
+            url = '/api/reviews';
+        } else {
+            method = 'PATCH',
+                url = `/api/reviews/${this.state.id}`
+        }
         
+
         if(this.state.photoFile){
             
         formData.append('review[image]', this.state.photoFile);
         
         }
+        formData.append('review[id]', this.state.id);
         formData.append('review[content]', this.state.content);
         formData.append('review[author_id]', this.props.currentUser.id);
         formData.append('review[rating]', parseInt(this.state.rating));
         formData.append('review[business_id]', this.props.match.params.businessId);
         
         $.ajax({
-            url: '/api/reviews',
-            method: 'POST',
+            url: url,
+            method: method,
             data: formData,
             contentType: false,
             processData: false,
