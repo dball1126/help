@@ -14,7 +14,7 @@ import SearchContainer from './search/search_container';
 const App = () => {
     return (
         <div>
-             <Route exact path ='/' component={Banner} />
+             {/* <Route exact path ='/' component={Banner} /> */}
              <Route exact path ='/' component={Homepage} />
              <Route exact path ='/businesses' component={BusinessIndexContainer} />
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>

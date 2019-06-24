@@ -45,7 +45,7 @@ class BusinessIndex extends React.Component {
         
         return (
             <div>
-                <RedBanner />
+                {/* <RedBanner /> */}
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
                 <div className="business-index-container">
                     <div className="business-index-header">

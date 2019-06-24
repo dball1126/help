@@ -10,13 +10,13 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state.reviews = this.props.reviews || {};
+        // this.state.reviewsEntities = this.props.reviews || [];
     }
 
     componentDidMount() {
 
         this.props.fetchBusiness(this.props.businessId);
-
+        
     }
 
 
@@ -129,7 +129,7 @@ class BusinessShow extends React.Component {
         return (
             
             <div>
-                <RedBanner />
+                {/* <RedBanner /> */}
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
                 
                 {/* <div className="categories-main-header">
