@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BusinessShowSearch from '../search/business_show_search';
+import BusinessHeaderSearchContainer from '../search/business_header_search_container';
 const businessHeader = ({currentUser, logout}) => {
     
     const defaultLinks = () => {
@@ -9,7 +9,7 @@ const businessHeader = ({currentUser, logout}) => {
             <div className="business-header-container">
                 <div className="business-header-logo">
                 </div>
-                <BusinessShowSearch />
+                <BusinessHeaderSearchContainer />
                 <div className="business-show-login-signup">
                     <div className="business-show-login-box">
                         <Link to="/login" className="business-show-login">Log In</Link>

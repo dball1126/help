@@ -5,7 +5,7 @@ class Api::SearchesController < ApplicationController
             @businesses = Business.all 
             render '/api/businesses/index'
         else
-            debugger
+            
         queryString = query.split(' ').map do |string|
             
             string = "LOWER(name) LIKE '%#{string.downcase}%'"
@@ -13,7 +13,7 @@ class Api::SearchesController < ApplicationController
 
         location = params[:query][:location]
         location = location.split(',')[0]
-        locationStr = "LOWER(city) = '#{location.downcase}'"
+        locationStr = "LOWER(city) = '#{location.downcase}'" || "LOWER(state) = '#{location.downcase}'"
 
         @businesses = Business.where('(' + queryString + ')')
         
@@ -22,9 +22,4 @@ class Api::SearchesController < ApplicationController
     end
     end
 
-    def category_search
-        query = params[:query][:category]
-        @businesses = Category.find_by(name: query).businesses
-        render '/api/businesses/index'
-    end
 end
