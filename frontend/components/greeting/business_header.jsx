@@ -43,7 +43,6 @@ const businessHeader = ({currentUser, logout}) => {
     }
 
     if(currentUser){
-        console.log(currentUser)
         return logoutLink()
     } else {
         return defaultLinks()

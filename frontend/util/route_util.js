@@ -11,15 +11,18 @@ const Auth = ({component: Component, path, loggedIn, exact}) => (
 );
 //REDIRECT TO signup FOR NOW   maybe switch to homepage at some point
 
-const Protected = ({ component: Component, path, loggedIn, exact}) => (
+const Protected = ({ component: Component, path, loggedIn, exact}) => {
+    debugger
+    return (
     <Route path={path} 
            exact={exact} 
            render={(props) => (
     loggedIn ? <Component {...props} /> : <Redirect to="/login" /> 
     )}/>
-);
+)};
 
 const mapStateToProps = (state) => {
+    
     return {
         loggedIn: Boolean(state.session.id)
     }

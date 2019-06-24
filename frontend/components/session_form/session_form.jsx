@@ -105,7 +105,7 @@ class sessionForm extends React.Component {
 
         return (
             <div>
-                 <RedBanner />
+                 {/* <RedBanner /> */}
                 <div className="processingForm-header">
                     <div className="login-signup-help-logo">
                         
