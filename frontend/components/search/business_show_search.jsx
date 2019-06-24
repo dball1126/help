@@ -1,15 +1,38 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
-const businessShowSearch = () => {
-    return (
+class businessShowSearch extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {query: "", location: ""}
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+            this.props.searchBusinesses(this.state).then(() => this.props.history.push('/businesses'));
+        
+    }
+
+    update(field){
+        return (e) => {
+            this.setState({[field]: e.target.value})
+        }
+    }
+
+    render(){
+
+       return (
         <div className="business-search-container">
-            <form method="get" className="business-show-search">
+            <form className="business-show-search" onSubmit={this.handleSubmit}>
                 <div className="business-show-search-left">
                     <label htmlFor="" className="searchbar-left-label">
                         <div className="searchbar-left-inside">
                             <span className="find-searchbar-left">Find</span>
                             <span className="input-searchbar-left">
                                 <input type="text"
+                                    value={this.state.query}
+                                    onChange={this.update('query')}
                                     placeholder="ac repair, burgers, bars, spas..."
                                     className="business-search" />
                             </span>
@@ -22,6 +45,8 @@ const businessShowSearch = () => {
                             <span className="near-searchbar-right">Near</span>
                             <span className="input-searchbar-right">
                                 <input type="text"
+                                    value={this.state.location}
+                                    onChange={this.update('location')}
                                     placeholder="Manhattan, NY"
                                     className="location-search" />
                             </span>
@@ -36,6 +61,7 @@ const businessShowSearch = () => {
             </form>
         </div>
     );
+    }
 }
 
-export default businessShowSearch;
+export default withRouter(businessShowSearch);

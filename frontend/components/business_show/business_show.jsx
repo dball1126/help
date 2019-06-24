@@ -1,24 +1,22 @@
 import React from 'react';
-import Search from '../search/main_search';
 import RedBanner from '../greeting/top_banner_red';
+import BusinessHeaderContainer from '../greeting/business_header_container';
 import { Link } from 'react-router-dom';
-import BusinessShowSearch from '../search/business_show_search';
 import ReviewListContainer from './review_list_container';
 import BusinessMap from './business_map';
+
 
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state.reviews = this.props.reviews || {};
-        
-
+        // this.state.reviewsEntities = this.props.reviews || [];
     }
 
     componentDidMount() {
 
         this.props.fetchBusiness(this.props.businessId);
-
+        
     }
 
 
@@ -45,7 +43,6 @@ class BusinessShow extends React.Component {
             } else {
                 const businessPosition = {lat: business.latitude, lng: business.longitude}
                 const mapCenter = { lat: business.latitude, lng: business.longitude };
-                
                 return (
                     <BusinessMap center={mapCenter} position={businessPosition} />
                 )
@@ -56,10 +53,7 @@ class BusinessShow extends React.Component {
             if (!reviewsEntities) {
                 return "";
             } else {
-
-
                 return (
-
                     <div key={Math.random()}>
                         <ul className="ul-business-show-review">
                             {reviewsEntities.map((review, i) => {
@@ -131,27 +125,13 @@ class BusinessShow extends React.Component {
                 )
             }
         }
-        
 
         return (
             
             <div>
-                <RedBanner />
-                <div className="business-show-header">
-                    <div className="business-header-container">
-                        <div className="business-header-logo">
-                        </div>
-                        <BusinessShowSearch />
-                        <div className="business-show-login-signup">
-                            <div className="business-show-login-box">
-                                <Link to="/login" className="business-show-login">Log In</Link>
-                            </div>
-                            <div className="business-show-signup-box">
-                                <Link to="/signup" className="business-show-signup">Sign up</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {/* <RedBanner /> */}
+                <BusinessHeaderContainer currentUser={this.props.currentUser}/>
+                
                 {/* <div className="categories-main-header">
                     <div className="business-show-categories-container">
                         <ul className="ul-categories-business-show">

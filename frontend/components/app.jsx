@@ -14,13 +14,13 @@ import SearchContainer from './search/search_container';
 const App = () => {
     return (
         <div>
-             <Route exact path ='/' component={Banner} />
+             {/* <Route exact path ='/' component={Banner} /> */}
              <Route exact path ='/' component={Homepage} />
              <Route exact path ='/businesses' component={BusinessIndexContainer} />
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
              <Route exact path ='/businesses/:businessId/review' component={CreateReviewContainer}/>
              <Route exact path ='/businesses/:businessId/edit/:reviewId' component={EditReviewContainer}/>
-             <Route exact path ='/businesses/search' component={SearchContainer}/>
+             <Route path ='/businesses/search' component={SearchContainer}/>
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
              <AuthRoute exact path="/login" component={LoginformContainer} />
         </div>

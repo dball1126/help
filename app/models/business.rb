@@ -9,4 +9,8 @@ class Business < ApplicationRecord
         primary_key: :id,
         foreign_key: :business_id,
         class_name: :Review
+
+    def average_rating
+        reviews.average(:rating).ceil
+    end
 end

@@ -1,7 +1,7 @@
-import {connect} from 'react-redux';
-import MainSearch from './main_search';
+import { connect } from 'react-redux';
+import BusinessShowSearch from './business_show_search';
 // import mainSearch from './main_search';
-import { searchBusinesses, fetchBusinesses} from '../../actions/business_actions';
+import { searchBusinesses, fetchBusinesses } from '../../actions/business_actions';
 
 const msp = (state, ownProps) => {
     const placeHolder = {};
@@ -17,4 +17,4 @@ const mdp = (dispatch) => {
     }
 }
 
-export default connect(msp, mdp)(MainSearch);
+export default connect(msp, mdp)(BusinessShowSearch);
