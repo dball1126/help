@@ -28,7 +28,7 @@ const businessHeader = ({currentUser, logout}) => {
                 <div className="business-header-container">
                     <div className="business-header-logo">
                     </div>
-                    <BusinessShowSearch />
+                    <BusinessHeaderSearchContainer />
                     <div className="business-show-login-signup">
                         <div className="business-show-login-box">
                             <button onClick={logout} className="business-page-logout">Logout</button>
