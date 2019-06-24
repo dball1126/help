@@ -5,6 +5,7 @@
 .business-index-inner-container{
     width: 990px;
     margin: 0 auto;
+    padding-top: 15px;
 }
 
 .business-index-header{
@@ -21,20 +22,57 @@
     display: flex;
 }
 
-.businesses-picture-column{
+
+.businesses-ul{
+    width: 630px;
+    
+}
+
+.business-index-li {
+    width: 630px;
+    height: 220px;
+    display: flex;
+    border-bottom: solid 1px #e6e6e6;
+}
+.index-li-picture{
     width: 200px;
 }
 
-.businesses-ul{
-    width: 460px;
-    
+.index-li-info-container{
+    width: 430px;
+    display: flex;
 }
 
-.business-index-li{
-    width: 300px;
-    
+.index-li-top-left {
+    width: 215px;
+    height: 110px;
+}
+
+.index-li-top-right {
+    width: 215px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
 }
 
 .businesses-index-rightSide{
     width: 300px;
+    padding-left: 30px;
+}
+
+.business-index-map #map {
+    width: 300px;
+    height: 300px;
+}
+
+
+.index-li-top-container {
+    width: 430px;
+    height: 110px;
+    display: flex;
+}
+
+.index-li-bottom-container {
+    width: 430px;
+    height: 110px;
 }

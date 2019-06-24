@@ -53,17 +53,15 @@ class BusinessIndex extends React.Component {
                     </div>
                     <div className="business-index-inner-container">
                         <div className="businesses-container">
-                            <div className="businesses-picture-column">
-                                <span>dummy data</span>
-                            </div>
                             <div className="businesses-ul-container">
                                 <ul className="businesses-ul">
                                 {businesses}
                                 </ul>
                             </div>
                             <div className="businesses-index-rightSide">
-                                <span>dummy data</span>
-                                {indexMap()}
+                                <div className="business-index-map">
+                                    {indexMap()}
+                                </div>
                             </div>
                         </div>
                     </div>

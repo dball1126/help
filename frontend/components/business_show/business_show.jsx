@@ -54,8 +54,6 @@ class BusinessShow extends React.Component {
             if (!reviewsEntities) {
                 return "";
             } else {
-
-
                 return (
 
                     <div key={Math.random()}>
