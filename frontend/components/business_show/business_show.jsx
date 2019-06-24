@@ -152,11 +152,6 @@ class BusinessShow extends React.Component {
                                 <div className="business-name">{business.name}
                                 </div>
                                 <div className="business-ratings">
-                                    {/* <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span>
-                                        <span className="fa fa-star"></span> */}
                                     {stars()}
                                     <span className="reviews-count"> {reviewsCount} reviews</span>
                                 </div>
@@ -201,17 +196,17 @@ class BusinessShow extends React.Component {
                                 <div className="review-highlights">
                                     <div className="review-highlights-header">
                                         <div className="review-highlights-header-text">
-                                            <span>Recommended Reviews</span>
+                                            <span>Reviews</span>
                                             <span className="recommended-review"> for {business.name}</span>
                                         </div>
                                         <div className="review-trust-banner">
                                             <div className="trust-banner-data">
                                                 <span className="trust-concern">Your trust is our top concern, </span>
                                                 <span>so businesses can't pay to alter or remove their reviews.</span>
-                                                <a href="" className="trust-link"> Learn more.</a>
+                                                {/* <a href="" className="trust-link"> Learn more.</a> */}
                                             </div>
                                         </div>
-                                        <div className="trust-banner-search">
+                                        {/* <div className="trust-banner-search">
                                             <div className="trust-search-bar">
                                                 <input type="text" placeholder="Search within Reviews" className="trust-search-input" />
                                                 <div className="trust-search-button">
@@ -228,7 +223,7 @@ class BusinessShow extends React.Component {
                                                 <span>Language</span>
                                                 <span className="sort-by-language"> English (3454)</span>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="bus-show-reviews-container">
                                         {reviews()}

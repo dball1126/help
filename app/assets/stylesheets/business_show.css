@@ -429,10 +429,11 @@
     width: 600px;
     
 }
-
+/* Chaning height from 131 to 80 due to removing the review search for now */
 .review-highlights-header{
     width: 600px;
-    height: 131px;
+    /* height: 131px; */
+    height: 66px;
     font-family:"Helvetica Neue";
     border-bottom: 1px solid #e6e6e6;
 }
