@@ -1,6 +1,6 @@
 import React from 'react';
 import RedBanner from '../greeting/top_banner_red';
-import BusinessHeader from '../greeting/business_header';
+import BusinessHeaderContainer from '../greeting/business_header_container';
 import { Link } from 'react-router-dom';
 import ReviewListContainer from './review_list_container';
 import BusinessMap from './business_map';
@@ -43,7 +43,6 @@ class BusinessShow extends React.Component {
             } else {
                 const businessPosition = {lat: business.latitude, lng: business.longitude}
                 const mapCenter = { lat: business.latitude, lng: business.longitude };
-                
                 return (
                     <BusinessMap center={mapCenter} position={businessPosition} />
                 )
@@ -55,7 +54,6 @@ class BusinessShow extends React.Component {
                 return "";
             } else {
                 return (
-
                     <div key={Math.random()}>
                         <ul className="ul-business-show-review">
                             {reviewsEntities.map((review, i) => {
@@ -127,13 +125,12 @@ class BusinessShow extends React.Component {
                 )
             }
         }
-        
 
         return (
             
             <div>
                 <RedBanner />
-                <BusinessHeader />
+                <BusinessHeaderContainer currentUser={this.props.currentUser}/>
                 
                 {/* <div className="categories-main-header">
                     <div className="business-show-categories-container">

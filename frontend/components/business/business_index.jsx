@@ -2,7 +2,7 @@ import React from 'react';
 import BusinessIndexItemContainer from './business_index_item_container';
 import BusinessMap from '../business_show/business_map';
 import RedBanner from '../greeting/top_banner_red';
-import BusinessHeader from '../greeting/business_header';
+import BusinessHeaderContainer from '../greeting/business_header_container';
 class BusinessIndex extends React.Component {
     constructor(props){
         super(props);
@@ -46,7 +46,7 @@ class BusinessIndex extends React.Component {
         return (
             <div>
                 <RedBanner />
-                <BusinessHeader />
+                <BusinessHeaderContainer currentUser={this.props.currentUser}/>
                 <div className="business-index-container">
                     <div className="business-index-header">
                         <div></div>
