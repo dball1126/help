@@ -23,6 +23,7 @@ const homepage = () => {
                     <div className="homepage-main-inner-inner-container">
                         <div className="main-logo-containter">
                             <div className="main-logo">
+                                <span className="yap-main-logo">yap</span>
                             </div>
                         </div>
                         <SearchContainer />

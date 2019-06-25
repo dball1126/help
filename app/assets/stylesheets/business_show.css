@@ -19,11 +19,26 @@
 }
 
 .business-header-logo {
-    background-image: url(https://i.imgur.com/khxz88S.png);
+    /* background-image: url(https://i.imgur.com/khxz88S.png); */
     height: 40px;
     width: 80px;
-    background-size: 100%;
+    /* background-size: 100%; */
     margin-right: 20px;
+}
+
+.yap-header-logo{
+    font-size: 35px;
+    color: #FFFFFF;
+    font-family: "oswald";
+    -webkit-text-stroke: -1px black;
+   color: white;
+   font-weight: bold;
+   text-shadow:
+       1px 1px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 .business-search-container {

@@ -7,7 +7,8 @@ const businessHeader = ({currentUser, logout}) => {
     return (
         <div className="business-show-header">
             <div className="business-header-container">
-                <Link to="/"><div className="business-header-logo">
+                <Link to="/" className="yap-logo-link"><div className="business-header-logo">
+                    <span className="yap-header-logo">yap</span>
                 </div></Link>
                 <BusinessHeaderSearchContainer />
                 <div className="business-show-login-signup">
@@ -26,7 +27,8 @@ const businessHeader = ({currentUser, logout}) => {
         return (
             <div className="business-show-header">
                 <div className="business-header-container">
-                    <Link to="/"><div className="business-header-logo">
+                    <Link to="/" className="yap-logo-link"><div className="business-header-logo">
+                        <span className="yap-header-logo">yap</span>
                     </div></Link>
                     <BusinessHeaderSearchContainer />
                     <div className="business-show-login-signup">
