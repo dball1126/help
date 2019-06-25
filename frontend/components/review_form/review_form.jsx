@@ -9,6 +9,7 @@ class ReviewForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
         this.photoFile = this.state.photoFile || {};
+        this.errorMessage;
     }
 
     componentDidMount(){
@@ -23,6 +24,7 @@ class ReviewForm extends React.Component{
         const formData = new FormData();
         let method;
         let url;
+        let errorMessage;
         if (this.props.formType === 'Create Review'){
             method = 'POST';
             url = '/api/reviews';
@@ -49,6 +51,11 @@ class ReviewForm extends React.Component{
             data: formData,
             contentType: false,
             processData: false,
+            error: function (response, status, error) {
+                this.errorMessage = response.responseJSON[0];
+                
+                $("div.error-review-box").html("<p>Select a Rating and Explain your Review</p>")
+            }
         }).then(() => this.props.history.push(`/businesses/${this.props.match.params.businessId}`));
           
         // const vals = {
@@ -63,6 +70,7 @@ class ReviewForm extends React.Component{
         // this.props.action(vals).then(() => this.props.history.push(`/businesses/${this.props.match.params.businessId}`));
     }
 
+
     update(field){
         return (e) => {
             this.setState({[field]: e.target.value})
@@ -76,8 +84,7 @@ class ReviewForm extends React.Component{
     }
 
     render(){
-            
-
+       
         // const business = this.props.businesses[this.props.match.params.businessId];
         const business = this.props.business;
             if (business === undefined) return "" ;
@@ -106,7 +113,7 @@ class ReviewForm extends React.Component{
                                         <a href="">Read our review guidelines</a>
                                     </div>
                                 </div>
-
+                                
                                 <div className="review-form-container">
                                     <form onSubmit={this.handleSubmit} >
                                     <div className="review-form">
@@ -141,6 +148,7 @@ class ReviewForm extends React.Component{
                                                   onChange={this.update('content')}
                                                   placeholder="Your review helps other learn about great local businesses"/>
                                     </div>
+                                        <div className="error-review-box"></div>
                                         <div className="field">
                                             <label htmlFor="file">Add Photo: </label>
                                             <input type="file"
@@ -154,6 +162,7 @@ class ReviewForm extends React.Component{
                                                 </button>
                                             </div>
                                         </div>
+                                        <div className="review-form-error-messages"></div>
                                     </form>
                                 </div>
                             </div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 import RedBanner from '../greeting/top_banner_red';
+import { Link } from 'react-router-dom'
+
 class sessionForm extends React.Component {
     constructor(props){
         super(props);
@@ -107,9 +109,9 @@ class sessionForm extends React.Component {
             <div>
                  {/* <RedBanner /> */}
                 <div className="processingForm-header">
-                    <div className="login-signup-help-logo">
+                    <Link to="/"><div className="login-signup-help-logo">
                         
-                    </div>
+                    </div></Link>
                 </div>
 
 
@@ -144,6 +146,7 @@ class sessionForm extends React.Component {
                         </div>
                     {getZip()}
                     <input type="submit" value={this.props.formType}/>
+                    <button className="session-form-demo-button" onClick={this.props.demoLogin}>Demo Log in</button>
                 </form>
                 <div className="login-form-photo">
                     <div className="login-photo"></div>

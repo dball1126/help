@@ -7,8 +7,8 @@ const businessHeader = ({currentUser, logout}) => {
     return (
         <div className="business-show-header">
             <div className="business-header-container">
-                <div className="business-header-logo">
-                </div>
+                <Link to="/"><div className="business-header-logo">
+                </div></Link>
                 <BusinessHeaderSearchContainer />
                 <div className="business-show-login-signup">
                     <div className="business-show-login-box">
@@ -26,8 +26,8 @@ const businessHeader = ({currentUser, logout}) => {
         return (
             <div className="business-show-header">
                 <div className="business-header-container">
-                    <div className="business-header-logo">
-                    </div>
+                    <Link to="/"><div className="business-header-logo">
+                    </div></Link>
                     <BusinessHeaderSearchContainer />
                     <div className="business-show-login-signup">
                         <div className="business-show-login-box">
