@@ -10,12 +10,12 @@ import BusinessIndexContainer from './business/business_index_container';
 import CreateReviewContainer from './review_form/create_review_container';
 import EditReviewContainer from './review_form/edit_review_container';
 import SearchContainer from './search/search_container';
-import ErrorBoundry from '../util/error_boundary';
+
 const App = () => {
     return (
         <div>
              {/* <Route exact path ='/' component={Banner} /> */}
-             <ErrorBoundry>
+            
              <Route exact path ='/' component={Homepage} />
              <Route exact path ='/businesses' component={BusinessIndexContainer} />
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
@@ -24,7 +24,7 @@ const App = () => {
              <Route path ='/businesses/search' component={SearchContainer}/>
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
              <AuthRoute exact path="/login" component={LoginformContainer} />
-            </ErrorBoundry>
+            
         </div>
     )
 }

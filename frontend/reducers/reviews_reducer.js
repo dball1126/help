@@ -21,7 +21,10 @@ const reviewsReducer = (oldState = {}, action) => {
             return newState;
         case RECEIVE_BUSINESS:
             
+            if (action.business.reviews)
             return action.business.reviews
+            else
+            return Object.assign({}, oldState);
         // case RECEIVE_BUSINESS:
         case RECEIVE_BUSINESS_REVIEWS:
             //entities.reviews

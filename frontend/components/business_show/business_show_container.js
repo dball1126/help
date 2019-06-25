@@ -11,16 +11,23 @@ const mapStateToProps = (state, ownProps) => {
     // const reviews = selectBusinessReviews(state.entities, business);
     // const reviews = business.reviews || {};
  
-    
-
     const reviews = Object.keys(state.entities.reviews).map(id => state.entities.reviews[id])
+     
+    let revs = [];
+    reviews.forEach(ele => {
+        console.log(ele)
+        if (`${ele.business_id}` === ownProps.match.params.businessId){
+        revs.push(ele)
+        }
+    })
+
+    //Extremely important Note:  the revs is taking out the reviews specific to the Business, if you remove it you will break it.
     
-   
     return {
         currentUser: currentUser,
         business,
         businessId,
-        reviews : reviews
+        reviews : revs
         
         // currentUser
         //  reviews: business.reviews

@@ -11,6 +11,13 @@ class Business < ApplicationRecord
         class_name: :Review
 
     def average_rating
-        reviews.average(:rating).ceil
+        
+       if reviews.average(:rating) == nil
+        
+        return 0
+       else
+        
+        return reviews.average(:rating).ceil
+       end
     end
 end

@@ -34,6 +34,7 @@ class BusinessShow extends React.Component {
         const currentUser = this.props.currentUser || {};
         // const reviewE = this.props.reviewsd || defaultReview;
         // const reviews = this.props.reviews || {};
+        
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
         
@@ -53,6 +54,7 @@ class BusinessShow extends React.Component {
             if (!reviewsEntities) {
                 return "";
             } else {
+                
                 return (
                     <div key={Math.random()}>
                         <ul className="ul-business-show-review">
@@ -72,10 +74,11 @@ class BusinessShow extends React.Component {
         let starColorTop;
         let reviewsCount = 0;
         const avgRating = () => {
-            if (!reviewsEntities) {
+            if (reviewsEntities.length < 1) {
+                
                 return 0;
             } else {
-
+                
                 let avgRating = 0;
                 // let reviewsRating = (avgRating / reviewsEntities.length) || 0;
 
@@ -91,6 +94,8 @@ class BusinessShow extends React.Component {
 
         const stars = () => {
             let starCounter = avgRating();
+            
+            
             return (
                 <div className="star-review-item-rating" >
                     {[...Array(5)].map((ele, i) => {
@@ -126,8 +131,8 @@ class BusinessShow extends React.Component {
             }
         }
 
+        
         return (
-            
             <div>
                 {/* <RedBanner /> */}
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
