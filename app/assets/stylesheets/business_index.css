@@ -31,9 +31,13 @@
 
 .business-index-li {
     width: 630px;
-    height: 220px;
+    height: 240px;
     display: flex;
     border-bottom: solid 1px #e6e6e6;
+}
+
+.index-li-img{
+    padding-top: 15px;
 }
 .index-li-picture{
     width: 200px;
@@ -45,16 +49,73 @@
 }
 
 .index-li-top-left {
-    width: 215px;
-    height: 110px;
+    width: 200px;
+    height: 100px;
+}
+
+.index-li-top-left .star-review-item-rating {
+    padding-top: 10px;
+}
+
+.index-name-div{
+    padding-top: 15px;
+
+}
+
+.index-image{
+    width: 210px;
+    height: 210px;
+    border-radius: 4px;
+}
+
+.business-index-show-link{
+    text-decoration: none;
+    color: #0073bb;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 800;
 }
 
 .index-li-top-right {
-    width: 215px;
-    height: 110px;
+    width: 200px;
+    height: 100px;
     display: flex;
     flex-direction: column;
 }
+
+.index-li-top-right span {
+    font-size: 14px;
+}
+
+.index-address-top {
+    padding-top: 15px;
+    text-align-last: end;
+}
+
+.index-address{
+    padding-top: 10px;
+    text-align-last: end;
+}
+
+.star-index-box{
+    width: 200px;
+    height: 30px;
+    display: flex;
+}
+
+.star-index-box .star-review-item-rating {
+    width: 100px;
+}
+
+.span-reviews-count {
+    padding-top: 10px;
+    font: inherit;
+    font-size: 14px;
+    color: #666;
+    padding-left: 5px;
+
+}
+
 
 .businesses-index-rightSide{
     width: 300px;
@@ -69,7 +130,8 @@
 
 .index-li-top-container {
     width: 430px;
-    height: 110px;
+    height: 100px;
+    padding-left: 30px;
     display: flex;
 }
 

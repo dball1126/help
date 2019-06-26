@@ -20,4 +20,8 @@ class Business < ApplicationRecord
         return reviews.average(:rating).ceil
        end
     end
+
+    def reviews_count
+        reviews.count
+    end
 end
