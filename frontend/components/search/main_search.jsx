@@ -40,7 +40,7 @@ class MainSearch extends React.Component{
                                     <input type="text"
                                         value={this.state.query}
                                         onChange={this.update('query')}
-                                        placeholder="ac repair, burgers, bars, spas..."
+                                        placeholder="restaurants, pizza, chinese..."
                                         className="business-search" />
                                 </span>
                             </div>
@@ -54,7 +54,7 @@ class MainSearch extends React.Component{
                                     <input type="text"
                                     value={this.state.location}
                                     onChange={this.update('location')}
-                                        placeholder="Manhattan, NY"
+                                        placeholder="Brooklyn, NY"
                                         className="location-search" />
                                 </span>
                             </div>
