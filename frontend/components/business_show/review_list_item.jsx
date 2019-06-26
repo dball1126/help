@@ -24,7 +24,7 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
                 return "";
             } else {
                 return (
-                    <div>
+                    <div className="review-item-content-img">
                         <span><img src={review.image} className="review-image"></img></span>
                     </div>
                 )
@@ -62,7 +62,7 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
                         <div className="review-item-content-container">
                             <span className="review-item-content">{review.content}</span>
                             
-                            <span>{image()}</span>
+                            <span className="review-item-content-img">{image()}</span>
                             
                         </div>
                         <div className="review-item-destroy-container">
