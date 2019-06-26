@@ -41,7 +41,7 @@ class BusinessIndexItem extends React.Component {
         const business = this.props.business;
         const image = business.imageLinks[Math.ceil(Math.random() * 2)];
         
-        console.log(image)
+        
         return (
             <li className="business-index-li">
                 <div className="index-li-picture">

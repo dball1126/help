@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
      
     let revs = [];
     reviews.forEach(ele => {
-        console.log(ele)
+        
         if (`${ele.business_id}` === ownProps.match.params.businessId){
         revs.push(ele)
         }

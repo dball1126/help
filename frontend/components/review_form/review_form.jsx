@@ -10,6 +10,7 @@ class ReviewForm extends React.Component{
         this.handleFile = this.handleFile.bind(this);
         this.photoFile = this.state.photoFile || {};
         this.errorMessage;
+        
     }
 
     componentDidMount(){
@@ -87,6 +88,7 @@ class ReviewForm extends React.Component{
        
         // const business = this.props.businesses[this.props.match.params.businessId];
         const business = this.props.business;
+        
             if (business === undefined) return "" ;
 
         return (

@@ -71,7 +71,7 @@ class Homepage extends React.Component {
                     <div className="homepage-main-nav-container">
                         <nav className="homepage-nav-reviews">
                             <ul className="ul-nav-reviews">
-                                <li className="nav-review-link"><Link to="/" className="start-page-reivew-link">Write a Review</Link></li>
+                                <li className="nav-review-link"><Link to='/businesses' className="start-page-reivew-link">Write a Review</Link></li>
                                 {/* <li className="nav-events-link">Events</li>
                                 <li className="nav-talk-link">Talk</li> */}
                             </ul>
