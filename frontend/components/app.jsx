@@ -3,7 +3,7 @@ import { Route} from 'react-router-dom';
 import LoginformContainer from '../components/session_form/login_form_container';
 import SignUpformContainer from '../components/session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import Homepage from './greeting/homepage';
+import HomepageContainer from './greeting/homepage_container';
 import Banner from './greeting/top_banner';
 import BusinessShowContainer from './business_show/business_show_container';
 import BusinessIndexContainer from './business/business_index_container';
@@ -16,7 +16,7 @@ const App = () => {
         <div>
              {/* <Route exact path ='/' component={Banner} /> */}
             
-             <Route exact path ='/' component={Homepage} />
+             <Route exact path ='/' component={HomepageContainer} />
              <Route exact path ='/businesses' component={BusinessIndexContainer} />
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
              <ProtectedRoute exact path ='/businesses/:businessId/review' component={CreateReviewContainer}/>

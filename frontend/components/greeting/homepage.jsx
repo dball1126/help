@@ -1,9 +1,69 @@
 import GreetingContainer from './greeting_container';
 import React from 'react';
+import {Link} from 'react-router-dom';
 // import MainSearch from '../search/main_search';
 import SearchContainer from '../search/search_container';
-const homepage = () => {
-    
+class Homepage extends React.Component {
+    constructor(props) {
+        super(props);
+        
+
+    }
+   componentDidMount(){
+       this.props.startPageBusinesses();
+   }
+   
+  
+   
+    render(){
+        let businesses = this.props.businesses || [];
+
+        
+        
+        const startBusinesses = () => {
+           
+            if (businesses < 1) {
+                return ""
+            } else {
+                
+                return (
+                    businesses.map((business, i) => {
+                        const stars = () => {
+                            let starColorTop;
+                            let starCounter = business.average_rating;
+                            return (
+                                <div className="star-review-item-rating" >
+                                    {[...Array(5)].map((ele, i) => {
+                                        starCounter -= 1;
+                                        if (starCounter < 0) starColorTop = "stary";
+                                        return (
+                                            <div className="star-box" key={i}>
+                                                <span className="fa fa-star" id={starColorTop} ></span>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            )
+
+                        }
+                        let image = business.imageLinks[Math.ceil(Math.random() * 2)];
+                        return (
+                            <div className="start-page-business" key={i}>
+                                <div className="start-business-pic">
+                                    <img src={image} className="start-page-index-image"></img>
+                                </div>
+                                <div className="start-page-business-name">
+                                    <Link to={`/businesses/${business.id}`} className="business-index-show-link">{business.name}</Link>
+                                </div>
+                                <div className="start-page-star-box">
+                                    {stars()}<span className="span-reviews-count">{business.reviews_count} Reviews</span>
+                                </div>
+                            </div>
+                        )
+                    })
+                )
+            }
+        }
     return (
         <div>
             <div className="homepage-main-container">
@@ -54,7 +114,9 @@ const homepage = () => {
             <div className="homepage-main-footer-container">
                 <div className="homepage-footer-inner-container">
                     <div className="footer-content-wrapper">
-
+                        <div className="start-business-box">
+                            {startBusinesses()}
+                        </div>
                     </div>
                     <div className="footer-img-wrapper">
                         <div className="footer-img"></div>
@@ -65,6 +127,7 @@ const homepage = () => {
     )
     
 }
+}
 
 
-export default homepage;
+export default Homepage;

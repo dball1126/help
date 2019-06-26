@@ -1,9 +1,10 @@
 export const RECEIVE_ALL_BUSINESSES = 'RECEIVE_ALL_BUSINESSES';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESS_REVIEWS = 'RECEIVE_BUSINESS_REVIEWS';
+export const RECEIVE_START_BUSINESSES = 'RECEIVE_START_BUSINESSES';
 import * as SearchApiUtil from '../util/search_api_util';
 import * as BusinessApiUtil from '../util/business_api_util';
-
+import * as StartApiUtil from '../util/start_page_util';
 
 export const fetchBusinesses = () => {
     return (dispatch) => {
@@ -23,6 +24,16 @@ export const fetchBusiness = (id) => {
     }
 };
 
+export const startPageBusinesses = () => {
+
+    return (dispatch) => {
+        return StartApiUtil.startPageBusinesses().then(payload => {
+            
+            return dispatch(receiveStartPageBusinesses(payload))
+        });
+    }
+};
+
 export const searchBusinesses = (query) => {
         
     return (dispatch) => {
@@ -38,7 +49,12 @@ export const searchBusinesses = (query) => {
 //     SearchApiUtil.searchBusinesses(query)
 //         .then(payload => dispatch(receiveBusinesses(payload)))
 // );
-
+const receiveStartPageBusinesses = ({businesses}) => {
+    return {
+        type: RECEIVE_START_BUSINESSES,
+        businesses: businesses
+    }
+}
 
 const receiveBusinesses = ({businesses}) => {
         

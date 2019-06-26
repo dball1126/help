@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :users, only: [:new, :create]
       resources :reviews
       get 'businesses/search', to: 'searches#business_search'
+      get 'businesses/start', to: 'searches#business_start'
       resources :businesses, only: [:index, :show, :create, :destroy]
       resource :session, only: [:new, :create, :destroy]
     end

@@ -2,6 +2,7 @@
     height: 536px;
     background: #f5f5f5;
     border-top: solid 1px #666666;
+    font-family: "Helvetica Neue";
 }
 
 .homepage-footer-inner-container{
@@ -31,4 +32,48 @@
     height: 390px;
     width: 960px;
 
+}
+
+.start-business-box{
+    width: 960px;
+    height: 350px;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+
+.start-page-business{
+    width: 300px;
+    height: 300px;
+        border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    background: #fff;
+    
+}
+
+.start-page-index-image{
+    width: 300px;
+    height: 200px;
+}
+
+.start-page-business-name{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.start-page-star-box{
+    display: flex;
+    padding-left: 30px;
+    padding-top: 5px;
+}
+
+.start-page-star-box .span-reviews-count {
+    padding-top: 0px;
+    margin-top: 4px;
+   
+    font: inherit;
+    font-size: 14px;
+    color: #666;
+    
 }
