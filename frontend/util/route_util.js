@@ -9,6 +9,8 @@ const Auth = ({component: Component, path, loggedIn, exact}) => (
      loggedIn ? <Redirect to="/" /> : <Component {...props} />
     )} />
 );
+//try to rediret in the Auth route right above to go back to the business page wher you clicked write a review.
+
 //REDIRECT TO signup FOR NOW   maybe switch to homepage at some point
 
 const Protected = ({ component: Component, path, loggedIn, exact}) => {

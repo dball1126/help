@@ -17,7 +17,7 @@ class ReviewForm extends React.Component{
         
         // this.props.fetchBusiness(this.props.match.params.businessId);
         this.setState({...this.props.review});
-        
+        // console.log(review.rating)
     }
 
     handleSubmit(e){
