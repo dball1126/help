@@ -95,7 +95,7 @@ class ReviewForm extends React.Component{
                     <div className="review-banner-container">
                         <div className="reivew-banner-inner-container">
                             <div className="review-logo">
-
+                                <span className="yap-review-logo"><Link to="/" className="yap-review-logo-link">yap</Link></span>
                             </div>
                             <div className="write-a-review-header">
                                 <span>Write a Review</span>
@@ -110,7 +110,7 @@ class ReviewForm extends React.Component{
                                         <span>{business.name}</span>
                                     </div>
                                     <div className="guidelines">
-                                        <a href="">Read our review guidelines</a>
+                                        {/* <a href="">Read our review guidelines</a> */}
                                     </div>
                                 </div>
                                 

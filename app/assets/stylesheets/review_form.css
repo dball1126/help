@@ -22,11 +22,31 @@
 .review-logo {
     width: 80px;
     height: 40px;
-    background-image: url(https://i.imgur.com/khxz88S.png);
+    /* background-image: url(https://i.imgur.com/khxz88S.png); */
     
-    background-size: 100%;
+    /* background-size: 100%; */
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.yap-review-logo{
+    font-size: 35px;
+    color: #FFFFFF;
+    font-family: "oswald";
+    -webkit-text-stroke: -1px black;
+   color: white;
+   font-weight: bold;
+   text-shadow:
+       1px 1px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.yap-review-logo-link{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .write-a-review-header {
