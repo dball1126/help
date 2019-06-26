@@ -13,6 +13,10 @@ Review.destroy_all
 user1 = User.create(email: 'demo@demo.com', password: 'demouser', first_name: "demo", last_name: "demo", zip_code: 11215)
 user2 = User.create(email: 'demo2@demo.com', password: 'demouser2', first_name: "demo", last_name: "demo", zip_code: 11215)
 user3 = User.create(email: 'demo3@demo.com', password: 'demouser3', first_name: "demo", last_name: "demo", zip_code: 11215)
+user4 = User.create(email: 'joeMone22233@email.com', password: 'password', first_name: "joe", last_name: "moet", zip_code: 11232)
+user5 = User.create(email: 'charles9002233@email.com', password: 'password', first_name: "charles", last_name: "chingy", zip_code: 11212)
+user6 = User.create(email: 'henry993123@email.com', password: 'password', first_name: "henry", last_name: "sunrise", zip_code: 11516)
+
 
 
 business1 = Business.create(name: "Katz's Delicatessen", state: "NY", city: "New York", zipcode: 10002, address: "205 E Houston St", phone_number: "(212)254-2246", website: "www.katzsdelicatessen.com", latitude: "40.722345", longitude: "-73.9873614")
@@ -23,6 +27,8 @@ business5 = Business.create(name: "Faith Chinese Food", state: "NY", city: "Broo
 business6 = Business.create(name: "Shake Shack", state: "NY", city: "New York", zipcode: 10018, address: "1333 Broadway", phone_number: "(646)230-0696", website: "www.shakeshack.com", latitude: "40.751171", longitude: "-73.988129")
 business7 = Business.create(name: "McDonald's", state: "NY", city: "New York", zipcode: 10022, address: "966 3rd Ave", phone_number: "(212)753-5360", website: "www.mcdonalds.com", latitude: "40.760850", longitude: "-73.967355")
 business8 = Business.create(name: "Calexico", state: "NY", city: "Brooklyn", zipcode: 11215, address: "278 5th Ave", phone_number: "(347) 254-7644", website: "www.calexico.com", latitude: "40.674301", longitude: "-73.982407")
+business9 = Business.create(name: "La Villa Pizzeria", state: "NY", city: "Brooklyn", zipcode: 11215, address: "261 5th Ave", phone_number: "(718) 499-9888", website: "www.lavillapizza.com", latitude: "40.674310", longitude: "-73.981630")
+business10 = Business.create(name: "SUPERCOOLNYC", state: "NY", city: "Brooklyn", zipcode: 11209, address: "648 74th St", phone_number: "(929) 400-7665", website: "www.supercoolnyc.com", latitude: "40.627920", longitude: "-74.018860")
 
 
 
@@ -87,3 +93,17 @@ file23 = open('https://yap-dev.s3.amazonaws.com/calexico2.jpg')
 business8.images.attach(io: file23, filename: 'calexico2.jpg')
 file24 = open('https://yap-dev.s3.amazonaws.com/calexico3.jpeg')
 business8.images.attach(io: file24, filename: 'calexico3.jpeg')
+
+file25 = open('https://yap-dev.s3.amazonaws.com/lavilla1.jpg')
+business9.images.attach(io: file25, filename: 'lavilla1.jpg')
+file26 = open('https://yap-dev.s3.amazonaws.com/lavilla2.jpg')
+business9.images.attach(io: file26, filename: 'lavilla2.jpg')
+file27 = open('https://yap-dev.s3.amazonaws.com/lavilla3.jpg')
+business9.images.attach(io: file27, filename: 'lavilla3.jpg')
+
+file28 = open('https://yap-dev.s3.amazonaws.com/air1.jpg')
+business10.images.attach(io: file28, filename: 'air1.jpg')
+file29 = open('https://yap-dev.s3.amazonaws.com/air2.jpg')
+business10.images.attach(io: file29, filename: 'air2.jpg')
+file30 = open('https://yap-dev.s3.amazonaws.com/air3.jpeg')
+business10.images.attach(io: file30, filename: 'air3.jpeg')
