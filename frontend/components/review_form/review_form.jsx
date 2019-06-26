@@ -18,6 +18,8 @@ class ReviewForm extends React.Component{
         // this.props.fetchBusiness(this.props.match.params.businessId);
         this.setState({...this.props.review});
         // console.log(review.rating)
+        
+       
     }
 
     handleSubmit(e){
@@ -70,7 +72,43 @@ class ReviewForm extends React.Component{
         
         // this.props.action(vals).then(() => this.props.history.push(`/businesses/${this.props.match.params.businessId}`));
     }
-
+    checked1(){
+        if ([...Array(this.state.rating+1).keys()].includes(1)){
+            return { backgroundColor: "#f15b50"}
+        } else {
+            return {}
+        }
+    }
+    checked2(){
+        if ([...Array(this.state.rating+1).keys()].includes(2)){
+            return {backgroundColor: "#f15b50"}
+        } else {
+            return { }
+        }
+    }
+    checked3(){
+        if ([...Array(this.state.rating+1).keys()].includes(3)){
+            return {backgroundColor: "#f15b50"}
+        } else {
+            return {}
+        }
+    }
+    checked4(){
+        if ([...Array(this.state.rating+1).keys()].includes(4)){
+            return {backgroundColor: "#f15b50"}
+        } else {
+            return { }
+        }
+    }
+    checked5(){
+        if ([...Array(this.state.rating+1).keys()].includes(5)){
+            return {backgroundColor: "#f15b50"}
+        } else {
+            return { }
+        }
+    }
+   
+    
 
     update(field){
         return (e) => {
@@ -85,7 +123,8 @@ class ReviewForm extends React.Component{
     }
 
     render(){
-       
+    //    const rating = this.state.rating || 0;
+    //    console.log(rating)
         // const business = this.props.businesses[this.props.match.params.businessId];
         const business = this.props.business;
         
@@ -126,21 +165,21 @@ class ReviewForm extends React.Component{
                                                 <span className="rating-selector"> <p>Select Your Rating</p></span>
                                                     
                                                 <input type="radio" id="rating-input-1-5" className="rating-input" name="rating-input-1" value="5" onChange={this.update('rating')} />
-                                                <label htmlFor="rating-input-1-5" className="star-box-rev" className="fa fa-star" ></label>
+                                                    <label htmlFor="rating-input-1-5" style={this.checked5()} className="star-box-rev" className="fa fa-star" ></label>
                                                 
                                                     
                                                     <input type="radio" id="rating-input-1-4" className="rating-input" name="rating-input-1" value="4" onChange={this.update('rating')} />
-                                                <label htmlFor="rating-input-1-4" className="star-box-rev" className="fa fa-star"></label>
+                                                    <label htmlFor="rating-input-1-4" style={this.checked4()} className="star-box-rev" className="fa fa-star"></label>
                                                 
                                                 <input type="radio" id="rating-input-1-3" className="rating-input" name="rating-input-1" value="3" onChange={this.update('rating')}/>
-                                                <label htmlFor="rating-input-1-3" className="star-box-rev" className="fa fa-star"></label>
+                                                <label htmlFor="rating-input-1-3" style={this.checked3()} className="star-box-rev" className="fa fa-star"></label>
                                                 
                                                 
                                                 <input type="radio" id="rating-input-1-2" className="rating-input" name="rating-input-1" value="2" onChange={this.update('rating')}/>
-                                                <label htmlFor="rating-input-1-2" className="star-box-rev" className="fa fa-star"></label>
+                                                    <label htmlFor="rating-input-1-2" style={this.checked2()} className="star-box-rev" className="fa fa-star"></label>
                                                 
                                                 <input type="radio" id="rating-input-1-1" className="rating-input" name="rating-input-1" value="1" onChange={this.update('rating')}/>
-                                                <label htmlFor="rating-input-1-1" className="star-box-rev" className="fa fa-star"></label>
+                                                    <label htmlFor="rating-input-1-1" style={this.checked1()} className="star-box-rev" className="fa fa-star"></label>
                                                
                                                 </ul>
                                             

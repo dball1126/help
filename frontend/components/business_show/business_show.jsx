@@ -16,8 +16,11 @@ class BusinessShow extends React.Component {
     componentDidMount() {
 
         this.props.fetchBusiness(this.props.businessId);
-        
+        // document.addEventListener('touchstart', handler, { capture: true });
+        // document.addEventListener('touchstart', this.businessMap, { passive: true });
     }
+    
+
 
 
 

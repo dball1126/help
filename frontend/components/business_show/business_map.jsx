@@ -21,15 +21,16 @@ class BusinessMap extends React.Component{
             zoom: zoom,
             marker: this.marker
         }
-        
         this.map = new google.maps.Map(this.mapNode, mapOptions);
+
         this.pos = new google.maps.LatLng(this.position.lat, this.position.lng);
         
         this.marker = new google.maps.Marker({
             position: this.pos,
             map: this.map
         });
-
+        
+        // this.map.document.addEventListener('touchstart', this.marker, { capture: true });
         
         
 
@@ -69,7 +70,8 @@ class BusinessMap extends React.Component{
         const infowindow = new google.maps.InfoWindow({
             content: business.name
         })
-        
+        // document.addEventListener('touchstart', handler, {passive: true});
+        // marker.addEventListener('touchstart', handler, { passive: true });
         marker.addListener('click', () => {
             infowindow.open(this.map, marker);
                     
