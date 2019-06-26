@@ -109,8 +109,8 @@ class sessionForm extends React.Component {
             <div>
                  {/* <RedBanner /> */}
                 <div className="processingForm-header">
-                    <Link to="/"><div className="login-signup-help-logo">
-                        
+                    <Link to="/" className="login-signup-yap-link"><div className="login-signup-help-logo">
+                        <span className="login-signup-yap-logo">yap</span>
                     </div></Link>
                 </div>
 

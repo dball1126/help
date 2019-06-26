@@ -388,6 +388,12 @@
     display: flex;
 }
 
+.ul-images img {
+    background-size: 100%;
+    background-repeat: none;
+    background-position: center;
+}
+
 .image-placeholder {
     background-image: url(https://i.imgur.com/YKSdxE4.png);
     width: 100%;
@@ -451,6 +457,7 @@
     height: 66px;
     font-family:"Helvetica Neue";
     border-bottom: 1px solid #e6e6e6;
+    padding-top: 30px;
 }
 
 .review-highlights-header-text{
@@ -459,6 +466,7 @@
     font-size: 21px;
     color: #d32323;
     font-weight: 450;
+    padding-bottom: 5px;
 
 }
 
