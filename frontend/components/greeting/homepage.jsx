@@ -71,9 +71,9 @@ class Homepage extends React.Component {
                     <div className="homepage-main-nav-container">
                         <nav className="homepage-nav-reviews">
                             <ul className="ul-nav-reviews">
-                                <li className="nav-review-link">Write a Review</li>
-                                <li className="nav-events-link">Events</li>
-                                <li className="nav-talk-link">Talk</li>
+                                <li className="nav-review-link"><Link to="/" className="start-page-reivew-link">Write a Review</Link></li>
+                                {/* <li className="nav-events-link">Events</li>
+                                <li className="nav-talk-link">Talk</li> */}
                             </ul>
                         </nav>
                         <nav className="home-page-nav-session">
@@ -89,7 +89,7 @@ class Homepage extends React.Component {
                         <SearchContainer />
                             <nav className="main-nav-categories">
                                 <ul className="ul-nav-categories">
-                                    <li className="cooling-services">
+                                    {/* <li className="cooling-services">
                                         Heating & Air Conditioning
                                     </li>
                                     <li className="restaurants">
@@ -100,7 +100,7 @@ class Homepage extends React.Component {
                                     </li>
                                     <li className="Delivery">
                                         Deilvery
-                                    </li>
+                                    </li> */}
                                 </ul>
                             <div className="main-header-credits">
                                 <div className="business-credit">Pancake Man</div>

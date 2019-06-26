@@ -12,8 +12,8 @@ const Greeting = ({logout, currentUser, demoLogin}) => {
 
     const personalGreeting = () => (
         <div className="currentuser-name">
-            <h1>{currentUser.email}</h1>
-            <button onClick={logout}>Logout</button>
+            <h1 className="homepage-user-name">{currentUser.email}</h1>
+            <button onClick={logout} className="homepage-logout-button">Logout</button>
         </div>
     );
 
