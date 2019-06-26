@@ -168,9 +168,9 @@ class BusinessShow extends React.Component {
                                     <Link to={reviewButton} >Write A Review</Link>
                                 </button>
 
-                                <button className="add-photo-button">Add Photo</button>
-                                <button className="share-photo-button">Share</button>
-                                <button className="save-button">Save</button>
+                                <button className="add-photo-button"><a href="https://www.linkedin.com/in/daniel-ball-1502b062/" className="social-links">LinkedIn</a></button>
+                                <button className="share-photo-button"><a href="https://angel.co/daniel-ball-6" className="social-links">AngelList</a></button>
+                                <button className="save-button"><a href="https://github.com/dball1126" className="social-links">GitHub</a></button>
                             </div>
                         </div>
                         <div className="business-show-sub-header">
