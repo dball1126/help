@@ -1,5 +1,4 @@
 import React from 'react';
-import RedBanner from '../greeting/top_banner_red';
 import BusinessHeaderContainer from '../greeting/business_header_container';
 import { Link } from 'react-router-dom';
 import ReviewListContainer from './review_list_container';
@@ -10,14 +9,13 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.state.reviewsEntities = this.props.reviews || [];
+       
     }
 
     componentDidMount() {
 
         this.props.fetchBusiness(this.props.businessId);
-        // document.addEventListener('touchstart', handler, { capture: true });
-        // document.addEventListener('touchstart', this.businessMap, { passive: true });
+        
     }
     
 
@@ -35,8 +33,7 @@ class BusinessShow extends React.Component {
 
         const business = this.props.business || defaultBusiness;
         const currentUser = this.props.currentUser || {};
-        // const reviewE = this.props.reviewsd || defaultReview;
-        // const reviews = this.props.reviews || {};
+       
         
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
@@ -83,7 +80,6 @@ class BusinessShow extends React.Component {
             } else {
                 
                 let avgRating = 0;
-                // let reviewsRating = (avgRating / reviewsEntities.length) || 0;
 
                 reviewsEntities.forEach(review => {
                     avgRating += review.rating;
@@ -137,7 +133,6 @@ class BusinessShow extends React.Component {
         
         return (
             <div>
-                {/* <RedBanner /> */}
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
                 
                 {/* <div className="categories-main-header">

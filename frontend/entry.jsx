@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
 import {fetchReviews} from './util/review_api_util';
-import BusinessShowMap from './components/business_show/business_map';
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     let store;

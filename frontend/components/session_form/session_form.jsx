@@ -21,6 +21,7 @@ class sessionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
+        
         this.props.processingForm(this.state);
     };
 

@@ -17,7 +17,7 @@ class ReviewForm extends React.Component{
         
         // this.props.fetchBusiness(this.props.match.params.businessId);
         this.setState({...this.props.review});
-        // console.log(review.rating)
+        
         
        
     }
@@ -124,7 +124,7 @@ class ReviewForm extends React.Component{
 
     render(){
     //    const rating = this.state.rating || 0;
-    //    console.log(rating)
+   
         // const business = this.props.businesses[this.props.match.params.businessId];
         const business = this.props.business;
         

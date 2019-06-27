@@ -19,8 +19,7 @@ const businessesReducer = (oldState = {}, action) => {
             }
             return newState;
         case DESTROY_REVIEW:
-            // delete newState
-            // delete newState.reviews[]
+            
             return newState;
         default:
             return oldState;

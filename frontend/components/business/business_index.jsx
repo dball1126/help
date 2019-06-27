@@ -1,7 +1,6 @@
 import React from 'react';
 import BusinessIndexItemContainer from './business_index_item_container';
 import BusinessMap from '../business_show/business_map';
-import RedBanner from '../greeting/top_banner_red';
 import BusinessHeaderContainer from '../greeting/business_header_container';
 class BusinessIndex extends React.Component {
     constructor(props){

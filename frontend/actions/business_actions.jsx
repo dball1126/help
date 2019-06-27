@@ -43,12 +43,7 @@ export const searchBusinesses = (query) => {
         });
     }
 };
-// searchBusinesses
-// export const searchBusinesses = query => dispatch => (
-    
-//     SearchApiUtil.searchBusinesses(query)
-//         .then(payload => dispatch(receiveBusinesses(payload)))
-// );
+
 const receiveStartPageBusinesses = ({businesses}) => {
     return {
         type: RECEIVE_START_BUSINESSES,

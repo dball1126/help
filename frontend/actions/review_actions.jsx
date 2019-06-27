@@ -1,7 +1,6 @@
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_ALL_REVIEWS = 'RECEIVE_ALL_REVIEWS'
 export const DESTROY_REVIEW = 'DESTROY_REVIEW';
-import { receiveErrors} from './session_actions';
 import * as ReviewApiUtil from '../util/review_api_util';
 const receiveReview = ({review, user}) => {
     return {

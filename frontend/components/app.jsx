@@ -4,7 +4,6 @@ import LoginformContainer from '../components/session_form/login_form_container'
 import SignUpformContainer from '../components/session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import HomepageContainer from './greeting/homepage_container';
-import Banner from './greeting/top_banner';
 import BusinessShowContainer from './business_show/business_show_container';
 import BusinessIndexContainer from './business/business_index_container';
 import CreateReviewContainer from './review_form/create_review_container';
@@ -14,8 +13,6 @@ import SearchContainer from './search/search_container';
 const App = () => {
     return (
         <div>
-             {/* <Route exact path ='/' component={Banner} /> */}
-            
              <Route exact path ='/' component={HomepageContainer} />
              <Route exact path ='/businesses' component={BusinessIndexContainer} />
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
@@ -24,7 +21,6 @@ const App = () => {
              <Route path ='/businesses/search' component={SearchContainer}/>
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
              <AuthRoute exact path="/login" component={LoginformContainer} />
-            
         </div>
     )
 }
