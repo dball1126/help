@@ -3,8 +3,10 @@ import React from 'react';
 import sessionForm from './session_form';
 import {Link} from 'react-router-dom'
 import {login, clearErrors} from '../../actions/session_actions';
+import history from '../../util/browser_util';
 
 const mapStateToProps = ({errors}) => {
+    
     
     return {
         formType: 'Login',

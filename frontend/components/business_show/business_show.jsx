@@ -3,7 +3,7 @@ import BusinessHeaderContainer from '../greeting/business_header_container';
 import { Link } from 'react-router-dom';
 import ReviewListContainer from './review_list_container';
 import BusinessMap from './business_map';
-
+import { Redirect, withRouter } from 'react-router-dom';
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -163,7 +163,7 @@ class BusinessShow extends React.Component {
 
                                 <button className="write-a-review-button">
                                     <span className="star" >&#9733;</span>
-                                    <Link to={reviewButton} >Write A Review</Link>
+                                    <Link to={reviewButton}>Write A Review</Link>
                                 </button>
 
                                 <button className="add-photo-button"><a href="https://www.linkedin.com/in/daniel-ball-1502b062/" className="social-links">LinkedIn</a></button>
@@ -300,4 +300,4 @@ class BusinessShow extends React.Component {
 
 
 
-export default BusinessShow;
+export default withRouter(BusinessShow);

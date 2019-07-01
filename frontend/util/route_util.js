@@ -2,15 +2,21 @@ import React from 'react';
 import {Redirect, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 
-const Auth = ({component: Component, path, loggedIn, exact}) => {
 
+const Auth = ({component: Component, path, loggedIn, exact}) => {
+     
     return (
-    <Route path={path} 
+    <Route path={path}
+            
            exact={exact}
            render={(props) => (
      loggedIn ? <Redirect to="/" /> : <Component {...props} />
     )} />
 )};
+
+
+// instead of Redirect    try props.history.push     
+// it appears Redirect might be wiping out the history.
 //try to rediret in the Auth route right above to go back to the business page wher you clicked write a review.
 
 //REDIRECT TO signup FOR NOW   maybe switch to homepage at some point
@@ -19,9 +25,10 @@ const Protected = ({ component: Component, path, loggedIn, exact}) => {
     
     return (
     <Route path={path} 
+    
            exact={exact} 
            render={(props) => (
-    loggedIn ? <Component {...props} /> : <Redirect to="/login" path={path} exact={exact} /> 
+    loggedIn ? <Component {...props} /> : <Redirect to="/login"  /> 
     )}/>
 )};
 
