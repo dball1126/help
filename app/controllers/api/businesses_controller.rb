@@ -1,4 +1,5 @@
 class Api::BusinessesController < ApplicationController
+    # before_action :ensure_logged_in?
     
     def new
         @business = Business.new
