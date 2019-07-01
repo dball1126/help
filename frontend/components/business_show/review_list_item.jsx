@@ -24,7 +24,7 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
             } else {
                 return (
                     <div className="review-item-content-img">
-                        <span><img src={review.image} className="review-image"></img></span>
+                        <div className="review-item-img-box"><img src={review.image} className="review-image"></img></div>
                     </div>
                 )
             }

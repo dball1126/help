@@ -111,10 +111,15 @@
 
 }
 
-.review-image{
-    
+.review-item-img-box{
     width: 150px;
     height: 150px;
+    overflow: hidden;
+}
+
+.review-image{
+    height: 150px;
+    
 }
 
 .delete-review{
