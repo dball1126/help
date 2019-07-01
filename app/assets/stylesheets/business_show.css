@@ -397,6 +397,17 @@
     width: 220px;
     height: 220px;
     overflow: hidden;
+    /* -webkit-transition-delay: transform 2s; */
+}
+
+
+
+.ul-images li:hover {
+    width: 250px;
+    /* height: 250px; */
+    
+    cursor: pointer;
+    /* -webkit-transition-delay: transform 2s; */
 }
 
 .ul-images img {
@@ -434,6 +445,12 @@
     /* width: 220px; */
     height: 220px;
 }
+
+/* .image:hover{
+    cursor: pointer;
+    
+    transform: scale(1.5);
+} */
 
 .business-bottom-container {
     min-width: 990px;
