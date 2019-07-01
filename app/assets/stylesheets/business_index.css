@@ -38,9 +38,16 @@
 
 .index-li-img{
     padding-top: 15px;
+    height: 210px;
+    width: 210px;
+    overflow: hidden;
+    border-radius: 4px;
 }
 .index-li-picture{
-    width: 200px;
+    /* width: 200px;
+    width: 210px;
+    height: 210px;
+    overflow: hidden; */
 }
 
 .index-li-info-container{
@@ -63,7 +70,8 @@
 }
 
 .index-image{
-    width: 210px;
+    /* width: 210px;
+    height: 210px; */
     height: 210px;
     border-radius: 4px;
 }
