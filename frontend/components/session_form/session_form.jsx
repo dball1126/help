@@ -24,7 +24,6 @@ class sessionForm extends React.Component {
         if(this.props.reviewPathLocation.length < 1){
             this.props.processingForm(this.state);
         } else {
-            debugger
             this.props.processingForm(this.state).then(() => this.props.history.push(this.props.reviewPathLocation));
         }
     };

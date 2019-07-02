@@ -4,14 +4,14 @@ import {connect} from 'react-redux';
 
 
 const Auth = (state, ownProps) => {
-    debugger
+    
     const path = state.path;
     const exact = state.exact;
     const Component = state.component;
     const loggedIn = state.loggedIn;
     let relocater = state.location.reviewPathLocation;
     if (relocater === undefined) relocater = "/";
-    debugger
+    
     return (
     <Route path={path}
            relocater={relocater}
