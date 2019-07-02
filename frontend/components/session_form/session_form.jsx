@@ -21,8 +21,12 @@ class sessionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        
-        this.props.processingForm(this.state);
+        if(this.props.reviewPathLocation.length < 1){
+            this.props.processingForm(this.state);
+        } else {
+            debugger
+            this.props.processingForm(this.state).then(() => this.props.history.push(this.props.reviewPathLocation));
+        }
     };
 
     update(field){

@@ -5,12 +5,13 @@ import {Link} from 'react-router-dom'
 import {login, clearErrors} from '../../actions/session_actions';
 import history from '../../util/browser_util';
 
-const mapStateToProps = ({errors}) => {
-    
-    
+const mapStateToProps = (state, ownProps) => {
+        
+        let reviewPathLocation = ownProps.history.location.reviewPathLocation || "";
     return {
         formType: 'Login',
-        errors: errors.session
+        errors: state.errors.session,
+        reviewPathLocation: reviewPathLocation
     }
 }
 
