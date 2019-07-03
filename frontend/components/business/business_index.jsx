@@ -19,7 +19,7 @@ class BusinessIndex extends React.Component {
     indexMap(){
         
         const businesses = this.props.businesses;
-        debugger
+        
         if (businesses.length < 1) {
             return (
                 ""

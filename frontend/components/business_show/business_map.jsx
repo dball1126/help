@@ -31,33 +31,17 @@ class BusinessMap extends React.Component{
             map: this.map
         });
         
-        // this.map.document.addEventListener('touchstart', this.marker, { capture: true });
-        
-        
-
         if(this.businesses){
             zoom = 5;
             this.businesses.forEach(business => {
-            // const pos = new google.maps.LatLng(business.latitude, business.longitude);
-            
-                
 
             return (
-                
-                //  this.marker = new google.maps.Marker({
-                //     position: pos,
-                //     map: this.map
-                // })
                 this.addBusiness(business)
                  
             )
         });
         }
-
         
-
-
-        // const options = { center: this.props.center}
     }
 
     componentDidUpdate() {
@@ -70,39 +54,19 @@ class BusinessMap extends React.Component{
             marker: this.marker
         }
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-
         this.pos = new google.maps.LatLng(this.position.lat, this.position.lng);
-
         this.marker = new google.maps.Marker({
             position: this.pos,
             map: this.map
         });
-
+        
+        if(this.props.businesses){
         this.props.businesses.forEach(business => {
             return (
                 this.addBusiness(business)
             )
         })
-        debugger
-            // if (this.props.businesses) {
-                
-            //     this.props.businesses.forEach(business => {
-            //         // const pos = new google.maps.LatLng(business.latitude, business.longitude);
-
-
-
-            //         return (
-
-            //             //  this.marker = new google.maps.Marker({
-            //             //     position: pos,
-            //             //     map: this.map
-            //             // })
-            //             this.addBusiness(business)
-
-            //         )
-            //     });
-            // }
-        
+    }
     }
 
     addBusiness(business){
