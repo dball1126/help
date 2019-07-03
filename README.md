@@ -27,12 +27,7 @@ Users select a rating for a review and this code renders the amount of stars sel
 This code also applies inline styling to the stars if a User chooses to edit their review.
 
 # Other Features.
+
 Searching for businesses via name or location.
 
-Editing Reviews.
-
-New Categories component.
-
-Filters for search.
-
-* ...
+Businesses plotted on Google Static Maps API
