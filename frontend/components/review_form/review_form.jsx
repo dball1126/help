@@ -164,26 +164,26 @@ class ReviewForm extends React.Component{
                                       
                                                 <span className="rating-selector"> <p>Select Your Rating</p></span>
                                                     
-                                                <input type="radio" id="rating-input-1-5" className="rating-input" name="rating-input-1" value="5" onChange={this.update('rating')} />
+                                                    <input type="radio" id="rating-input-1-5" className="rating-input" name="rating-input-1" value="5" onChange={this.update('rating')} />
                                                     <label htmlFor="rating-input-1-5" style={this.checked5()} className="star-box-rev" className="fa fa-star" ></label>
                                                 
                                                     
                                                     <input type="radio" id="rating-input-1-4" className="rating-input" name="rating-input-1" value="4" onChange={this.update('rating')} />
                                                     <label htmlFor="rating-input-1-4" style={this.checked4()} className="star-box-rev" className="fa fa-star"></label>
                                                 
-                                                <input type="radio" id="rating-input-1-3" className="rating-input" name="rating-input-1" value="3" onChange={this.update('rating')}/>
-                                                <label htmlFor="rating-input-1-3" style={this.checked3()} className="star-box-rev" className="fa fa-star"></label>
+                                                    <input type="radio" id="rating-input-1-3" className="rating-input" name="rating-input-1" value="3" onChange={this.update('rating')}/>
+                                                    <label htmlFor="rating-input-1-3" style={this.checked3()} className="star-box-rev" className="fa fa-star"></label>
                                                 
                                                 
-                                                <input type="radio" id="rating-input-1-2" className="rating-input" name="rating-input-1" value="2" onChange={this.update('rating')}/>
+                                                    <input type="radio" id="rating-input-1-2" className="rating-input" name="rating-input-1" value="2" onChange={this.update('rating')}/>
                                                     <label htmlFor="rating-input-1-2" style={this.checked2()} className="star-box-rev" className="fa fa-star"></label>
                                                 
-                                                <input type="radio" id="rating-input-1-1" className="rating-input" name="rating-input-1" value="1" onChange={this.update('rating')}/>
+                                                    <input type="radio" id="rating-input-1-1" className="rating-input" name="rating-input-1" value="1" onChange={this.update('rating')}/>
                                                     <label htmlFor="rating-input-1-1" style={this.checked1()} className="star-box-rev" className="fa fa-star"></label>
                                                
-                                                </ul>
+                                            </ul>
                                             
-                                        </div>
+                                    </div>
                                         <textarea className="content-data" 
                                                   value={this.state.content}
                                                   onChange={this.update('content')}
