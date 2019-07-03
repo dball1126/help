@@ -12,31 +12,37 @@ class BusinessIndex extends React.Component {
         if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
         this.props.fetchBusinesses();
         }
+        
     }
 
     
+    indexMap(){
+        
+        const businesses = this.props.businesses;
+        debugger
+        if (businesses.length < 1) {
+            return (
+                ""
+            )
+        } else {
+
+            return (
+                <BusinessMap businesses={businesses} />
+            );
+        }
+    };
 
     render(){
         
+       
+
         
-        const indexMap = () => {
-            
-            const businesses = this.props.businesses;
-            
-            if (businesses.length < 1){
-                return (
-                    ""
-                )
-            } else {
-                
-                return (
-                    <BusinessMap businesses={businesses} />
-                );
-            }
-        };
+        
+        
 
 
         const businesses = this.props.businesses.map((business, i) => {
+
             
             return (
                 <BusinessIndexItemContainer key={i} business={business}/>
@@ -60,7 +66,7 @@ class BusinessIndex extends React.Component {
                             </div>
                             <div className="businesses-index-rightSide">
                                 <div className="business-index-map">
-                                    {indexMap()}
+                                    {this.indexMap()}
                                 </div>
                             </div>
                         </div>

@@ -60,6 +60,51 @@ class BusinessMap extends React.Component{
         // const options = { center: this.props.center}
     }
 
+    componentDidUpdate() {
+        let zoom = 10;
+        if (this.position) zoom = 13;
+
+        const mapOptions = {
+            center: this.center,
+            zoom: zoom,
+            marker: this.marker
+        }
+        this.map = new google.maps.Map(this.mapNode, mapOptions);
+
+        this.pos = new google.maps.LatLng(this.position.lat, this.position.lng);
+
+        this.marker = new google.maps.Marker({
+            position: this.pos,
+            map: this.map
+        });
+
+        this.props.businesses.forEach(business => {
+            return (
+                this.addBusiness(business)
+            )
+        })
+        debugger
+            // if (this.props.businesses) {
+                
+            //     this.props.businesses.forEach(business => {
+            //         // const pos = new google.maps.LatLng(business.latitude, business.longitude);
+
+
+
+            //         return (
+
+            //             //  this.marker = new google.maps.Marker({
+            //             //     position: pos,
+            //             //     map: this.map
+            //             // })
+            //             this.addBusiness(business)
+
+            //         )
+            //     });
+            // }
+        
+    }
+
     addBusiness(business){
         const pos = new google.maps.LatLng(business.latitude, business.longitude)
         const marker = new google.maps.Marker({

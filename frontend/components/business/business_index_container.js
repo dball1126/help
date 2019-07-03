@@ -4,6 +4,7 @@ import BusinessIndex from './business_index';
 
 const mapStateToProps = (state) => {
     const currentUser = state.entities.users[state.session.id];
+    
     return {
         businesses: Object.values(state.entities.businesses) || {},
         currentUser: currentUser || {}
