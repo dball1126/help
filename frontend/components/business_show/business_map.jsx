@@ -12,6 +12,7 @@ class BusinessMap extends React.Component{
     }
 
     componentDidMount(){
+        
         // const map = ReactDOM.findDOMNode(this.refs.map);
         let zoom = 10;
         if (this.position) zoom = 13;
@@ -60,7 +61,6 @@ class BusinessMap extends React.Component{
     }
 
     addBusiness(business){
-       
         const pos = new google.maps.LatLng(business.latitude, business.longitude)
         const marker = new google.maps.Marker({
             position: pos,
@@ -80,6 +80,7 @@ class BusinessMap extends React.Component{
     }
 
     render(){
+        
         return (
             <div ref={ map => this.mapNode = map} id="map">
                 

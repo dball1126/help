@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import BusinessIndexItem from './business_index_item';
 
 const mapStateToProps = (state, ownProps) => {
-    
+     
     const business = state.entities.businesses[ownProps.business.id];
     return {
         business: business

@@ -1,4 +1,5 @@
 import React from 'react';
+import BusinessMap from '../business_show/business_map';
 import {withRouter} from 'react-router-dom';
 
 class businessShowSearch extends React.Component{
