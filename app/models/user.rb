@@ -1,8 +1,9 @@
 class User < ApplicationRecord
+    require 'open-uri'
     validates :email, :password_digest, :session_token, :first_name, :last_name, presence: true
     validates :password, length:{minimum: 8}, allow_nil: true
     validates :zip_code, length:{minimum: 5}
-    
+
     attr_reader :password
     has_one_attached :image
     
@@ -11,7 +12,17 @@ class User < ApplicationRecord
         foreign_key: :author_id,
         class_name: :Review
 
+    before_save :profile_image_check
+
     after_initialize :ensure_session_token
+
+    def profile_image_check 
+        
+        if !image.attached?
+            file1 = open('https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg');
+            image.attach(io: file1, filename: 'profile_placeholder.jpg')
+        end
+    end
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
