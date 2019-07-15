@@ -26,6 +26,7 @@
     width: 250px;
     height: 200px;
     float: left;
+    display: flex;
 }
 
 .review-item-li-right-container{
@@ -73,11 +74,13 @@
 }
 
 .review-user{
-    text-align: center;
-    padding: 23px;
+    /* text-align: center; */
+    /* padding: 23px; */
+    padding-top: 10px;
     font-family:"Helvetica Neue";
     display: block;
     font-weight: bold;
+    color: #0073bb;
 }
 
 .star-review-item-rating{
@@ -168,4 +171,19 @@
     font-family:"Helvetica Neue";
     padding-left: 1px;
 
+}
+
+.review-user-image-box{
+    width: 70px;
+}
+
+.review-user-image{
+    width: 60px;
+
+}
+
+.review-user-count{
+    color: #666666;
+    font-size: 12px;
+    padding-top: 5px;
 }
