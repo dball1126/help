@@ -21,7 +21,10 @@ class sessionForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        if(this.props.reviewPathLocation.length < 1){
+        //changed conditional from < 1 to undefined due to sign
+        
+        if(this.props.reviewPathLocation === undefined){
+            
             this.props.processingForm(this.state);
         } else {
             this.props.processingForm(this.state).then(() => this.props.history.push(this.props.reviewPathLocation));

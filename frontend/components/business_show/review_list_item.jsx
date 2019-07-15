@@ -52,7 +52,11 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
             <li  key={review.id} className="review-business-show-li">
                 <div className="review-item-li-container">
                     <div className="review-item-li-left-container">
-                        <span className="review-user">{review.first_name}</span>
+                        <div className="review-user-image-box"><img className="review-user-image" src={review.user_image}></img></div>
+                        <span className="review-user">{review.name}<br/>
+                            <p className="review-user-count">{review.user_reviews} reviews</p>
+                        </span>
+                        
                     </div>
                     <div className="review-item-li-right-container">
                         <div className="review-item-rating-container">
