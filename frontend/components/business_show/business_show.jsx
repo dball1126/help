@@ -19,9 +19,6 @@ class BusinessShow extends React.Component {
     }
     
 
-
-
-
     render() {
         // const reviews1 = this.props.reviewsEntities || {};
         const defaultReview = { rating: 0, author_id: 0, user_id: 0, content: "", first_name: "", }
@@ -29,8 +26,38 @@ class BusinessShow extends React.Component {
             name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
             website: "", latitude: "", longitude: "", imageLinks: []
         }
-        
+        const showModal = () =>{
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
 
+        const listenersOn = () => {
+            const imageListeners = document.getElementsByClassName("image");
+
+            for (let i = 0; i < imageListeners.length; i++) {
+                debugger
+                imageListeners[i].addEventListener('click', () => {
+                    modalImg.src = imageListeners[i].src;
+                    modal.style.display = "block";
+                });
+            }
+        }
+
+        const modal = document.getElementById("imgModal");
+        const span = document.getElementsByClassName("close")[0];
+        const img = document.getElementById("imageid");
+        const modalImg = document.getElementById("img01");
+        const imgClick = () => {
+        
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        
+    }
+        const imgClickClose = () =>{
+            modal.style.display = "none";
+            
+        }
+    
         const business = this.props.business || defaultBusiness;
         const currentUser = this.props.currentUser || {};
        
@@ -121,7 +148,7 @@ class BusinessShow extends React.Component {
                         <ul className="ul-images">
                             {business.imageLinks.map((image, i) => {
                                 return (
-                                    <li key={i} ><img src={image} className="image"></img></li>
+                                    <li key={i} ><img src={image} className={`image`} id="imageid" ></img></li>
                                 )
                             })}
                         </ul>
@@ -131,10 +158,15 @@ class BusinessShow extends React.Component {
         }
 
         
+        
         return (
             <div>
+                {listenersOn()}
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
-                
+                <div id="imgModal" className="modal">
+                    <span className="close" onClick={() => imgClickClose()}><p className="close-word">Close</p>&times;</span>
+                    <img className="modal-content" id="img01"></img>
+                </div>
                 {/* <div className="categories-main-header">
                     <div className="business-show-categories-container">
                         <ul className="ul-categories-business-show">
