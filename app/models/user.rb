@@ -4,6 +4,7 @@ class User < ApplicationRecord
     validates :zip_code, length:{minimum: 5}
     
     attr_reader :password
+    has_one_attached :image
     
     has_many :reviews,
         primary_key: :id, 

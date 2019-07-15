@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
+
 Business.destroy_all
 User.destroy_all
 Review.destroy_all
@@ -107,3 +108,7 @@ file29 = open('https://yap-dev.s3.amazonaws.com/air2.jpg')
 business10.images.attach(io: file29, filename: 'air2.jpg')
 file30 = open('https://yap-dev.s3.amazonaws.com/air3.jpeg')
 business10.images.attach(io: file30, filename: 'air3.jpeg')
+
+
+#profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
+# profile_placeholder.jpg     file name
