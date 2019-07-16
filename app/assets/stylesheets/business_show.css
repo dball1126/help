@@ -388,7 +388,7 @@
 }
 
 .ul-images {
-    width: 660px;
+    width: 690px;
     height: 220px;
     display: flex;
 }
@@ -460,15 +460,16 @@
     transition-delay: .3s;
 }
 
-.image:nth-of-type(odd){
-    width: 250px;
-    height: 250px;
+.ul-images .image:nth-of-type(odd){
+    /* width: 250px; */
+    height: 100%;
 }
 .ul-images li:nth-of-type(3n+2){
     width: 250px;
     height: 250px;
-    overflow: visible;
+    overflow: hidden;
     margin-top: -30.5px;
+   
 }
 
 .ul-images .image:nth-of-type(3n+2){
