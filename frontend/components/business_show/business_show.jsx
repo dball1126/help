@@ -152,7 +152,7 @@ class BusinessShow extends React.Component {
                         <ul className="ul-images">
                             {business.imageLinks.map((image, i) => {
                                 return (
-                                    <li key={i} ><img src={image} className={`image`} id="imageid" ></img></li>
+                                    <li key={i} className={`image${i}`}><img src={image} className={`image${i} image`} id="imageid" ></img></li>
                                 )
                             })}
                         </ul>

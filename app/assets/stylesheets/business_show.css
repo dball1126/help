@@ -393,19 +393,19 @@
     display: flex;
 }
 
-.ul-images li {
+/* .ul-images li {
     width: 220px;
     height: 220px;
     overflow: hidden;
-    /* -webkit-transition-delay: transform 2s; */
-}
+   
+} */
 
 
 
 .ul-images li:hover {
     width: 250px;
     /* height: 250px; */
-    
+    height: 250px;
     cursor: pointer;
     /* -webkit-transition-delay: transform 2s; */
 }
@@ -416,6 +416,43 @@
     background-repeat: none;
     background-position: center; */
 }
+
+
+
+.ul-images li:nth-of-type(even){
+    width: 250px;
+    height: 250px;
+    overflow: visible;
+        margin-top: -14.5px;
+
+}
+
+.ul-images .image:nth-of-type(odd){
+    width: 250px;
+    height: 250px;
+}
+
+.ul-images li:nth-of-type(odd){
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.ul-images .image:nth-of-type(even){
+    width: 220px;
+    height: 220px;
+}
+
+/* @keyframes popout {
+    from{transform:scale(0)}
+    80%{transform:scale(1.2)}
+    to{transform:scale(1.5)}
+}
+@-webkit-keyframes popout {
+    from{-webkit-transform:scale(0)}
+    80%{-webkit-transform:scale(1.2)}
+    to{-webkit-transform:scale(1.5)}
+} */
 
 .image-placeholder {
     background-image: url(https://i.imgur.com/YKSdxE4.png);
