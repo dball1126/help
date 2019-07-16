@@ -19,9 +19,13 @@
 }
 
 .close {
+    
+    /* top: 0px;
+    right: 1px; */
+    /* right: 100px; */
     position: absolute;
-    top: 90px;
-    right: 35px;
+    top: 50px;
+    right:100px;
     color: #d32323;;
     font-size: 40px;
     font-weight: bold;

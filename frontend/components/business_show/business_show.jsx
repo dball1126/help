@@ -169,8 +169,10 @@ class BusinessShow extends React.Component {
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
                 
                 <div id="imgModal" className="modal">
+                    <div>
                     <span className="close" onClick={() => this.imgClickClose()}><p className="close-word">Close</p><p>&times;</p></span>
                     <img className="modal-content" id="img01"></img>
+                    </div>
                 </div>
                 
                 {/* <div className="categories-main-header">
