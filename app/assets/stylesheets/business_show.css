@@ -445,20 +445,21 @@
 } */
 
 .ul-images li:nth-of-type(odd) .image{
-    width: 220px;
-    height: 220px;
+    /* width: 220px;
+    height: 220px; */
+    height: 100%;
     overflow: visible;
     margin-top: -14.5px;
 }
-.ul-images li:nth-of-type(odd) .image:hover{
+/* .ul-images li:nth-of-type(odd) .image:hover{
     width: 250px;
     height: 250px;
     overflow: visible;
-    /* position: relative; */
+   
     z-index: 10;
     margin-top: -14.5px;
     transition-delay: .3s;
-}
+} */
 
 .ul-images .image:nth-of-type(odd){
     /* width: 250px; */
@@ -475,6 +476,12 @@
 .ul-images .image:nth-of-type(3n+2){
     width: 250px;
     height: 250px;
+}
+
+.ul-images li:nth-of-type(odd){
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
 }
 
 
