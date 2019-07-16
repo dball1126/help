@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => {
+const ReviewListItem = ({user, review, business, currentUser, deleteReview, listener}) => {
         let starCounter = review.rating;
         let starColor;
         
@@ -24,7 +24,7 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
             } else {
                 return (
                     <div className="review-item-content-img">
-                        <div className="review-item-img-box"><img src={review.image} className="review-image"></img></div>
+                        <div className="review-item-img-box"><img src={review.image} className="review-image image" id="imageid"></img></div>
                     </div>
                 )
             }
@@ -45,14 +45,16 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
                 </div>
             )
             
-        }    
+        }
+            
         
         return (
             
             <li  key={review.id} className="review-business-show-li">
+               
                 <div className="review-item-li-container">
                     <div className="review-item-li-left-container">
-                        <div className="review-user-image-box"><img className="review-user-image" src={review.user_image}></img></div>
+                        <div className="review-user-image-box"><img className="review-user-image"  src={review.user_image}></img></div>
                         <span className="review-user">{review.name}<br/>
                             <p className="review-user-count">{review.user_reviews} reviews</p>
                         </span>
@@ -66,7 +68,7 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview}) => 
                             <span className="review-item-content">{review.content}</span>
                             
                             <span className="review-item-content-img">{image()}</span>
-                            
+                            {listener()}
                         </div>
                         <div className="review-item-destroy-container">
                             

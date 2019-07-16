@@ -9,7 +9,7 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-       
+    //    this.listenersOn = this.listenersOn.bind(this);
     }
 
     componentDidMount() {
@@ -18,6 +18,33 @@ class BusinessShow extends React.Component {
         
     }
     
+    // const showModal = () =>{
+    //     modal.style.display = "block";
+    //     modalImg.src = img.src;
+    // }
+
+     listenersOn  () {
+         setTimeout(() => {
+        const imageListeners = document.getElementsByClassName("image");
+        const modal = document.getElementById("imgModal");
+        // const span = document.getElementsByClassName("close")[0];
+        const img = document.getElementById("imageid");
+        const modalImg = document.getElementById("img01");
+        for (let i = 0; i < imageListeners.length; i++) {
+
+            imageListeners[i].addEventListener('click', () => {
+                modalImg.src = imageListeners[i].src;
+                modal.style.display = "block";
+            });
+        }
+         }, 1000);
+    }
+
+
+    imgClickClose  () {
+        const modal = document.getElementById("imgModal");
+        modal.style.display = "none";
+    }
 
     render() {
         // const reviews1 = this.props.reviewsEntities || {};
@@ -26,37 +53,7 @@ class BusinessShow extends React.Component {
             name: "", address: "", city: "", state: "", zipcode: "", phone_number: "",
             website: "", latitude: "", longitude: "", imageLinks: []
         }
-        const showModal = () =>{
-            modal.style.display = "block";
-            modalImg.src = img.src;
-        }
-
-        const listenersOn = () => {
-            const imageListeners = document.getElementsByClassName("image");
-
-            for (let i = 0; i < imageListeners.length; i++) {
-                debugger
-                imageListeners[i].addEventListener('click', () => {
-                    modalImg.src = imageListeners[i].src;
-                    modal.style.display = "block";
-                });
-            }
-        }
-
-        const modal = document.getElementById("imgModal");
-        const span = document.getElementsByClassName("close")[0];
-        const img = document.getElementById("imageid");
-        const modalImg = document.getElementById("img01");
-        const imgClick = () => {
         
-            modal.style.display = "block";
-            modalImg.src = img.src;
-        
-    }
-        const imgClickClose = () =>{
-            modal.style.display = "none";
-            
-        }
     
         const business = this.props.business || defaultBusiness;
         const currentUser = this.props.currentUser || {};
@@ -88,6 +85,7 @@ class BusinessShow extends React.Component {
                             {reviewsEntities.map((review, i) => {
                                 return (
                                     <ReviewListContainer key={i}
+                                        listener={this.listenersOn}
                                         review={review}
                                         business={this.props.business}
                                         currentUser={currentUser} />
@@ -161,10 +159,10 @@ class BusinessShow extends React.Component {
         
         return (
             <div>
-                {listenersOn()}
+                {/* {this.listenersOn()} */}
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
                 <div id="imgModal" className="modal">
-                    <span className="close" onClick={() => imgClickClose()}><p className="close-word">Close</p>&times;</span>
+                    <span className="close" onClick={() => this.imgClickClose()}><p className="close-word">Close</p>&times;</span>
                     <img className="modal-content" id="img01"></img>
                 </div>
                 {/* <div className="categories-main-header">
