@@ -15,7 +15,13 @@ class BusinessShow extends React.Component {
     componentDidMount() {
 
         this.props.fetchBusiness(this.props.businessId);
-        
+        const modal = document.getElementById('imgModal');
+
+        window.onclick = function(event) {
+            if (event.target == modal){
+                modal.style.display = "none";
+            }
+        }
     }
     
     // const showModal = () =>{
@@ -159,12 +165,14 @@ class BusinessShow extends React.Component {
         
         return (
             <div>
-                {/* {this.listenersOn()} */}
+                
                 <BusinessHeaderContainer currentUser={this.props.currentUser}/>
+                
                 <div id="imgModal" className="modal">
-                    <span className="close" onClick={() => this.imgClickClose()}><p className="close-word">Close</p>&times;</span>
+                    <span className="close" onClick={() => this.imgClickClose()}><p className="close-word">Close</p><p>&times;</p></span>
                     <img className="modal-content" id="img01"></img>
                 </div>
+                
                 {/* <div className="categories-main-header">
                     <div className="business-show-categories-container">
                         <ul className="ul-categories-business-show">

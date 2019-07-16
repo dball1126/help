@@ -122,7 +122,7 @@
 
 .review-image{
     height: 150px;
-    
+    cursor: pointer;
 }
 
 .delete-review{

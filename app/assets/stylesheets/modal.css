@@ -26,6 +26,7 @@
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    display: flex;
 }
 .close:hover, .close:focus {
     color: #FFFFFF;
@@ -35,4 +36,7 @@
 
 .close-word{
     font-size: 14px;
+    line-height: 3.2;
+    padding-right: 5px;
+    font-family: "Helvetica Neue";
 }
