@@ -16,6 +16,14 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
+    def photo_count
+        count = 0;
+        reviews.each do |review|
+            count += 1 if review.image.attached?
+        end
+        count
+    end
+
     def profile_image_check 
         
         if !image.attached?

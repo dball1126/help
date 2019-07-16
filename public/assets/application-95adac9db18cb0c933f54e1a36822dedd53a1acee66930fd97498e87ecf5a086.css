@@ -627,7 +627,7 @@
     width: 250px;
     height: 250px;
     overflow: hidden;
-    margin-top: -30.5px;
+    margin-top: -23.5px;
    
 }
 
@@ -1227,13 +1227,14 @@
     color: #666666;
     font-size: 12px;
     padding-top: 5px;
+    font-weight: 400;
 }
-
-.review-user-photo-count {
+.review-user-photo-count{
     color: #666666;
     font-size: 12px;
     padding-top: 5px;
     padding-left: 1px;
+    font-weight: 400;
 }
 .homepage-main-footer-container{
     height: 536px;

@@ -56,7 +56,8 @@ const ReviewListItem = ({user, review, business, currentUser, deleteReview, list
                     <div className="review-item-li-left-container">
                         <div className="review-user-image-box"><img className="review-user-image"  src={review.user_image}></img></div>
                         <span className="review-user">{review.name}<br/>
-                            <p className="review-user-count">{review.user_reviews} reviews</p>
+                            <p className="review-user-count"><strong style={{"fontWeight": "bold"}}>{review.user_reviews}</strong> reviews</p>
+                            <p className="review-user-photo-count"><strong style={{"fontWeight": "bold"}}>{review.user_photos}</strong> photos</p>
                         </span>
                         
                     </div>
