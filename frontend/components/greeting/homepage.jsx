@@ -51,7 +51,7 @@ class Homepage extends React.Component {
                         return (
                             <div className="start-page-business" key={i}>
                                 <div className="start-business-pic">
-                                    <img src={image} className="start-page-index-image"></img>
+                                    <Link to={`/businesses/${business.id}`}><img src={image} className="start-page-index-image"></img></Link>
                                 </div>
                                 <div className="start-page-business-name">
                                     <Link to={`/businesses/${business.id}`} className="business-index-show-link">{business.name}</Link>

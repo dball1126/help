@@ -46,7 +46,7 @@ class BusinessIndexItem extends React.Component {
             <li className="business-index-li">
                 <div className="index-li-picture">
                     <div className="index-li-img">
-                        <img src={image} className="index-image"></img>
+                        <Link to={`/businesses/${business.id}`}><img src={image} className="index-image"></img></Link>
                     </div>
                 </div>
                     <div className="index-li-info-container">
