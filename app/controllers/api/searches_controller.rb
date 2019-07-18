@@ -42,7 +42,7 @@ class Api::SearchesController < ApplicationController
             @businesses = Business.where('(' + queryString + ')')            
             render 'api/businesses/index'
         else 
-
+            
             locationString = location.split(' ').map do |string|
                 string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
             end.join(" OR ")
@@ -55,7 +55,9 @@ class Api::SearchesController < ApplicationController
             @businesses = @locationBusinesses.where('(' + queryString + ')')
             
             if @businesses.empty?
-                @businesses = Business.all
+                @businesses = [];
+                # render json: @searches.errors.full_messages, status: 422
+                
                 render 'api/businesses/index'
             else
                 render 'api/businesses/index'

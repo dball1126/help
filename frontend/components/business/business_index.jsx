@@ -10,7 +10,8 @@ class BusinessIndex extends React.Component {
     componentDidMount(){
         
         if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
-        this.props.fetchBusinesses();
+            debugger
+            $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
         }
         
     }
@@ -42,7 +43,7 @@ class BusinessIndex extends React.Component {
 
 
         const businesses = this.props.businesses.map((business, i) => {
-
+            debugger
             
             return (
                 <BusinessIndexItemContainer key={i} business={business}/>

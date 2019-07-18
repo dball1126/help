@@ -18,6 +18,15 @@
     border-bottom: 1px;
 }
 
+.business-index-header p{
+    font-family: inherit;
+    color: #333;
+    font-weight: bold;
+    font-size: 21px;
+    padding-left: 100px;
+    padding-top: 15px;
+}
+
 .businesses-container{
     width: 960px;
     display: flex;

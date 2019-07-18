@@ -68,7 +68,7 @@ class MainSearch extends React.Component{
                             <Link to={`/businesses/${business.id}`}><img src={image} className="main-business-search-img"></img></Link>
                         </div>
                         <div className="main-business-search-name">
-                            {businessName} 
+                            <Link to={`/businesses/${business.id}`}>{businessName}</Link>
                         </div>
                     </div>
                 )
