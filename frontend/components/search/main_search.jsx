@@ -17,7 +17,7 @@ class MainSearch extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        
+        debugger
         this.props.searchBusinesses(this.state).then(() => this.props.history.push('/businesses'));
     }
 
@@ -56,8 +56,8 @@ class MainSearch extends React.Component{
         } else {
             let businesses = this.state.results;
            const allbusinesses = businesses.map((business, i) => {
-                let businessName = business.name.split("").map((char) => {
-                    if(this.state.query.includes(char.toLowerCase())) return (<b className="liveLetters">{char}</b>)
+                let businessName = business.name.split("").map((char, idx) => {
+                    if(this.state.query.includes(char.toLowerCase())) return (<b key={idx} className="liveLetters">{char}</b>)
                     return char
                 })
                 return (

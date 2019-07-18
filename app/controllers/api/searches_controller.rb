@@ -64,12 +64,13 @@ class Api::SearchesController < ApplicationController
     end
 
     def business_start
-        counter = (1...Business.count).to_a.sort_by{rand}[0...Business.count]
-        bus1 = counter.first
-        bus2 = counter.second
-        bus3 = counter.third
+        # counter = (1...Business.count).to_a.sort_by{rand}[0...Business.count]
+        # bus1 = counter.first
+        # bus2 = counter.second
+        # bus3 = counter.third
 
-        @businesses = Business.find(bus1, bus2, bus3)
+
+        @businesses = Business.find(1, 2, 3)
         render '/api/businesses/index'
     end
 end

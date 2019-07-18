@@ -22,11 +22,14 @@ class Homepage extends React.Component {
         
         
         const startBusinesses = () => {
-           
+           let counter = 0
             if (businesses < 1) {
+                
                 return ""
             } else {
                 
+                if (counter === 0){
+                    counter++;
                 return (
                     businesses.map((business, i) => {
                         const stars = () => {
@@ -47,7 +50,8 @@ class Homepage extends React.Component {
                             )
 
                         }
-                        let image = business.imageLinks[Math.ceil(Math.random() * 2)];
+                        // let image = business.imageLinks[Math.ceil(Math.random() * 2)];
+                            let image = business.imageLinks[1];
                         return (
                             <div className="start-page-business" key={i}>
                                 <div className="start-business-pic">
@@ -62,7 +66,7 @@ class Homepage extends React.Component {
                             </div>
                         )
                     })
-                )
+                )}
             }
         }
     return (
@@ -111,6 +115,9 @@ class Homepage extends React.Component {
                     </div>
                 </div>
             </div>
+            {/* <div className="popular-businesses">
+                
+            </div> */}
 
             <div className="homepage-main-footer-container">
                 <div className="homepage-footer-inner-container">
