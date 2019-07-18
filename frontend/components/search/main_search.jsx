@@ -1,12 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import BusinessIndexContainer from '../business/business_index_container';
 
 class MainSearch extends React.Component{
     constructor(props){
         super(props);
-        this.state = {query: "", location: ""};
+        this.state = {query: "", location: "", results: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
-     
+        
     }
 
     componentDidMount(){
@@ -21,14 +22,56 @@ class MainSearch extends React.Component{
     }
 
     update(field){
-        return (e) => {
-             this.setState({[field]: e.target.value})
+        
+       return  (e) => {
+             this.setState({[field]: e.target.value}, () => this.searchdata())
+       
         }
+       
     }
     
+    
+    searchdata(){
+        let allData = "";
+        
+         if (this.state.query.length >= 1){
+            allData = this.props.searchBusinesses(this.state).then((data) => {
+                
+                let searchBusinesses = Object.values(data.businesses)
+                
+                this.setState({results: searchBusinesses});
+               
+                return searchBusinesses;
+            })
+            return allData;
+         } else {
+             
+             this.setState({results: ""})
+         }
+    }
+
+    searchResults(){
+        if(this.state.results.length < 1){
+            return ""
+        } else {
+            let businesses = this.state.results;
+           const allbusinesses = businesses.map((business, i) => {
+                let businessName = business.name.split("").map((char) => {
+                    if(this.state.query.includes(char.toLowerCase())) return (<b className="liveLetters">{char}</b>)
+                    return char
+                })
+                return (
+                    <div key={i} className="main-page-search-result">
+                        {businessName} 
+                    </div>
+                )
+            })
+            return allbusinesses
+        }
+    }
+
     render(){
        
-        
     return (
             <div className="main-search-form">
                 <form className="main-business-search" onSubmit={this.handleSubmit}>
@@ -65,7 +108,12 @@ class MainSearch extends React.Component{
                             <div className="search-image"></div>
                         </button>
                     </div>
+                   
                 </form>
+                <div className="searchData">
+                
+                {this.searchResults()}
+                </div>
             </div>
     );
     }
