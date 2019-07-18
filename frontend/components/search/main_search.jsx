@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import BusinessIndexContainer from '../business/business_index_container';
 
 class MainSearch extends React.Component{
@@ -17,7 +17,7 @@ class MainSearch extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        debugger
+        
         this.props.searchBusinesses(this.state).then(() => this.props.history.push('/businesses'));
     }
 
@@ -56,13 +56,20 @@ class MainSearch extends React.Component{
         } else {
             let businesses = this.state.results;
            const allbusinesses = businesses.map((business, i) => {
+               let image = business.imageLinks[1];
+               
                 let businessName = business.name.split("").map((char, idx) => {
                     if(this.state.query.includes(char.toLowerCase())) return (<b key={idx} className="liveLetters">{char}</b>)
                     return char
                 })
                 return (
                     <div key={i} className="main-page-search-result">
-                        {businessName} 
+                        <div className="main-business-search-img-box">
+                            <Link to={`/businesses/${business.id}`}><img src={image} className="main-business-search-img"></img></Link>
+                        </div>
+                        <div className="main-business-search-name">
+                            {businessName} 
+                        </div>
                     </div>
                 )
             })

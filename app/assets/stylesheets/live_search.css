@@ -11,8 +11,26 @@
     padding-left: 18px;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
 }
 
 .liveLetters {
     font-weight: bold;
+}
+
+.main-business-search-img-box {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.main-business-search-img {
+    height: 100%;
+    border-radius: 2px;
+
+}
+
+.main-business-search-name {
+    padding: 7px;
 }
