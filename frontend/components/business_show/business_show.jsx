@@ -13,11 +13,22 @@ class BusinessShow extends React.Component {
         
     }
 
+    shouldComponentUpdate(){
+        if(this.didUpdate === false){
+            this.didUpdate = true
+            
+            return true;
+        } else {
+            
+            return false;
+        }
+       
+    }
+
     componentDidMount() {
         
         this.props.fetchBusiness(this.props.businessId);
         const modal = document.getElementById('imgModal');
-        
         window.onclick = function(event) {
             if (event.target == modal){
                 modal.style.display = "none";
@@ -78,10 +89,13 @@ class BusinessShow extends React.Component {
                 
                 const businessPosition = {lat: business.latitude, lng: business.longitude}
                 const mapCenter = { lat: business.latitude, lng: business.longitude };
+                
                 return (
                     <BusinessMap center={mapCenter} position={businessPosition} />
                 )
+
             }
+            
         }
         
         const reviews = () => {

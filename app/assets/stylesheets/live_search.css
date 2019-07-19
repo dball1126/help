@@ -59,5 +59,6 @@
     background-color: #FFFFFF;
     font-family: inherit;
     position: absolute;
-    box-shadow: 2px 4px 5px 0px #ccc
+    box-shadow: 2px 4px 5px 0px #ccc;
+    z-index: 100;
 }
