@@ -23,21 +23,21 @@ class BusinessIndex extends React.Component {
     shouldComponentUpdate() {
         
         
-        if (this.props.history.action === "POP"){
-            return false;
-        }
-        else if (this.props.match.action === "PUSH") {
+        // if (this.props.history.action === "POP"){
+        //     return false;
+        // }
+        // else if (this.props.match.action === "PUSH") {
             
-            this.didUpdate = true
+        //     this.didUpdate = true
 
-            return true;
-        } else if(this.didUpdate === false){
-            this.didUpdate = true;
-            return true;
-        } else{
+        //     return true;
+        // } else if(this.didUpdate === false){
+        //     this.didUpdate = true;
+        //     return true;
+        // } else{
 
             return false;
-        }
+        // }
 
     }
 

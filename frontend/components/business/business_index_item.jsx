@@ -6,14 +6,14 @@ class BusinessIndexItem extends React.Component {
         this.didUpdate = false;
     }
     shouldComponentUpdate() {
-        // console.log(this.didUpdate)
+    
         
 
         return false;
 
     }
     componentDidMount(){
-        
+        // return true;
     }
 
     render(){

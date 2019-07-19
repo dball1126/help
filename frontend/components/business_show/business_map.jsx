@@ -12,6 +12,7 @@ class BusinessMap extends React.Component{
     }
     shouldComponentUpdate() {
         
+
         if (this.didUpdate === false) {
             this.didUpdate = true
 
