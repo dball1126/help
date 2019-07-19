@@ -1,6 +1,6 @@
 export const searchBusinesses = query => (
     $.ajax({
-        method: 'GET',
+        method: 'POST',
         url: '/api/businesses/search',
         data: { query }
     })
