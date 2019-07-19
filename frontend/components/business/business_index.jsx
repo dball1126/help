@@ -21,8 +21,7 @@ class BusinessIndex extends React.Component {
     }
 
     shouldComponentUpdate() {
-        // console.log(this.didUpdate)
-        // debugger
+        
         
         if (this.props.history.action === "POP"){
             return false;

@@ -3,14 +3,18 @@ import {Link} from 'react-router-dom';
 class BusinessIndexItem extends React.Component {
     constructor(props) {
         super(props);
+        this.didUpdate = false;
+    }
+    shouldComponentUpdate() {
+        // console.log(this.didUpdate)
+        
+
+        return false;
+
+    }
+    componentDidMount(){
         
     }
-shouldComponentUpdate() {
-
-}
-
-componentDidMount(){
-}
 
     render(){
         const stars = () => {
