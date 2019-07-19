@@ -8,7 +8,19 @@ class BusinessMap extends React.Component{
         this.position = this.props.position || "";
         this.center = this.props.center || { lat: 40.70569, lng: -73.99639 };
         this.businesses = this.props.businesses || "";
+        this.didUpdate = false;
+    }
+    shouldComponentUpdate() {
         
+        if (this.didUpdate === false) {
+            this.didUpdate = true
+
+            return true;
+        } else {
+
+            return false;
+        }
+
     }
 
     componentDidMount(){

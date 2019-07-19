@@ -7,12 +7,13 @@ class businessShowSearch extends React.Component{
         super(props);
         this.state = {query: "", location: "", results: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     handleSubmit(e){
         e.preventDefault();
         
-            this.props.searchBusinesses(this.state).then(() => this.props.history.push('/businesses'));;
+            this.props.searchBusinesses(this.state).then(() => this.props.history.push('/null')).then(() => this.props.history.push({pathname: '/businesses'}))
         
     }
 

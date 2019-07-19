@@ -2,7 +2,7 @@ import { fetchBusinesses } from '../../actions/business_actions';
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     const currentUser = state.entities.users[state.session.id];
     
     return {
