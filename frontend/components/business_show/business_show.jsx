@@ -9,7 +9,7 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-   
+        this.didUpdate = false;
         
     }
 
@@ -17,7 +17,7 @@ class BusinessShow extends React.Component {
         
         this.props.fetchBusiness(this.props.businessId);
         const modal = document.getElementById('imgModal');
-
+        
         window.onclick = function(event) {
             if (event.target == modal){
                 modal.style.display = "none";
@@ -75,6 +75,7 @@ class BusinessShow extends React.Component {
             if(!business.longitude){
                 return "";
             } else {
+                
                 const businessPosition = {lat: business.latitude, lng: business.longitude}
                 const mapCenter = { lat: business.latitude, lng: business.longitude };
                 return (

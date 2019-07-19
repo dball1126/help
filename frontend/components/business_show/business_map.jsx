@@ -8,12 +8,13 @@ class BusinessMap extends React.Component{
         this.position = this.props.position || "";
         this.center = this.props.center || { lat: 40.70569, lng: -73.99639 };
         this.businesses = this.props.businesses || "";
-        
+        this.didUpdate = false;
     }
 
     componentDidMount(){
         
         // const map = ReactDOM.findDOMNode(this.refs.map);
+        if(this.didUpdate === false){
         let zoom = 10;
         if (this.position) zoom = 13;
         
@@ -41,7 +42,8 @@ class BusinessMap extends React.Component{
             )
         });
         }
-        
+        this.didUpdate = true;
+    }
     }
 
     componentDidUpdate() {
