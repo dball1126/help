@@ -1,23 +1,80 @@
 import React from 'react';
 import BusinessMap from '../business_show/business_map';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 
 class businessShowSearch extends React.Component{
     constructor(props){
         super(props);
-        this.state = {query: "", location: ""}
+        this.state = {query: "", location: "", results: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e){
         e.preventDefault();
-            this.props.searchBusinesses(this.state).then(() => this.props.history.push('/businesses'));
+        
+            this.props.searchBusinesses(this.state).then(() => this.props.history.push('/businesses'));;
         
     }
 
     update(field){
         return (e) => {
-            this.setState({[field]: e.target.value})
+            this.setState({ [field]: e.target.value }, () => this.searchdata())
+        }
+    }
+
+    reloadPage() {
+        this.props.history.go('/null')
+    }
+
+    searchdata() {
+        let allData = "";
+
+        if (this.state.query.length >= 1) {
+            allData = this.props.searchBusinesses(this.state).then((data) => {
+                let searchBusinesses;
+                if (data.businesses) {
+                    searchBusinesses = Object.values(data.businesses)
+                } else {
+                    searchBusinesses = "";
+                }
+
+                this.setState({ results: searchBusinesses });
+
+                return searchBusinesses;
+            })
+            return allData;
+        } else {
+
+            this.setState({ results: "" })
+        }
+    }
+
+
+    searchResults() {
+        if (this.state.results.length < 1) {
+            return ""
+        } else {
+            let businesses = this.state.results;
+            const allbusinesses = businesses.map((business, i) => {
+                let image = business.imageLinks[1];
+
+                let businessName = business.name.split("").map((char, idx) => {
+                    
+                    if (this.state.query.includes(char.toLowerCase())) return (<b key={idx} className="liveLetters">{char}</b>)
+                    return char
+                })
+                return (
+                    <div key={i} className="main-page-search-result">
+                        <div className="main-business-search-img-box">
+                            <Link to={`/businesses/${business.id}`}><img src={image} className="main-business-search-img"></img></Link>
+                        </div>
+                        <div className="main-business-search-name" >
+                            <div onClick={() => this.reloadPage()}><Link  to={`/businesses/${business.id}`}>{businessName}</Link></div>
+                        </div>
+                    </div>
+                )
+            })
+            return allbusinesses
         }
     }
 
@@ -60,6 +117,10 @@ class businessShowSearch extends React.Component{
                     </button>
                 </div>
             </form>
+               <div className="business-show-index-searchData">
+
+                   {this.searchResults()}
+               </div>
         </div>
     );
     }

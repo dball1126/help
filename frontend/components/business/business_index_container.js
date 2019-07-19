@@ -6,7 +6,7 @@ const mapStateToProps = (state) => {
     const currentUser = state.entities.users[state.session.id];
     
     return {
-        businesses: Object.values(state.entities.businesses) || {},
+        businesses: Object.values(state.search) || {},
         currentUser: currentUser || {}
     }
 }

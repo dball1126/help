@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 
 
 const mapStateToProps = (state, ownProps) => {
+    
     const businessId = parseInt(ownProps.match.params.businessId);
 
     const business = state.entities.businesses[businessId];  //INVESTIGATE

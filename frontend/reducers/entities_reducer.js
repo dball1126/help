@@ -7,8 +7,7 @@ import searchReducer from './search_reducer';
 const entitiesReducer = combineReducers({users: usersReducer,
                                 businesses: businessesReducer,
                                 reviews: reviewsReducer,
-                                start: startReducer,
-                                search: searchReducer})
+                                start: startReducer})
 
 
 export default entitiesReducer;

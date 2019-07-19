@@ -5,13 +5,17 @@ import BusinessHeaderContainer from '../greeting/business_header_container';
 class BusinessIndex extends React.Component {
     constructor(props){
         super(props);
-        
+        this.didUpdate = false;        
     }
+
     componentDidMount(){
         
         if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
-            debugger
+            this.didUpdate = false;
             $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
+        } else {
+            this.didUpdate = true;
+           
         }
         
     }
@@ -32,6 +36,17 @@ class BusinessIndex extends React.Component {
             );
         }
     };
+        busIndex(){
+    const businesses = this.props.businesses.map((business, i) => {
+        
+        
+        return (
+            <BusinessIndexItemContainer key={i} business={business}/>
+        );
+    })
+        return businesses
+        };
+    
 
     render(){
         
@@ -42,14 +57,6 @@ class BusinessIndex extends React.Component {
         
 
 
-        const businesses = this.props.businesses.map((business, i) => {
-            debugger
-            
-            return (
-                <BusinessIndexItemContainer key={i} business={business}/>
-            );
-        });
-        
         return (
             <div>
                 {/* <RedBanner /> */}
@@ -62,7 +69,7 @@ class BusinessIndex extends React.Component {
                         <div className="businesses-container">
                             <div className="businesses-ul-container">
                                 <ul className="businesses-ul">
-                                {businesses}
+                                {this.busIndex()}
                                 </ul>
                             </div>
                             <div className="businesses-index-rightSide">

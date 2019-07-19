@@ -9,11 +9,12 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-    //    this.listenersOn = this.listenersOn.bind(this);
+   
+        
     }
 
     componentDidMount() {
-
+        
         this.props.fetchBusiness(this.props.businessId);
         const modal = document.getElementById('imgModal');
 
@@ -60,8 +61,10 @@ class BusinessShow extends React.Component {
             website: "", latitude: "", longitude: "", imageLinks: []
         }
         
-    
+        
         const business = this.props.business || defaultBusiness;
+        
+        
         const currentUser = this.props.currentUser || {};
        
         

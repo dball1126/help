@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import BusinessIndexContainer from '../business/business_index_container';
+
 
 class MainSearch extends React.Component{
     constructor(props){
@@ -8,11 +8,6 @@ class MainSearch extends React.Component{
         this.state = {query: "", location: "", results: ""};
         this.handleSubmit = this.handleSubmit.bind(this);
         
-    }
-
-    componentDidMount(){
-        // this.props.fetchBusinesses();
-      
     }
 
     handleSubmit(e){
@@ -36,8 +31,12 @@ class MainSearch extends React.Component{
         
          if (this.state.query.length >= 1){
             allData = this.props.searchBusinesses(this.state).then((data) => {
-                
-                let searchBusinesses = Object.values(data.businesses)
+                let searchBusinesses;
+                if(data.businesses){
+                 searchBusinesses = Object.values(data.businesses)
+                } else {
+                    searchBusinesses = "";
+                }
                 
                 this.setState({results: searchBusinesses});
                
@@ -49,6 +48,8 @@ class MainSearch extends React.Component{
              this.setState({results: ""})
          }
     }
+
+    
 
     searchResults(){
         if(this.state.results.length < 1){
@@ -67,7 +68,7 @@ class MainSearch extends React.Component{
                         <div className="main-business-search-img-box">
                             <Link to={`/businesses/${business.id}`}><img src={image} className="main-business-search-img"></img></Link>
                         </div>
-                        <div className="main-business-search-name">
+                        <div className="main-business-search-name" >
                             <Link to={`/businesses/${business.id}`}>{businessName}</Link>
                         </div>
                     </div>
@@ -117,7 +118,7 @@ class MainSearch extends React.Component{
                     </div>
                    
                 </form>
-                <div className="searchData">
+                <div className="main-searchData">
                 
                 {this.searchResults()}
                 </div>
