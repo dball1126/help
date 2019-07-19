@@ -44,7 +44,7 @@ class BusinessShow extends React.Component {
                 modal.style.display = "block";
             });
         }
-         }, 1000);
+         }, 500);
     }
 
 

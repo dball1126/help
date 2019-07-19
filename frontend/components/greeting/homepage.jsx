@@ -115,17 +115,20 @@ class Homepage extends React.Component {
                     </div>
                 </div>
             </div>
-            {/* <div className="popular-businesses">
+            <div className="popular-businesses">
+                <div className="popular-businesses-h3">
+                    <p>Popular Businesses</p>
+                </div>
+                <div className="footer-content-wrapper">
+                    <div className="start-business-box">
+                        {startBusinesses()}
+                    </div>
+                </div>
                 
-            </div> */}
+            </div>
 
             <div className="homepage-main-footer-container">
                 <div className="homepage-footer-inner-container">
-                    <div className="footer-content-wrapper">
-                        <div className="start-business-box">
-                            {startBusinesses()}
-                        </div>
-                    </div>
                     <div className="footer-img-wrapper">
                         <div className="footer-img"></div>
                     </div>
