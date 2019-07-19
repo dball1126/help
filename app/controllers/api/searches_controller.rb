@@ -22,6 +22,8 @@ class Api::SearchesController < ApplicationController
     #     @businesses = Business.all if @businesses.empty?
     #     render '/api/businesses/index'
     # end
+            #REMOVED LIMIT(6) OPTION FOR NOW;
+
         if query == "" && location == ""
             @businesses = Business.all
             render '/api/businesses/index'
@@ -30,7 +32,7 @@ class Api::SearchesController < ApplicationController
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) LIKE '%#{string.downcase}%'"
             end.join(" OR ");
-            @businesses = Business.where('(' + queryString + ')').limit(6)
+            @businesses = Business.where('(' + queryString + ')')
             render 'api/businesses/index'
 
         elsif query == "" && location != ""
@@ -39,7 +41,7 @@ class Api::SearchesController < ApplicationController
                 string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
             end.join(" OR ");
             
-            @businesses = Business.where('(' + queryString + ')').limit(6)         
+            @businesses = Business.where('(' + queryString + ')')         
             render 'api/businesses/index'
         else 
             
@@ -52,7 +54,7 @@ class Api::SearchesController < ApplicationController
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) LIKE '%#{string.downcase}%'"
             end.join(" OR ")
-            @businesses = @locationBusinesses.where('(' + queryString + ')').limit(6)
+            @businesses = @locationBusinesses.where('(' + queryString + ')')
             
             if @businesses.empty?
                 @businesses = [];
