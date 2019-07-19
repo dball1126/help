@@ -9,21 +9,21 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-        this.didUpdate = false;
+        // this.didUpdate = false;
         
     }
 
-    shouldComponentUpdate(){
-        if(this.didUpdate === false){
-            this.didUpdate = true
+    // shouldComponentUpdate(){
+    //     if(this.didUpdate === false){
+    //         this.didUpdate = true
             
-            return true;
-        } else {
+    //         return true;
+    //     } else {
             
-            return false;
-        }
+    //         return false;
+    //     }
        
-    }
+    // }
 
     componentDidMount() {
         
