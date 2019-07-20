@@ -3,20 +3,22 @@ import {Link} from 'react-router-dom';
 class BusinessIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        this.didUpdate = false;
+        this.state = {hasMounted: false}
     }
     shouldComponentUpdate() {
     
-        
-
-        return false;
-
+       if(this.state.hasMounted === false){
+           return true;
+       } else {
+           return false;
+       }
     }
     componentDidMount(){
-        // return true;
+        this.setState({hasMounted: true})
     }
 
     render(){
+        
         const stars = () => {
             let starColorTop;
             let starCounter = business.average_rating;
@@ -54,7 +56,7 @@ class BusinessIndexItem extends React.Component {
         }
         const business = this.props.business;
         const image = business.imageLinks[Math.ceil(Math.random() * 2)];
-        
+        console.log(business)
         
         return (
             <li className="business-index-li">
