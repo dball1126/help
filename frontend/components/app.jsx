@@ -10,11 +10,15 @@ import CreateReviewContainer from './review_form/create_review_container';
 import EditReviewContainer from './review_form/edit_review_container';
 import SearchContainer from './search/search_container';
 
+
 const App = () => {
+   
     return (
+       
+        
         <div>
              <Route exact path ='/' component={HomepageContainer} />
-             <Route exact path ='/businesses' component={BusinessIndexContainer} />
+                <Route exact path='/businesses' component={BusinessIndexContainer}/>
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
              <ProtectedRoute exact path ='/businesses/:businessId/review' component={CreateReviewContainer}/>
              <ProtectedRoute exact path ='/businesses/:businessId/edit/:reviewId' component={EditReviewContainer}/>
@@ -23,6 +27,7 @@ const App = () => {
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
              <AuthRoute exact path="/login" component={LoginformContainer} />
         </div>
+       
     )
 }
 

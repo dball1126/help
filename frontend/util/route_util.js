@@ -4,18 +4,19 @@ import {connect} from 'react-redux';
 
 
 const Auth = (state, ownProps) => {
-    
     const path = state.path;
     const exact = state.exact;
     const Component = state.component;
     const loggedIn = state.loggedIn;
     let relocater = state.location.reviewPathLocation;
+   
     if (relocater === undefined) relocater = "/";
     
     return (
     <Route path={path}
            relocater={relocater}
            exact={exact}
+           
            render={(props) => (
      loggedIn ? <Redirect to={{pathname: relocater}} /> : <Component {...props} />
     )} />
@@ -29,6 +30,7 @@ const Auth = (state, ownProps) => {
 //REDIRECT TO signup FOR NOW   maybe switch to homepage at some point
 //{ component: Component, path, loggedIn, exact}
 const Protected = (state, ownProps) => {
+
     const path = state.path
     const exact = state.exact
     const Component = state.component
@@ -45,7 +47,7 @@ const Protected = (state, ownProps) => {
     
     return (
     <Route path={path} 
-    
+            
            exact={exact} 
            render={(props) => (
     loggedIn ? <Component {...props} /> : <Redirect to={{pathname: "/login",

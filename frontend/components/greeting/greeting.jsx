@@ -6,7 +6,7 @@ const Greeting = ({logout, currentUser, demoLogin}) => {
         <ul className="login-signup">
             <li className="login"><Link to="/login">Log In</Link></li>
             <Link to="/signup" className="signup">Sign up</Link>
-            <li><button className="demo-button" onClick={demoLogin}>Demo Log in</button></li>
+            <li className="li-demo-button"><button className="demo-button" onClick={demoLogin}>Demo Log in</button></li>
         </ul>
     );
 

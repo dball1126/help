@@ -5,7 +5,8 @@ import BusinessHeaderContainer from '../greeting/business_header_container';
 class BusinessIndex extends React.Component {
     constructor(props){
         super(props);
-        this.state ={hasMounted: false, businesses: []      }
+        this.state ={hasMounted: false, businesses: []      };
+        this.prevLocation = this.props.location.prev
     }
 
     componentDidMount(){
@@ -56,7 +57,7 @@ class BusinessIndex extends React.Component {
         
         
         return (
-            <BusinessIndexItemContainer key={i} business={business}/>
+            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation}/>
         );
     })
         return businesses

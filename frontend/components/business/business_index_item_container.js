@@ -2,8 +2,13 @@ import {connect} from 'react-redux';
 import BusinessIndexItem from './business_index_item';
 
 const mapStateToProps = (state, ownProps) => {
-     
-    const business = state.search[ownProps.business.id];
+    let business = state.search[ownProps.business.id] || {};
+    
+    if(ownProps.prev === "homepage"){
+        
+        business = state.entities.businesses[ownProps.business.id]
+    }
+    
     return {
         business: business
     }

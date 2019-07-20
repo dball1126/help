@@ -287,8 +287,14 @@
     text-align: center;   
 }
 
-.demo-button:hover {
+.demo-button:hover{
+    cursor: pointer;
+}
+
+
+.li-demo-button:hover {
     box-shadow: inset 0 -3px 0 white, inset 0 -3.5px 0 white;
+    cursor: pointer;
 }
 
 .login:hover {
@@ -301,6 +307,7 @@
 
 .nav-review-link:hover {
     box-shadow: inset 0 -3px 0 white, inset 0 -3.5px 0 white;
+    cursor: pointer;
 }
 
 .nav-talk-link:hover {
@@ -375,6 +382,7 @@
 .start-page-reivew-link{
     text-decoration: none;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 

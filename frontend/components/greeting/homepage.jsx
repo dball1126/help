@@ -1,6 +1,6 @@
 import GreetingContainer from './greeting_container';
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 // import MainSearch from '../search/main_search';
 import SearchContainer from '../search/search_container';
 class Homepage extends React.Component {
@@ -17,6 +17,7 @@ class Homepage extends React.Component {
   
    
     render(){
+        
         let businesses = this.props.businesses || [];
 
         
@@ -76,7 +77,7 @@ class Homepage extends React.Component {
                     <div className="homepage-main-nav-container">
                         <nav className="homepage-nav-reviews">
                             <ul className="ul-nav-reviews">
-                                <li className="nav-review-link"><Link to='/businesses' className="start-page-reivew-link">Write a Review</Link></li>
+                                <li className="nav-review-link" ><div  onClick={() => this.props.fetchBusinesses().then(() => this.props.history.push({ pathname: '/businesses', prev: 'homepage' }))} className="start-page-reivew-link">Write a Review</div></li>
                                 {/* <li className="nav-events-link">Events</li>
                                 <li className="nav-talk-link">Talk</li> */}
                             </ul>
