@@ -9,24 +9,23 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-        // this.didUpdate = false;
+      this.state = {hasMounted: false}
         
     }
 
-    // shouldComponentUpdate(){
-    //     if(this.didUpdate === false){
-    //         this.didUpdate = true
+    shouldComponentUpdate(){
+        if(this.state.hasMounted === false){
+           this.setState({hasMounted: true})
             
-    //         return true;
-    //     } else {
+            return true;
+        } else {
             
-    //         return false;
-    //     }
+            return false;
+        }
        
-    // }
+    }
 
     componentDidMount() {
-        
         this.props.fetchBusiness(this.props.businessId);
         const modal = document.getElementById('imgModal');
         window.onclick = function(event) {

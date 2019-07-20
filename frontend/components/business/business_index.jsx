@@ -5,11 +5,11 @@ import BusinessHeaderContainer from '../greeting/business_header_container';
 class BusinessIndex extends React.Component {
     constructor(props){
         super(props);
-        this.didUpdate = false;        
+        this.state ={hasMounted: false}      
     }
 
     componentDidMount(){
-        
+        this.setState({hasMounted: true})
         if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
             
             $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
@@ -22,22 +22,14 @@ class BusinessIndex extends React.Component {
 
     shouldComponentUpdate() {
         
-        
-        // if (this.props.history.action === "POP"){
-        //     return false;
-        // }
-        // else if (this.props.match.action === "PUSH") {
+        if (this.state.hasMounted === false) {
             
-        //     this.didUpdate = true
 
-        //     return true;
-        // } else if(this.didUpdate === false){
-        //     this.didUpdate = true;
-        //     return true;
-        // } else{
+            return true;
+        } else {
 
             return false;
-        // }
+        }
 
     }
 
