@@ -16,7 +16,6 @@ const Auth = (state, ownProps) => {
     <Route path={path}
            relocater={relocater}
            exact={exact}
-           
            render={(props) => (
      loggedIn ? <Redirect to={{pathname: relocater}} /> : <Component {...props} />
     )} />
