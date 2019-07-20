@@ -5,11 +5,11 @@ import BusinessHeaderContainer from '../greeting/business_header_container';
 class BusinessIndex extends React.Component {
     constructor(props){
         super(props);
-        this.state ={hasMounted: false, businesses: this.props.businesses}      
+        this.state ={hasMounted: false, businesses: []      }
     }
 
     componentDidMount(){
-        this.setState({hasMounted: true})
+        this.setState({hasMounted: true, businesses: this.props.businesses})
         if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
             
             $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
@@ -37,7 +37,7 @@ class BusinessIndex extends React.Component {
     indexMap(){
         
         // const businesses = this.props.businesses;
-        
+        console.log(this.state.businesses)
         if (this.state.businesses.length < 1) {
             return (
                 ""
