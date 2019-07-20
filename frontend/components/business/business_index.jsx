@@ -5,7 +5,7 @@ import BusinessHeaderContainer from '../greeting/business_header_container';
 class BusinessIndex extends React.Component {
     constructor(props){
         super(props);
-        this.state ={hasMounted: false}      
+        this.state ={hasMounted: false, businesses: this.props.businesses}      
     }
 
     componentDidMount(){
@@ -36,21 +36,23 @@ class BusinessIndex extends React.Component {
     
     indexMap(){
         
-        const businesses = this.props.businesses;
+        // const businesses = this.props.businesses;
         
-        if (businesses.length < 1) {
+        if (this.state.businesses.length < 1) {
             return (
                 ""
             )
         } else {
 
             return (
-                <BusinessMap businesses={businesses} />
+                <BusinessMap businesses={this.state.businesses} />
             );
         }
+        
     };
         busIndex(){
-    const businesses = this.props.businesses.map((business, i) => {
+           
+    const businesses = this.state.businesses.map((business, i) => {
         
         
         return (
