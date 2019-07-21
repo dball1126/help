@@ -117,3 +117,5 @@ file33 = open('https://yap-dev.s3.amazonaws.com/chipotle3.jpg')
 business11.images.attach(io: file33, filename: 'chipotle3.jpg')
 #profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
 # profile_placeholder.jpg     file name
+
+review1 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place always pisses me off, and today was no different.  The lady rushes me and it just seems so rude.  It was a bad experience, and lately it's been like that the last two times i've been there", rating: 4)
