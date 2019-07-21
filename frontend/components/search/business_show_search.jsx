@@ -5,14 +5,14 @@ import {withRouter, Link} from 'react-router-dom';
 class businessShowSearch extends React.Component{
     constructor(props){
         super(props);
-        this.state = {query: "", location: "", results: ""};
+        this.state = {query: "", location: "", results: "", allbusinesses: false};
         this.handleSubmit = this.handleSubmit.bind(this);
         
     }
 
     handleSubmit(e){
         e.preventDefault();
-        
+            this.state.allBusinesses = "true"
             this.props.searchBusinesses(this.state).then(() => this.props.history.push('/null')).then(() => this.props.history.push({pathname: '/businesses'}))
         
     }
