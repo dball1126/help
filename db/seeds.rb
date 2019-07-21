@@ -30,7 +30,7 @@ business7 = Business.create(name: "McDonald's", state: "NY", city: "New York", z
 business8 = Business.create(name: "Calexico", state: "NY", city: "Brooklyn", zipcode: 11215, address: "278 5th Ave", phone_number: "(347) 254-7644", website: "www.calexico.com", latitude: "40.674301", longitude: "-73.982407")
 business9 = Business.create(name: "La Villa Pizzeria", state: "NY", city: "Brooklyn", zipcode: 11215, address: "261 5th Ave", phone_number: "(718) 499-9888", website: "www.lavillapizza.com", latitude: "40.674310", longitude: "-73.981630")
 business10 = Business.create(name: "SUPERCOOLNYC", state: "NY", city: "Brooklyn", zipcode: 11209, address: "648 74th St", phone_number: "(929) 400-7665", website: "www.supercoolnyc.com", latitude: "40.627920", longitude: "-74.018860")
-
+business11 = Business.create(name: "Chipotle Mexican Grill, Inc", state: "NY", city: "New York", zipcode: 10018, address: "28 W 4th Street", phone_number: "(212)302-0650", website: "www.chipotle.com", latitude: "40.658806899999995", longitude: "-73.978241")
 
 
 
@@ -109,6 +109,11 @@ business10.images.attach(io: file29, filename: 'air2.jpg')
 file30 = open('https://yap-dev.s3.amazonaws.com/air3.jpeg')
 business10.images.attach(io: file30, filename: 'air3.jpeg')
 
-
+file31 = open('https://yap-dev.s3.amazonaws.com/chipotle1.jpg')
+business11.images.attach(io: file31, filename: 'chipotle1.jpg')
+file32 = open('https://yap-dev.s3.amazonaws.com/chipotle2.jpg')
+business11.images.attach(io: file32, filename: 'chipotle2.jpg')
+file33 = open('https://yap-dev.s3.amazonaws.com/chipotle3.jpg')
+business11.images.attach(io: file33, filename: 'chipotle3.jpg')
 #profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
 # profile_placeholder.jpg     file name
