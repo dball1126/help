@@ -6,7 +6,8 @@ class BusinessIndex extends React.Component {
     constructor(props){
         super(props);
         this.state ={hasMounted: false, businesses: []      };
-        this.prevLocation = this.props.location.prev
+        this.prevLocation = this.props.location.prev;
+        
     }
 
     componentDidMount(){

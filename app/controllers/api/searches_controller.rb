@@ -2,6 +2,8 @@ class Api::SearchesController < ApplicationController
     def business_search
         query = params[:query][:query]
         location = params[:query][:location]
+        allBusinesses = params[:query][:allBusinesses]
+        
     #     if query == ""
     #         @businesses = Business.all 
     #         render '/api/businesses/index'
@@ -30,7 +32,12 @@ class Api::SearchesController < ApplicationController
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) LIKE '%#{string.downcase}%'"
             end.join(" OR ");
-            @businesses = Business.where('(' + queryString + ')').limit(6)
+            if allBusinesses == "true"
+                
+                @businesses = Business.where('(' + queryString + ')')
+            else
+                @businesses = Business.where('(' + queryString + ')').limit(6)
+            end
             render 'api/businesses/index'
 
         elsif query == "" && location != ""
@@ -39,7 +46,12 @@ class Api::SearchesController < ApplicationController
                 string = "LOWER(city) LIKE '%#{string.downcase}%'" + (" OR ") + ("LOWER(state) LIKE '%#{string.downcase}%'")
             end.join(" OR ");
             
-            @businesses = Business.where('(' + queryString + ')').limit(6)         
+            if allBusinesses == "true"
+                
+                @businesses = Business.where('(' + queryString + ')')
+            else
+                @businesses = Business.where('(' + queryString + ')').limit(6)
+            end        
             render 'api/businesses/index'
         else 
             
@@ -52,7 +64,13 @@ class Api::SearchesController < ApplicationController
             queryString = query.split(' ').map do |string|
                 string = "LOWER(name) LIKE '%#{string.downcase}%'"
             end.join(" OR ")
-            @businesses = @locationBusinesses.where('(' + queryString + ')').limit(6)
+
+            if allBusinesses == "true"
+                
+                @businesses = Business.where('(' + queryString + ')')
+            else
+                @businesses = Business.where('(' + queryString + ')').limit(6)
+            end
             
             if @businesses.empty?
                 @businesses = [];
