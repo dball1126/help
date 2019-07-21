@@ -77,7 +77,7 @@ class Homepage extends React.Component {
                     <div className="homepage-main-nav-container">
                         <nav className="homepage-nav-reviews">
                             <ul className="ul-nav-reviews">
-                                <li className="nav-review-link" ><div  onClick={() => this.props.fetchBusinesses().then(() => this.props.history.push({ pathname: '/businesses', prev: 'homepage' }))} className="start-page-reivew-link">Write a Review</div></li>
+                                <li className="nav-review-link" onClick={() => this.props.fetchBusinesses().then(() => this.props.history.push({ pathname: '/businesses', prev: 'homepage' }))} ><div className="start-page-reivew-link" >Write a Review</div></li>
                                 {/* <li className="nav-events-link">Events</li>
                                 <li className="nav-talk-link">Talk</li> */}
                             </ul>
