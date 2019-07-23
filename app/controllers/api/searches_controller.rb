@@ -1,8 +1,11 @@
 class Api::SearchesController < ApplicationController
+    
+
     def business_search
-        query = params[:query][:query]
+        query = params[:query][:query].gsub("'", "''")
         location = params[:query][:location]
         allBusinesses = params[:query][:allBusinesses]
+       
         
     #     if query == ""
     #         @businesses = Business.all 
@@ -24,6 +27,7 @@ class Api::SearchesController < ApplicationController
     #     @businesses = Business.all if @businesses.empty?
     #     render '/api/businesses/index'
     # end
+    
         if query == "" && location == ""
             @businesses = Business.all
             render '/api/businesses/index'
@@ -62,7 +66,9 @@ class Api::SearchesController < ApplicationController
             @locationBusinesses = Business.where('(' + locationString + ')')
 
             queryString = query.split(' ').map do |string|
-                string = "LOWER(name) LIKE '%#{string.downcase}%'"
+                name = name.gsub("'", "''")
+                debugger
+                string = "LOWER(#{name}) LIKE '%#{string.downcase}%'"
             end.join(" OR ")
 
             if allBusinesses == "true"

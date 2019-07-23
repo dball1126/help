@@ -24,4 +24,6 @@ class Business < ApplicationRecord
     def reviews_count
         reviews.count
     end
+
+    
 end
