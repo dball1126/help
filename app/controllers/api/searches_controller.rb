@@ -3,30 +3,9 @@ class Api::SearchesController < ApplicationController
 
     def business_search
         query = params[:query][:query].gsub("'", "''")
-        location = params[:query][:location]
+        location = params[:query][:location].gsub("'", "''")
         allBusinesses = params[:query][:allBusinesses]
        
-        
-    #     if query == ""
-    #         @businesses = Business.all 
-    #         render '/api/businesses/index'
-    #     else
-        
-    #     queryString = query.split(' ').map do |string|
-            
-    #         string = "LOWER(name) LIKE '%#{string.downcase}%'"
-    #     end.join(" OR ");
-         
-    #     location = params[:query][:location]
-    #     location = "new york" if location == "" 
-    #     location = location.split(',')[0]
-    #     locationStr = "LOWER(city) = '#{location.downcase}'" || "LOWER(state) = '#{location.downcase}'"
-
-    #     @businesses = Business.where('(' + queryString + ')')
-        
-    #     @businesses = Business.all if @businesses.empty?
-    #     render '/api/businesses/index'
-    # end
     
         if query == "" && location == ""
             @businesses = Business.all
@@ -66,9 +45,8 @@ class Api::SearchesController < ApplicationController
             @locationBusinesses = Business.where('(' + locationString + ')')
 
             queryString = query.split(' ').map do |string|
-                name = name.gsub("'", "''")
-                debugger
-                string = "LOWER(#{name}) LIKE '%#{string.downcase}%'"
+                
+                string = "LOWER(name) LIKE '%#{string.downcase}%'"
             end.join(" OR ")
 
             if allBusinesses == "true"
