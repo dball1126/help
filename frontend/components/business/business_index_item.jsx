@@ -58,6 +58,15 @@ class BusinessIndexItem extends React.Component {
       
         const image = business.imageLinks[Math.ceil(Math.random() * 2)];
         
+        const review = () => {
+            
+            if(business.review === undefined){
+                return ""
+            } else {
+                return `"${business.review}"`
+            }
+        }
+        
         
         return (
             <li className="business-index-li">
@@ -83,7 +92,9 @@ class BusinessIndexItem extends React.Component {
                         </div>
                     </div>
                     <div className="index-li-bottom-container">
-                        
+                            <span>
+                                 {review()}
+                            </span>
                     </div>
                 </div>
             </li>

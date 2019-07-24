@@ -61,7 +61,7 @@
 
 .index-li-info-container{
     width: 430px;
-    display: flex;
+    /* display: flex; */
 }
 
 .index-li-top-left {
@@ -102,16 +102,19 @@
 
 .index-li-top-right span {
     font-size: 14px;
+    color: #333333;
 }
 
 .index-address-top {
     padding-top: 15px;
     text-align-last: end;
+    color: #333333;
 }
 
 .index-address{
     padding-top: 10px;
     text-align-last: end;
+    color: #333333;
 }
 
 .star-index-box{
@@ -155,6 +158,9 @@
 .index-li-bottom-container {
     width: 430px;
     height: 110px;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #333333;
 }
 
 .business-page-logout {

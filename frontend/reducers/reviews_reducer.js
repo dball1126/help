@@ -1,6 +1,6 @@
 import {RECEIVE_REVIEW, DESTROY_REVIEW, RECEIVE_ALL_REVIEWS} from '../actions/review_actions';
 
-import { RECEIVE_BUSINESS, RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS_REVIEWS} from '../actions/business_actions';
+import { RECEIVE_BUSINESS, RECEIVE_BUSINESS_REVIEWS} from '../actions/business_actions';
 const reviewsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
 

@@ -12,7 +12,7 @@ export const fetchBusinesses = () => {
         return BusinessApiUtil.fetchBusinesses().then(payload => {
             return dispatch(receiveBusinesses(payload))
         });
-    };
+    }
 };
 
 export const fetchBusiness = (id) => {
@@ -75,7 +75,9 @@ const receiveBusiness = ({business}) => {
         business: business,
         reviews: business.reviews
     }
-};
+}
+
+
 
 const receiveBusinessReviews = ({business}) => {
     
