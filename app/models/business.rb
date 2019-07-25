@@ -3,7 +3,12 @@ class Business < ApplicationRecord
     :phone_number, :website, :latitude, :longitude, presence: true
 
     has_many_attached :images
-   
+
+    has_many :business_categories
+
+    has_many :categories,
+    through: :business_categories,
+    source: :category
 
     has_many :reviews,
         primary_key: :id,
