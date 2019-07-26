@@ -32,6 +32,7 @@ business9 = Business.create(name: "La Villa Pizzeria", state: "NY", city: "Brook
 business10 = Business.create(name: "SUPERCOOLNYC", state: "NY", city: "Brooklyn", zipcode: 11209, address: "648 74th St", phone_number: "(929) 400-7665", website: "www.supercoolnyc.com", latitude: "40.627920", longitude: "-74.018860")
 business11 = Business.create(name: "Chipotle Mexican Grill, Inc", state: "NY", city: "New York", zipcode: 10018, address: "28 W 4th Street", phone_number: "(212)302-0650", website: "www.chipotle.com", latitude: "40.658806899999995", longitude: "-73.978241")
 business12 = Business.create(name: "Red Hot II", state: "NY", city: "Brooklyn", zipcode: 11215, address: "349 7th Ave", phone_number: "(718)369-2577", website: "www.redhot.com", latitude: "40.6661369", longitude: "-73.9820222")
+business13 = Business.create(name: "Peter Luger Steak House", state: "NY", city: "Brooklyn", zipcode: 11211, address: "178 Broadway", phone_number: "(718)387-7400", website: "www.peterluger.com", latitude: "40.7098661", longitude: "-73.9625564")
 
 
 
@@ -123,8 +124,16 @@ file35 = open('https://yap-dev.s3.amazonaws.com/redhot2.jpg')
 business12.images.attach(io: file35, filename: 'redhot2.jpg')
 file36 = open('https://yap-dev.s3.amazonaws.com/redhot3.jpg')
 business12.images.attach(io: file36, filename: 'redhot3.jpg')
+
+file37 = open('https://yap-dev.s3.amazonaws.com/luger1.jpg')
+business13.images.attach(io: file37, filename: 'luger1.jpg')
+file38 = open('https://yap-dev.s3.amazonaws.com/luger2.jpg')
+business13.images.attach(io: file38, filename: 'luger2.jpg')
+file39 = open('https://yap-dev.s3.amazonaws.com/luger3.jpg')
+business13.images.attach(io: file39, filename: 'luger3.jpg')
 #profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
 # profile_placeholder.jpg     file name
 
 review1 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place always pisses me off, and today was no different.  The lady rushes me and it just seems so rude.  It was a bad experience, and lately it's been like that the last two times i've been there", rating: 4)
 review2 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place is great, the black bean chicken is delicious!  The wonton soup is Fantastic as well, and add it with the wonderful spciy homemade mustard!", rating: 5)
+review3 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "The steak is absolutely amazing! The tomato platter is big round and delicious, the bacon is thick fat and juicy!", rating: 5)
