@@ -3,6 +3,10 @@ class Api::CategoriesController < ApplicationController
     def new
         @category = Category.new
     end
+
+    def index
+        
+    end
     
     def create
         @category = Category.create(category_params)
