@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get 'businesses/start', to: 'searches#business_start'
       resources :businesses, only: [:index, :show, :create, :destroy]
       resource :session, only: [:new, :create, :destroy]
-      resources :categories, only: [:new, :create, :show]
-      resources :business_categories, only: [:new, :create, :show]
+      resources :categories, only: [:new, :create, :show, :index]
+      resources :business_categories, only: [:new, :create, :show, :index]
     end
 end

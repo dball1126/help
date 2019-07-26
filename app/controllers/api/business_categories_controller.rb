@@ -11,6 +11,10 @@ class Api::BusinessCategoriesController < ApplicationController
         @business_category = BusinessCategory.create(business_category_params)
     end
 
+    def index
+        @business_categories = BusinessCategories.all
+    end
+
     private
 
     def business_category_params
