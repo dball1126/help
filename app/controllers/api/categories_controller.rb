@@ -5,6 +5,7 @@ class Api::CategoriesController < ApplicationController
     end
 
     def index
+        
         @categories = Category.all
     end
     

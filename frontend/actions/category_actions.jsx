@@ -12,7 +12,8 @@ export const fetchCategory = (id) => {
 
 export const fetchCategories = () => {
     return (dispatch) => {
-        return CategoryApIUtil.fetchCategories().then((payload) => {
+        debugger
+        return CategoryApIUtil.fetchCategories().then(payload => {
             return dispatch(receiveCategories(payload))
         });
     }
@@ -27,6 +28,7 @@ const receiveCategory = ({category}) => {
 }
 
 const receiveCategories = ({categories}) => {
+    debugger
     return {
         type: RECEIVE_ALL_CATEGORIES,
         categories: categories

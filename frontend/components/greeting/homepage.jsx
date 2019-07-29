@@ -10,6 +10,7 @@ class Homepage extends React.Component {
 
     }
    componentDidMount(){
+       this.props.fetchCategories();
        
        this.props.startPageBusinesses();
    }
@@ -20,8 +21,6 @@ class Homepage extends React.Component {
         
         let businesses = this.props.businesses || [];
 
-        
-        
         const startBusinesses = () => {
            let counter = 0
             if (businesses < 1) {

@@ -23,6 +23,7 @@ const App = () => {
              <ProtectedRoute exact path ='/businesses/:businessId/review' component={CreateReviewContainer}/>
              <ProtectedRoute exact path ='/businesses/:businessId/edit/:reviewId' component={EditReviewContainer}/>
              <Route path = '/categories/:categoryId'/>
+             <Route path = '/categories'/>
              <Route path ='/businesses/search' component={SearchContainer}/>
              <Route path = '/null'/>
              <AuthRoute exact path="/signup" component={SignUpformContainer} />
