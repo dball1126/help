@@ -94,18 +94,18 @@ class Homepage extends React.Component {
                         <SearchContainer />
                             <nav className="main-nav-categories">
                                 <ul className="ul-nav-categories">
-                                    {/* <li className="cooling-services">
-                                        Heating & Air Conditioning
+                                    <li className="cooling-services">
+                                        Italian
                                     </li>
                                     <li className="restaurants">
-                                        Restaurants
+                                        Chinese
                                     </li>
                                     <li className="home-services">
-                                        Home Services
+                                        Sushi
                                     </li>
                                     <li className="Delivery">
-                                        Deilvery
-                                    </li> */}
+                                        Burgers
+                                    </li>
                                 </ul>
                             <div className="main-header-credits">
                                 <div className="business-credit">Pancake Man</div>

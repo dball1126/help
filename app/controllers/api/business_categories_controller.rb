@@ -12,7 +12,7 @@ class Api::BusinessCategoriesController < ApplicationController
     end
 
     def index
-        @business_categories = BusinessCategories.all
+        @business_categories = BusinessCategory.all
     end
 
     private

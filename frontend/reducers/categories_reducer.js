@@ -8,7 +8,7 @@ const categoriesReducer = (oldState = {}, action) => {
         case RECEIVE_CATEGORY:
             return Object.assign({}, oldState, {[action.category.id]: action.category})
         case RECEIVE_ALL_CATEGORIES:
-            debugger
+            
             return Object.assign({}, action.categories)
         default:
             return newState;
