@@ -18,12 +18,12 @@ const App = () => {
         
         <div>
              <Route exact path ='/' component={HomepageContainer} />
-                <Route exact path='/businesses' component={BusinessIndexContainer}/>
+             <Route exact path='/businesses' component={BusinessIndexContainer}/>
              <Route exact path ='/businesses/:businessId' component={BusinessShowContainer}/>
              <ProtectedRoute exact path ='/businesses/:businessId/review' component={CreateReviewContainer}/>
              <ProtectedRoute exact path ='/businesses/:businessId/edit/:reviewId' component={EditReviewContainer}/>
-             <Route path = '/business_categories/:business_categoryId'/>
-             <Route path = '/business_categories'/>
+             <Route path = '/categories/:categoryId' component={BusinessIndexContainer}/>
+             <Route path = '/categories'/>
              <Route path ='/businesses/search' component={SearchContainer}/>
              <Route path = '/null'/>
              <AuthRoute exact path="/signup" component={SignUpformContainer} />

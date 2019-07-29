@@ -67,6 +67,15 @@ class Api::SearchesController < ApplicationController
         end
     end
 
+    def category_search
+        
+        query = params[:query]
+        
+        @businesses = Category.find_by(name: query).businesses
+        
+        render '/api/businesses/index'
+    end
+
     
 
     def business_start
@@ -74,9 +83,9 @@ class Api::SearchesController < ApplicationController
         # bus1 = counter.first
         # bus2 = counter.second
         # bus3 = counter.third
-
-
         @businesses = Business.find(1, 2, 3)
         render '/api/businesses/index'
     end
+
+
 end

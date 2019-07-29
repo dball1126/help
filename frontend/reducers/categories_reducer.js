@@ -1,5 +1,5 @@
 import {RECEIVE_ALL_CATEGORIES, RECEIVE_CATEGORY} from '../actions/category_actions';
-
+import {RECEIVE_BUSINESS, RECEIVE_ALL_BUSINESSES} from '../actions/business_actions';
 const categoriesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     let newState = Object.assign({}, oldState);
@@ -8,9 +8,12 @@ const categoriesReducer = (oldState = {}, action) => {
         case RECEIVE_CATEGORY:
             return Object.assign({}, oldState, {[action.category.id]: action.category})
         case RECEIVE_ALL_CATEGORIES:
-            
             return Object.assign({}, action.categories)
-        default:
+        case RECEIVE_BUSINESS:
+            return Object.assign({}, oldState, action.categories);
+        case RECEIVE_ALL_BUSINESSES:
+            return action.categories;
+            default:
             return newState;
     }
 

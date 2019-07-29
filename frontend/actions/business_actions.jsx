@@ -44,6 +44,16 @@ export const searchBusinesses = (query) => {
         });
     }
 };
+export const searchCategories = (query) => {
+        
+    return (dispatch) => {
+        
+        return SearchApiUtil.searchCategories(query).then(payload =>{
+            
+            return dispatch(receiveSearchedBusinesses(payload))
+        });
+    }
+};
 
 
 const receiveStartPageBusinesses = ({businesses}) => {

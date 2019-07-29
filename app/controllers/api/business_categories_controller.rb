@@ -15,6 +15,10 @@ class Api::BusinessCategoriesController < ApplicationController
         @business_categories = BusinessCategory.all
     end
 
+    def find_matches
+        
+    end
+
     private
 
     def business_category_params

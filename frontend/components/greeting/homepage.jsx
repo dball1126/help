@@ -10,8 +10,9 @@ class Homepage extends React.Component {
 
     }
    componentDidMount(){
+    //    let query = "chinese"
+    //    this.props.searchCategories(query);
        this.props.fetchCategories();
-       
        this.props.startPageBusinesses();
    }
    
@@ -93,7 +94,7 @@ class Homepage extends React.Component {
                         </div>
                         <SearchContainer />
                             <nav className="main-nav-categories">
-                                <ul className="ul-nav-categories">
+                                <ul className="ul-nav-categories" >
                                     <li className="cooling-services">
                                         Italian
                                     </li>

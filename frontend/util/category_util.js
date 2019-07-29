@@ -10,3 +10,10 @@ export const fetchCategory = (id) => {
         url: `/api/categories/${id}`
     });
 };
+
+// export const fetchMatchedCategories = () => {
+//     return $.ajax({
+//         method: 'GET',
+//         url: 'api'
+//     })
+// }
