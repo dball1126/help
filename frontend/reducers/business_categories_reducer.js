@@ -13,3 +13,5 @@ const businessCategoriesReducer = (oldState = {}, action) => {
             return newState;
     }
 }
+
+export default businessCategoriesReducer;
