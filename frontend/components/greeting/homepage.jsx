@@ -19,10 +19,10 @@ class Homepage extends React.Component {
   
    
     render(){
-        let italianCategory = this.props.categories.find(obj => obj.name === "Italian");
-        let chineseCategory = this.props.categories.find(obj => obj.name === "Chinese");
-        let sushiCategory = this.props.categories.find(obj => obj.name === "Sushi");
-        let burgersCategory = this.props.categories.find(obj => obj.name === "Burgers");
+        let italianCategory = this.props.categories.find(obj => obj.name === "Italian") || {};
+        let chineseCategory = this.props.categories.find(obj => obj.name === "Chinese") || {};
+        let sushiCategory = this.props.categories.find(obj => obj.name === "Sushi") || {};
+        let burgersCategory = this.props.categories.find(obj => obj.name === "Burgers") || {};
         debugger
         let businesses = this.props.businesses || [];
 
@@ -100,16 +100,16 @@ class Homepage extends React.Component {
                             <nav className="main-nav-categories">
                                 <ul className="ul-nav-categories" >
                                     <li className="cooling-services">
-                                        Italian
+                                        {italianCategory.name}
                                     </li>
                                     <li className="restaurants">
-                                        Chinese
+                                        {chineseCategory.name}
                                     </li>
                                     <li className="home-services">
-                                        Sushi
+                                        {sushiCategory.name}
                                     </li>
                                     <li className="Delivery">
-                                        Burgers
+                                        {burgersCategory.name}
                                     </li>
                                 </ul>
                             <div className="main-header-credits">
