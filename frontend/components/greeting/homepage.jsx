@@ -19,7 +19,11 @@ class Homepage extends React.Component {
   
    
     render(){
-        
+        let italianCategory = this.props.categories.find(obj => obj.name === "Italian");
+        let chineseCategory = this.props.categories.find(obj => obj.name === "Chinese");
+        let sushiCategory = this.props.categories.find(obj => obj.name === "Sushi");
+        let burgersCategory = this.props.categories.find(obj => obj.name === "Burgers");
+        debugger
         let businesses = this.props.businesses || [];
 
         const startBusinesses = () => {

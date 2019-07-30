@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
     
     return {
         businesses: Object.values(state.entities.start) || {},
-        categories: state.entities.categories
+        categories: Object.values(state.entities.categories) || {}
         
     }
 }
