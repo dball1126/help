@@ -7,10 +7,10 @@ export const searchBusinesses = query => (
 );
 
 export const searchCategories = query => {
+    
     $.ajax({
         method: 'GET',
         url: '/api/categories/search',
         data: { query }
-
     })
 }

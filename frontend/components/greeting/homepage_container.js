@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
        startPageBusinesses: () => dispatch(startPageBusinesses()),
        fetchBusinesses: () => dispatch(fetchBusinesses()),
        fetchCategories: () => dispatch(fetchCategories())
-        // searchCategories: (query) => dispatch(searchCategories(query))
+        
     }
 }
 

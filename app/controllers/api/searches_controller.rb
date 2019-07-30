@@ -74,6 +74,7 @@ class Api::SearchesController < ApplicationController
         @businesses = Category.find_by("name iLIKE '#{query}'").businesses
         
         render '/api/businesses/index'
+        
     end
 
     

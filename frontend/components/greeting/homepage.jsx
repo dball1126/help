@@ -10,8 +10,8 @@ class Homepage extends React.Component {
 
     }
    componentDidMount(){
-    //    let query = "chinese"
-    //    this.props.searchCategories(query);
+       
+    
        this.props.fetchCategories();
        this.props.startPageBusinesses();
    }

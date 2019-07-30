@@ -3,6 +3,7 @@ export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESS_REVIEWS = 'RECEIVE_BUSINESS_REVIEWS';
 export const RECEIVE_START_BUSINESSES = 'RECEIVE_START_BUSINESSES';
 export const RECEIVE_SEARCHED_BUSINESSES = 'RECEIVE_SEARCHED_BUSINESSES';
+export const RECEIVE_SEARCHED_CATEGORIES = 'RECEIVE_SEARCHED_CATEGORIES';
 import * as SearchApiUtil from '../util/search_api_util';
 import * as BusinessApiUtil from '../util/business_api_util';
 import * as StartApiUtil from '../util/start_page_util';
@@ -50,11 +51,27 @@ export const searchCategories = (query) => {
         
         return SearchApiUtil.searchCategories(query).then(payload =>{
             
-            return dispatch(receiveSearchedBusinesses(payload))
+            return dispatch(receiveSearchedCategories(payload))
         });
     }
 };
 
+const receiveSearchedCategories = ({businesses, cateogires}) => {
+    
+    return {
+        type: RECEIVE_SEARCHED_CATEGORIES,
+        businesses: businesses,
+        categories: categories
+    }
+}
+
+const receiveSearchedBusinesses = ({businesses}) => {
+    
+    return {
+        type: RECEIVE_SEARCHED_BUSINESSES,
+        businesses: businesses
+    }
+}
 
 const receiveStartPageBusinesses = ({businesses}) => {
     return {
@@ -71,12 +88,8 @@ const receiveBusinesses = ({businesses}) => {
         }
 };
 
-const receiveSearchedBusinesses = ({businesses}) => {
-    return {
-        type: RECEIVE_SEARCHED_BUSINESSES,
-        businesses: businesses
-    }
-}
+
+
 
 const receiveBusiness = ({business}) => {
     

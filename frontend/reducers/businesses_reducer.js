@@ -1,4 +1,4 @@
-import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, RECEIVE_SEARCHED_BUSINESSES} from '../actions/business_actions';
+import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, RECEIVE_SEARCHED_BUSINESSES, RECEIVE_SEARCHED_CATEGORIES} from '../actions/business_actions';
 
 import { RECEIVE_REVIEW, DESTROY_REVIEW} from '../actions/review_actions';
 
@@ -21,6 +21,7 @@ const businessesReducer = (oldState = {}, action) => {
         case RECEIVE_SEARCHED_BUSINESSES:
             return Object.assign({}, oldState, action.businesses);
             
+        
         case DESTROY_REVIEW:
             
             return newState;
