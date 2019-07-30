@@ -27,16 +27,17 @@ class BusinessIndex extends React.Component {
             this.setState({ hasMounted: false, businesses: Object.values(this.props.businesses) })
         }
 
-
         this.setState({hasMounted: true})
-        if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
-            
-            $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
-        } else {
-            
-           
-        }
         
+        setTimeout(() => { 
+            if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
+                $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
+            } else {
+            }
+        }, 1000)
+                
+                
+            
     }
 
     shouldComponentUpdate() {
