@@ -6,8 +6,6 @@ import SearchContainer from '../search/search_container';
 class Homepage extends React.Component {
     constructor(props) {
         super(props);
-        
-
     }
    componentDidMount(){
        
@@ -23,7 +21,7 @@ class Homepage extends React.Component {
         let chineseCategory = this.props.categories.find(obj => obj.name === "Chinese") || {};
         let sushiCategory = this.props.categories.find(obj => obj.name === "Sushi") || {};
         let burgersCategory = this.props.categories.find(obj => obj.name === "Burgers") || {};
-        debugger
+        
         let businesses = this.props.businesses || [];
 
         const startBusinesses = () => {
@@ -100,16 +98,16 @@ class Homepage extends React.Component {
                             <nav className="main-nav-categories">
                                 <ul className="ul-nav-categories" >
                                     <li className="cooling-services">
-                                        {italianCategory.name}
+                                    <Link to={`/categories/${italianCategory.id}`}>{italianCategory.name}</Link>
                                     </li>
                                     <li className="restaurants">
-                                        {chineseCategory.name}
+                                    <Link to={`/categories/${chineseCategory.id}`}>{chineseCategory.name}</Link>
                                     </li>
                                     <li className="home-services">
-                                        {sushiCategory.name}
+                                    <Link to={`/categories/${sushiCategory.id}`}>{sushiCategory.name}</Link>
                                     </li>
                                     <li className="Delivery">
-                                        {burgersCategory.name}
+                                    <Link to={`/categories/${burgersCategory.id}`}>{burgersCategory.name}</Link>
                                     </li>
                                 </ul>
                             <div className="main-header-credits">

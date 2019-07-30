@@ -7,11 +7,28 @@ class BusinessIndex extends React.Component {
         super(props);
         this.state ={hasMounted: false, businesses: []      };
         this.prevLocation = this.props.location.prev;
+        this.catTracker = 0;
+       if(this.props.businesses.length > 0){
+           this.state.businesses = Object.values(this.props.businesses)
+           
+       }
         
     }
 
     componentDidMount(){
-        this.setState({hasMounted: true, businesses: this.props.businesses})
+        if (this.props.category !== "") {
+
+            this.props.fetchCategory(this.props.category.id)
+
+        }
+
+
+        if (this.props.businesses.length > 0) {
+            this.setState({ hasMounted: false, businesses: Object.values(this.props.businesses) })
+        }
+
+
+        this.setState({hasMounted: true})
         if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
             
             $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
@@ -24,6 +41,11 @@ class BusinessIndex extends React.Component {
 
     shouldComponentUpdate() {
         
+        
+        if(this.props.catLocation === "true" && this.catTracker < 2) {
+            this.catTracker++;
+            return true;
+        }
         if (this.state.hasMounted === false) {
             
 
@@ -37,7 +59,9 @@ class BusinessIndex extends React.Component {
 
     
     indexMap(){
-        
+        if (this.props.businesses.length > 0) {
+            this.state.businesses = Object.values(this.props.businesses)
+        }
         // const businesses = this.props.businesses;
         
         if (this.state.businesses.length < 1) {
@@ -53,12 +77,14 @@ class BusinessIndex extends React.Component {
         
     };
         busIndex(){
-           
+            if (this.props.businesses.length > 0) {
+                this.state.businesses = Object.values(this.props.businesses)
+            }
     const businesses = this.state.businesses.map((business, i) => {
         
         
         return (
-            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation}/>
+            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation} catLocation={this.props.catLocation}/>
         );
     })
         return businesses
@@ -66,10 +92,7 @@ class BusinessIndex extends React.Component {
     
 
     render(){
-        
        
-
-        
         
         
 

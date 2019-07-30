@@ -3,7 +3,7 @@ import Homepage from './homepage';
 import { login, logout } from '../../actions/session_actions';
 import { startPageBusinesses, fetchBusinesses, searchCategories} from '../../actions/business_actions';
 import { fetchBusinessCategories, fetchBusinessCategory} from '../../actions/business_category_actions';
-import {fetchCategories} from '../../actions/category_actions';
+import {fetchCategories, fetchCategory} from '../../actions/category_actions';
 
 const mapStateToProps = (state) => {
 
@@ -19,7 +19,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
        startPageBusinesses: () => dispatch(startPageBusinesses()),
        fetchBusinesses: () => dispatch(fetchBusinesses()),
-       fetchCategories: () => dispatch(fetchCategories())
+       fetchCategories: () => dispatch(fetchCategories()),
+       fetchCategory: (id) => dispatch(fetchCategory(id))
         
     }
 }

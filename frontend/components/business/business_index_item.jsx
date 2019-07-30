@@ -6,7 +6,7 @@ class BusinessIndexItem extends React.Component {
         this.state = {hasMounted: false}
     }
     shouldComponentUpdate() {
-    
+    // return true
        if(this.state.hasMounted === false){
            return true;
        } else {
