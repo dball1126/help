@@ -22,7 +22,7 @@ const mapStateToProps = (state, ownProps) => {
 
         businesses = Object.values(state.entities.businesses)
     }
-    debugger
+    
     return {
         businesses: businesses,
         currentUser: currentUser || {},

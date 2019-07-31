@@ -32,9 +32,10 @@ class BusinessIndex extends React.Component {
         setTimeout(() => { 
             if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
                 $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
+                $('.businesses-container').css('display', 'none');
             } else {
             }
-        }, 1000)
+        }, 100)
                 
                 
             
