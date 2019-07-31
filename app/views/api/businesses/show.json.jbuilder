@@ -15,7 +15,7 @@ json.business do
                         json.image url_for(review.image)
                     end
                     
-
+                    
                 end
             end
         end

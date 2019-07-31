@@ -7,11 +7,9 @@
             if business.reviews.any?
                 json.review business.reviews.map{|x| x.content}.max
             end
-
             if business.categories.any?
-                json.category business.categories.map{|x| x.name}
+                json.category business.categories
             end
-
         end
     end
 end

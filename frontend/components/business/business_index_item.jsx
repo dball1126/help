@@ -79,10 +79,13 @@ class BusinessIndexItem extends React.Component {
                         <div className="index-li-top-container">
                             <div className="index-li-top-left">
                             <div className="index-name-div">
-                            <Link to={`/businesses/${business.id}`} className="business-index-show-link">{business.name}</Link>
+                                <Link to={`/businesses/${business.id}`} className="business-index-show-link">{business.name}</Link>
                             </div>
                             <div className="star-index-box">
-                            {stars()}<span className="span-reviews-count">{business.reviews_count} Reviews</span>
+                                {stars()}<span className="span-reviews-count">{business.reviews_count} Reviews</span>
+                            </div>
+                            <div className="index-li-category-box">
+                                
                             </div>
                         </div>
                         <div className="index-li-top-right">
