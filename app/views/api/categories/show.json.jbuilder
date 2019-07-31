@@ -8,6 +8,10 @@ json.category do
                 if business.reviews.any?
                     json.review business.reviews.map{|x| x.content}.max
                 end
+
+                if business.categories.any?
+                    json.category business.categories.map{|x| x.name}
+                end
             end
         end
     end
