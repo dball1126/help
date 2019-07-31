@@ -5,10 +5,17 @@ class BusinessIndexItem extends React.Component {
         super(props);
         this.catTracker = 0;
         this.state = {hasMounted: false}
+        this.linkTracker = "true";
     }
     shouldComponentUpdate() {
-    // return true
-        if (this.props.catLocation === "true" && this.catTracker < 2) {
+  
+        
+        let tracking = this.props.location.linkTracker || undefined;
+
+        if (tracking !== undefined && this.props.catLocation === "true") return true;
+        
+    
+        if ((this.props.catLocation === "true" && this.catTracker < 2)) {
             this.catTracker++;
             return true;
         }
@@ -23,10 +30,9 @@ class BusinessIndexItem extends React.Component {
     }
     
     reloadPage() {
-        // debugger
-        // window.location.reload();
+       
 
-        // this.props.history.go('/null')
+        this.props.history.go('/null')
             
     }
     
@@ -77,7 +83,7 @@ class BusinessIndexItem extends React.Component {
                         <ul >
                             {business.categories.map((category, i) => {
                                 return (
-                                    <div key={i} onClick={() => this.reloadPage()} ><Link to={`/categories/${category.id}`}>{category.name}</Link></div>
+                                    <div key={i} ><Link to={{pathname: `/categories/${category.id}`, linkTracker: this.linkTracker}}>{category.name}</Link></div>
                                 )
                             })}
                         </ul>

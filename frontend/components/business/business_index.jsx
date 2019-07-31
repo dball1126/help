@@ -8,6 +8,7 @@ class BusinessIndex extends React.Component {
         this.state ={hasMounted: false, businesses: []      };
         this.prevLocation = this.props.location.prev;
         this.catTracker = 0;
+       
         this.categoryName = this.props.category.name;
        if(this.props.businesses.length > 0){
            this.state.businesses = Object.values(this.props.businesses)
@@ -17,6 +18,7 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount(){
+        
         if (this.props.category !== "") {
 
             this.props.fetchCategory(this.props.category.id)
@@ -47,6 +49,13 @@ class BusinessIndex extends React.Component {
 
     shouldComponentUpdate() {
         
+        let tracking = this.props.location.linkTracker || undefined;
+       
+        if (tracking !== undefined && this.props.catLocation === "true" && this.linkTracker < 1) {
+          
+           
+            return true
+        };
         
         if(this.props.catLocation === "true" && this.catTracker < 2) {
             this.catTracker++;
@@ -62,7 +71,7 @@ class BusinessIndex extends React.Component {
         }
 
     }
-
+   
     
     indexMap(){
         if (this.props.businesses.length > 0) {
@@ -91,7 +100,7 @@ class BusinessIndex extends React.Component {
         
         
         return (
-            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation} catLocation={this.props.catLocation} history={this.props.history}/>
+            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation} catLocation={this.props.catLocation} history={this.props.history} location={this.props.location}/>
         );
     })
         return businesses
