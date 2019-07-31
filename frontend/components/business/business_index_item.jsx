@@ -54,6 +54,25 @@ class BusinessIndexItem extends React.Component {
                 )
             }
         }
+
+        const categories = () => {
+            if (!business.categories) {
+                return "";
+            } else {
+                return (
+                    <div>
+                        <ul>
+                            {business.categories.map((category, i) => {
+                                return (
+                                    <li key={i}>{category.name}</li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                )
+            }
+        }
+
         const business = this.props.business;
       
         const image = business.imageLinks[Math.ceil(Math.random() * 2)];
@@ -85,7 +104,7 @@ class BusinessIndexItem extends React.Component {
                                 {stars()}<span className="span-reviews-count">{business.reviews_count} Reviews</span>
                             </div>
                             <div className="index-li-category-box">
-                                
+                                {categories()}
                             </div>
                         </div>
                         <div className="index-li-top-right">

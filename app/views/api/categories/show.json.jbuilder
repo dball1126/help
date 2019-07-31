@@ -10,7 +10,7 @@ json.category do
                 end
 
                 if business.categories.any?
-                    json.category business.categories
+                    json.categories business.categories
                 end
             end
         end

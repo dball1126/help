@@ -8,7 +8,7 @@
                 json.review business.reviews.map{|x| x.content}.max
             end
             if business.categories.any?
-                json.category business.categories
+                json.categories business.categories
             end
         end
     end
