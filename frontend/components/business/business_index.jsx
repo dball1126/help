@@ -86,11 +86,12 @@ class BusinessIndex extends React.Component {
             if (this.props.businesses.length > 0) {
                 this.state.businesses = Object.values(this.props.businesses)
             }
+            
     const businesses = this.state.businesses.map((business, i) => {
         
         
         return (
-            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation} catLocation={this.props.catLocation}/>
+            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation} catLocation={this.props.catLocation} history={this.props.history}/>
         );
     })
         return businesses

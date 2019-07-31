@@ -1,12 +1,17 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 class BusinessIndexItem extends React.Component {
     constructor(props) {
         super(props);
+        this.catTracker = 0;
         this.state = {hasMounted: false}
     }
     shouldComponentUpdate() {
     // return true
+        if (this.props.catLocation === "true" && this.catTracker < 2) {
+            this.catTracker++;
+            return true;
+        }
        if(this.state.hasMounted === false){
            return true;
        } else {
@@ -16,7 +21,15 @@ class BusinessIndexItem extends React.Component {
     componentDidMount(){
         this.setState({hasMounted: true})
     }
+    
+    reloadPage() {
+        // debugger
+        // window.location.reload();
 
+        // this.props.history.go('/null')
+            
+    }
+    
     render(){
         
         const stars = () => {
@@ -61,10 +74,10 @@ class BusinessIndexItem extends React.Component {
             } else {
                 return (
                     <div>
-                        <ul>
+                        <ul >
                             {business.categories.map((category, i) => {
                                 return (
-                                    <li key={i}>{category.name}</li>
+                                    <div key={i} onClick={() => this.reloadPage()} ><Link to={`/categories/${category.id}`}>{category.name}</Link></div>
                                 )
                             })}
                         </ul>
@@ -103,7 +116,7 @@ class BusinessIndexItem extends React.Component {
                             <div className="star-index-box">
                                 {stars()}<span className="span-reviews-count">{business.reviews_count} Reviews</span>
                             </div>
-                            <div className="index-li-category-box">
+                            <div className="index-li-category-box" >
                                 {categories()}
                             </div>
                         </div>

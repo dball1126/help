@@ -10,6 +10,7 @@ const categoriesReducer = (oldState = {}, action) => {
             return Object.assign({}, {[action.category.id]: action.category})
         case RECEIVE_ALL_CATEGORIES:
             return Object.assign({}, action.categories)
+        
         // case RECEIVE_BUSINESS:
         //     return Object.assign({}, oldState, action.categories);
         
