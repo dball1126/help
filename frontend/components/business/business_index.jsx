@@ -8,6 +8,7 @@ class BusinessIndex extends React.Component {
         this.state ={hasMounted: false, businesses: []      };
         this.prevLocation = this.props.location.prev;
         this.catTracker = 0;
+        this.categoryName = this.props.category.name;
        if(this.props.businesses.length > 0){
            this.state.businesses = Object.values(this.props.businesses)
            
@@ -27,13 +28,16 @@ class BusinessIndex extends React.Component {
             this.setState({ hasMounted: false, businesses: Object.values(this.props.businesses) })
         }
 
+        
+
         this.setState({hasMounted: true})
         
         setTimeout(() => { 
             if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
                 $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
                 $('.businesses-container').css('display', 'none');
-            } else {
+            } else if (this.props.category !== "" && this.props.businesses.length > 0) {
+                $("div.business-index-header").html(`<p>${this.categoryName}</p>`)
             }
         }, 100)
                 
