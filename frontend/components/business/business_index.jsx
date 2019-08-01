@@ -8,6 +8,7 @@ class BusinessIndex extends React.Component {
         this.state ={hasMounted: false, businesses: []      };
         this.prevLocation = this.props.location.prev;
         this.catTracker = 0;
+
        
         this.categoryName = this.props.category.name;
        if(this.props.businesses.length > 0){
@@ -19,11 +20,11 @@ class BusinessIndex extends React.Component {
 
     componentDidMount(){
         
-        if (this.props.category !== "") {
+        // if (this.props.category !== "") {
+            
+        //     this.props.fetchCategory(this.props.category.id)
 
-            this.props.fetchCategory(this.props.category.id)
-
-        }
+        // }
 
 
         if (this.props.businesses.length > 0) {
@@ -47,8 +48,14 @@ class BusinessIndex extends React.Component {
             
     }
 
-    shouldComponentUpdate() {
+    shouldComponentUpdate(ownprops) {
         
+        let catUpdater = this.props.history.location.state;
+        if (catUpdater === "flushDeal") {
+            
+           
+            return true;
+        }
         let tracking = this.props.location.linkTracker || undefined;
        
         if (tracking !== undefined && this.props.catLocation === "true" && this.linkTracker < 1) {
@@ -94,21 +101,30 @@ class BusinessIndex extends React.Component {
         busIndex(){
             if (this.props.businesses.length > 0) {
                 this.state.businesses = Object.values(this.props.businesses)
-            }
-            
-    const businesses = this.state.businesses.map((business, i) => {
-        
-        
-        return (
-            <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation} catLocation={this.props.catLocation} history={this.props.history} location={this.props.location}/>
-        );
-    })
-        return businesses
+                const businesses = this.state.businesses.map((business, i) => {
+                    
+                    
+                    return (
+                        <BusinessIndexItemContainer key={i} business={business} prev={this.prevLocation} catLocation={this.props.catLocation} history={this.props.history} location={this.props.location}/>
+                        );
+                    })
+                    return businesses
+                } else {
+                    return []
+                }
+                
         };
     
 
     render(){
-       
+        let catUpdater = this.props.history.location.state;
+        if (catUpdater === "flushDeal") {
+            
+            this.props.fetchCategory(this.props.match.params.categoryId)
+
+            this.props.location.state = null;
+            
+        }
         
         
 

@@ -7,8 +7,15 @@ class BusinessIndexItem extends React.Component {
         this.state = {hasMounted: false}
         this.linkTracker = "true";
     }
+    
     shouldComponentUpdate() {
   
+        let catUpdater = this.props.history.location.state;
+        if (catUpdater === "flushDeal") {
+            
+           
+            return true;
+        }
         
         let tracking = this.props.location.linkTracker || undefined;
 
@@ -83,7 +90,7 @@ class BusinessIndexItem extends React.Component {
                         <ul >
                             {business.categories.map((category, i) => {
                                 return (
-                                    <div key={i} ><Link to={{pathname: `/categories/${category.id}`, linkTracker: this.linkTracker}}>{category.name}</Link></div>
+                                    <div key={i} ><Link to={{pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal"}}>{category.name}</Link></div>
                                 )
                             })}
                         </ul>
