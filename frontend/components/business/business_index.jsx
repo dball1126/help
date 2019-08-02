@@ -8,7 +8,7 @@ class BusinessIndex extends React.Component {
         this.state ={hasMounted: false, businesses: []      };
         this.prevLocation = this.props.location.prev;
         this.catTracker = 0;
-
+        this.catFetchTracker = 0;
        
         this.categoryName = this.props.category.name;
        if(this.props.businesses.length > 0){
@@ -23,7 +23,7 @@ class BusinessIndex extends React.Component {
         if (this.props.category !== "") {
             
             this.props.fetchCategory(this.props.category.id)
-
+            this.catFetchTracker++;
         }
 
 
@@ -39,20 +39,29 @@ class BusinessIndex extends React.Component {
             if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
                 $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
                 $('.businesses-container').css('display', 'none');
-            } else if (this.props.category !== "" && this.props.businesses.length > 0) {
-                $("div.business-index-header").html(`<p>${this.categoryName}</p>`)
-            }
+            } 
+            // else if (this.props.category !== "" && this.props.businesses.length > 0) {
+            //     $("div.business-index-header").html(`<p>${this.categoryName}</p>`)
+            // }
         }, 100)
                 
                 
             
     }
 
-    shouldComponentUpdate() {
+    shouldComponentUpdate(ownProps) {
         // return true;
         let catUpdater = this.props.history.location.state;
-        if (catUpdater === "flushDeal") {
-            
+        debugger
+        if (catUpdater === "flushDeal" || this.props.category !== "") {
+           
+           
+           
+           setTimeout(() => {
+               if(ownProps.category !== undefined){
+                    $("div.business-index-header").html(`<p>${ownProps.category.name}</p>`)
+               }
+           }, 100)
             this.props.location.state = null;
             return true;
         }
