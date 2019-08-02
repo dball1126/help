@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
     // const categories = Object.keys(state.entities.categories).map(id => state.entities.categories[id]) 
     let revs = [];
     // if(Object.entries(categories).length === 0 && categories.constructor === Object) categories = [];
-    // console.log(categories)
+    
     reviews.forEach(ele => {
         
         if (`${ele.business_id}` === ownProps.match.params.businessId){

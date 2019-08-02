@@ -8,9 +8,10 @@ class BusinessIndexItem extends React.Component {
         this.linkTracker = "true";
     }
     
-    shouldComponentUpdate() {
+    shouldComponentUpdate(ownProps) {
         // return true;
         let catUpdater = this.props.history.location.state;
+        if (ownProps.searching === "true") return false;
         if (catUpdater === "flushDeal") {
             
            

@@ -21,7 +21,8 @@ class BusinessIndex extends React.Component {
 
     componentDidMount(){
         
-        if (this.props.category !== ) {
+        
+        if (this.props.category !== "" && this.props.category !== undefined) {
             
             this.props.fetchCategory(this.props.category.id)
             this.catFetchTracker++;
@@ -35,14 +36,17 @@ class BusinessIndex extends React.Component {
         
 
         this.setState({hasMounted: true})
-        
         setTimeout(() => { 
             if(this.props.businesses.length < 1 || this.props.businesses === undefined){ 
                 $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
                 $('.businesses-container').css('display', 'none');
             } 
+            
             else if (this.props.category !== "" && this.props.businesses.length > 0) {
-                $("div.business-index-header").html(`<p>${this.categoryName}</p>`)
+                
+               
+                $("div.business-index-header").html(`<p>${this.props.category.name}</p>`)
+                
             }
         }, 100)
                 
@@ -52,14 +56,18 @@ class BusinessIndex extends React.Component {
 
     shouldComponentUpdate(ownProps) {
         // return true;
+        
+        if (ownProps.searching === "true") return false;
         let catUpdater = this.props.history.location.state;
         
-        if (catUpdater === "flushDeal" || this.props.category !== "") {
-           
+        if (catUpdater === "flushDeal" || this.props.category !== undefined) {
+        //    this.catTracker++;
            
            
            setTimeout(() => {
-               if(ownProps.category !== undefined){
+               if(ownProps.category !== "" && ownProps.category !== undefined){
+                   
+                   if(ownProps.category.name === undefined) ownProps.category.name = "";
                     $("div.business-index-header").html(`<p>${ownProps.category.name}</p>`)
                }
            }, 100)
@@ -73,7 +81,7 @@ class BusinessIndex extends React.Component {
            
             return true
         };
-        
+       
         if(this.props.catLocation === "true" && this.catTracker < 2) {
             this.catTracker++;
             return true;

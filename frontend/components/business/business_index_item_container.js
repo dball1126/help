@@ -6,6 +6,7 @@ const mapStateToProps = (state, ownProps) => {
     let business = state.search[ownProps.business.id] || {};
     let catLocation = "";
     let category = "";
+    let searching = state.entities.businesses.searching || "";
     if(ownProps.prev === "homepage" || ownProps.catLocation === "true"){
        
         business = state.entities.businesses[ownProps.business.id] || []
@@ -19,7 +20,8 @@ const mapStateToProps = (state, ownProps) => {
     // }
     
     return {
-        business: business
+        business: business,
+        searching: searching
     }
 }
 

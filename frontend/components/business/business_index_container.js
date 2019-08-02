@@ -9,6 +9,8 @@ const mapStateToProps = (state, ownProps) => {
     let businesses = Object.values(state.search) || {};
     let category = "";
     let catLocation = "";
+    let searching = state.entities.businesses.searching || "";
+   
     if(ownProps.location.prev === "homepage"){
         businesses = Object.values(state.entities.businesses)
     }
@@ -18,16 +20,18 @@ const mapStateToProps = (state, ownProps) => {
         // businesses = Object.values(category.businesses)
         
     }
-    if (category !== "") {
-
+    if (category !== "" && category !== undefined) {
+        
         businesses = Object.values(state.entities.businesses)
     }
+    
     
     return {
         businesses: businesses,
         currentUser: currentUser || {},
         category: category,
-        catLocation: catLocation
+        catLocation: catLocation,
+        searching: searching
     }
 }
 

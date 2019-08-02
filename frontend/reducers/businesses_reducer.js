@@ -19,7 +19,8 @@ const businessesReducer = (oldState = {}, action) => {
             }
             return newState;
         case RECEIVE_SEARCHED_BUSINESSES:
-            return Object.assign({}, oldState, action.businesses);
+            const searching = "true"
+            return Object.assign({}, oldState, action.businesses, {searching: searching});
             
         case RECEIVE_CATEGORY:
             
