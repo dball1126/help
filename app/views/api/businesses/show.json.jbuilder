@@ -1,7 +1,11 @@
 json.business do 
     json.partial! '/api/businesses/business', business: @business
     json.imageLinks @business.images.map { |image| url_for(image) }
-   
+    
+    if @business.categories.any?
+        json.categories @business.categories
+    end
+
         json.reviews do 
             @business.reviews.each do |review|
                 json.set! review.id do  
