@@ -255,7 +255,13 @@
 .ul-nav-categories li {
     padding: 10px;
 }
-
+.ul-nav-categories li a {
+    text-decoration: none;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+}
 .signup:hover {
     background-color: white;
     color: #666;
