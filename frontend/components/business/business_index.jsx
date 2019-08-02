@@ -52,7 +52,7 @@ class BusinessIndex extends React.Component {
     shouldComponentUpdate(ownProps) {
         // return true;
         let catUpdater = this.props.history.location.state;
-        debugger
+        
         if (catUpdater === "flushDeal" || this.props.category !== "") {
            
            

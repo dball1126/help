@@ -80,7 +80,8 @@ class BusinessShow extends React.Component {
         
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
-        
+        const categoriesEntities = business.categories || [];
+        debugger
         const businessMap = () => {
             if(!business.longitude){
                 return "";
@@ -119,6 +120,29 @@ class BusinessShow extends React.Component {
                 )
             }
         }
+
+        const categories = () => {
+            debugger
+            if (categoriesEntities.length < 1) {
+                return "";
+            } else {
+                return (
+                    <div key={Date.now()}>
+                        <ul className="ul-business-show-category">
+                            {categoriesEntities.map((category, i) => {
+                                debugger
+                                return (
+                                    <div key={i}>
+                                        <Link to={`/categories/${category.id}`}>{category.name}</Link>
+                                    </div>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                )
+            }
+        }
+
         let starColorTop;
         let reviewsCount = 0;
         const avgRating = () => {
@@ -213,7 +237,12 @@ class BusinessShow extends React.Component {
                                 </div>
                                 <div className="business-ratings">
                                     {stars()}
+                                </div>
+                                <div>
                                     <span className="reviews-count"> {reviewsCount} reviews</span>
+                                </div>
+                                <div className="business-show-category-box">
+                                    {categories()}
                                 </div>
                             </div>
                             <div className="business-review-header">
