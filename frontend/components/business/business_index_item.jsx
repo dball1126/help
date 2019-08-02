@@ -93,8 +93,10 @@ class BusinessIndexItem extends React.Component {
                     <div>
                         <ul className="ul-business-index-category">
                             {business.categories.map((category, i) => {
+                                let comma = ", "
+                                if (i+1 === business.categories.length) comma = "";
                                 return (
-                                    <li key={i} className="business-index-category-li"><Link to={{pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal"}}>{category.name}</Link></li>
+                                    <li key={i} className="business-index-category-li"><Link to={{pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal"}}>{category.name}{comma}</Link></li>
                                 )
                             })}
                         </ul>

@@ -128,10 +128,11 @@ class BusinessShow extends React.Component {
                     <div key={Date.now()}>
                         <ul className="ul-business-show-category">
                             {categoriesEntities.map((category, i) => {
-                                
+                                let comma = ", "
+                                if (i + 1 === business.categories.length) comma = "";
                                 return (
                                     <li key={i} className="business-show-category-li">
-                                        <Link to={{ pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal" }}>{category.name}</Link>
+                                        <Link to={{ pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal" }}>{category.name}{comma}</Link>
                                     </li>
                                 )
                             })}

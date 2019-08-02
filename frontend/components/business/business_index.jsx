@@ -40,9 +40,9 @@ class BusinessIndex extends React.Component {
                 $("div.business-index-header").html("<p>No Results: Nothing in the database matches the search input.</p>")
                 $('.businesses-container').css('display', 'none');
             } 
-            // else if (this.props.category !== "" && this.props.businesses.length > 0) {
-            //     $("div.business-index-header").html(`<p>${this.categoryName}</p>`)
-            // }
+            else if (this.props.category !== "" && this.props.businesses.length > 0) {
+                $("div.business-index-header").html(`<p>${this.categoryName}</p>`)
+            }
         }, 100)
                 
                 
