@@ -81,7 +81,7 @@ class BusinessShow extends React.Component {
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
         const categoriesEntities = business.categories || [];
-        debugger
+        
         const businessMap = () => {
             if(!business.longitude){
                 return "";
@@ -93,9 +93,7 @@ class BusinessShow extends React.Component {
                 return (
                     <BusinessMap center={mapCenter} position={businessPosition} />
                 )
-
             }
-            
         }
         
         const reviews = () => {
@@ -122,7 +120,7 @@ class BusinessShow extends React.Component {
         }
 
         const categories = () => {
-            debugger
+            
             if (categoriesEntities.length < 1) {
                 return "";
             } else {
@@ -130,11 +128,11 @@ class BusinessShow extends React.Component {
                     <div key={Date.now()}>
                         <ul className="ul-business-show-category">
                             {categoriesEntities.map((category, i) => {
-                                debugger
+                                
                                 return (
-                                    <div key={i}>
-                                        <Link to={`/categories/${category.id}`}>{category.name}</Link>
-                                    </div>
+                                    <li key={i} className="business-show-category-li">
+                                        <Link to={{ pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal" }}>{category.name}</Link>
+                                    </li>
                                 )
                             })}
                         </ul>
@@ -237,9 +235,9 @@ class BusinessShow extends React.Component {
                                 </div>
                                 <div className="business-ratings">
                                     {stars()}
+                                    <span className="reviews-count"> {reviewsCount} reviews</span>
                                 </div>
                                 <div>
-                                    <span className="reviews-count"> {reviewsCount} reviews</span>
                                 </div>
                                 <div className="business-show-category-box">
                                     {categories()}
