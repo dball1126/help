@@ -20,15 +20,15 @@ class BusinessIndex extends React.Component {
 
     componentDidMount(){
         
-        // if (this.props.category !== "") {
+        if (this.props.category !== "") {
             
-        //     this.props.fetchCategory(this.props.category.id)
+            this.props.fetchCategory(this.props.category.id)
 
-        // }
+        }
 
 
         if (this.props.businesses.length > 0) {
-            this.setState({ hasMounted: false, businesses: Object.values(this.props.businesses) })
+            this.setState({ hasMounted: false })
         }
 
         
@@ -48,12 +48,12 @@ class BusinessIndex extends React.Component {
             
     }
 
-    shouldComponentUpdate(ownprops) {
-        
+    shouldComponentUpdate() {
+        // return true;
         let catUpdater = this.props.history.location.state;
         if (catUpdater === "flushDeal") {
             
-           
+            this.props.location.state = null;
             return true;
         }
         let tracking = this.props.location.linkTracker || undefined;
@@ -98,9 +98,11 @@ class BusinessIndex extends React.Component {
         }
         
     };
-        busIndex(){
+        busIndex(ownprops){
+            
             if (this.props.businesses.length > 0) {
                 this.state.businesses = Object.values(this.props.businesses)
+                
                 const businesses = this.state.businesses.map((business, i) => {
                     
                     
@@ -120,19 +122,19 @@ class BusinessIndex extends React.Component {
         let catUpdater = this.props.history.location.state;
         if (catUpdater === "flushDeal") {
             
-            this.props.fetchCategory(this.props.match.params.categoryId)
-
-            this.props.location.state = null;
+            this.props.fetchCategory(this.props.match.params.categoryId);
+            
+            
             
         }
         
-        
+       
 
 
         return (
             <div>
                 {/* <RedBanner /> */}
-                <BusinessHeaderContainer currentUser={this.props.currentUser}/>
+                <BusinessHeaderContainer currentUser={this.props.currentUser} />
                 <div className="business-index-container">
                     <div className="business-index-header">
                         <div></div>

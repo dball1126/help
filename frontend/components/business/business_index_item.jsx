@@ -4,12 +4,12 @@ class BusinessIndexItem extends React.Component {
     constructor(props) {
         super(props);
         this.catTracker = 0;
-        this.state = {hasMounted: false}
+        this.state = {hasMounted: false, business: ""}
         this.linkTracker = "true";
     }
     
     shouldComponentUpdate() {
-  
+        // return true;
         let catUpdater = this.props.history.location.state;
         if (catUpdater === "flushDeal") {
             
@@ -33,7 +33,7 @@ class BusinessIndexItem extends React.Component {
        }
     }
     componentDidMount(){
-        this.setState({hasMounted: true})
+        this.setState({hasMounted: true, business: this.props.business})
     }
     
     reloadPage() {
@@ -48,6 +48,9 @@ class BusinessIndexItem extends React.Component {
         const stars = () => {
             let starColorTop;
             let starCounter = business.average_rating;
+            if (business.length < 1) {
+                return ""
+            } else {
             return (
                 <div className="star-review-item-rating" >
                     {[...Array(5)].map((ele, i) => {
@@ -61,25 +64,26 @@ class BusinessIndexItem extends React.Component {
                     })}
                 </div>
             )
+                }
 
         }
-        const images = () => {
-            if (!business.imageLinks) {
-                return "";
-            } else {
-                return (
-                    <div>
-                        <ul className="ul-images">
-                            {business.imageLinks.map((image, i) => {
-                                return (
-                                    <li key={i} ><img src={image} className="image"></img></li>
-                                )
-                            })}
-                        </ul>
-                    </div>
-                )
-            }
-        }
+        // const images = () => {
+        //     if (!business.imageLinks) {
+        //         return "";
+        //     } else {
+        //         return (
+        //             <div>
+        //                 <ul className="ul-images">
+        //                     {business.imageLinks.map((image, i) => {
+        //                         return (
+        //                             <li key={i} ><img src={image} className="image"></img></li>
+        //                         )
+        //                     })}
+        //                 </ul>
+        //             </div>
+        //         )
+        //     }
+        // }
 
         const categories = () => {
             if (!business.categories) {
@@ -98,11 +102,17 @@ class BusinessIndexItem extends React.Component {
                 )
             }
         }
-
-        const business = this.props.business;
-      
-        const image = business.imageLinks[Math.ceil(Math.random() * 2)];
         
+        const business = this.props.business;
+        
+        const image = () => {
+            if (business.length < 1) {
+                return ""
+            } else {
+                
+           return business.imageLinks[Math.ceil(Math.random() * 2)] || {};
+            }
+        }
         const review = () => {
             
             if(business.review === undefined){
@@ -117,7 +127,7 @@ class BusinessIndexItem extends React.Component {
             <li className="business-index-li">
                 <div className="index-li-picture">
                     <div className="index-li-img">
-                        <Link to={`/businesses/${business.id}`}><img src={image} className="index-image"></img></Link>
+                        <Link to={`/businesses/${business.id}`}><img src={image()} className="index-image"></img></Link>
                     </div>
                 </div>
                     <div className="index-li-info-container">

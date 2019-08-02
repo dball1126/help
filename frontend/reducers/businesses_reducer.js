@@ -22,7 +22,7 @@ const businessesReducer = (oldState = {}, action) => {
             return Object.assign({}, oldState, action.businesses);
             
         case RECEIVE_CATEGORY:
-            debugger
+            
             return Object.assign({}, action.category.businesses)
         case DESTROY_REVIEW:
             
