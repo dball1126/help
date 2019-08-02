@@ -91,10 +91,10 @@ class BusinessIndexItem extends React.Component {
             } else {
                 return (
                     <div>
-                        <ul >
+                        <ul className="ul-business-index-category">
                             {business.categories.map((category, i) => {
                                 return (
-                                    <div key={i} ><Link to={{pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal"}}>{category.name}</Link></div>
+                                    <li key={i} className="business-index-category-li"><Link to={{pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal"}}>{category.name}</Link></li>
                                 )
                             })}
                         </ul>
