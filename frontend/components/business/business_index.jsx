@@ -9,8 +9,9 @@ class BusinessIndex extends React.Component {
         this.prevLocation = this.props.location.prev;
         this.catTracker = 0;
         this.catFetchTracker = 0;
-       
+       if (this.props.category !== undefined){
         this.categoryName = this.props.category.name;
+       }
        if(this.props.businesses.length > 0){
            this.state.businesses = Object.values(this.props.businesses)
            
@@ -20,7 +21,7 @@ class BusinessIndex extends React.Component {
 
     componentDidMount(){
         
-        if (this.props.category !== "") {
+        if (this.props.category !== ) {
             
             this.props.fetchCategory(this.props.category.id)
             this.catFetchTracker++;
