@@ -21,6 +21,10 @@ class Homepage extends React.Component {
         let chineseCategory = this.props.categories.find(obj => obj.name === "Chinese") || {};
         let sushiCategory = this.props.categories.find(obj => obj.name === "Sushi") || {};
         let burgersCategory = this.props.categories.find(obj => obj.name === "Burgers") || {};
+        let massageCategory = this.props.categories.find(obj => obj.name === "Massage") || {};
+        let gymsCategory = this.props.categories.find(obj => obj.name === "Gyms") || {};
+        let locksmithCategory = this.props.categories.find(obj => obj.name === "Locksmith") || {};
+        let phoneRepairCategory = this.props.categories.find(obj => obj.name === "Phone Repair") || {};
         
         let businesses = this.props.businesses || [];
 
