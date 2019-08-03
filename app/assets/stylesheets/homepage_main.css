@@ -430,6 +430,31 @@
     font-size: 21px;
 }
 
+.categories-square-inner-container {
+    display: flex;
+    justify-content: center;
+}
+
 .categories-square-wrapper {
     background-color: #F5f5f5;
+}
+
+.categories-square-img-header {
+    font-size: 14px;
+    color: #333333;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    margin-top: -5px;
+}
+
+.categories-square-img-box {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.categories-square-header {
+    margin-bottom: 24px;
 }

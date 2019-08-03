@@ -123,7 +123,23 @@ class Homepage extends React.Component {
                         <p>Fint the Best Businesses in Town</p>
                     </div>
                 <div className="categories-square-inner-container">
-                    
+                    <div className="categories-square-img-box">
+                        <Link ><img src="https://yap-dev.s3.amazonaws.com/Massage.png"></img></Link>
+                        <p className="categories-square-img-header">Massage</p>
+                    </div>
+                    <div className="categories-square-img-box">
+                        <Link ><img src="https://yap-dev.s3.amazonaws.com/Locksmith.png"></img></Link>
+                        <p className="categories-square-img-header">Locksmith</p>
+                    </div>
+                    <div className="categories-square-img-box">
+                        <Link ><img src="https://yap-dev.s3.amazonaws.com/gyms.png"></img></Link>
+                        <p className="categories-square-img-header">Gyms</p>
+                    </div>
+                    <div className="categories-square-img-box">
+                        <Link ><img src="https://yap-dev.s3.amazonaws.com/phone-repair.png"></img></Link>
+                        <p className="categories-square-img-header">Phone Repair</p>
+                    </div>
+
                 </div>
             </div>
             <div className="popular-businesses">
