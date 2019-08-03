@@ -19,7 +19,7 @@ class Homepage extends React.Component {
     render(){
         let italianCategory = this.props.categories.find(obj => obj.name === "Italian") || {};
         let chineseCategory = this.props.categories.find(obj => obj.name === "Chinese") || {};
-        let sushiCategory = this.props.categories.find(obj => obj.name === "Sushi") || {};
+        let mexicanCategory = this.props.categories.find(obj => obj.name === "Mexican") || {};
         let burgersCategory = this.props.categories.find(obj => obj.name === "Burgers") || {};
         let massageCategory = this.props.categories.find(obj => obj.name === "Massage") || {};
         let gymsCategory = this.props.categories.find(obj => obj.name === "Gyms") || {};
@@ -108,7 +108,7 @@ class Homepage extends React.Component {
                                     <Link to={`/categories/${chineseCategory.id}`}>{chineseCategory.name}</Link>
                                     </li>
                                     <li className="home-services">
-                                    <Link to={`/categories/${sushiCategory.id}`}>{sushiCategory.name}</Link>
+                                    <Link to={`/categories/${mexicanCategory.id}`}>{mexicanCategory.name}</Link>
                                     </li>
                                     <li className="Delivery">
                                     <Link to={`/categories/${burgersCategory.id}`}>{burgersCategory.name}</Link>
@@ -129,20 +129,20 @@ class Homepage extends React.Component {
                 <div className="categories-square-inner-container">
                     <div className="categories-square-img-box">
                         <Link to={`/categories/${massageCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/Massage.png"></img></Link>
-                        <Link to={`/categories/${massageCategory.id}`}><p className="categories-square-img-header">Massage</p></Link>
+                        <Link to={`/categories/${massageCategory.id}`}><p className="categories-square-img-header">{massageCategory.name}</p></Link>
                         
                     </div>
                     <div className="categories-square-img-box">
                         <Link to={`/categories/${locksmithCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/Locksmith.png"></img></Link>
-                        <Link to={`/categories/${locksmithCategory.id}`}><p className="categories-square-img-header">Locksmith</p></Link>
+                        <Link to={`/categories/${locksmithCategory.id}`}><p className="categories-square-img-header">{locksmithCategory.name}</p></Link>
                     </div>
                     <div className="categories-square-img-box">
                         <Link to={`/categories/${gymsCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/gyms.png"></img></Link>
-                        <Link to={`/categories/${gymsCategory.id}`}><p className="categories-square-img-header">Gyms</p></Link>
+                        <Link to={`/categories/${gymsCategory.id}`}><p className="categories-square-img-header">{gymsCategory.name}</p></Link>
                     </div>
                     <div className="categories-square-img-box">
                         <Link to={`/categories/${phoneRepairCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/phone-repair.png"></img></Link>
-                        <Link to={`/categories/${phoneRepairCategory.id}`}><p className="categories-square-img-header">Phone Repair</p></Link>
+                        <Link to={`/categories/${phoneRepairCategory.id}`}><p className="categories-square-img-header">{phoneRepairCategory.name}</p></Link>
                     </div>
 
                 </div>
