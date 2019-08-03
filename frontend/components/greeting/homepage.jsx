@@ -118,6 +118,14 @@ class Homepage extends React.Component {
                     </div>
                 </div>
             </div>
+            <div className="categories-square-wrapper">
+                    <div className="categories-square-header">
+                        <p>Fint the Best Businesses in Town</p>
+                    </div>
+                <div className="categories-square-inner-container">
+                    
+                </div>
+            </div>
             <div className="popular-businesses">
                 <div className="popular-businesses-h3">
                     <p>Popular Businesses</p>
