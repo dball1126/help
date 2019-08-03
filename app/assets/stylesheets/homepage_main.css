@@ -428,6 +428,8 @@
     padding: 36px;
     font-family: inherit;
     font-size: 21px;
+    background-color: #F5f5f5;
+    height: 259px;
 }
 
 .categories-square-inner-container {
@@ -435,9 +437,6 @@
     justify-content: center;
 }
 
-.categories-square-wrapper {
-    background-color: #F5f5f5;
-}
 
 .categories-square-img-header {
     font-size: 14px;
@@ -461,6 +460,15 @@
     margin-left: 15px;
 }
 
+.categories-square-img-box:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    font-size: 30px;
+}
+.categories-square-img-box:hover .categories-square-img-header:hover {
+    color: #0073bb;
+   
+    
+}
 .categories-square-header {
     margin-bottom: 24px;
     font-family: "Helvetica Neue";
