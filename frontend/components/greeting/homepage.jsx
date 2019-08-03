@@ -120,7 +120,7 @@ class Homepage extends React.Component {
             </div>
             <div className="categories-square-wrapper">
                     <div className="categories-square-header">
-                        <p>Fint the Best Businesses in Town</p>
+                        <p>Find the Best Businesses in Town</p>
                     </div>
                 <div className="categories-square-inner-container">
                     <div className="categories-square-img-box">

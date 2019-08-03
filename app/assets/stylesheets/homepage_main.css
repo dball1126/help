@@ -448,6 +448,7 @@
     border: 1px solid #e6e6e6;
     background-color: #fff;
     margin-top: -5px;
+    font-family: "Helvetica Neue";
 }
 
 .categories-square-img-box {
@@ -457,4 +458,5 @@
 
 .categories-square-header {
     margin-bottom: 24px;
+    font-family: "Helvetica Neue";
 }
