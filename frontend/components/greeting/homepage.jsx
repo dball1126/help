@@ -128,20 +128,21 @@ class Homepage extends React.Component {
                     </div>
                 <div className="categories-square-inner-container">
                     <div className="categories-square-img-box">
-                        <Link ><img src="https://yap-dev.s3.amazonaws.com/Massage.png"></img></Link>
-                        <p className="categories-square-img-header">Massage</p>
+                        <Link to={`/categories/${massageCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/Massage.png"></img></Link>
+                        <Link to={`/categories/${massageCategory.id}`}><p className="categories-square-img-header">Massage</p></Link>
+                        
                     </div>
                     <div className="categories-square-img-box">
-                        <Link ><img src="https://yap-dev.s3.amazonaws.com/Locksmith.png"></img></Link>
-                        <p className="categories-square-img-header">Locksmith</p>
+                        <Link to={`/categories/${locksmithCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/Locksmith.png"></img></Link>
+                        <Link to={`/categories/${locksmithCategory.id}`}><p className="categories-square-img-header">Locksmith</p></Link>
                     </div>
                     <div className="categories-square-img-box">
-                        <Link ><img src="https://yap-dev.s3.amazonaws.com/gyms.png"></img></Link>
-                        <p className="categories-square-img-header">Gyms</p>
+                        <Link to={`/categories/${gymsCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/gyms.png"></img></Link>
+                        <Link to={`/categories/${gymsCategory.id}`}><p className="categories-square-img-header">Gyms</p></Link>
                     </div>
                     <div className="categories-square-img-box">
-                        <Link ><img src="https://yap-dev.s3.amazonaws.com/phone-repair.png"></img></Link>
-                        <p className="categories-square-img-header">Phone Repair</p>
+                        <Link to={`/categories/${phoneRepairCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/phone-repair.png"></img></Link>
+                        <Link to={`/categories/${phoneRepairCategory.id}`}><p className="categories-square-img-header">Phone Repair</p></Link>
                     </div>
 
                 </div>

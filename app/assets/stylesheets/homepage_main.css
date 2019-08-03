@@ -449,6 +449,11 @@
     background-color: #fff;
     margin-top: -5px;
     font-family: "Helvetica Neue";
+    
+}
+
+.categories-square-img-box a {
+    text-decoration: none;
 }
 
 .categories-square-img-box {
