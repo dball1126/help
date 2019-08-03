@@ -34,6 +34,13 @@ business11 = Business.create(name: "Chipotle Mexican Grill, Inc", state: "NY", c
 business12 = Business.create(name: "Red Hot II", state: "NY", city: "Brooklyn", zipcode: 11215, address: "349 7th Ave", phone_number: "(718)369-2577", website: "www.redhot.com", latitude: "40.6661369", longitude: "-73.9820222")
 business13 = Business.create(name: "Peter Luger Steak House", state: "NY", city: "Brooklyn", zipcode: 11211, address: "178 Broadway", phone_number: "(718)387-7400", website: "www.peterluger.com", latitude: "40.7098661", longitude: "-73.9625564")
 
+business14 = Business.create(name: "Park Slope Armory YMCA", state: "NY", city: "Brooklyn", zipcode: 11215, address: "361 15th st", phone_number: "(212)912-2580", website: "www.ymcanyc.org/parkslopearmory", latitude: "40.662750", longitude: "-73.983280")
+business15 = Business.create(name: "Harbor Fitness", state: "NY", city: "Brooklyn", zipcode: 11215, address: "191 15th st", phone_number: "(718)965-6200", website: "www.harborfitness.com", latitude: "40.666000", longitude: "-73.989970")
+
+business16 = Business.create(name: "Slope Wellness", state: "NY", city: "Brooklyn", zipcode: 11215, address: "816 8th Ave", phone_number: "(718)415-0738", website: "www.slopewellnessny.com", latitude: "40.666130", longitude: "-73.979290")
+business17 = Business.create(name: "Prospect Garden Spa", state: "NY", city: "Brooklyn", zipcode: 11238, address: "351 Flatbush Ave", phone_number: "(718)230-0226", website: "www.summerdayspa.com", latitude: "40.677110", longitude: "-73.972070")
+
+
 
 
 # business3.images.attach(io: File.open('./app/assets/images/spumoni1.jpg'), filename: 'spumoni1.jpg')
@@ -131,9 +138,90 @@ file38 = open('https://yap-dev.s3.amazonaws.com/luger2.jpg')
 business13.images.attach(io: file38, filename: 'luger2.jpg')
 file39 = open('https://yap-dev.s3.amazonaws.com/luger3.jpg')
 business13.images.attach(io: file39, filename: 'luger3.jpg')
+
+file40 = open('https://yap-dev.s3.amazonaws.com/ymca1.jpg')
+business14.images.attach(io: file40, filename: 'ymca1.jpg')
+file41 = open('https://yap-dev.s3.amazonaws.com/ymca2.jpg')
+business14.images.attach(io: file41, filename: 'ymca2.jpg')
+file42 = open('https://yap-dev.s3.amazonaws.com/ymca3.jpg')
+business14.images.attach(io: file42, filename: 'ymca3.jpg')
+
+file43 = open('https://yap-dev.s3.amazonaws.com/harbor1.jpg')
+business15.images.attach(io: file43, filename: 'harbor1.jpg')
+file44 = open('https://yap-dev.s3.amazonaws.com/harbor2.jpg')
+business15.images.attach(io: file44, filename: 'harbor2.jpg')
+file45 = open('https://yap-dev.s3.amazonaws.com/harbor3.jpg')
+business15.images.attach(io: file45, filename: 'harbor3.jpg')
+
+file46 = open('https://yap-dev.s3.amazonaws.com/slopewell1.jpg')
+business16.images.attach(io: file46, filename: 'slopewell1jpg')
+file47 = open('https://yap-dev.s3.amazonaws.com/slopewell2.jpg')
+business16.images.attach(io: file47, filename: 'slopewell2.jpg')
+file48 = open('https://yap-dev.s3.amazonaws.com/slopewell3.jpg')
+business16.images.attach(io: file48, filename: 'slopewell3.jpg')
+
+file49 = open('https://yap-dev.s3.amazonaws.com/spa1.jpg')
+business17.images.attach(io: file49, filename: 'spa1jpg')
+file50 = open('https://yap-dev.s3.amazonaws.com/spa2.jpg')
+business17.images.attach(io: file50, filename: 'spa2.jpg')
+file51 = open('https://yap-dev.s3.amazonaws.com/spa3.jpg')
+business17.images.attach(io: file51, filename: 'spa3.jpg')
 #profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
 # profile_placeholder.jpg     file name
 
 review1 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place always pisses me off, and today was no different.  The lady rushes me and it just seems so rude.  It was a bad experience, and lately it's been like that the last two times i've been there", rating: 4)
 review2 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place is great, the black bean chicken is delicious!  The wonton soup is Fantastic as well, and add it with the wonderful spciy homemade mustard!", rating: 5)
 review3 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "The steak is absolutely amazing! The tomato platter is big round and delicious, the bacon is thick fat and juicy!", rating: 5)
+
+
+category1 = Category.create(name: "Massage")
+category2 = Category.create(name: "Gyms")
+category3 = Category.create(name: "Locksmith")
+category4 = Category.create(name: "Phone Repair")
+category5 = Category.create(name: "Burgers")
+category6 = Category.create(name: "Mexican")
+category7 = Category.create(name: "Restaurants")
+category8 = Category.create(name: "Italian")
+Category9 = Category.create(name: "Chinese")
+Category10 = Category.create(name: "Fast Food")
+Category11 = Category.create(name: "Steakhouses")
+Category12 = Category.create(name: "Bars")
+
+businessCategory1 = BusinessCategory.create(business_id: 1, category_id: 7)
+
+businessCategory2 = BusinessCategory.create(business_id: 2, category_id: 5)
+
+businessCategory3 = BusinessCategory.create(business_id: 3, category_id: 8)
+businessCategory4 = BusinessCategory.create(business_id: 3, category_id: 7)
+
+businessCategory5 = BusinessCategory.create(business_id: 4, category_id: 8)
+
+businessCategory6 = BusinessCategory.create(business_id: 5, category_id: 9)
+
+businessCategory7 = BusinessCategory.create(business_id: 6, category_id: 5)
+
+businessCategory9 = BusinessCategory.create(business_id: 7, category_id: 10)
+businessCategory10 = BusinessCategory.create(business_id: 7, category_id: 5)
+
+businessCategory11 = BusinessCategory.create(business_id: 8, category_id: 7)
+businessCategory12 = BusinessCategory.create(business_id: 8, category_id: 6)
+
+businessCategory13 = BusinessCategory.create(business_id: 9, category_id: 7)
+businessCategory14 = BusinessCategory.create(business_id: 9, category_id: 8)
+
+businessCategory15 = BusinessCategory.create(business_id: 11, category_id: 7)
+businessCategory16 = BusinessCategory.create(business_id: 11, category_id: 6)
+
+businessCategory17 = BusinessCategory.create(business_id: 12, category_id: 7)
+businessCategory18 = BusinessCategory.create(business_id: 12, category_id: 9)
+
+businessCategory19 = BusinessCategory.create(business_id: 13, category_id: 7)
+businessCategory20 = BusinessCategory.create(business_id: 13, category_id: 11)
+
+
+
+businessCategory21 = BusinessCategory.create(business_id: 14, category_id: 2)
+businessCategory22 = BusinessCategory.create(business_id: 15, category_id: 2)
+
+businessCategory23 = BusinessCategory.create(business_id: 16, category_id: 1)
+businessCategory23 = BusinessCategory.create(business_id: 17, category_id: 1)
