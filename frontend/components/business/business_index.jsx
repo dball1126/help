@@ -104,14 +104,14 @@ class BusinessIndex extends React.Component {
         }
         // const businesses = this.props.businesses;
         
-        if (this.state.businesses.length < 1) {
+        if (this.props.businesses.length < 1) {
             return (
                 ""
             )
         } else {
 
             return (
-                <BusinessMap businesses={this.state.businesses} />
+                <BusinessMap businesses={Object.values(this.props.businesses)} />
             );
         }
         

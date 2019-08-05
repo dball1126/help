@@ -212,6 +212,16 @@ review1 = Review.create(author_id: User.last.id, business_id: Business.last.id, 
 review2 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place is great, the black bean chicken is delicious!  The wonton soup is Fantastic as well, and add it with the wonderful spciy homemade mustard!", rating: 5)
 review3 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "The steak is absolutely amazing! The tomato platter is big round and delicious, the bacon is thick fat and juicy!", rating: 5)
 
+review4 = Review.create(author_id: User.fourth.id, business_id: 14, content: "The place has a very large race track where people can run freely.  There are basketball courts in the middle of the racetrack, and the location is located in a fantastic neighborhood!", rating: 3)
+review5 = Review.create(author_id: User.fifth.id, business_id: 15, content: "This is actually a great gym.  It's open 24 hours a day, but they do close early on the weekends.  It has great amenities.", rating: 5)
+review6 = Review.create(author_id: User.fifth.id, business_id: 16, content: "The people are nice, the beds are soft, and just an overall great experience.", rating: 4)
+review7 = Review.create(author_id: User.fifth.id, business_id: 17, content: "Not so good!  I just got a really bad creepy vibe when I entered and wish I had left!", rating: 2)
+review8 = Review.create(author_id: User.fifth.id, business_id: 18, content: "I was locked out of my car and this place showed up to save the day.", rating: 4)
+review9 = Review.create(author_id: User.fourth.id, business_id: 19, content: "My door lock had to be changed since the key kept getting stuck in it.  The guy came, replaced the cylinder, which allowed me to keep most of the door lock.", rating: 4)
+review10 = Review.create(author_id: User.fourth.id, business_id: 20, content: "This place is just OKAY.  They got the job done but didn't WOW me.", rating: 3)
+review11 = Review.create(author_id: User.fourth.id, business_id: 21, content: "Best phone repair place in the city.  Prices are great and the job was done in a timely manner.", rating: 5)
+
+
 
 category1 = Category.create(name: "Massage")
 category2 = Category.create(name: "Gyms")
