@@ -13,15 +13,18 @@ class BusinessMap extends React.Component{
         this.catTracker = 0;
     }
     shouldComponentUpdate(ownProps) {
-        let catUpdater = this.props.history.location.state;
+        let catUpdater;
+        if (this.props.history) catUpdater = this.props.history.location.state;
         if (ownProps.searching === "true") return false;
         if (catUpdater === "flushDeal") {
-
-
+            
+            
             return true;
         }
-
-        let tracking = this.props.location.linkTracker || undefined;
+        
+        debugger
+        let tracking;
+        if (this.props.location) tracking = this.props.location.linkTracker || undefined;
 
         if (tracking !== undefined && this.props.catLocation === "true") return true;
 
