@@ -5,7 +5,7 @@ class Api::SearchesController < ApplicationController
         query = params[:query][:query].gsub("'", "''")
         location = params[:query][:location].gsub("'", "''")
         allBusinesses = params[:query][:allBusinesses]
-       debugger
+       
     
         if query == "" && location == ""
             @businesses = Business.all
