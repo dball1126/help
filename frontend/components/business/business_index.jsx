@@ -20,7 +20,7 @@ class BusinessIndex extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        debugger
+        
         if(nextProps.match.params.categoryId !== this.props.categoryId) {
             this.props.fetchCategory(nextProps.match.params.categoryId)
             setTimeout(() => { 
@@ -34,7 +34,7 @@ class BusinessIndex extends React.Component {
 
     componentDidMount(){
         
-        debugger
+        
         if (this.props.category !== "" && this.props.category !== undefined) {
             
             this.props.fetchCategory(this.props.category.id)
@@ -71,7 +71,7 @@ class BusinessIndex extends React.Component {
 
     shouldComponentUpdate(ownProps) {
         // return true;
-        console.log(this.state.category)
+        
         if (ownProps.searching === "true") return false;
         let catUpdater = this.props.history.location.state;
         
@@ -156,8 +156,6 @@ class BusinessIndex extends React.Component {
         if (catUpdater === "flushDeal") {
             
             this.props.fetchCategory(this.props.match.params.categoryId);
-            
-            
             
         }
         
