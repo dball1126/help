@@ -111,7 +111,7 @@ class BusinessIndex extends React.Component {
         } else {
 
             return (
-                <BusinessMap businesses={Object.values(this.props.businesses)} />
+                <BusinessMap businesses={Object.values(this.props.businesses)} prev={this.prevLocation} catLocation={this.props.catLocation} history={this.props.history} location={this.props.location}/>
             );
         }
         

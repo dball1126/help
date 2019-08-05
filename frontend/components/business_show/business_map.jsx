@@ -9,9 +9,27 @@ class BusinessMap extends React.Component{
         this.center = this.props.center || { lat: 40.70569, lng: -73.99639 };
         this.businesses = this.props.businesses || "";
         this.didUpdate = false;
+        this.linkTracker = "true";
+        this.catTracker = 0;
     }
-    shouldComponentUpdate() {
-        
+    shouldComponentUpdate(ownProps) {
+        let catUpdater = this.props.history.location.state;
+        if (ownProps.searching === "true") return false;
+        if (catUpdater === "flushDeal") {
+
+
+            return true;
+        }
+
+        let tracking = this.props.location.linkTracker || undefined;
+
+        if (tracking !== undefined && this.props.catLocation === "true") return true;
+
+
+        if ((this.props.catLocation === "true" && this.catTracker < 2)) {
+            this.catTracker++;
+            return true;
+        }
 
         if (this.didUpdate === false) {
             this.didUpdate = true
