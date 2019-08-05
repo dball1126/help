@@ -40,6 +40,13 @@ business15 = Business.create(name: "Harbor Fitness", state: "NY", city: "Brookly
 business16 = Business.create(name: "Slope Wellness", state: "NY", city: "Brooklyn", zipcode: 11215, address: "816 8th Ave", phone_number: "(718)415-0738", website: "www.slopewellnessny.com", latitude: "40.666130", longitude: "-73.979290")
 business17 = Business.create(name: "Prospect Garden Spa", state: "NY", city: "Brooklyn", zipcode: 11238, address: "351 Flatbush Ave", phone_number: "(718)230-0226", website: "www.summerdayspa.com", latitude: "40.677110", longitude: "-73.972070")
 
+business18 = Business.create(name: "All Security Locksmiths", state: "NY", city: "Brooklyn", zipcode: 11215, address: "500 2nd St", phone_number: "(718)435-9055", website: "www.allsecurity.tv", latitude: "40.671150", longitude: "-73.978380")
+business19 = Business.create(name: "Amazon Locksmith", state: "NY", city: "New York", zipcode: 10025, address: "2669 Broadway", phone_number: "(888)645-4536", website: "www.amazonlocksmithnyc.com", latitude: "40.798380", longitude: "-73.969540")
+
+business20 = Business.create(name: "iPhone Screen Repair Expert NYC", state: "NY", city: "New York", zipcode: 10018, address: "1441 Broadway", phone_number: "(917)668-2222", website: "www.iphoneexpertnyc.com", latitude: "40.755010", longitude: "-73.987170")
+business21 = Business.create(name: "Fix and Accessorize", state: "NY", city: "New York", zipcode: 10016, address: "551 3rd Ave", phone_number: "(646)852-6593", website: "", latitude: "40.747210", longitude: "-73.976630")
+
+
 
 
 
@@ -166,6 +173,37 @@ file50 = open('https://yap-dev.s3.amazonaws.com/spa2.jpg')
 business17.images.attach(io: file50, filename: 'spa2.jpg')
 file51 = open('https://yap-dev.s3.amazonaws.com/spa3.jpg')
 business17.images.attach(io: file51, filename: 'spa3.jpg')
+
+
+file52 = open('https://yap-dev.s3.amazonaws.com/allsecuritylocksmith1.jpg')
+business18.images.attach(io: file52, filename: 'allsecuritylocksmith1.jpg')
+file53 = open('https://yap-dev.s3.amazonaws.com/allsecuritylocksmith2.jpg')
+business18.images.attach(io: file53, filename: 'allsecuritylocksmith2.jpg')
+file54 = open('https://yap-dev.s3.amazonaws.com/allsecuritylocksmith3.jpg')
+business18.images.attach(io: file54, filename: 'allsecuritylocksmith3.jpg')
+
+file55 = open('https://yap-dev.s3.amazonaws.com/amazonlocksmith1.jpg')
+business19.images.attach(io: file55, filename: 'amazonlocksmith1.jpg')
+file56 = open('https://yap-dev.s3.amazonaws.com/amazonlocksmith2.png')
+business19.images.attach(io: file56, filename: 'amazonlocksmith2.png')
+file57 = open('https://yap-dev.s3.amazonaws.com/amazonlocksmith3.jpg')
+business19.images.attach(io: file57, filename: 'amazonlocksmith3.jpg')
+
+
+file58 = open('https://yap-dev.s3.amazonaws.com/iphonerepairone1.jpg')
+business20.images.attach(io: file58, filename: 'iphonerepairone1.jpg')
+file59 = open('https://yap-dev.s3.amazonaws.com/iphonerepairone2.jpg')
+business20.images.attach(io: file59, filename: 'iphonerepairone2.jpg')
+file60 = open('https://yap-dev.s3.amazonaws.com/iphonerepairone3.png')
+business20.images.attach(io: file60, filename: 'iphonerepairone3.png')
+
+file61 = open('https://yap-dev.s3.amazonaws.com/iphonerepairtwo1.jpg')
+business21.images.attach(io: file61, filename: 'iphonerepairtwo1.jpg')
+file62 = open('https://yap-dev.s3.amazonaws.com/iphonerepairtwo2.jpg')
+business21.images.attach(io: file62, filename: 'iphonerepairtwo2.jpg')
+file63 = open('https://yap-dev.s3.amazonaws.com/iphonerepairtwo3.jpg')
+business21.images.attach(io: file63, filename: 'iphonerepairtwo3.jpg')
+
 #profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
 # profile_placeholder.jpg     file name
 
@@ -225,3 +263,9 @@ businessCategory22 = BusinessCategory.create(business_id: 15, category_id: 2)
 
 businessCategory23 = BusinessCategory.create(business_id: 16, category_id: 1)
 businessCategory23 = BusinessCategory.create(business_id: 17, category_id: 1)
+
+businessCategory24 = BusinessCategory.create(business_id: 18, category_id: 3)
+businessCategory25 = BusinessCategory.create(business_id: 19, category_id: 3)
+
+businessCategory26 = BusinessCategory.create(business_id: 20, category_id: 4)
+businessCategory27 = BusinessCategory.create(business_id: 21, category_id: 4)
