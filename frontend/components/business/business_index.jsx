@@ -63,7 +63,7 @@ class BusinessIndex extends React.Component {
                 $("div.business-index-header").html(`<p>${this.props.category.name}</p>`)
                 
             }
-        }, 500)
+        }, 100)
                 
                 
             
