@@ -6,6 +6,7 @@ import { searchBusinesses, fetchBusinesses } from '../../actions/business_action
 const msp = (state, ownProps) => {
     const placeHolder = {};
     const businessShowSearchBar = "true"
+    
     return {
         placeHolder: placeHolder,
         businessShowSearchBar: businessShowSearchBar

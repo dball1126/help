@@ -255,7 +255,13 @@
 .ul-nav-categories li {
     padding: 10px;
 }
-
+.ul-nav-categories li a {
+    text-decoration: none;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+}
 .signup:hover {
     background-color: white;
     color: #666;
@@ -413,4 +419,57 @@
     color: #666;
     transition-delay: .3s;
     -webkit-transition-delay: .3s;
+}
+
+.categories-square-wrapper {
+    color: #d32223;
+    text-align: center;
+    font-weight: 700;
+    padding: 36px;
+    font-family: inherit;
+    font-size: 21px;
+    background-color: #F5f5f5;
+    height: 259px;
+}
+
+.categories-square-inner-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.categories-square-img-header {
+    font-size: 14px;
+    color: #333333;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    margin-top: -5px;
+    font-family: "Helvetica Neue";
+    
+}
+
+.categories-square-img-box a {
+    text-decoration: none;
+}
+
+.categories-square-img-box {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.categories-square-img-box:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    font-size: 30px;
+}
+.categories-square-img-box:hover .categories-square-img-header:hover {
+    color: #0073bb;
+   
+    
+}
+.categories-square-header {
+    margin-bottom: 24px;
+    font-family: "Helvetica Neue";
 }

@@ -1,4 +1,4 @@
-import { RECEIVE_SEARCHED_BUSINESSES } from '../actions/business_actions';
+import { RECEIVE_SEARCHED_BUSINESSES, RECEIVE_SEARCHED_CATEGORIES } from '../actions/business_actions';
 
 
 

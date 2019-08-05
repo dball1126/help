@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessHeaderSearchContainer from '../search/business_header_search_container';
 const businessHeader = ({currentUser, logout}) => {
-    
+    const searchRoute = "true";
     const defaultLinks = () => {
     return (
         <div className="business-show-header">
@@ -10,7 +10,7 @@ const businessHeader = ({currentUser, logout}) => {
                 <Link to="/" className="yap-logo-link"><div className="business-header-logo">
                     <span className="yap-header-logo">yap</span>
                 </div></Link>
-                <BusinessHeaderSearchContainer />
+                <BusinessHeaderSearchContainer searchRoute={searchRoute}/>
                 <div className="business-show-login-signup">
                     <div className="business-show-login-box">
                         <Link to="/login" className="business-show-login">Log In</Link>
@@ -30,7 +30,7 @@ const businessHeader = ({currentUser, logout}) => {
                     <Link to="/" className="yap-logo-link"><div className="business-header-logo">
                         <span className="yap-header-logo">yap</span>
                     </div></Link>
-                    <BusinessHeaderSearchContainer />
+                    <BusinessHeaderSearchContainer searchRoute={searchRoute}/>
                     <div className="business-show-login-signup">
                         <div className="business-show-login-box">
                             <button onClick={logout} className="business-page-logout">Logout</button>

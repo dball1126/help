@@ -1,5 +1,5 @@
-import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, RECEIVE_SEARCHED_BUSINESSES} from '../actions/business_actions';
-
+import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, RECEIVE_SEARCHED_BUSINESSES, RECEIVE_SEARCHED_CATEGORIES, RECEIVE_START_BUSINESSES} from '../actions/business_actions';
+import {RECEIVE_CATEGORY} from '../actions/category_actions';
 import { RECEIVE_REVIEW, DESTROY_REVIEW} from '../actions/review_actions';
 
 const businessesReducer = (oldState = {}, action) => {
@@ -19,8 +19,12 @@ const businessesReducer = (oldState = {}, action) => {
             }
             return newState;
         case RECEIVE_SEARCHED_BUSINESSES:
-            return Object.assign({}, oldState, action.businesses);
+            const searching = "true"
+            return Object.assign({}, oldState, action.businesses, {searching: searching});
             
+        case RECEIVE_CATEGORY:
+            
+            return Object.assign({}, action.category.businesses)
         case DESTROY_REVIEW:
             
             return newState;

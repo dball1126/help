@@ -1,0 +1,7 @@
+class BusinessCategory < ApplicationRecord
+    
+    belongs_to :category
+    
+    belongs_to :business
+
+end

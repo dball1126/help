@@ -1,7 +1,11 @@
 json.business do 
     json.partial! '/api/businesses/business', business: @business
     json.imageLinks @business.images.map { |image| url_for(image) }
-   
+    
+    if @business.categories.any?
+        json.categories @business.categories
+    end
+
         json.reviews do 
             @business.reviews.each do |review|
                 json.set! review.id do  
@@ -10,10 +14,12 @@ json.business do
                     json.user_reviews review.user.reviews.count  # places the first_name in the reviews state under businesses
                     json.user_photos review.user.photo_count
                     json.user_image url_for(review.user.image)
-                      if (review.image.attached?)
-                         json.image url_for(review.image)
-                      end
-    
+                      
+                    if (review.image.attached?)
+                        json.image url_for(review.image)
+                    end
+                    
+                    
                 end
             end
         end

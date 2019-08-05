@@ -54,13 +54,35 @@ const Protected = (state, ownProps) => {
     )}/>
 )};
 
-const mapStateToProps = (state) => {
+const Cat = (state, ownProps) => {
+    const path = state.path
+    const exact = state.exact
+    const Component = state.component
+    let relocater = state.location.reviewPathLocation;
+    const loggedIn = state.loggedIn;
     
+    return (
+        <Route path={path}
+            relocater={relocater}
+            exact={exact}
+            render={(props) => (
+                loggedIn ? <Redirect to={{ pathname: '/null' }} /> : <Component {...props} />
+            )} />
+    )
+}
+
+const mapStateToProps = (state, ownProps) => {
+    
+    let catlocation = "";
+    if (ownProps.location.pathname.includes("category")) {
+        catlocation = ownProps.location.pathname;
+    }
     return {
         loggedIn: Boolean(state.session.id),
-        
+        catlocation: catlocation
     }
 }
 
+export const CatRoute = withRouter(connect(mapStateToProps, null)(Cat))
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth))
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected))

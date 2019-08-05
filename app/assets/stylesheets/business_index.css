@@ -127,6 +127,10 @@
     width: 100px;
 }
 
+.index-li-category-box {
+    
+}
+
 .span-reviews-count {
     padding-top: 10px;
     font: inherit;
@@ -170,4 +174,17 @@
     background: transparent;
     border: 0;
     font-weight: 800;
+}
+
+.ul-business-index-category {
+    display: flex;
+    font-family: inherit;
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.business-index-category-li a{
+    text-decoration: none;
+    color: #666666;
+    padding-right: 5px;
 }

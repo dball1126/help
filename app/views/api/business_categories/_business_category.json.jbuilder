@@ -1,0 +1,1 @@
+json.extract! business_category, :id, :business_id, :category_id

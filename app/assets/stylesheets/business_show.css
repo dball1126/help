@@ -297,6 +297,7 @@
 }
 
 .business-ratings {
+    display: flex;
     width: 525px;
     height: 24px;
 }
@@ -881,3 +882,25 @@
     color: #0073bb;
 }
 
+.reviews-count {
+    padding-left: 5px;
+    font-family: inherit;
+    color: #666666;
+}
+
+.ul-business-show-category {
+    
+    
+    font-family: inherit;
+    display: flex;
+}
+
+.business-show-category-li a{
+    text-decoration: none;
+    color: #0073BB;
+    padding-right: 5px;
+}
+
+.business-show-category-box {
+    padding-top: 5px;
+}

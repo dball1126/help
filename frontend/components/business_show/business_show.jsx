@@ -80,6 +80,7 @@ class BusinessShow extends React.Component {
         
         const reviewsEntities = this.props.reviews || [];
         const reviewButton = `/businesses/${this.props.businessId}/review`;
+        const categoriesEntities = business.categories || [];
         
         const businessMap = () => {
             if(!business.longitude){
@@ -92,9 +93,7 @@ class BusinessShow extends React.Component {
                 return (
                     <BusinessMap center={mapCenter} position={businessPosition} />
                 )
-
             }
-            
         }
         
         const reviews = () => {
@@ -119,6 +118,30 @@ class BusinessShow extends React.Component {
                 )
             }
         }
+
+        const categories = () => {
+            
+            if (categoriesEntities.length < 1) {
+                return "";
+            } else {
+                return (
+                    <div key={Date.now()}>
+                        <ul className="ul-business-show-category">
+                            {categoriesEntities.map((category, i) => {
+                                let comma = ", "
+                                if (i + 1 === business.categories.length) comma = "";
+                                return (
+                                    <li key={i} className="business-show-category-li">
+                                        <Link to={{ pathname: `/categories/${category.id}`, linkTracker: this.linkTracker, state: "flushDeal" }}>{category.name}{comma}</Link>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                )
+            }
+        }
+
         let starColorTop;
         let reviewsCount = 0;
         const avgRating = () => {
@@ -214,6 +237,11 @@ class BusinessShow extends React.Component {
                                 <div className="business-ratings">
                                     {stars()}
                                     <span className="reviews-count"> {reviewsCount} reviews</span>
+                                </div>
+                                <div>
+                                </div>
+                                <div className="business-show-category-box">
+                                    {categories()}
                                 </div>
                             </div>
                             <div className="business-review-header">

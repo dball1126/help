@@ -6,22 +6,28 @@ import SearchContainer from '../search/search_container';
 class Homepage extends React.Component {
     constructor(props) {
         super(props);
-        
-
     }
    componentDidMount(){
        
+    
+       this.props.fetchCategories();
        this.props.startPageBusinesses();
    }
    
   
    
     render(){
+        let italianCategory = this.props.categories.find(obj => obj.name === "Italian") || {};
+        let chineseCategory = this.props.categories.find(obj => obj.name === "Chinese") || {};
+        let mexicanCategory = this.props.categories.find(obj => obj.name === "Mexican") || {};
+        let burgersCategory = this.props.categories.find(obj => obj.name === "Burgers") || {};
+        let massageCategory = this.props.categories.find(obj => obj.name === "Massage") || {};
+        let gymsCategory = this.props.categories.find(obj => obj.name === "Gyms") || {};
+        let locksmithCategory = this.props.categories.find(obj => obj.name === "Locksmith") || {};
+        let phoneRepairCategory = this.props.categories.find(obj => obj.name === "Phone Repair") || {};
         
         let businesses = this.props.businesses || [];
 
-        
-        
         const startBusinesses = () => {
            let counter = 0
             if (businesses < 1) {
@@ -94,19 +100,19 @@ class Homepage extends React.Component {
                         </div>
                         <SearchContainer />
                             <nav className="main-nav-categories">
-                                <ul className="ul-nav-categories">
-                                    {/* <li className="cooling-services">
-                                        Heating & Air Conditioning
+                                <ul className="ul-nav-categories" >
+                                    <li className="cooling-services">
+                                    <Link to={`/categories/${italianCategory.id}`}>{italianCategory.name}</Link>
                                     </li>
                                     <li className="restaurants">
-                                        Restaurants
+                                    <Link to={`/categories/${chineseCategory.id}`}>{chineseCategory.name}</Link>
                                     </li>
                                     <li className="home-services">
-                                        Home Services
+                                    <Link to={`/categories/${mexicanCategory.id}`}>{mexicanCategory.name}</Link>
                                     </li>
                                     <li className="Delivery">
-                                        Deilvery
-                                    </li> */}
+                                    <Link to={`/categories/${burgersCategory.id}`}>{burgersCategory.name}</Link>
+                                    </li>
                                 </ul>
                             <div className="main-header-credits">
                                 <div className="business-credit">Pancake Man</div>
@@ -114,6 +120,31 @@ class Homepage extends React.Component {
                             </div>
                             </nav>
                     </div>
+                </div>
+            </div>
+            <div className="categories-square-wrapper">
+                    <div className="categories-square-header">
+                        <p>Find the Best Businesses in Town</p>
+                    </div>
+                <div className="categories-square-inner-container">
+                    <div className="categories-square-img-box">
+                        <Link to={`/categories/${massageCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/Massage.png"></img></Link>
+                        <Link to={`/categories/${massageCategory.id}`}><p className="categories-square-img-header">{massageCategory.name}</p></Link>
+                        
+                    </div>
+                    <div className="categories-square-img-box">
+                        <Link to={`/categories/${locksmithCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/Locksmith.png"></img></Link>
+                        <Link to={`/categories/${locksmithCategory.id}`}><p className="categories-square-img-header">{locksmithCategory.name}</p></Link>
+                    </div>
+                    <div className="categories-square-img-box">
+                        <Link to={`/categories/${gymsCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/gyms.png"></img></Link>
+                        <Link to={`/categories/${gymsCategory.id}`}><p className="categories-square-img-header">{gymsCategory.name}</p></Link>
+                    </div>
+                    <div className="categories-square-img-box">
+                        <Link to={`/categories/${phoneRepairCategory.id}`}><img src="https://yap-dev.s3.amazonaws.com/phone-repair.png"></img></Link>
+                        <Link to={`/categories/${phoneRepairCategory.id}`}><p className="categories-square-img-header">{phoneRepairCategory.name}</p></Link>
+                    </div>
+
                 </div>
             </div>
             <div className="popular-businesses">

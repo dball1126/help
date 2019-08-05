@@ -5,3 +5,12 @@ export const searchBusinesses = query => (
         data: { query }
     })
 );
+
+export const searchCategories = query => {
+    
+    $.ajax({
+        method: 'GET',
+        url: '/api/categories/search',
+        data: { query }
+    })
+}

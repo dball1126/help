@@ -4,6 +4,7 @@ import { HashRouter, BrowserRouter } from 'react-router-dom';
 import history from '../util/browser_util';
 import App from './app';
 
+
 const Root = ({ store }) => {
    
     return (
