@@ -10,12 +10,13 @@ const mapStateToProps = (state, ownProps) => {
     let category = "";
     let catLocation = "";
     let searching = state.entities.businesses.searching || "";
-   
+    let categoryId = ownProps.match.params.categoryId || "";
+    
     if(ownProps.location.prev === "homepage"){
         businesses = Object.values(state.entities.businesses)
     }
     if (ownProps.location.pathname.includes("categories")) {
-        category = state.entities.categories[ownProps.match.params.categoryId];
+        category = state.entities.categories[categoryId];
         catLocation = "true"
         // businesses = Object.values(category.businesses)
         
@@ -31,7 +32,8 @@ const mapStateToProps = (state, ownProps) => {
         currentUser: currentUser || {},
         category: category,
         catLocation: catLocation,
-        searching: searching
+        searching: searching,
+        categoryId: categoryId
     }
 }
 

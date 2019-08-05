@@ -19,9 +19,22 @@ class BusinessIndex extends React.Component {
         
     }
 
+    componentWillReceiveProps(nextProps) {
+        debugger
+        if(nextProps.match.params.categoryId !== this.props.categoryId) {
+            this.props.fetchCategory(nextProps.match.params.categoryId)
+            setTimeout(() => { 
+            $("div.business-index-header").html(`<p>${this.props.category.name}</p>`)
+            }, 100)
+            // this.setState({category:})
+            
+
+        }
+    }
+
     componentDidMount(){
         
-        
+        debugger
         if (this.props.category !== "" && this.props.category !== undefined) {
             
             this.props.fetchCategory(this.props.category.id)
@@ -32,7 +45,9 @@ class BusinessIndex extends React.Component {
         if (this.props.businesses.length > 0) {
             this.setState({ hasMounted: false })
         }
-
+        if (this.props.category) {
+            this.setState({category: this.props.category})
+        }
         
 
         this.setState({hasMounted: true})
@@ -56,7 +71,7 @@ class BusinessIndex extends React.Component {
 
     shouldComponentUpdate(ownProps) {
         // return true;
-        
+        console.log(this.state.category)
         if (ownProps.searching === "true") return false;
         let catUpdater = this.props.history.location.state;
         
