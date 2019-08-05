@@ -22,7 +22,7 @@ class BusinessMap extends React.Component{
             return true;
         }
         
-        debugger
+        
         let tracking;
         if (this.props.location) tracking = this.props.location.linkTracker || undefined;
 
