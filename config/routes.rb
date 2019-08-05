@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     namespace :api, defaults: {format: 'json'} do
       resources :users, only: [:new, :create, :show]
       resources :reviews
-      get 'businesses/search', to: 'searches#business_search'
+      post 'businesses/search', to: 'searches#business_search'
       get 'businesses/live_search', to: 'searches#live_search'
       get 'businesses/start', to: 'searches#business_start'
       get 'categories/search', to: 'searches#category_search' 

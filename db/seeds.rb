@@ -10,6 +10,7 @@ require 'open-uri'
 Business.destroy_all
 User.destroy_all
 Review.destroy_all
+Category.destory_all
 
 user1 = User.create(email: 'demo@demo.com', password: 'demouser', first_name: "demo", last_name: "demo", zip_code: 11215)
 user2 = User.create(email: 'demo2@demo.com', password: 'demouser2', first_name: "demo", last_name: "demo", zip_code: 11215)
@@ -44,7 +45,7 @@ business18 = Business.create(name: "All Security Locksmiths", state: "NY", city:
 business19 = Business.create(name: "Amazon Locksmith", state: "NY", city: "New York", zipcode: 10025, address: "2669 Broadway", phone_number: "(888)645-4536", website: "www.amazonlocksmithnyc.com", latitude: "40.798380", longitude: "-73.969540")
 
 business20 = Business.create(name: "iPhone Screen Repair Expert NYC", state: "NY", city: "New York", zipcode: 10018, address: "1441 Broadway", phone_number: "(917)668-2222", website: "www.iphoneexpertnyc.com", latitude: "40.755010", longitude: "-73.987170")
-business21 = Business.create(name: "Fix and Accessorize", state: "NY", city: "New York", zipcode: 10016, address: "551 3rd Ave", phone_number: "(646)852-6593", website: "", latitude: "40.747210", longitude: "-73.976630")
+business21 = Business.create(name: "Fix and Accessorize", state: "NY", city: "New York", zipcode: 10016, address: "551 3rd Ave", phone_number: "(646)852-6593", website: "www.ifixandrepair.com/repair-services/", latitude: "40.747210", longitude: "-73.976630")
 
 
 
@@ -197,12 +198,12 @@ business20.images.attach(io: file59, filename: 'iphonerepairone2.jpg')
 file60 = open('https://yap-dev.s3.amazonaws.com/iphonerepairone3.png')
 business20.images.attach(io: file60, filename: 'iphonerepairone3.png')
 
-file61 = open('https://yap-dev.s3.amazonaws.com/iphonerepairtwo1.jpg')
-business21.images.attach(io: file61, filename: 'iphonerepairtwo1.jpg')
-file62 = open('https://yap-dev.s3.amazonaws.com/iphonerepairtwo2.jpg')
-business21.images.attach(io: file62, filename: 'iphonerepairtwo2.jpg')
-file63 = open('https://yap-dev.s3.amazonaws.com/iphonerepairtwo3.jpg')
-business21.images.attach(io: file63, filename: 'iphonerepairtwo3.jpg')
+file61 = open('https://yap-dev.s3.amazonaws.com/phonerepairtwo1.jpg')
+business21.images.attach(io: file61, filename: 'phonerepairtwo1.jpg')
+file62 = open('https://yap-dev.s3.amazonaws.com/phonerepairtwo2.jpg')
+business21.images.attach(io: file62, filename: 'phonerepairtwo2.jpg')
+file63 = open('https://yap-dev.s3.amazonaws.com/phonerepairtwo3.jpg')
+business21.images.attach(io: file63, filename: 'phonerepairtwo3.jpg')
 
 #profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
 # profile_placeholder.jpg     file name
