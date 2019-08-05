@@ -45,9 +45,9 @@ class BusinessIndex extends React.Component {
         if (this.props.businesses.length > 0) {
             this.setState({ hasMounted: false })
         }
-        if (this.props.category) {
-            this.setState({category: this.props.category})
-        }
+        // if (this.props.category) {
+        //     this.setState({category: this.props.category})
+        // }
         
 
         this.setState({hasMounted: true})
@@ -63,7 +63,7 @@ class BusinessIndex extends React.Component {
                 $("div.business-index-header").html(`<p>${this.props.category.name}</p>`)
                 
             }
-        }, 100)
+        }, 500)
                 
                 
             
