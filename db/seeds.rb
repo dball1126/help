@@ -19,6 +19,28 @@ user4 = User.create(email: 'joeMone22233@email.com', password: 'password', first
 user5 = User.create(email: 'charles9002233@email.com', password: 'password', first_name: "charles", last_name: "chingy", zip_code: 11212)
 user6 = User.create(email: 'henry993123@email.com', password: 'password', first_name: "henry", last_name: "sunrise", zip_code: 11516)
 
+#profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
+# profile_placeholder.jpg     file name
+
+# profile image
+
+userfile1 = open('https://yap-dev.s3.amazonaws.com/userprofile1.jpg')
+user1.image.attach(io: userfile1, filename: 'userprofile1.jpg')
+
+userfile2 = open('https://yap-dev.s3.amazonaws.com/userprofile2.jpg')
+user2.image.attach(io: userfile2, filename: 'userprofile2.jpg')
+
+userfile3 = open('https://yap-dev.s3.amazonaws.com/userprofile3.jpg')
+user3.image.attach(io: userfile3, filename: 'userprofile3.jpg')
+
+userfile4 = open('https://yap-dev.s3.amazonaws.com/userprofile4.jpg')
+user4.image.attach(io: userfile4, filename: 'userprofile4.jpg')
+
+userfile5 = open('https://yap-dev.s3.amazonaws.com/userprofile5.jpg')
+user5.image.attach(io: userfile5, filename: 'userprofile5.jpg')
+
+userfile6 = open('https://yap-dev.s3.amazonaws.com/userprofile6.jpg')
+user6.image.attach(io: userfile6, filename: 'userprofile6.jpg')
 
 
 business1 = Business.create(name: "Katz's Delicatessen", state: "NY", city: "New York", zipcode: 10002, address: "205 E Houston St", phone_number: "(212)254-2246", website: "www.katzsdelicatessen.com", latitude: "40.722345", longitude: "-73.9873614")
@@ -205,8 +227,6 @@ business21.images.attach(io: file62, filename: 'phonerepairtwo2.jpg')
 file63 = open('https://yap-dev.s3.amazonaws.com/phonerepairtwo3.jpg')
 business21.images.attach(io: file63, filename: 'phonerepairtwo3.jpg')
 
-#profile image url https://yap-dev.s3.amazonaws.com/profile_placeholder.jpg
-# profile_placeholder.jpg     file name
 
 review1 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place always pisses me off, and today was no different.  The lady rushes me and it just seems so rude.  It was a bad experience, and lately it's been like that the last two times i've been there", rating: 4)
 review2 = Review.create(author_id: User.last.id, business_id: Business.last.id, content: "This place is great, the black bean chicken is delicious!  The wonton soup is Fantastic as well, and add it with the wonderful spciy homemade mustard!", rating: 5)
