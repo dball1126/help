@@ -7,7 +7,6 @@ class businessShowSearch extends React.Component{
         super(props);
         this.state = {query: "", location: "", results: "", allbusinesses: false};
         this.handleSubmit = this.handleSubmit.bind(this);
-        
     }
 
     handleSubmit(e){
