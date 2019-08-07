@@ -2,9 +2,17 @@ class Api::SearchesController < ApplicationController
     
 
     def business_search
-        query = params[:query][:query].gsub("'", "''")
+        debugger
+        if params[:query] == "brooklyn-location-homepage"
+            location = "brooklyn"
+            query = ""
+            allBusinesses = "true"
+        else
+            query = params[:query][:query].gsub("'", "''")
         location = params[:query][:location].gsub("'", "''")
         allBusinesses = params[:query][:allBusinesses]
+        end
+        
        
     
         if query == "" && location == ""
