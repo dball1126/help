@@ -479,9 +479,9 @@
     text-align: center;
     font-weight: 700;
     padding-top: 72px;
-    font-family: inherit;
     font-size: 21px;
     padding-bottom: 20px;
+    font-family: "Helvetica Neue";
     /* background-color: #F5f5f5; */
 }
 
@@ -489,9 +489,14 @@
     border-bottom: 1px solid #ccc;
     text-align: center;
     font-size: 14px;
-    font-family: inherit;
     padding-bottom: 12px;
+    
+}
+
+.yap-new-york-locations a {
+    text-decoration: none;
     color: #666666;
     font-family: "Helvetica Neue";
-
+    margin-left: 12px;
+    margin-right: 12px;
 }
