@@ -473,3 +473,25 @@
     margin-bottom: 24px;
     font-family: "Helvetica Neue";
 }
+
+.yap-new-york-header {
+      color: #d32223;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 72px;
+    font-family: inherit;
+    font-size: 21px;
+    padding-bottom: 20px;
+    /* background-color: #F5f5f5; */
+}
+
+.yap-new-york-locations {
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+    font-family: inherit;
+    padding-bottom: 12px;
+    color: #666666;
+    font-family: "Helvetica Neue";
+
+}

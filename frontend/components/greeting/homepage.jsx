@@ -147,6 +147,15 @@ class Homepage extends React.Component {
 
                 </div>
             </div>
+            <div className="yap-new-york-container">
+                <div className="yap-new-york-header">
+                    <span>Yap New York</span>
+                </div>
+                <div className="yap-new-york-locations">
+                    <span>Brooklyn</span>
+                    <span>Manhattan</span>
+                </div>
+            </div>
             <div className="popular-businesses">
                 <div className="popular-businesses-h3">
                     <p>Popular Businesses</p>
