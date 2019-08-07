@@ -473,3 +473,41 @@
     margin-bottom: 24px;
     font-family: "Helvetica Neue";
 }
+
+.yap-new-york-header {
+      color: #d32223;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 72px;
+    font-size: 21px;
+    padding-bottom: 20px;
+    font-family: "Helvetica Neue";
+    /* background-color: #F5f5f5; */
+}
+
+.yap-new-york-locations {
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+    /* padding-bottom: 12px; */
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.yap-new-york-locations button {
+    text-decoration: none;
+    color: #666666;
+    font-family: "Helvetica Neue";
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    font-size: 16px;
+    line-height: 2;
+
+}
+
+.yap-new-york-locations button:hover {
+    box-shadow: inset 0 -3px 0 #d32223, inset 0 -3.5px 0 #d32223;
+    cursor: pointer;
+    
+}

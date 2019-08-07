@@ -76,6 +76,7 @@ class Homepage extends React.Component {
                 )}
             }
         }
+        const local = "brooklyn";
     return (
         <div>
             <div className="homepage-main-container">
@@ -145,6 +146,15 @@ class Homepage extends React.Component {
                         <Link to={`/categories/${phoneRepairCategory.id}`}><p className="categories-square-img-header">{phoneRepairCategory.name}</p></Link>
                     </div>
 
+                </div>
+            </div>
+            <div className="yap-new-york-container">
+                <div className="yap-new-york-header">
+                    <span>Yap New York</span>
+                </div>
+                <div className="yap-new-york-locations">
+                    <button onClick={() => this.props.searchBusinesses("manhattan-location-homepage").then(() => this.props.history.push({pathname: '/businesses', locationName: "Manhattan"}))}>Manhattan</button>
+                    <button onClick={() => this.props.searchBusinesses("brooklyn-location-homepage").then(() => this.props.history.push({pathname: '/businesses', locationName: "Brooklyn"}))}>Brooklyn</button>
                 </div>
             </div>
             <div className="popular-businesses">
