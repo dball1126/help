@@ -24,7 +24,7 @@ class BusinessIndex extends React.Component {
         if(nextProps.match.params.categoryId !== this.props.categoryId) {
             this.props.fetchCategory(nextProps.match.params.categoryId)
             setTimeout(() => { 
-            $("div.business-index-header").html(`<p>${this.props.category.name}</p>`)
+            $("div.business-index-header").html(`<p>${this.props.category.name || ""}</p>`)
             }, 100)
             // this.setState({category:})
             
