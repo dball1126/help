@@ -92,7 +92,7 @@ class businessShowSearch extends React.Component{
                                 <input type="text"
                                     value={this.state.query}
                                     onChange={this.update('query')}
-                                    placeholder="restaurants, pizza, chinese..."
+                                    placeholder="search for businesses by name..."
                                     className="business-search" />
                             </span>
                         </div>
