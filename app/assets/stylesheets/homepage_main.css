@@ -490,13 +490,18 @@
     text-align: center;
     font-size: 14px;
     padding-bottom: 12px;
-    
+    max-width: 960px;
+    margin: 0 auto;
+
 }
 
-.yap-new-york-locations a {
+.yap-new-york-locations button {
     text-decoration: none;
     color: #666666;
     font-family: "Helvetica Neue";
-    margin-left: 12px;
-    margin-right: 12px;
+    /* margin-left: 12px;
+    margin-right: 12px; */
+    border: none;
+    font-size: 14px;
+    
 }
