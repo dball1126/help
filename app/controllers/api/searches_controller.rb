@@ -2,9 +2,13 @@ class Api::SearchesController < ApplicationController
     
 
     def business_search
-        debugger
+        
         if params[:query] == "brooklyn-location-homepage"
             location = "brooklyn"
+            query = ""
+            allBusinesses = "true"
+        elsif params[:query] == "manhattan-location-homepage"
+            location = "new york"
             query = ""
             allBusinesses = "true"
         else
