@@ -21,7 +21,8 @@ class BusinessIndex extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         
-        if(nextProps.match.params.categoryId !== this.props.categoryId && this.props.categoryId !== "") {
+        // if(nextProps.match.params.categoryId !== this.props.categoryId && this.props.categoryId !== "") {
+        if(nextProps.match.params.categoryId !== this.props.match.params.categoryId) {
             
             this.props.fetchCategory(nextProps.match.params.categoryId)
             setTimeout(() => { 
