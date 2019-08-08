@@ -13862,7 +13862,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this3 = this;
 
-      
+      debugger;
       if (this.props.location.locationName) $("div.business-index-header").html("<p>".concat(this.props.location.locationName, "</p>"));
 
       if (this.props.categoryId !== "") {

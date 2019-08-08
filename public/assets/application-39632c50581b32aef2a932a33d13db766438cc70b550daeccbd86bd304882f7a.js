@@ -13862,7 +13862,6 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this3 = this;
 
-      
       if (this.props.location.locationName) $("div.business-index-header").html("<p>".concat(this.props.location.locationName, "</p>"));
 
       if (this.props.categoryId !== "") {
@@ -13889,7 +13888,7 @@ function (_React$Component) {
         } else if (_this3.props.category !== "" && _this3.props.businesses.length > 0) {
           $("div.business-index-header").html("<p>".concat(_this3.props.category.name, "</p>"));
         }
-      }, 100);
+      }, 500);
     }
   }, {
     key: "shouldComponentUpdate",

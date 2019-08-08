@@ -300,3 +300,5 @@ businessCategory25 = BusinessCategory.create(business_id: 19, category_id: 3)
 
 businessCategory26 = BusinessCategory.create(business_id: 20, category_id: 4)
 businessCategory27 = BusinessCategory.create(business_id: 21, category_id: 4)
+
+

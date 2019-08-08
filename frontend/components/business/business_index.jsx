@@ -35,7 +35,7 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        
         if (this.props.location.locationName) $("div.business-index-header").html(`<p>${this.props.location.locationName}</p>`)
         
         if (this.props.categoryId !== "") {
@@ -66,7 +66,7 @@ class BusinessIndex extends React.Component {
                 $("div.business-index-header").html(`<p>${this.props.category.name}</p>`)
                 
             }
-        }, 100)
+        }, 500)
                 
                 
             
@@ -135,6 +135,7 @@ class BusinessIndex extends React.Component {
         
     };
         busIndex(ownprops){
+            
             
             if (this.props.businesses.length > 0) {
                 this.state.businesses = Object.values(this.props.businesses)
