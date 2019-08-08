@@ -35,8 +35,7 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount(){
-        console.log(this.props.categoryId)
-        console.log(this.props.match.params.categoryId)
+        debugger
         if (this.props.location.locationName) $("div.business-index-header").html(`<p>${this.props.location.locationName}</p>`)
         
         if (this.props.categoryId !== "") {
