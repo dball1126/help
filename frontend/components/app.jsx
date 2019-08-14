@@ -9,13 +9,10 @@ import BusinessIndexContainer from './business/business_index_container';
 import CreateReviewContainer from './review_form/create_review_container';
 import EditReviewContainer from './review_form/edit_review_container';
 import SearchContainer from './search/search_container';
-import {Switch} from 'react-router';
 
 const App = () => {
    
     return (
-       
-        
         <div>
             
              <Route exact path ='/' component={HomepageContainer} />
@@ -31,10 +28,7 @@ const App = () => {
              <AuthRoute exact path="/login" component={LoginformContainer} />
             
         </div>
-       
     )
 }
 
 export default App;
-
-
