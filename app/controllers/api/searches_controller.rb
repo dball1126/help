@@ -13,8 +13,8 @@ class Api::SearchesController < ApplicationController
             allBusinesses = "true"
         else
             query = params[:query][:query].gsub("'", "''")
-        location = params[:query][:location].gsub("'", "''")
-        allBusinesses = params[:query][:allBusinesses]
+            location = params[:query][:location].gsub("'", "''")
+            allBusinesses = params[:query][:allBusinesses]
         end
         
        

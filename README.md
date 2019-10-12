@@ -1,6 +1,6 @@
 # README
 
-# [Yap](https://www.google.com)
+# [Yap](https://help10.herokuapp.com/#/)
 Yap is a website where you can find a listing of businesses and you can leave reviews about them.  It is a clone of Yelp
 
 
