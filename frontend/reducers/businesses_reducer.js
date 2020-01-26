@@ -26,7 +26,6 @@ const businessesReducer = (oldState = {}, action) => {
             
             return Object.assign({}, action.category.businesses)
         case DESTROY_REVIEW:
-            
             return newState;
         default:
             return oldState;

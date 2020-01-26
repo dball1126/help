@@ -9,11 +9,17 @@ class BusinessShow extends React.Component {
     constructor(props) {
         super(props);
 
-      this.state = {hasMounted: false}
+      this.state = {hasMounted: false, deleted: this.props.deleted}
         
     }
 
-    shouldComponentUpdate(){
+    shouldComponentUpdates(state, ownProps){
+        
+        if (ownProps.deleted) { // This allows the the react dom to update and delete the review
+            this.setState({deleted: false})
+            return true;
+        } 
+
         if(this.state.hasMounted === false){
            this.setState({hasMounted: true})
             
@@ -97,6 +103,7 @@ class BusinessShow extends React.Component {
         }
         
         const reviews = () => {
+            
             if (!reviewsEntities) {
                 return "";
             } else {

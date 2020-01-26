@@ -1,6 +1,5 @@
 class Api::SearchesController < ApplicationController
     
-
     def business_search
         
         if params[:query] == "brooklyn-location-homepage"

@@ -10,7 +10,6 @@ const mapStateToProps = (state, ownprops) => {
     const businesses = state.entities.businesses;
     const currentUser = state.entities.users[state.session.id]
     const business = state.entities.businesses[ownprops.match.params.businessId] || {};
-    
     return {
         review: {content: "", rating: 0},
         formType: 'Create Review',

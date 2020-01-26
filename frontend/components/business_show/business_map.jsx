@@ -18,10 +18,8 @@ class BusinessMap extends React.Component{
         if (ownProps.searching === "true") return false;
         if (catUpdater === "flushDeal") {
             
-            
             return true;
         }
-        
         
         let tracking;
         if (this.props.location) tracking = this.props.location.linkTracker || undefined;

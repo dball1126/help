@@ -14,7 +14,6 @@ class ReviewForm extends React.Component{
     }
 
     componentDidMount(){
-        
         // this.props.fetchBusiness(this.props.match.params.businessId);
         this.setState({...this.props.review});
         
@@ -111,7 +110,10 @@ class ReviewForm extends React.Component{
     
 
     update(field){
-        ''
+        return  (e) => {
+            this.setState({[field]: e.target.value})
+      
+       }
     }
 
     handleFile(e){
@@ -122,7 +124,6 @@ class ReviewForm extends React.Component{
 
     render(){
     //    const rating = this.state.rating || 0;
-   
         // const business = this.props.businesses[this.props.match.params.businessId];
         const business = this.props.business;
         

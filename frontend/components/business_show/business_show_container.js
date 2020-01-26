@@ -9,14 +9,18 @@ const mapStateToProps = (state, ownProps) => {
 
     const business = state.entities.businesses[businessId];  //INVESTIGATE
     const currentUser = state.entities.users[state.session.id];
-    
- 
+    let deleted = false;
+    if (!(Object.entries(state.entities.reviews).length === 0 && state.entities.reviews.constructor === Object)) {
+        
+        if (state.entities.reviews.deleted) { // Used to allow the virtual dom to update when a review is deleted
+            deleted = true;
+            delete state.entities.reviews.deleted // Important this removes the deleted key, so if we search it won't update the virtual dom
+        }
+    }
     const reviews = Object.keys(state.entities.reviews).map(id => state.entities.reviews[id])
-    
     // const categories = Object.keys(state.entities.categories).map(id => state.entities.categories[id]) 
     let revs = [];
     // if(Object.entries(categories).length === 0 && categories.constructor === Object) categories = [];
-    
     reviews.forEach(ele => {
         
         if (`${ele.business_id}` === ownProps.match.params.businessId){
@@ -30,7 +34,8 @@ const mapStateToProps = (state, ownProps) => {
         currentUser: currentUser,
         business,
         businessId,
-        reviews : revs
+        reviews: revs,
+        deleted: deleted
         // categories: categories
         
         // currentUser

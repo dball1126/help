@@ -20,9 +20,7 @@ class MainSearch extends React.Component{
         
        return  (e) => {
              this.setState({[field]: e.target.value}, () => this.searchdata())
-       
         }
-       
     }
     
     

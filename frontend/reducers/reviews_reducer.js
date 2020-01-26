@@ -12,12 +12,11 @@ const reviewsReducer = (oldState = {}, action) => {
             
             return Object.assign({}, oldState, action.reviews);
         case DESTROY_REVIEW:
-            
-            const newState = Object.assign({}, oldState);
-            
+
+            const newState = Object.assign({}, oldState, {deleted: true});
                 delete newState[action.reviewId]
-                
             return newState;
+
         case RECEIVE_BUSINESS:
             
             if (action.business.reviews)

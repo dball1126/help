@@ -1,5 +1,3 @@
-
-
 export const startPageBusinesses = () => (
     $.ajax({
         method: 'GET',
